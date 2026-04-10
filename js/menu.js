@@ -28,6 +28,7 @@ function switchTo(view) {
   const items = dropdown.querySelectorAll('.dropdown-item:not(.disabled)');
   items.forEach(el => el.classList.remove('active'));
   items[menuIdx[view]].classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ── Toggle-knapper (delt på tvers av alle kalkulatorer) ──

@@ -73,7 +73,20 @@ function kabelCalc() {
   const temp      = parseFloat(document.getElementById('kbTemp').value) || 25;
   const insul     = getToggle('kbInsul');     // 'PVC' | 'PEX'
 
-  if (isNaN(length) || isNaN(loadKw)) return;
+  const errors = [];
+  if (isNaN(length) || length <= 0) errors.push('Kabellengde må være større enn 0.');
+  if (isNaN(loadKw) || loadKw <= 0) errors.push('Last må være større enn 0 kW.');
+  if (temp < 10 || temp > 50) errors.push('Omgivelsestemperatur må være mellom 10 og 50 °C.');
+
+  const warnEl = document.getElementById('krWarning');
+  if (errors.length) {
+    warnEl.textContent = errors.join('\n');
+    warnEl.classList.remove('hidden');
+
+    document.getElementById('kbResult').classList.add('hidden');
+    document.getElementById('kbUtregningBox').classList.add('hidden');
+    return;
+  }
 
   // Spenning og lasstrøm (cos φ = 1)
   // IT 230V: L-L = 230V (ingen nøytral i tradisjonelt IT-nett)
@@ -147,7 +160,6 @@ function kabelCalc() {
   dropEl.textContent = chosenDrop.toFixed(1);
   dropEl.style.color = chosenDrop > maxDrop ? '#fc8181' : '#68d391';
 
-  const warnEl = document.getElementById('krWarning');
   warnEl.textContent = warnings.join('\n');
   warnEl.classList.toggle('hidden', warnings.length === 0);
 
