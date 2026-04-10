@@ -47,7 +47,7 @@ AppTilTelefon/
 ## Forbedringer — backlog
 
 ### Høy prioritet
-- [ ] **Git + GitHub + koble til Netlify**
+- [x] **Git + GitHub + koble til Netlify**
   - Gir versionshistorikk og mulighet til å rulle tilbake ved feil
   - Automatisk deploy ved `git push` — bruker ikke Netlify credits
   - Backup av kode (nå ligger alt kun lokalt)
