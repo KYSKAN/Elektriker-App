@@ -52,12 +52,12 @@ AppTilTelefon/
   - Automatisk deploy ved `git push` — bruker ikke Netlify credits
   - Backup av kode (nå ligger alt kun lokalt)
 
-- [ ] **Input-validering i kabel-kalkulatoren**
+- [x] **Input-validering i kabel-kalkulatoren**
   - Negativ kabellengde, 0 kW, ekstremt høye verdier gir i dag rare resultater
   - Legg til sjekk og brukervennlig feilmelding
 
 ### Lav prioritet
-- [ ] **Scroll reset ved kalkulator-bytte**
+- [x] **Scroll reset ved kalkulator-bytte**
   - Siden scroller ikke tilbake til toppen når man bytter kalkulator i menyen
 
 ---
