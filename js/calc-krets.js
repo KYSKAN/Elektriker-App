@@ -7,13 +7,22 @@ function updateKretsInputs() {
   const type = getToggle('kcType');
   document.getElementById('kcRowL').classList.toggle('hidden', type === 'RC');
   document.getElementById('kcRowC').classList.toggle('hidden', type === 'RL');
-  document.getElementById('kcResFreq').classList.add('hidden');
   kretsReset();
 }
 
 function kretsReset() {
   document.getElementById('kcResult').classList.add('hidden');
+  document.getElementById('kcUtregningBox').classList.add('hidden');
+  document.getElementById('kcError').classList.add('hidden');
 }
+
+// Lytter spesifikt på kcType — kjører etter den generiske toggle-handleren
+// slik at getToggle() leser riktig aktiv verdi
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#kcType .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => updateKretsInputs());
+  });
+});
 
 function kretsCalc() {
   const type = getToggle('kcType');
