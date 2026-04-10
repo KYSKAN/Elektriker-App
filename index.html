@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f3460">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Kalkulator</title>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="menu-wrapper">
+      <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">
+        <span id="menuLabel">Kalkulator</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="dropdown" id="dropdown">
+        <div class="dropdown-item active" onclick="switchTo('calc')">Kalkulator</div>
+        <div class="dropdown-item" onclick="switchTo('ohm')">Ohms lov</div>
+        <div class="dropdown-item" onclick="switchTo('kabel')">Kabel og vern</div>
+        <div class="dropdown-item disabled">Mer kommer...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanlig kalkulator -->
+  <div class="card" id="viewCalc">
+    <div class="display">
+      <div class="expression" id="expression"></div>
+      <div class="result" id="result">0</div>
+    </div>
+    <div class="buttons">
+      <button class="btn-clear"    onclick="calcClear()">AC</button>
+      <button class="btn-operator" onclick="toggleSign()">+/-</button>
+      <button class="btn-operator" onclick="percent()">%</button>
+      <button class="btn-operator" onclick="operator('/')">÷</button>
+
+      <button class="btn-number" onclick="digit('7')">7</button>
+      <button class="btn-number" onclick="digit('8')">8</button>
+      <button class="btn-number" onclick="digit('9')">9</button>
+      <button class="btn-operator" onclick="operator('*')">×</button>
+
+      <button class="btn-number" onclick="digit('4')">4</button>
+      <button class="btn-number" onclick="digit('5')">5</button>
+      <button class="btn-number" onclick="digit('6')">6</button>
+      <button class="btn-operator" onclick="operator('-')">−</button>
+
+      <button class="btn-number" onclick="digit('1')">1</button>
+      <button class="btn-number" onclick="digit('2')">2</button>
+      <button class="btn-number" onclick="digit('3')">3</button>
+      <button class="btn-operator" onclick="operator('+')">+</button>
+
+      <button class="btn-number btn-zero" onclick="digit('0')">0</button>
+      <button class="btn-number" onclick="decimal()">.</button>
+      <button class="btn-equals"  onclick="equals()">=</button>
+    </div>
+  </div>
+
+  <!-- Ohms lov -->
+  <div class="card hidden" id="viewOhm">
+    <div class="calc-title">Ohms lov</div>
+    <div class="ohm-grid">
+      <div class="ohm-field" id="fieldV">
+        <label>SPENNING</label>
+        <div class="ohm-symbol">V</div>
+        <input type="number" id="inV" placeholder="—" inputmode="decimal">
+      </div>
+      <div class="ohm-field" id="fieldA">
+        <label>STRØM</label>
+        <div class="ohm-symbol">A</div>
+        <input type="number" id="inA" placeholder="—" inputmode="decimal">
+      </div>
+      <div class="ohm-field" id="fieldR">
+        <label>MOTSTAND</label>
+        <div class="ohm-symbol">Ω</div>
+        <input type="number" id="inR" placeholder="—" inputmode="decimal">
+      </div>
+      <div class="ohm-field" id="fieldW">
+        <label>EFFEKT</label>
+        <div class="ohm-symbol">W</div>
+        <input type="number" id="inW" placeholder="—" inputmode="decimal">
+      </div>
+    </div>
+    <div class="ohm-multiplier">
+      <label>MULTIPLISER SVAR MED</label>
+      <input type="number" id="inMult" value="1" inputmode="decimal" min="1">
+    </div>
+    <div class="action-row">
+      <button class="btn-secondary" onclick="ohmClear()">Nullstill</button>
+      <button class="btn-primary" id="ohmCalcBtn" onclick="ohmCalc()">Beregn</button>
+    </div>
+    <div class="hint" id="ohmHint">Fyll inn to verdier og trykk Beregn</div>
+  </div>
+
+  <!-- Kabel og vern -->
+  <div class="card hidden" id="viewKabel">
+    <div class="calc-title">Kabel og vern</div>
+    <div class="kabel-form">
+
+      <div class="kabel-row">
+        <label>Kabellengde</label>
+        <div class="kabel-input-unit">
+          <input type="number" id="kbLength" placeholder="0" inputmode="decimal">
+          <span>m</span>
+        </div>
+      </div>
+
+      <div class="kabel-row">
+        <label>Fordelingssystem</label>
+        <div class="toggle-group" id="kbSystem">
+          <button class="toggle-btn" data-val="IT">IT (230V)</button>
+          <button class="toggle-btn active" data-val="TN">TN (400V)</button>
+        </div>
+      </div>
+
+      <div class="kabel-row">
+        <label>Antall faser</label>
+        <div class="toggle-group" id="kbPhase">
+          <button class="toggle-btn active" data-val="1">1-fase</button>
+          <button class="toggle-btn" data-val="3">3-fase</button>
+        </div>
+      </div>
+
+      <div class="kabel-row">
+        <label>Last størrelse</label>
+        <div class="kabel-input-unit">
+          <input type="number" id="kbLoad" placeholder="0" inputmode="decimal">
+          <span>kW</span>
+        </div>
+      </div>
+
+      <div class="kabel-row">
+        <label>Forlegning</label>
+        <select id="kbInstall">
+          <option value="A2">I rør i isolert vegg</option>
+          <option value="B2">I rør på vegg</option>
+          <option value="C" selected>På vegg / tak</option>
+          <option value="E">Fritt i luft</option>
+          <option value="D1">Nedgravd i rør</option>
+        </select>
+      </div>
+
+      <div class="kabel-row">
+        <label>Bruksområde</label>
+        <div class="toggle-group" id="kbUse">
+          <button class="toggle-btn active" data-val="bolig">Bolig</button>
+          <button class="toggle-btn" data-val="industri">Industri</button>
+        </div>
+      </div>
+
+      <div class="kabel-row">
+        <label>Leder</label>
+        <div class="toggle-group" id="kbConductor">
+          <button class="toggle-btn active" data-val="Cu">Kobber</button>
+          <button class="toggle-btn" data-val="Al">Aluminium</button>
+        </div>
+      </div>
+
+      <div class="kabel-row">
+        <label>Omgivelsestemperatur</label>
+        <div class="kabel-input-unit">
+          <input type="number" id="kbTemp" value="25" inputmode="decimal">
+          <span>°C</span>
+        </div>
+      </div>
+
+      <div class="kabel-row">
+        <label>Isolasjon</label>
+        <div class="toggle-group" id="kbInsul">
+          <button class="toggle-btn active" data-val="PVC">PVC</button>
+          <button class="toggle-btn" data-val="PEX">PEX</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="kabel-result hidden" id="kbResult">
+      <div class="kabel-result-grid">
+        <div class="kr-item">
+          <div class="kr-label">STRØM</div>
+          <div class="kr-value" id="krCurrent">—</div>
+          <div class="kr-unit">A</div>
+        </div>
+        <div class="kr-item">
+          <div class="kr-label">TVERRSNITT</div>
+          <div class="kr-value" id="krCross">—</div>
+          <div class="kr-unit">mm²</div>
+        </div>
+        <div class="kr-item">
+          <div class="kr-label">SPENNINGSFALL</div>
+          <div class="kr-value" id="krDrop">—</div>
+          <div class="kr-unit">%</div>
+        </div>
+        <div class="kr-item">
+          <div class="kr-label">VERN</div>
+          <div class="kr-value" id="krBreaker">—</div>
+          <div class="kr-unit">A</div>
+        </div>
+      </div>
+      <div class="kr-warning hidden" id="krWarning"></div>
+    </div>
+
+    <div class="kabel-utregning-box hidden" id="kbUtregningBox">
+      <div class="kabel-utregning-title">Utregning</div>
+      <div class="kabel-utregning" id="kbUtregning"></div>
+    </div>
+
+    <div class="action-row">
+      <button class="btn-secondary" onclick="kabelClear()">Nullstill</button>
+      <button class="btn-primary ready" onclick="kabelCalc()">Beregn</button>
+    </div>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/calc-standard.js"></script>
+  <script src="js/calc-ohm.js"></script>
+  <script src="js/calc-kabel.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js');
+    }
+  </script>
+</body>
+</html>

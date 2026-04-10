@@ -1,0 +1,378 @@
+/* ── Global ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 32px;
+}
+
+/* ── Topplinje / meny ── */
+.topbar {
+  width: 100%;
+  max-width: 340px;
+  padding: 16px 4px 8px;
+}
+
+.menu-wrapper { position: relative; display: inline-block; }
+
+.menu-btn {
+  background: #16213e;
+  color: #e2e8f0;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 15px;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-btn .arrow { font-size: 10px; color: #63b3ed; transition: transform 0.2s; }
+.menu-btn.open .arrow { transform: rotate(180deg); }
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: #16213e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  z-index: 10;
+  min-width: 210px;
+}
+
+.dropdown.open { display: block; }
+
+.dropdown-item {
+  padding: 14px 18px;
+  color: #e2e8f0;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active { background: #0f3460; color: #63b3ed; }
+.dropdown-item.disabled { color: #4a5568; cursor: default; font-style: italic; }
+
+/* ── Felles kort ── */
+.card {
+  background: #16213e;
+  border-radius: 24px;
+  padding: 24px;
+  width: 340px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* ── Vanlig kalkulator ── */
+.display {
+  background: #0f3460;
+  border-radius: 16px;
+  padding: 20px 16px 12px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.display .expression {
+  color: #a0aec0;
+  font-size: 14px;
+  min-height: 20px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.display .result {
+  color: #e2e8f0;
+  font-size: 40px;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 500;
+  height: 64px;
+  cursor: pointer;
+  transition: transform 0.08s, opacity 0.08s;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+button:active { transform: scale(0.93); opacity: 0.85; }
+
+.btn-number   { background: #1a3a5c; color: #e2e8f0; }
+.btn-operator { background: #0f3460; color: #63b3ed; }
+.btn-equals   { background: #e94560; color: #fff; }
+.btn-clear    { background: #2d3748; color: #fc8181; }
+.btn-zero     { grid-column: span 2; }
+
+/* ── Felles fagkalkulatorer ── */
+.calc-title {
+  color: #63b3ed;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn-secondary {
+  background: #2d3748;
+  color: #fc8181;
+  font-size: 16px;
+  height: 52px;
+  border-radius: 14px;
+}
+
+.btn-primary {
+  background: #2d3748;
+  color: #4a5568;
+  font-size: 16px;
+  height: 52px;
+  border-radius: 14px;
+  cursor: not-allowed;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary.ready {
+  background: #38a169;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hint {
+  text-align: center;
+  color: #4a5568;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+/* ── Toggle-gruppe ── */
+.toggle-group {
+  display: flex;
+  background: #1a3a5c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toggle-btn {
+  background: transparent;
+  color: #718096;
+  font-size: 13px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+.toggle-btn.active {
+  background: #0f3460;
+  color: #63b3ed;
+}
+
+/* ── Ohms lov ── */
+.ohm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ohm-field {
+  background: #0f3460;
+  border-radius: 14px;
+  padding: 14px 14px 10px;
+}
+
+.ohm-field label {
+  display: block;
+  font-size: 11px;
+  color: #a0aec0;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.ohm-field .ohm-symbol {
+  font-size: 20px;
+  color: #63b3ed;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.ohm-field input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #1a3a5c;
+  color: #e2e8f0;
+  font-size: 22px;
+  font-weight: 300;
+  outline: none;
+  padding: 2px 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ohm-field input::placeholder { color: #2d4a6e; }
+.ohm-field.calculated { background: #0d2a4a; border: 1px solid #1a3a5c; }
+.ohm-field.calculated input { color: #68d391; }
+
+.ohm-multiplier {
+  background: #0f3460;
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.ohm-multiplier label { font-size: 11px; color: #a0aec0; letter-spacing: 0.5px; }
+
+.ohm-multiplier input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #1a3a5c;
+  color: #e2e8f0;
+  font-size: 20px;
+  font-weight: 300;
+  width: 80px;
+  text-align: right;
+  outline: none;
+}
+
+/* ── Kabel og vern ── */
+.kabel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.kabel-row {
+  background: #0f3460;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.kabel-row label {
+  font-size: 12px;
+  color: #a0aec0;
+  flex-shrink: 0;
+}
+
+.kabel-row select {
+  background: #1a3a5c;
+  border: none;
+  color: #e2e8f0;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 6px 8px;
+  outline: none;
+  max-width: 155px;
+}
+
+.kabel-input-unit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kabel-input-unit input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #1a3a5c;
+  color: #e2e8f0;
+  font-size: 18px;
+  font-weight: 300;
+  width: 72px;
+  text-align: right;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.kabel-input-unit span { color: #63b3ed; font-size: 13px; }
+
+.kabel-result {
+  background: #0f3460;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.kabel-result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.kr-item  { text-align: center; }
+.kr-label { font-size: 11px; color: #a0aec0; letter-spacing: 0.5px; margin-bottom: 4px; }
+.kr-value { font-size: 26px; font-weight: 300; color: #68d391; }
+.kr-unit  { font-size: 12px; color: #63b3ed; margin-top: 2px; }
+
+.kr-warning {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #fc8181;
+  line-height: 1.6;
+}
+
+.kabel-utregning-box {
+  background: #0a1628;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.kabel-utregning-title {
+  font-size: 11px;
+  color: #63b3ed;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.kabel-utregning {
+  font-family: 'Courier New', monospace;
+  font-size: 11.5px;
+  color: #a0aec0;
+  white-space: pre;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+/* ── Felles ── */
+.hidden { display: none; }

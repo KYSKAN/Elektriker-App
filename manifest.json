@@ -1,0 +1,18 @@
+{
+  "name": "Kalkulator",
+  "short_name": "Kalkulator",
+  "description": "Enkel kalkulator — fremtidig elektriker-app",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1a2e",
+  "theme_color": "#0f3460",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
