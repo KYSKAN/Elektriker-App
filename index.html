@@ -14,53 +14,19 @@
   <div class="topbar">
     <div class="menu-wrapper">
       <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">
-        <span id="menuLabel">Kalkulator</span>
+        <span id="menuLabel">Ohms lov</span>
         <span class="arrow">▼</span>
       </button>
       <div class="dropdown" id="dropdown">
-        <div class="dropdown-item active" onclick="switchTo('calc')">Kalkulator</div>
-        <div class="dropdown-item" onclick="switchTo('ohm')">Ohms lov</div>
+        <div class="dropdown-item active" onclick="switchTo('ohm')">Ohms lov</div>
         <div class="dropdown-item" onclick="switchTo('kabel')">Kabel og vern</div>
         <div class="dropdown-item" onclick="switchTo('krets')">RC / RL / RLC krets</div>
       </div>
     </div>
   </div>
 
-  <!-- Vanlig kalkulator -->
-  <div class="card" id="viewCalc">
-    <div class="display">
-      <div class="expression" id="expression"></div>
-      <div class="result" id="result">0</div>
-    </div>
-    <div class="buttons">
-      <button class="btn-clear"    onclick="calcClear()">AC</button>
-      <button class="btn-operator" onclick="toggleSign()">+/-</button>
-      <button class="btn-operator" onclick="percent()">%</button>
-      <button class="btn-operator" onclick="operator('/')">÷</button>
-
-      <button class="btn-number" onclick="digit('7')">7</button>
-      <button class="btn-number" onclick="digit('8')">8</button>
-      <button class="btn-number" onclick="digit('9')">9</button>
-      <button class="btn-operator" onclick="operator('*')">×</button>
-
-      <button class="btn-number" onclick="digit('4')">4</button>
-      <button class="btn-number" onclick="digit('5')">5</button>
-      <button class="btn-number" onclick="digit('6')">6</button>
-      <button class="btn-operator" onclick="operator('-')">−</button>
-
-      <button class="btn-number" onclick="digit('1')">1</button>
-      <button class="btn-number" onclick="digit('2')">2</button>
-      <button class="btn-number" onclick="digit('3')">3</button>
-      <button class="btn-operator" onclick="operator('+')">+</button>
-
-      <button class="btn-number btn-zero" onclick="digit('0')">0</button>
-      <button class="btn-number" onclick="decimal()">.</button>
-      <button class="btn-equals"  onclick="equals()">=</button>
-    </div>
-  </div>
-
   <!-- Ohms lov -->
-  <div class="card hidden" id="viewOhm">
+  <div class="card" id="viewOhm">
     <div class="calc-title">Ohms lov</div>
     <div class="ohm-grid">
       <div class="ohm-field" id="fieldV">
@@ -330,7 +296,6 @@
   </div>
 
   <script src="js/menu.js"></script>
-  <script src="js/calc-standard.js"></script>
   <script src="js/calc-ohm.js"></script>
   <script src="js/calc-kabel.js"></script>
   <script src="js/calc-krets.js"></script>

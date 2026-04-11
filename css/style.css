@@ -74,40 +74,7 @@ body {
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
-/* ── Vanlig kalkulator ── */
-.display {
-  background: #0f3460;
-  border-radius: 16px;
-  padding: 20px 16px 12px;
-  margin-bottom: 20px;
-  text-align: right;
-}
-
-.display .expression {
-  color: #a0aec0;
-  font-size: 14px;
-  min-height: 20px;
-  margin-bottom: 6px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.display .result {
-  color: #e2e8f0;
-  font-size: 40px;
-  font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
+/* ── Knapper (felles) ── */
 button {
   border: none;
   border-radius: 14px;
@@ -121,12 +88,6 @@ button {
 }
 
 button:active { transform: scale(0.93); opacity: 0.85; }
-
-.btn-number   { background: #1a3a5c; color: #e2e8f0; }
-.btn-operator { background: #0f3460; color: #63b3ed; }
-.btn-equals   { background: #e94560; color: #fff; }
-.btn-clear    { background: #2d3748; color: #fc8181; }
-.btn-zero     { grid-column: span 2; }
 
 /* ── Felles fagkalkulatorer ── */
 .calc-title {
