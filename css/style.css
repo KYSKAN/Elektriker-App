@@ -107,27 +107,36 @@ button:active { transform: scale(0.93); opacity: 0.85; }
 }
 
 .btn-secondary {
-  background: #2d3748;
-  color: #fc8181;
+  background: transparent;
+  border: 1.5px solid #e05c7a;
+  color: #e05c7a;
   font-size: 16px;
   height: 52px;
   border-radius: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-secondary:active {
+  background: #e05c7a22;
 }
 
 .btn-primary {
-  background: #2d3748;
-  color: #4a5568;
+  background: #1e2a3a;
+  border: 1.5px solid #2d3f55;
+  color: #3a4f66;
   font-size: 16px;
   height: 52px;
   border-radius: 14px;
   cursor: not-allowed;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
 
 .btn-primary.ready {
-  background: #38a169;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  border-color: transparent;
   color: #fff;
   cursor: pointer;
+  box-shadow: 0 4px 18px rgba(99, 102, 241, 0.45);
 }
 
 .hint {
@@ -140,24 +149,27 @@ button:active { transform: scale(0.93); opacity: 0.85; }
 /* ── Toggle-gruppe ── */
 .toggle-group {
   display: flex;
-  background: #1a3a5c;
+  background: #111c2d;
   border-radius: 8px;
   overflow: hidden;
+  border: 1px solid #1e2f45;
 }
 
 .toggle-btn {
   background: transparent;
-  color: #718096;
+  color: #4a6080;
   font-size: 13px;
   height: 32px;
   padding: 0 12px;
   border-radius: 0;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: background 0.15s, color 0.15s;
 }
 
 .toggle-btn.active {
-  background: #0f3460;
-  color: #63b3ed;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: #fff;
 }
 
 /* ── Ohms lov ── */
