@@ -70,7 +70,7 @@ function kabelCalc() {
   const system    = getToggle('kbSystem');    // 'IT' | 'TN'
   const use       = getToggle('kbUse');       // 'bolig' | 'industri'
   const conductor = getToggle('kbConductor'); // 'Cu' | 'Al'
-  const temp      = parseFloat(document.getElementById('kbTemp').value) || 25;
+  const temp      = parseFloat(document.getElementById('kbTemp').value) || 30;
   const insul     = getToggle('kbInsul');     // 'PVC' | 'PEX'
 
   const errors = [];
@@ -212,7 +212,7 @@ function kabelCalc() {
 function kabelClear() {
   document.getElementById('kbLength').value = '';
   document.getElementById('kbLoad').value   = '';
-  document.getElementById('kbTemp').value   = '25';
+  document.getElementById('kbTemp').value   = '30';
   document.getElementById('kbResult').classList.add('hidden');
   document.getElementById('kbUtregningBox').classList.add('hidden');
   setToggle('kbSystem',    'TN');
