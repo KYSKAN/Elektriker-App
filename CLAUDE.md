@@ -1,7 +1,7 @@
 # CLAUDE.md — Prosjektoversikt
 
 ## Hva er dette?
-Personlig PWA-app for Android (Chrome). Elektriker-verktøy med fagkalkulatorer. Hostet på Netlify, koblet til GitHub — automatisk deploy ved `git push`.
+Personlig PWA-app for Android (Chrome). Elektriker-verktøy med fagkalkulatorer. Hostet på GitHub Pages — automatisk deploy ved `git push`. URL: https://kyskan.github.io/AppTilTelefon
 
 ## Filstruktur
 ```
@@ -31,7 +31,7 @@ AppTilTelefon/
 
 ## Viktige regler
 - **Service worker:** Bump `CACHE` (v17 → v18 osv.) i `service-worker.js` ved HVER deploy — ellers ser ikke telefonen endringene
-- **Deploy:** `git add . && git commit -m "..." && git push` — Netlify deployer automatisk
+- **Deploy:** `git add . && git commit -m "..." && git push` — GitHub Pages deployer automatisk
 - **Platform:** Android-only, Chrome PWA. Ingen iOS/Safari-støtte nødvendig.
 - **Stil:** Mørkt tema — bakgrunn `#1a1a2e`, kort `#16213e`, aksentblå `#63b3ed`
 - **Knapper:** Aktive toggle/beregn-knapper bruker gradient `#3b82f6 → #6366f1`

@@ -4,7 +4,7 @@
 Personlig PWA-app til eget bruk på Android. Elektriker-verktøy med fagkalkulatorer.
 
 ## Nåværende status
-PWA er oppe og kjører på telefon. Koblet til GitHub — automatisk deploy via Netlify ved `git push`.
+PWA er oppe og kjører på telefon. Koblet til GitHub — automatisk deploy via GitHub Pages ved `git push`. URL: https://kyskan.github.io/AppTilTelefon
 
 ### Implementerte kalkulatorer
 - **Ohms lov** — V, A, Ω, W. Fyll inn 2, beregn 2. Støtter multiplikator.
@@ -20,7 +20,7 @@ PWA er oppe og kjører på telefon. Koblet til GitHub — automatisk deploy via 
 | Logikk | Vanilla JavaScript (én fil per kalkulator) |
 | Styling | CSS (`css/style.css`) |
 | Distribusjonsformat | PWA — Android / Chrome |
-| Hosting | Netlify (auto-deploy via GitHub) |
+| Hosting | GitHub Pages (auto-deploy via GitHub) |
 | Versjonskontroll | Git + GitHub (KYSKAN/AppTilTelefon) |
 
 ---
