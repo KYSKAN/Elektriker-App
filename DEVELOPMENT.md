@@ -1,13 +1,15 @@
 # AppTilTelefon — Utviklingsdokument
 
 ## Formål
-Personlig PWA-app til eget bruk på Android. Startet som enkel kalkulator, bygges ut til **avansert kalkulator for elektrikere**.
+Personlig PWA-app til eget bruk på Android. Elektriker-verktøy med fagkalkulatorer.
 
 ## Nåværende status
-PWA er oppe og kjører på telefon via Netlify. Tre kalkulatorer er implementert:
-- **Vanlig kalkulator** — `+`, `-`, `×`, `÷`, `%`, `+/-`
+PWA er oppe og kjører på telefon. Koblet til GitHub — automatisk deploy via Netlify ved `git push`.
+
+### Implementerte kalkulatorer
 - **Ohms lov** — V, A, Ω, W. Fyll inn 2, beregn 2. Støtter multiplikator.
-- **Kabel og vern** — Kabeldimensjonering og vernvalg etter NEK 400
+- **Kabel og vern** — Kabeldimensjonering og vernvalg etter NEK 400. Forlegningsmetoder A1–E inkl. D1/D2 (jord). Auto-temperatur ved jordforlegning.
+- **RC/RL/RLC krets** — Aktiv, reaktiv og syneffekt, impedans, strøm, fasevinkel, resonansfrekvens.
 
 ---
 
@@ -15,11 +17,11 @@ PWA er oppe og kjører på telefon via Netlify. Tre kalkulatorer er implementert
 | Hva | Valg |
 |---|---|
 | Markup | HTML5 |
-| Logikk | Vanilla JavaScript (splittet per kalkulator) |
+| Logikk | Vanilla JavaScript (én fil per kalkulator) |
 | Styling | CSS (`css/style.css`) |
 | Distribusjonsformat | PWA — Android / Chrome |
-| Hosting | Netlify (drag-and-drop, 300 credits/mnd) |
-| Versjonskontroll | Ingen ennå — se forbedringer under |
+| Hosting | Netlify (auto-deploy via GitHub) |
+| Versjonskontroll | Git + GitHub (KYSKAN/AppTilTelefon) |
 
 ---
 
@@ -28,47 +30,36 @@ PWA er oppe og kjører på telefon via Netlify. Tre kalkulatorer er implementert
 AppTilTelefon/
 ├── index.html
 ├── manifest.json
-├── service-worker.js
+├── service-worker.js      (nåværende versjon: v16)
 ├── CLAUDE.md
 ├── DEVELOPMENT.md
 ├── css/
 │   └── style.css
 ├── js/
 │   ├── menu.js
-│   ├── calc-standard.js
 │   ├── calc-ohm.js
-│   └── calc-kabel.js
+│   ├── calc-kabel.js
+│   └── calc-krets.js
 └── icons/
     └── icon.svg
 ```
 
 ---
 
-## Forbedringer — backlog
+## Backlog
 
-### Høy prioritet
-- [x] **Git + GitHub + koble til Netlify**
-  - Gir versionshistorikk og mulighet til å rulle tilbake ved feil
-  - Automatisk deploy ved `git push` — bruker ikke Netlify credits
-  - Backup av kode (nå ligger alt kun lokalt)
+### Kabel og vern — faglig
+- [ ] **Cos φ** — kalkulatoren antar cos φ = 1,0. Legg til felt for å endre dette.
+- [ ] **Samlefaktor** — korreksjon for flere kabler i samme rør/grøft (NEK 400)
+- [ ] **Aluminium-tabeller** — i dag brukes faktor 0,78 på kobbertabeller. NEK 400 har egne Al-tabeller.
+- [ ] **Jordtemperatur-korreksjon** — D1/D2 bruker lufttabell. Egne korreksjonsfaktorer for jord med ref. 20°C bør implementeres.
 
-- [x] **Input-validering i kabel-kalkulatoren**
-  - Negativ kabellengde, 0 kW, ekstremt høye verdier gir i dag rare resultater
-  - Legg til sjekk og brukervennlig feilmelding
+### Kabel og vern — brukervennlighet
+- [ ] **Last i A eller kW** — legg til valg mellom å oppgi last som effekt (kW) eller strøm (A) direkte
 
-### Lav prioritet
-- [x] **Scroll reset ved kalkulator-bytte**
-  - Siden scroller ikke tilbake til toppen når man bytter kalkulator i menyen
-
----
-
-## Planlagte kalkulatorer (Fase 2 — Elektriker)
-
-- **Cos φ / effektfaktor** — aktiv, reaktiv og tilsynelatende effekt
-- **3-fase beregninger** — U_linje vs U_fase, totalt effektuttak
-- **Kabelberegning avansert** — parallelkabling, flere belastninger
-- **Kortslutningsstrøm** — Icc-beregning for vernkoordinering
-- **Jordfeil / isolasjonsmåling** — veiledende verdier
+### Planlagte kalkulatorer
+- [ ] **Kortslutningsstrøm** — Icc-beregning for vernkoordinering
+- [ ] **Jordfeil / isolasjonsmåling** — veiledende verdier
 
 ---
 
@@ -76,4 +67,4 @@ AppTilTelefon/
 - Android-only, ingen iOS/Safari-hensyn
 - Hold all logikk i frontend — ingen server nødvendig
 - Legg til ny kalkulator: se instruksjoner i `CLAUDE.md`
-- **Husk:** Bump `CACHE`-versjon i `service-worker.js` ved hver Netlify-deploy
+- **Husk:** Bump `CACHE`-versjon i `service-worker.js` ved hver deploy
