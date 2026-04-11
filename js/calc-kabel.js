@@ -277,12 +277,10 @@ function updateCosPVisibility() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('#kbLoadUnit .toggle-btn').forEach(btn => {
-    btn.addEventListener('click', updateCosPVisibility);
-  });
-  updateCosPVisibility();
+document.querySelectorAll('#kbLoadUnit .toggle-btn').forEach(btn => {
+  btn.addEventListener('click', updateCosPVisibility);
 });
+updateCosPVisibility();
 
 // Jord: referansetemperatur 20°C (NEK 400-5-52), luft: 30°C
 function updateTempForInstall() {
