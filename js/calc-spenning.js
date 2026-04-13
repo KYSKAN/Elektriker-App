@@ -2,14 +2,6 @@
 // Fyll inn det du vet (minst 2 verdier), beregn resten
 // Støtter 1-fase og 3-fase
 
-function spUpdateBtn() {
-  const filled = ['spU','spI','spP','spCosP'].filter(id => {
-    const v = document.getElementById(id).value;
-    return v !== '' && !isNaN(parseFloat(v));
-  }).length;
-  document.getElementById('spCalcBtnEl').classList.toggle('ready', filled >= 2);
-}
-
 function spCalc() {
   const phases  = parseInt(getToggle('spPhase'));
   const U_in    = parseFloat(document.getElementById('spU').value);
@@ -114,11 +106,4 @@ function spClear() {
   document.getElementById('spResult').classList.add('hidden');
   document.getElementById('spError').classList.add('hidden');
   setToggle('spPhase', '1');
-  spUpdateBtn();
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  ['spU', 'spI', 'spP', 'spCosP'].forEach(id =>
-    document.getElementById(id).addEventListener('input', spUpdateBtn)
-  );
-});
