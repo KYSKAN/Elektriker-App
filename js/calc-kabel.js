@@ -107,7 +107,10 @@ function kabelCalc() {
   }
 
   // Vern (NEK 400-43): Ib ≤ In ≤ Iz
-  const breaker = breakerSizes.find(b => b >= I && b <= chosenIz)
+  // Bolig: maks vernstørrelse per tverrsnitt (maxBreakerBolig)
+  const maxBreakerCS = use === 'bolig' ? (maxBreakerBolig[chosenCS] ?? Infinity) : Infinity;
+  const breaker = breakerSizes.find(b => b >= I && b <= chosenIz && b <= maxBreakerCS)
+               ?? breakerSizes.find(b => b >= I && b <= maxBreakerCS)
                ?? breakerSizes.find(b => b >= I)
                ?? breakerSizes[breakerSizes.length - 1];
 
@@ -119,6 +122,8 @@ function kabelCalc() {
     warnings.push('Strømkapasitet overskrides. Vurder parallellføring.');
   if (use === 'bolig' && breaker > chosenIz)
     warnings.push(`NEK 400 (bolig): Vern ${breaker} A > Iz ${chosenIz.toFixed(1)} A. Velg større kabel.`);
+  if (use === 'bolig' && maxBreakerBolig[chosenCS] && I > maxBreakerBolig[chosenCS])
+    warnings.push(`${chosenCS} mm² tillater maks ${maxBreakerBolig[chosenCS]} A vern i bolig. Last (${I.toFixed(1)} A) overstiger dette — velg større tverrsnitt.`);
 
   // Vis resultat
   document.getElementById('krCurrent').textContent = I.toFixed(1);
@@ -181,7 +186,12 @@ function kabelCalc() {
     `In = ${breaker} A  (automatsikring)`,
     `Iz = ${chosenIz.toFixed(1)} A`,
     `${I.toFixed(2)} ≤ ${breaker} ≤ ${chosenIz.toFixed(1)}  ${ok(I <= breaker && breaker <= chosenIz)}`,
-    use === 'bolig' ? `\n── Særnorsk krav (bolig) ──\nIn ≤ Iz: ${breaker} ≤ ${chosenIz.toFixed(1)}  ${ok(breaker <= chosenIz)}` : '',
+    use === 'bolig' ? [
+      ``,
+      `── Særnorsk krav (bolig) ──`,
+      `In ≤ Iz: ${breaker} ≤ ${chosenIz.toFixed(1)}  ${ok(breaker <= chosenIz)}`,
+      maxBreakerBolig[chosenCS] ? `Maks vern ${chosenCS} mm²: ${maxBreakerBolig[chosenCS]} A  →  In = ${breaker} A  ${ok(breaker <= maxBreakerBolig[chosenCS])}` : '',
+    ].filter(Boolean).join('\n') : '',
   ].filter(l => l !== undefined);
 
   document.getElementById('kbUtregning').textContent = lines.join('\n');

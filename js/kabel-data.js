@@ -78,3 +78,10 @@ const tCorrGroundPEX = { 10:1.07, 15:1.04, 20:1.00, 25:0.96, 30:0.93, 35:0.89, 4
 
 // ── Resistivitet ved driftstemperatur (Ω·mm²/m) ──
 const rhoMap = { Cu_PVC: 0.0225, Cu_PEX: 0.0246, Al_PVC: 0.036, Al_PEX: 0.040 };
+
+// ── Maks vernstørrelse (A) per tverrsnitt — bolig (NEK 400 særnorske krav) ──
+// 1,5 mm² → maks 16 A, 2,5 mm² → maks 20 A
+const maxBreakerBolig = {
+  1.5: 16,
+  2.5: 20,
+};
