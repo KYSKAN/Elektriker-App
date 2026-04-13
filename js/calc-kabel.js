@@ -212,11 +212,27 @@ function updateCosPVisibility() {
   }
 }
 
+function updateSystemVisibility() {
+  const phases = getToggle('kbPhase');
+  const row = document.getElementById('kbSystemRow');
+  if (phases === '1') {
+    row.classList.add('hidden');
+    setToggle('kbSystem', 'TN');
+  } else {
+    row.classList.remove('hidden');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('#kbLoadUnit .toggle-btn').forEach(btn => {
     btn.addEventListener('click', updateCosPVisibility);
   });
   updateCosPVisibility();
+
+  document.querySelectorAll('#kbPhase .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', updateSystemVisibility);
+  });
+  updateSystemVisibility();
 });
 
 // Jord: referansetemperatur 20°C (NEK 400-5-52), luft: 30°C
