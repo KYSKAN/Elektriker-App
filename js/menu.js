@@ -5,7 +5,7 @@ const menuLabel = document.getElementById('menuLabel');
 
 const views   = { ohm: 'viewOhm', kabel: 'viewKabel', krets: 'viewKrets' };
 const labels  = { ohm: 'Ohms lov', kabel: 'Kabel og vern', krets: 'RC/RL/RLC krets' };
-const menuIdx = { ohm: 0, kabel: 1, krets: 2 };
+const menuIdx = { kabel: 0, ohm: 1, krets: 2 };
 
 function toggleMenu() {
   menuBtn.classList.toggle('open');
