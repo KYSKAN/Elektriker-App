@@ -419,6 +419,10 @@
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js');
+      // Reload automatisk når ny service worker tar over — sikrer ferske JS-filer
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
     }
   </script>
 </body>
