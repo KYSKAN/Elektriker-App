@@ -1,4 +1,4 @@
-const CACHE = 'kalkulator-v35';
+const CACHE = 'kalkulator-v36';
 
 const FILES = [
   './',
@@ -11,6 +11,7 @@ const FILES = [
   './js/calc-kabel.js',
   './js/calc-krets.js',
   './icons/icon.svg',
+  './icons/icon-192.png',
 ];
 
 self.addEventListener('install', event => {
