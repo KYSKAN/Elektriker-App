@@ -44,7 +44,8 @@ function kabelCalc() {
   if (isNaN(length) || length <= 0) errors.push('Kabellengde må være større enn 0.');
   if (isNaN(loadVal) || loadVal <= 0) errors.push(`Last må være større enn 0 ${loadUnit}.`);
   if (cosP <= 0 || cosP > 1) errors.push('Cos φ må være mellom 0,1 og 1,0.');
-  if (temp < 10 || temp > 50) errors.push('Omgivelsestemperatur må være mellom 10 og 50 °C.');
+  if (temp < 10) errors.push('Omgivelsestemperatur kan ikke være under 10 °C.');
+  if (temp > 50) errors.push(`${temp}°C overskrider maks tabellverdi for ${insul}-isolert kabel (50°C). Kabelen er ikke egnet for denne temperaturen.`);
 
   const warnEl = document.getElementById('krWarning');
   if (errors.length) {
