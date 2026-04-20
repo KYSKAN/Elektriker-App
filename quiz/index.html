@@ -378,29 +378,33 @@
       nextBtn.className   = 'next-btn';
       nextBtn.textContent = currentIdx === questions.length - 1 ? 'Se resultat →' : 'Neste spørsmål →';
 
+      // Shuffle answer options, track where correct answer ends up
+      const indices = shuffle([0, 1, 2, 3]);
+      const shuffledOpts = indices.map(i => q.opts[i]);
+      const shuffledCorrect = indices.indexOf(q.correct);
+
       const container = document.getElementById('options-container');
       container.innerHTML = '';
-      q.opts.forEach((opt, i) => {
+      shuffledOpts.forEach((opt, i) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         btn.innerHTML = `<span class="letter">${LETTERS[i]}</span><span>${opt}</span>`;
-        btn.addEventListener('click', () => selectAnswer(i));
+        btn.addEventListener('click', () => selectAnswer(i, shuffledCorrect, q));
         container.appendChild(btn);
       });
     }
 
-    function selectAnswer(chosen) {
+    function selectAnswer(chosen, correctIdx, q) {
       if (answered) return;
       answered = true;
 
-      const q = questions[currentIdx];
       document.querySelectorAll('.option-btn').forEach((btn, i) => {
         btn.disabled = true;
-        if (i === q.correct)   btn.classList.add('correct');
+        if (i === correctIdx)  btn.classList.add('correct');
         else if (i === chosen) btn.classList.add('wrong');
       });
 
-      if (chosen === q.correct) {
+      if (chosen === correctIdx) {
         score++;
         catScores[q.cat].correct++;
       }
@@ -408,7 +412,7 @@
       document.getElementById('score-live').textContent = `Poeng: ${score}`;
 
       const expl = document.getElementById('explanation');
-      expl.innerHTML = `<strong>${chosen === q.correct ? '✓ Riktig!' : '✗ Feil.'}</strong> ${q.explain}`;
+      expl.innerHTML = `<strong>${chosen === correctIdx ? '✓ Riktig!' : '✗ Feil.'}</strong> ${q.explain}`;
       expl.classList.add('show');
       document.getElementById('next-btn').classList.add('show');
     }
