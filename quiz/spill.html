@@ -48,12 +48,22 @@
       padding-top: 4px;
     }
     .back-btn {
-      color: #63b3ed;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #16213e;
+      border: 1px solid #2d4a6e;
+      border-radius: 10px;
+      color: #e2e8f0;
       text-decoration: none;
       font-size: 14px;
-      padding: 6px 0;
+      font-weight: 500;
+      padding: 8px 14px;
       -webkit-tap-highlight-color: transparent;
+      transition: background 0.15s, border-color 0.15s;
     }
+    .back-btn .arrow { color: #63b3ed; }
+    .back-btn:active { background: #1a3a5c; border-color: #63b3ed; }
     .topbar-title {
       flex: 1;
       text-align: center;
@@ -193,7 +203,23 @@
       font-family: inherit; cursor: pointer; transition: background 0.15s;
     }
     .restart-btn:hover { background: var(--accent-hover); }
-    .home-link { color: #63b3ed; text-decoration: none; font-size: 14px; padding: 6px 0; }
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #16213e;
+      border: 1px solid #2d4a6e;
+      border-radius: 10px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 14px;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .home-link .arrow { color: #63b3ed; }
+    .home-link:active { background: #1a3a5c; border-color: #63b3ed; }
 
     /* ── Start screen ── */
     #start-screen { max-width: 700px; width: 100%; animation: fadeIn 0.3s ease; }
@@ -230,7 +256,7 @@
 
   <!-- Top bar -->
   <div class="topbar">
-    <a class="back-btn" href="./">← Velg quiz</a>
+    <a class="back-btn" href="./"><span class="arrow">←</span> Velg quiz</a>
     <div class="topbar-title" id="topbar-title">Quiz</div>
   </div>
 
@@ -280,7 +306,7 @@
       <div class="cat-breakdown"   id="cat-breakdown"></div>
       <div class="result-btns">
         <button class="restart-btn" onclick="restartQuiz()">Ta quizen på nytt</button>
-        <a class="home-link" href="./">← Velg en annen quiz</a>
+        <a class="home-link" href="./"><span class="arrow">←</span> Velg en annen quiz</a>
       </div>
     </div>
   </div>

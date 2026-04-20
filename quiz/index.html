@@ -28,12 +28,22 @@
       padding-top: 4px;
     }
     .back-btn {
-      color: #63b3ed;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #16213e;
+      border: 1px solid #2d4a6e;
+      border-radius: 10px;
+      color: #e2e8f0;
       text-decoration: none;
       font-size: 14px;
-      padding: 6px 0;
+      font-weight: 500;
+      padding: 8px 14px;
       -webkit-tap-highlight-color: transparent;
+      transition: background 0.15s, border-color 0.15s;
     }
+    .back-btn .arrow { color: #63b3ed; }
+    .back-btn:active { background: #1a3a5c; border-color: #63b3ed; }
     .topbar-title {
       flex: 1;
       text-align: center;
@@ -127,7 +137,7 @@
 <body>
 
   <div class="topbar">
-    <a class="back-btn" href="../">← Hjem</a>
+    <a class="back-btn" href="../"><span class="arrow">←</span> Hjem</a>
     <div class="topbar-title">Quiz</div>
   </div>
 

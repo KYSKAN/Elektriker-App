@@ -11,6 +11,11 @@ PWA er oppe og kjører på telefon. Koblet til GitHub — automatisk deploy via 
 - **Kabel og vern** — Kabeldimensjonering og vernvalg etter NEK 400. Forlegningsmetoder A1–E inkl. D1/D2 (jord). Auto-temperatur ved jordforlegning.
 - **RC/RL/RLC krets** — Aktiv, reaktiv og syneffekt, impedans, strøm, fasevinkel, resonansfrekvens.
 
+### Quiz-app (`quiz/`)
+- **LØM fagskole** — Ledelse, marked, regnskap, økonomi
+- **RLC kretser** — Fagspørsmål om RC/RL/RLC
+- Quiz-velger + flertemastøtte via `?tema=`-URL-param
+
 ---
 
 ## Teknologi
@@ -24,26 +29,6 @@ PWA er oppe og kjører på telefon. Koblet til GitHub — automatisk deploy via 
 | Versjonskontroll | Git + GitHub (KYSKAN/AppTilTelefon) |
 
 ---
-
-## Filstruktur
-```
-AppTilTelefon/
-├── index.html
-├── manifest.json
-├── service-worker.js      (nåværende versjon: v25)
-├── CLAUDE.md
-├── DEVELOPMENT.md
-├── css/
-│   └── style.css
-├── js/
-│   ├── menu.js
-│   ├── calc-ohm.js
-│   ├── kabel-data.js
-│   ├── calc-kabel.js
-│   └── calc-krets.js
-└── icons/
-    └── icon.svg
-```
 
 ---
 
@@ -69,4 +54,4 @@ AppTilTelefon/
 - Android-only, ingen iOS/Safari-hensyn
 - Hold all logikk i frontend — ingen server nødvendig
 - Legg til ny kalkulator: se instruksjoner i `CLAUDE.md`
-- **Husk:** Bump `CACHE`-versjon i `service-worker.js` ved hver deploy
+- **Husk:** Bump `CACHE`-versjon i `service-worker.js` linje 1 ved hver deploy

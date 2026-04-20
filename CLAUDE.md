@@ -19,8 +19,14 @@ AppTilTelefon/
 │   ├── kabel-data.js      Tabeller og konstanter for kabel og vern (IEC 60364-5-52)
 │   ├── calc-kabel.js      Kabel og vern: NEK 400, IT/TN, logikk og utregning
 │   └── calc-krets.js      RC/RL/RLC: impedans, effekter, fasevinkel
-└── icons/
-    └── icon.svg           App-ikon (kalkulator-illustrasjon, mørk bakgrunn)
+├── icons/
+│   └── icon.svg           App-ikon (kalkulator-illustrasjon, mørk bakgrunn)
+└── quiz/
+    ├── index.html          Quiz-velger — kort per tema, lenker til spill.html?tema=X
+    ├── spill.html          Quiz-spill — laster sporsmal-${tema}.js dynamisk fra URL-param
+    ├── sporsmal-lom.js     Spørsmål: LØM fagskole (ledelse, marked, regnskap, økonomi)
+    ├── sporsmal-rlc.js     Spørsmål: RC/RL/RLC kretser
+    └── QUIZ-FORMAT.md      Format og instruksjoner for quiz-data
 ```
 
 ## Kalkulatorer
@@ -29,6 +35,13 @@ AppTilTelefon/
 | ohm     | calc-ohm.js     | viewOhm     | Ohms lov med multiplikator             |
 | kabel   | calc-kabel.js   | viewKabel   | Kabeldimensjonering etter NEK 400      |
 | krets   | calc-krets.js   | viewKrets   | RC/RL/RLC: P, Q, S, cos φ, Z, I, φ    |
+
+## Quiz (quiz/)
+Separat app på `quiz/index.html`. Lenkes fra hoved-appen via menyen.
+- `index.html` viser temavelger — ett kort per quiz-tema
+- `spill.html` er selve quiz-motoren — laster spørsmålsfil dynamisk basert på `?tema=X`
+- Legg til nytt tema: opprett `sporsmal-X.js` + legg til kort i `index.html`
+- Se `quiz/QUIZ-FORMAT.md` for spørsmålsformat og steg-for-steg instruksjoner
 
 ## Viktige regler
 - **Service worker:** Bump `CACHE` (v18 → v19 osv.) i `service-worker.js` ved HVER deploy — ellers ser ikke telefonen endringene

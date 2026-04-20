@@ -4,23 +4,33 @@
 
 ```
 quiz/
-├── index.html          Quiz-app (UI + logikk) — rør ikke denne for å bytte tema
-├── sporsmal-lom.js     Spørsmålsdata for LØM fagskole — bytt denne for nytt tema
+├── index.html          Quiz-velger — temavelger med ett kort per tema
+├── spill.html          Quiz-motoren — laster spørsmålsfil dynamisk via ?tema=X
+├── sporsmal-lom.js     Spørsmålsdata: LØM fagskole
+├── sporsmal-rlc.js     Spørsmålsdata: RLC kretser
 └── QUIZ-FORMAT.md      Denne filen
 ```
 
 ---
 
-## Slik bytter du quiztema
+## Arkitektur
+
+`index.html` er temavelgeren. Hvert kort lenker til `spill.html?tema=<nøkkel>`.
+`spill.html` leser `?tema=`-parameteren og laster `sporsmal-${tema}.js` dynamisk.
+
+---
+
+## Slik legger du til et nytt quiztema
 
 1. Lag en ny fil, f.eks. `sporsmal-elektro.js`, med samme format som `sporsmal-lom.js`
-2. I `quiz/index.html`, finn linjen:
+2. I `quiz/index.html`, legg til et nytt kort:
    ```html
-   <script src="sporsmal-lom.js"></script>
+   <a class="quiz-card" href="spill.html?tema=elektro">
+     <div class="quiz-card-title">Elektro</div>
+     <div class="quiz-card-sub">XX spørsmål · kategorier …</div>
+   </a>
    ```
-   Bytt filnavnet til den nye filen.
-3. Oppdater `CAT_META`-objektet i `index.html` hvis det nye temaet har andre kategorier.
-4. Bump cache-versjon i `service-worker.js` og push.
+3. Bump cache-versjon i `service-worker.js`, legg til `'./quiz/sporsmal-elektro.js'` i `FILES`, og push.
 
 ---
 
@@ -60,7 +70,7 @@ Hvert element i arrayet ser slik ut:
 ## Slik legger du til nye kategorier
 
 1. Legg til spørsmål med en ny `cat`-nøkkel i spørsmålsfilen.
-2. I `quiz/index.html`, finn `CAT_META`-objektet og legg til en ny rad:
+2. I `quiz/spill.html`, finn `CAT_META`-objektet og legg til en ny rad:
    ```js
    nykategori: { label: 'Visningsnavn', color: '#hexfarge' }
    ```
@@ -79,13 +89,13 @@ Hvert element i arrayet ser slik ut:
 
 Kopier et eksisterende spørsmål i spørsmålsfilen og rediger feltene. Sjekk at:
 - `correct` er riktig indeks (teller fra 0)
-- `cat` matcher en nøkkel i `CAT_META`
+- `cat` matcher en nøkkel i `CAT_META` i `spill.html`
 - `opts` har nøyaktig 4 elementer
 
 ---
 
 ## Husk etter endringer
 
-- Bump `CACHE`-versjonen i `service-worker.js` (f.eks. v50 → v51)
+- Bump `CACHE`-versjonen i `service-worker.js` linje 1
 - Legg til nye JS-filer i `FILES`-arrayet i `service-worker.js`
 - `git add . && git commit -m "..." && git push`
