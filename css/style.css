@@ -1,4 +1,12 @@
 /* ── Global ── */
+#appVersion {
+  position: fixed;
+  bottom: 8px;
+  right: 10px;
+  font-size: 10px;
+  color: #2d4a6e;
+  pointer-events: none;
+}
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
