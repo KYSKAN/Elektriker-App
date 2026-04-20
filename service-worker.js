@@ -1,4 +1,4 @@
-const CACHE = 'kalkulator-v49';
+const CACHE = 'kalkulator-v50';
 
 const FILES = [
   './',
@@ -17,6 +17,7 @@ const FILES = [
   './kalkulator/js/calc-krets.js',
   './quiz/',
   './quiz/index.html',
+  './quiz/sporsmal-lom.js',
 ];
 
 self.addEventListener('install', event => {
