@@ -1,7 +1,7 @@
 # CLAUDE.md — Prosjektoversikt
 
 ## Hva er dette?
-PWA og nettside for elektrikere. Fagkalkulatorer og quiz. Fungerer som installerbar PWA på Android og iOS, og som nettside i alle nettlesere på mobil og PC. Hostet på GitHub Pages — automatisk deploy ved `git push`. URL: https://kyskan.github.io/AppTilTelefon
+PWA og nettside for elektrikere. Fagkalkulatorer og quiz. Fungerer som installerbar PWA på Android og iOS, og som nettside i alle nettlesere på mobil og PC. Hostet på GitHub Pages — automatisk deploy ved `git push`. URL: https://kyskan.github.io/Elektriker-App
 
 ## Filstruktur
 ```
