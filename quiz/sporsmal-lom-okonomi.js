@@ -38,7 +38,8 @@ const QUESTIONS = [
       'Den laveste salgsprisen bedriften kan sette uten tap'
     ],
     correct: 2,
-    explain: 'Under nullpunktet = tap. Over nullpunktet = overskudd. Formelen er: Nullpunktsomsetning = Faste kostnader / Dekningsgrad. Jo lavere dekningsgrad, jo høyere omsetning trengs for å nå nullpunktet.'
+    img: `<svg viewBox="0 0 280 172" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="172" fill="#161927" rx="8"/><line x1="28" y1="12" x2="28" y2="148" stroke="#2a2f4a" stroke-width="1.5"/><line x1="28" y1="148" x2="268" y2="148" stroke="#2a2f4a" stroke-width="1.5"/><text x="148" y="163" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Omsetning / volum</text><line x1="28" y1="106" x2="268" y2="106" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,3"/><line x1="28" y1="106" x2="268" y2="56" stroke="#e74c3c" stroke-width="2"/><line x1="28" y1="148" x2="268" y2="28" stroke="#10b981" stroke-width="2"/><circle cx="168" cy="84" r="5" fill="white" stroke="#5c7cfa" stroke-width="2.5"/><line x1="168" y1="84" x2="168" y2="148" stroke="#5c7cfa" stroke-width="1.5" stroke-dasharray="4,3"/><text x="244" y="104" fill="#f59e0b" font-size="9" font-family="system-ui,sans-serif">FK</text><text x="244" y="50" fill="#e74c3c" font-size="9" font-family="system-ui,sans-serif">TK</text><text x="244" y="24" fill="#10b981" font-size="9" font-family="system-ui,sans-serif">Inntekt</text><text x="168" y="160" fill="#5c7cfa" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Nullpunkt</text><text x="90" y="136" fill="#e74c3c" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">TAP</text><text x="220" y="136" fill="#10b981" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">OVERSKUDD</text></svg>`,
+    explain: 'Under nullpunktet = tap. Over nullpunktet = overskudd. Formel: Nullpunktsomsetning = Faste kostnader / Dekningsgrad. For en elektrobedrift: hvis faste kostnader er 2 mill. kr/år og DG er 40 %, må bedriften omsette for 5 mill. kr for å gå i null.'
   },
   {
     cat: 'okonomi', catLabel: 'Økonomistyring',
@@ -98,7 +99,7 @@ const QUESTIONS = [
       'En metode for å sette pris basert på hva markedet er villig til å betale'
     ],
     correct: 2,
-    explain: 'Selvkostkalkylen: direkte materialkostnader + direkte lønnskostnader + indirekte kostnader (tillegg for OH og admin) = Selvkost. Prisen settes over selvkost for å sikre fortjeneste.'
+    explain: 'Selvkostkalkylen: direkte materialkostnader + direkte lønnskostnader + indirekte kostnader (OH-tillegg for admin og rigg) = Selvkost. I el-entreprise er dette grunnlaget for tilbudsprisen: Selvkost + fortjenestepåslag = tilbudspris. Legger du inn for lav selvkost taper du penger på oppdraget.'
   },
   {
     cat: 'okonomi', catLabel: 'Økonomistyring',
@@ -351,5 +352,31 @@ const QUESTIONS = [
     ],
     correct: 1,
     explain: 'Bruttofortjeneste = Salgsinntekt (ekskl. mva.) − Varekostnad. Uttrykt i prosent av salgsinntekt får man BFP. Viser lønnsomheten på selve varesalget før drifts- og finanskostnader.'
+  },
+
+  {
+    cat: 'okonomi', catLabel: 'Økonomistyring',
+    q: 'Hva inngår i en prosjektkalkyle for et el-installasjonsoppdrag?',
+    opts: [
+      'Kun materialkostnader (kabel, kurssikringer, koblingsbokser)',
+      'Kun lønnskostnader for montørene',
+      'Direkte materialer + direkte lønn + indirekte kostnader (rigg, bil, verktøy) + fortjenestepåslag',
+      'Bare fastpris basert på antall kvadratmeter'
+    ],
+    correct: 2,
+    explain: 'En fullstendig prosjektkalkyle inkluderer: (1) Direkte materialkostnader (innkjøpspris + svinn), (2) Direkte lønnskostnader (estimerte timer × timesats inkl. sosiale kostnader), (3) Indirekte kostnader / OH-tillegg (rigg, firmabiler, administrasjon), (4) Fortjenestepåslag. Summen gir tilbudsprisen. Feil kalkyle = tap på prosjektet.'
+  },
+
+  {
+    cat: 'okonomi', catLabel: 'Økonomistyring',
+    q: 'Hva er arbeidsgiveravgift, og hvor stor er standardsatsen for de fleste norske bedrifter?',
+    opts: [
+      'En avgift ansatte betaler av lønnen sin — 8,2 %',
+      'En avgift arbeidsgiveren betaler av lønnsutbetalingene — standardsatsen er 14,1 %',
+      'En avgift på bedriftens overskudd — 22 %',
+      'En avgift som bare gjelder AS — 10 %'
+    ],
+    correct: 1,
+    explain: 'Arbeidsgiveravgiften (AGA) er en skatt arbeidsgiver betaler til staten av lønnsgrunnlaget. Standardsats er 14,1 % (sone 1 — de fleste steder i landet). For en elektrobedrift er AGA en vesentlig lønnskostnad som alltid skal med i prosjektkalkylen: timesats × (1 + AGA-sats + feriepengeprosent + evt. pensjon).'
   }
 ];

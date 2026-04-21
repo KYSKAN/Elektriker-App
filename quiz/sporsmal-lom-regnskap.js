@@ -146,7 +146,8 @@ const QUESTIONS = [
       'Kun framtidige kontantstrømmer'
     ],
     correct: 1,
-    explain: 'Balansen = øyeblikksbilde per dato (ofte 31.12). Venstresiden: eiendeler (anlegg + omløpsmidler). Høyresiden: egenkapital + gjeld. Sum eiendeler = sum EK+G alltid.'
+    img: `<svg viewBox="0 0 280 172" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="172" fill="#161927" rx="8"/><line x1="140" y1="10" x2="140" y2="162" stroke="#2a2f4a" stroke-width="2"/><line x1="10" y1="36" x2="270" y2="36" stroke="#2a2f4a" stroke-width="2"/><text x="75" y="28" fill="#5c7cfa" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">EIENDELER</text><text x="205" y="28" fill="#ec4899" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">EK + GJELD</text><text x="18" y="54" fill="#7b82a8" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Anleggsmidler:</text><text x="22" y="68" fill="#e8eaf6" font-size="9" font-family="system-ui,sans-serif">Biler, verktøy, maskiner</text><text x="22" y="80" fill="#e8eaf6" font-size="9" font-family="system-ui,sans-serif">Bygninger, datautstyr</text><text x="18" y="98" fill="#7b82a8" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Omløpsmidler:</text><text x="22" y="112" fill="#e8eaf6" font-size="9" font-family="system-ui,sans-serif">Varelager, fordringer</text><text x="22" y="124" fill="#e8eaf6" font-size="9" font-family="system-ui,sans-serif">Bank og kontanter</text><text x="148" y="54" fill="#7b82a8" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Egenkapital:</text><text x="152" y="68" fill="#e8eaf6" font-size="9" font-family="system-ui,sans-serif">Aksjekapital</text><text x="152" y="80" fill="#e8eaf6" font-size="9" font-family="system-ui,sans-serif">Opptjent overskudd</text><text x="148" y="98" fill="#7b82a8" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Gjeld:</text><text x="152" y="112" fill="#e8eaf6" font-size="9" font-family="system-ui,sans-serif">Langsiktig (banklån)</text><text x="152" y="124" fill="#e8eaf6" font-size="9" font-family="system-ui,sans-serif">Kortsiktig (lev.gjeld)</text><line x1="10" y1="142" x2="130" y2="142" stroke="#2a2f4a" stroke-width="1"/><line x1="150" y1="142" x2="270" y2="142" stroke="#2a2f4a" stroke-width="1"/><text x="75" y="157" fill="#5c7cfa" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Sum eiendeler</text><text x="205" y="157" fill="#ec4899" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Sum EK + Gjeld</text></svg>`,
+    explain: 'Balansen = øyeblikksbilde per dato (ofte 31.12). Venstresiden: eiendeler (anlegg + omløpsmidler). Høyresiden: egenkapital + gjeld. Sum eiendeler = sum EK+gjeld alltid. For en elektrobedrift er typiske anleggsmidler: firmabiler, spesialverktøy og EK-målere.'
   },
   {
     cat: 'regnskap', catLabel: 'Regnskapsanalyse',
@@ -230,7 +231,7 @@ const QUESTIONS = [
       'Innbetaling fra kunder'
     ],
     correct: 1,
-    explain: 'Avskrivning sprer kostnaden for en anleggsmiddel utover dens levetid. F.eks. en bil til 300 000 med 6 års levetid gir avskrivning på 50 000 per år (lineært). Er en kostnad, men ingen utbetaling.'
+    explain: 'Avskrivning sprer kostnaden for et anleggsmiddel over dens levetid. F.eks. en servicebil til 300 000 kr med 6 års levetid gir 50 000 kr/år i avskrivning (lineært). Er en kostnad i resultatregnskapet, men ingen utbetaling — viktig å forstå i prosjektkalkyler.'
   },
   {
     cat: 'regnskap', catLabel: 'Regnskapsanalyse',

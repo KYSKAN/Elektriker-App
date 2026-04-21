@@ -62,7 +62,8 @@ const QUESTIONS = [
       'Produkt, Person, Posisjonering og Plass'
     ],
     correct: 1,
-    explain: '4P = Produkt (hva tilbyr vi?), Pris (hva koster det?), Plass/Distribusjon (hvordan når vi kunden?), Påvirkning/Promosjon (hvordan kommuniserer vi?). Disse fire virkemidlene styrer markedstilnærmingen.'
+    img: `<svg viewBox="0 0 280 162" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="162" fill="#161927" rx="8"/><rect x="8" y="8" width="124" height="70" rx="6" fill="#5c7cfa" opacity="0.2"/><rect x="148" y="8" width="124" height="70" rx="6" fill="#ec4899" opacity="0.2"/><rect x="8" y="86" width="124" height="70" rx="6" fill="#10b981" opacity="0.2"/><rect x="148" y="86" width="124" height="70" rx="6" fill="#f59e0b" opacity="0.2"/><text x="70" y="38" fill="#5c7cfa" font-size="17" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">Produkt</text><text x="70" y="56" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Hva tilbyr vi?</text><text x="210" y="38" fill="#ec4899" font-size="17" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">Pris</text><text x="210" y="56" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Hva koster det?</text><text x="70" y="117" fill="#10b981" font-size="15" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">Plass/Dist.</text><text x="70" y="134" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Hvordan nå kunden?</text><text x="210" y="117" fill="#f59e0b" font-size="14" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">Påvirkning</text><text x="210" y="134" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Hvordan kommunisere?</text></svg>`,
+    explain: '4P = Produkt (hva tilbyr vi?), Pris (hva koster det?), Plass/Distribusjon (hvordan når vi kunden?), Påvirkning/Promosjon (hvordan kommuniserer vi?). For en elektrobedrift: Produkt = installasjonstjenester, Pris = timepris/fastpris, Plass = lokalt/regionalt, Påvirkning = referanser og nettverksmarkedsføring.'
   },
   {
     cat: 'marked', catLabel: 'Markedsføringsledelse',
@@ -122,7 +123,8 @@ const QUESTIONS = [
       'En modell for å sette riktig pris på et produkt'
     ],
     correct: 1,
-    explain: 'AIDA beskriver kommunikasjons- og kjøpsprosessen: vekke oppmerksomhet (Attention), skape interesse (Interest), bygge ønske (Desire), utløse kjøp/handling (Action).'
+    img: `<svg viewBox="0 0 280 172" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="172" fill="#161927" rx="8"/><polygon points="10,10 270,10 242,50 38,50" fill="#5c7cfa" opacity="0.8"/><polygon points="38,56 242,56 214,96 66,96" fill="#00a8e8" opacity="0.8"/><polygon points="66,102 214,102 190,137 90,137" fill="#10b981" opacity="0.8"/><polygon points="90,143 190,143 172,165 108,165" fill="#f59e0b" opacity="0.8"/><text x="140" y="35" fill="white" font-size="12" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">A – Attention (oppmerksomhet)</text><text x="140" y="80" fill="white" font-size="12" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">I – Interest (interesse)</text><text x="140" y="124" fill="white" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">D – Desire (ønske)</text><text x="140" y="158" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">A – Action</text></svg>`,
+    explain: 'AIDA beskriver kommunikasjons- og kjøpsprosessen: vekke oppmerksomhet (Attention), skape interesse (Interest), bygge ønske (Desire), utløse kjøp/handling (Action). For en elektrobedrift: annonse → referanseprosjekter → pristilbud → signert kontrakt.'
   },
   {
     cat: 'marked', catLabel: 'Markedsføringsledelse',
@@ -146,7 +148,8 @@ const QUESTIONS = [
       'Lansering, Konkurranse, Rabatt, Avvikling'
     ],
     correct: 2,
-    explain: 'Produktlivssyklusen: Introduksjon (lav omsetning, høye kostnader) → Vekst (raskt stigende salg) → Modenhet (stagnasjon, hard konkurranse) → Tilbakegang (fallende salg).'
+    img: `<svg viewBox="0 0 280 162" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="162" fill="#161927" rx="8"/><line x1="22" y1="10" x2="22" y2="138" stroke="#2a2f4a" stroke-width="1.5"/><line x1="22" y1="138" x2="268" y2="138" stroke="#2a2f4a" stroke-width="1.5"/><text x="145" y="155" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Tid</text><path d="M22,133 C38,133 48,122 63,98 C78,73 98,38 128,26 C158,14 182,30 206,64 C224,90 240,118 268,133" fill="none" stroke="#5c7cfa" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="14" x2="70" y2="138" stroke="#2a2f4a" stroke-width="1" stroke-dasharray="4,3"/><line x1="138" y1="14" x2="138" y2="138" stroke="#2a2f4a" stroke-width="1" stroke-dasharray="4,3"/><line x1="206" y1="14" x2="206" y2="138" stroke="#2a2f4a" stroke-width="1" stroke-dasharray="4,3"/><text x="46" y="12" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Intro</text><text x="104" y="12" fill="#5c7cfa" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Vekst</text><text x="172" y="12" fill="#10b981" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Modenhet</text><text x="237" y="12" fill="#f59e0b" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Tilbakegang</text></svg>`,
+    explain: 'Produktlivssyklusen: Introduksjon (lav omsetning, høye lanserings-kostnader) → Vekst (raskt stigende salg) → Modenhet (stagnasjon, hard konkurranse) → Tilbakegang (fallende salg). Gjelder også tjenester — f.eks. er tradisjonell installasjon av oljefyr i tilbakegangsfase, mens lading for elbil er i vekstfasen.'
   },
   {
     cat: 'marked', catLabel: 'Markedsføringsledelse',
@@ -158,7 +161,7 @@ const QUESTIONS = [
       'B2B = netthandel, B2C = fysisk butikk'
     ],
     correct: 1,
-    explain: 'B2B (Business-to-Business) og B2C (Business-to-Consumer) har svært ulik kjøpsatferd: B2B-kjøp er gjerne mer rasjonelle, langsiktige og basert på relasjoner, mens B2C-kjøp ofte er mer impulsive og følelsesdrevne.'
+    explain: 'B2B (Business-to-Business) og B2C (Business-to-Consumer) har svært ulik kjøpsatferd: B2B-kjøp er gjerne mer rasjonelle, langsiktige og basert på relasjoner, mens B2C-kjøp ofte er mer impulsive og følelsesdrevne. Elektroinstallasjons-bedrifter jobber primært B2B: kunder er utbyggere, eiendomsforvaltere, industri og offentlige etater. Anbud og relasjoner er de viktigste salgskanalene.'
   },
   {
     cat: 'marked', catLabel: 'Markedsføringsledelse',
@@ -386,7 +389,8 @@ const QUESTIONS = [
       'Segmenter, Oppdag, Fokuser, Test'
     ],
     correct: 1,
-    explain: 'SOFT/SWOT ser på Styrker og Svakheter (internt) samt Muligheter og Trusler (eksternt). En sentral modell i situasjonsanalysen, og utgangspunkt for videre strategivalg.'
+    img: `<svg viewBox="0 0 280 182" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="182" fill="#161927" rx="8"/><text x="140" y="14" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">← Internt →</text><text x="140" y="104" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">← Eksternt →</text><rect x="8" y="18" width="120" height="74" rx="6" fill="#10b981" opacity="0.18"/><rect x="152" y="18" width="120" height="74" rx="6" fill="#e74c3c" opacity="0.18"/><rect x="8" y="106" width="120" height="72" rx="6" fill="#5c7cfa" opacity="0.18"/><rect x="152" y="106" width="120" height="72" rx="6" fill="#f59e0b" opacity="0.18"/><text x="68" y="62" fill="#10b981" font-size="34" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">S</text><text x="212" y="62" fill="#e74c3c" font-size="34" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">W</text><text x="68" y="149" fill="#5c7cfa" font-size="34" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">O</text><text x="212" y="149" fill="#f59e0b" font-size="34" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">T</text><text x="68" y="82" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Styrker</text><text x="212" y="82" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Svakheter</text><text x="68" y="168" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Muligheter</text><text x="212" y="168" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Trusler</text></svg>`,
+    explain: 'SOFT/SWOT ser på Styrker og Svakheter (internt) samt Muligheter og Trusler (eksternt). Eksempel for elektrobedrift: Styrke = sertifiserte fagarbeidere, Svakhet = liten markedsavdeling, Mulighet = elbil-ladeinstallasjoner, Trussel = prispress fra lavkostkonkurrenter.'
   },
   {
     cat: 'marked', catLabel: 'Markedsføringsledelse',
@@ -423,5 +427,31 @@ const QUESTIONS = [
     ],
     correct: 1,
     explain: 'Konkurransefortrinn skal være varig og vanskelig å kopiere – f.eks. sterkt merkenavn, unik teknologi, stordriftsfordeler, spesialkompetanse eller eksklusive distribusjonskanaler.'
+  },
+
+  {
+    cat: 'marked', catLabel: 'Markedsføringsledelse',
+    q: 'Hva er en anbudskonkurranse, og hvorfor er den sentral i elektrobransjen?',
+    opts: [
+      'En intern konkurranse mellom avdelinger om hvem som selger mest',
+      'En prosess der oppdragsgiver inviterer leverandører til å levere tilbud, og velger leverandør basert på pris, kompetanse og kvalitet',
+      'En messe der elektrobedrifter markedsfører seg',
+      'En offentlig prisstatistikk for elektrotjenester'
+    ],
+    correct: 1,
+    explain: 'I elektrobransjen skjer salg til store kunder (offentlig sektor, utbyggere, industri) ofte gjennom anbud. Elektrobedriften leverer et tilbud med kalkulert pris basert på mengdeuttak (material + timer). Vinner man anbudet, sikrer man oppdrag. Å kalkulere riktig er avgjørende – for lav pris gir tap, for høy pris gir tapt anbud.'
+  },
+
+  {
+    cat: 'marked', catLabel: 'Markedsføringsledelse',
+    q: 'Hva menes med relasjonsmarkedsføring, og hvorfor er det viktig for elektrobedrifter?',
+    opts: [
+      'Markedsføring som kun bruker sosiale medier',
+      'Å bygge og vedlikeholde langsiktige, lønnsomme relasjoner med kunder og samarbeidspartnere',
+      'Å selge til lavest mulig pris for å beholde kunder',
+      'Massemarkedsføring mot privatpersoner'
+    ],
+    correct: 1,
+    explain: 'Relasjonsmarkedsføring handler om tillit og langsiktighet fremfor enkeltransaksjon. For elektrobedrifter er dette svært viktig: en fornøyd utbygger gir gjentatte oppdrag og anbefaler bedriften videre. Referanser og rykte er de sterkeste salgsinstrumentene i bransjen.'
   }
 ];

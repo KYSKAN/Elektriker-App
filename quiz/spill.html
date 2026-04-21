@@ -108,6 +108,15 @@
       background: rgba(255,255,255,0.08);
     }
 
+    /* ── Question image ── */
+    .q-image {
+      margin-bottom: 16px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--surface2);
+    }
+    .q-image svg { width: 100%; height: auto; max-height: 210px; display: block; }
+
     /* ── Question & options ── */
     .question-text { font-size: 1.1rem; font-weight: 600; line-height: 1.55; margin-bottom: 22px; color: #fff; }
 
@@ -285,6 +294,7 @@
     </div>
     <div class="card" id="question-card">
       <span class="cat-badge" id="cat-badge">Kategori</span>
+      <div class="q-image" id="q-image" style="display:none;"></div>
       <div class="question-text" id="question-text"></div>
       <div class="options" id="options-container"></div>
       <div class="explanation" id="explanation"></div>
@@ -398,6 +408,10 @@
       badge.textContent = cat.label;
       badge.style.background = cat.color + '26'; // ~15% opacity
       badge.style.color = cat.color;
+
+      const imgDiv = document.getElementById('q-image');
+      if (q.img) { imgDiv.innerHTML = q.img; imgDiv.style.display = 'block'; }
+      else        { imgDiv.innerHTML = '';    imgDiv.style.display = 'none';  }
 
       document.getElementById('question-text').textContent = q.q;
 

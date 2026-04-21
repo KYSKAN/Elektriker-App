@@ -21,13 +21,15 @@ const QUESTIONS = [
     q: 'Hva er det øverste behovet i Maslows behovspyramide?',
     opts: ['Sikkerhetsbehov', 'Anerkjennelse og status', 'Selvrealisering', 'Sosiale behov'],
     correct: 2,
-    explain: 'Maslows pyramide (nedenfra): Fysiologiske behov → Sikkerhetsbehov → Sosiale behov → Anerkjennelse → Selvrealisering. Man må dekke lavere nivåer før høyere nivåer blir motiverende.'
+    img: `<svg viewBox="0 0 280 190" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cp-maslow"><polygon points="140,4 276,186 4,186"/></clipPath></defs><rect width="280" height="190" fill="#161927" rx="8"/><rect x="0" y="4" width="280" height="36" fill="#8b5cf6" clip-path="url(#cp-maslow)"/><rect x="0" y="40" width="280" height="37" fill="#5c7cfa" clip-path="url(#cp-maslow)"/><rect x="0" y="77" width="280" height="36" fill="#00a8e8" clip-path="url(#cp-maslow)"/><rect x="0" y="113" width="280" height="36" fill="#10b981" clip-path="url(#cp-maslow)"/><rect x="0" y="149" width="280" height="37" fill="#f59e0b" clip-path="url(#cp-maslow)"/><polygon points="140,4 276,186 4,186" fill="none" stroke="#161927" stroke-width="2.5"/><line x1="113" y1="40" x2="167" y2="40" stroke="#161927" stroke-width="1.5"/><line x1="85" y1="77" x2="195" y2="77" stroke="#161927" stroke-width="1.5"/><line x1="57" y1="113" x2="223" y2="113" stroke="#161927" stroke-width="1.5"/><line x1="29" y1="149" x2="251" y2="149" stroke="#161927" stroke-width="1.5"/><text x="140" y="27" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Selvrealisering</text><text x="140" y="63" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Anerkjennelse</text><text x="140" y="99" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Sosiale behov</text><text x="140" y="135" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Sikkerhetsbehov</text><text x="140" y="171" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Fysiologiske behov</text></svg>`,
+    explain: 'Maslows pyramide (nedenfra): Fysiologiske behov → Sikkerhetsbehov → Sosiale behov → Anerkjennelse → Selvrealisering. Man må dekke lavere nivåer før høyere motiveres. For en elektriker betyr dette f.eks.: trygg lønn og fast ansettelse (sikkerhet) må være på plass før faglig utvikling og anerkjennelse kan motivere fullt ut.'
   },
   {
     cat: 'ledelse', catLabel: 'Ledelse & Organisasjon',
     q: 'Hva er det laveste behovet i Maslows behovspyramide?',
     opts: ['Sosiale behov', 'Fysiologiske behov (mat, vann, søvn)', 'Sikkerhetsbehov', 'Anerkjennelse'],
     correct: 1,
+    img: `<svg viewBox="0 0 280 190" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cp-maslow2"><polygon points="140,4 276,186 4,186"/></clipPath></defs><rect width="280" height="190" fill="#161927" rx="8"/><rect x="0" y="4" width="280" height="36" fill="#8b5cf6" clip-path="url(#cp-maslow2)"/><rect x="0" y="40" width="280" height="37" fill="#5c7cfa" clip-path="url(#cp-maslow2)"/><rect x="0" y="77" width="280" height="36" fill="#00a8e8" clip-path="url(#cp-maslow2)"/><rect x="0" y="113" width="280" height="36" fill="#10b981" clip-path="url(#cp-maslow2)"/><rect x="0" y="149" width="280" height="37" fill="#f59e0b" clip-path="url(#cp-maslow2)"/><polygon points="140,4 276,186 4,186" fill="none" stroke="#161927" stroke-width="2.5"/><line x1="113" y1="40" x2="167" y2="40" stroke="#161927" stroke-width="1.5"/><line x1="85" y1="77" x2="195" y2="77" stroke="#161927" stroke-width="1.5"/><line x1="57" y1="113" x2="223" y2="113" stroke="#161927" stroke-width="1.5"/><line x1="29" y1="149" x2="251" y2="149" stroke="#161927" stroke-width="1.5"/><text x="140" y="27" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Selvrealisering</text><text x="140" y="63" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Anerkjennelse</text><text x="140" y="99" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Sosiale behov</text><text x="140" y="135" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Sikkerhetsbehov</text><text x="140" y="171" fill="white" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Fysiologiske behov</text></svg>`,
     explain: 'Fysiologiske behov ligger nederst i pyramiden – mat, vann, søvn, varme. Disse må dekkes før sikkerhetsbehov og høyere behov blir aktuelle motivasjonsfaktorer.'
   },
   {
@@ -40,7 +42,8 @@ const QUESTIONS = [
       'Faktorer som øker bedriftens lønnsomhet direkte'
     ],
     correct: 1,
-    explain: 'Hygienefaktorer (lønn, arbeidsforhold, ledelse, trygghet) forhindrer mistrivsel hvis de er til stede – men de skaper ikke motivasjon alene. Motivasjonsfaktorer gjør det.'
+    img: `<svg viewBox="0 0 280 175" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="175" fill="#161927" rx="8"/><rect x="8" y="8" width="122" height="32" rx="6" fill="#3b82f6" opacity="0.85"/><rect x="150" y="8" width="122" height="32" rx="6" fill="#8b5cf6" opacity="0.85"/><text x="69" y="28" fill="white" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Hygienefaktorer</text><text x="211" y="28" fill="white" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Motivasjonsfaktorer</text><line x1="140" y1="8" x2="140" y2="167" stroke="#2a2f4a" stroke-width="1"/><text x="69" y="60" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Lønn og goder</text><text x="69" y="78" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Arbeidsforhold</text><text x="69" y="96" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">HMS og sikkerhet</text><text x="69" y="114" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Ledelse</text><text x="69" y="132" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Kollegaer</text><text x="211" y="60" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Ansvar</text><text x="211" y="78" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Anerkjennelse</text><text x="211" y="96" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Faglig vekst</text><text x="211" y="114" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Meningsfullt arbeid</text><text x="211" y="132" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Prestasjoner</text><text x="69" y="155" fill="#3b82f6" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Hindrer mistrivsel</text><text x="211" y="155" fill="#8b5cf6" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Skaper motivasjon</text></svg>`,
+    explain: 'Hygienefaktorer (lønn, arbeidsforhold, ledelse, trygghet) forhindrer mistrivsel hvis de er til stede – men de skaper ikke motivasjon alene. For elektrikere: fast lønn, verneutstyr og oversiktlige arbeidstider er hygienefaktorer. Motivasjonsfaktorer gjør det.'
   },
   {
     cat: 'ledelse', catLabel: 'Ledelse & Organisasjon',
@@ -52,7 +55,8 @@ const QUESTIONS = [
       'Arbeidskontrakt, arbeidstid og pauser'
     ],
     correct: 2,
-    explain: 'Motivasjonsfaktorer er knyttet til selve arbeidsinnholdet: ansvar, anerkjennelse, læring og mestring. Disse skaper reell trivsel og motivasjon – i motsetning til hygienefaktorer.'
+    img: `<svg viewBox="0 0 280 175" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="175" fill="#161927" rx="8"/><rect x="8" y="8" width="122" height="32" rx="6" fill="#3b82f6" opacity="0.85"/><rect x="150" y="8" width="122" height="32" rx="6" fill="#8b5cf6" opacity="0.85"/><text x="69" y="28" fill="white" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Hygienefaktorer</text><text x="211" y="28" fill="white" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Motivasjonsfaktorer</text><line x1="140" y1="8" x2="140" y2="167" stroke="#2a2f4a" stroke-width="1"/><text x="69" y="60" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Lønn og goder</text><text x="69" y="78" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Arbeidsforhold</text><text x="69" y="96" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">HMS og sikkerhet</text><text x="69" y="114" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Ledelse</text><text x="69" y="132" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Kollegaer</text><text x="211" y="60" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Ansvar</text><text x="211" y="78" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Anerkjennelse</text><text x="211" y="96" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Faglig vekst</text><text x="211" y="114" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Meningsfullt arbeid</text><text x="211" y="132" fill="#e8eaf6" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Prestasjoner</text><text x="69" y="155" fill="#3b82f6" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Hindrer mistrivsel</text><text x="211" y="155" fill="#8b5cf6" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Skaper motivasjon</text></svg>`,
+    explain: 'Motivasjonsfaktorer er knyttet til selve arbeidsinnholdet: ansvar, anerkjennelse, læring og mestring. For elektrikere: selvstendige oppdrag, fagbrev/sertifisering, tillit fra leder og det å mestre krevende installasjoner er typiske motivasjonsfaktorer.'
   },
   {
     cat: 'ledelse', catLabel: 'Ledelse & Organisasjon',
@@ -88,7 +92,7 @@ const QUESTIONS = [
       'En organisasjon som kun finnes i industribedrifter'
     ],
     correct: 2,
-    explain: 'Linjestabsorganisasjonen kombinerer linjestrukturen (myndighet går nedover) med stabsenheter (HR, økonomi, IT) som gir faglige råd uten formell beslutningsmyndighet.'
+    explain: 'Linjestabsorganisasjonen kombinerer linjestrukturen (myndighet går nedover) med stabsenheter (HR, økonomi, IT) som gir faglige råd uten formell beslutningsmyndighet. Mange mellomstor elektrobedrifter bruker denne modellen: montører rapporterer til arbeidsleder, mens HMS-ansvarlig og økonomi fungerer som stabsfunksjoner.'
   },
   {
     cat: 'ledelse', catLabel: 'Ledelse & Organisasjon',
@@ -160,7 +164,7 @@ const QUESTIONS = [
       'Situasjonsledelse handler kun om å håndtere kriser'
     ],
     correct: 1,
-    explain: 'Situasjonsledelse sier at lederen bør tilpasse atferden til medarbeiderens «modenhet» – kombinasjonen av kompetanse og motivasjon. En uerfaren og usikker medarbeider trenger mer instruksjon enn en erfaren og motivert.'
+    explain: 'Situasjonsledelse sier at lederen bør tilpasse atferden til medarbeiderens «modenhet» – kombinasjonen av kompetanse og motivasjon. En lærling i første opplæringsår trenger tett instruksjon og oppfølging. En erfaren montør med svennebrev trenger mer autonomi og delegering.'
   },
   {
     cat: 'ledelse', catLabel: 'Ledelse & Organisasjon',
@@ -341,5 +345,31 @@ const QUESTIONS = [
     ],
     correct: 1,
     explain: 'Coaching bygger på tillit til at medarbeideren har svarene selv. Coachen stiller åpne spørsmål, utfordrer antakelser og støtter refleksjon – i motsetning til tradisjonell instruksjon.'
+  },
+
+  {
+    cat: 'ledelse', catLabel: 'Ledelse & Organisasjon',
+    q: 'Hva kjennetegner prosjektbasert arbeid, slik det er vanlig i elektroinstallasjons-bransjen?',
+    opts: [
+      'Arbeidet er repetitivt og identisk fra dag til dag',
+      'Arbeidet er tidsavgrenset med definert mål, budsjett og ressurser – avsluttes når oppdraget er ferdig',
+      'Prosjekter har ingen fast leder',
+      'Prosjektarbeid krever ikke planlegging'
+    ],
+    correct: 1,
+    explain: 'El-installasjonsprosjekter (f.eks. el-anlegg i en ny skole eller boligblokk) har tydelig start- og sluttdato, definert budsjett, kalkulerte materialkostnader og et team av montører. Prosjektlederen koordinerer fremdrift, bemanning og økonomi. Avvik mot kalkyle må håndteres løpende.'
+  },
+
+  {
+    cat: 'ledelse', catLabel: 'Ledelse & Organisasjon',
+    q: 'Hva er arbeidsgiversiden i elektrobransjen organisert som?',
+    opts: [
+      'EL & IT Forbundet',
+      'Fellesforbundet',
+      'NHO Elektro',
+      'Arbeidstilsynet'
+    ],
+    correct: 2,
+    explain: 'NHO Elektro er arbeidsgiverorganisasjonen for elektroinstallasjons-bedrifter i Norge og forhandler tariffavtalen (Landsoverenskomsten) mot EL & IT Forbundet på arbeidstakersiden. En arbeidsleder/daglig leder i en el-bedrift bør kjenne til denne strukturen.'
   }
 ];
