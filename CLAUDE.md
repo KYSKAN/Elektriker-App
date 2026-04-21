@@ -26,9 +26,11 @@ AppTilTelefon/
     ├── spill.html                  Quiz-spill — laster sporsmal-${tema}.js dynamisk fra URL-param
     ├── sporsmal-lom-ledelse.js     Spørsmål: LØM – Ledelse & Organisasjon (28 spørsmål)
     ├── sporsmal-lom-marked.js      Spørsmål: LØM – Markedsføringsledelse (35 spørsmål)
-    ├── sporsmal-lom-regnskap.js    Spørsmål: LØM – Regnskapsanalyse (27 spørsmål)
-    ├── sporsmal-lom-okonomi.js     Spørsmål: LØM – Økonomistyring (28 spørsmål)
+    ├── sporsmal-lom-regnskap.js    Spørsmål: LØM – Regnskapsanalyse (33 spørsmål)
+    ├── sporsmal-lom-okonomi.js     Spørsmål: LØM – Økonomistyring (48 spørsmål)
+    ├── sporsmal-lom-lovavtale.js   Spørsmål: LØM – Lover & Avtaler
     ├── sporsmal-rlc.js             Spørsmål: RC/RL/RLC kretser
+    ├── KILDER-lom-lovavtale.md     Kildemateriale for lovavtale-quiz
     └── QUIZ-FORMAT.md              Format og instruksjoner for quiz-data
 ```
 

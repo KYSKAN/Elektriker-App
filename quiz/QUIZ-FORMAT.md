@@ -8,9 +8,9 @@ quiz/
 ├── spill.html                  Quiz-motoren — laster spørsmålsfil dynamisk via ?tema=X
 ├── sporsmal-lom-ledelse.js     Spørsmålsdata: LØM – Ledelse & Organisasjon (28 spørsmål)
 ├── sporsmal-lom-marked.js      Spørsmålsdata: LØM – Markedsføringsledelse (35 spørsmål)
-├── sporsmal-lom-regnskap.js    Spørsmålsdata: LØM – Regnskapsanalyse (27 spørsmål)
-├── sporsmal-lom-okonomi.js     Spørsmålsdata: LØM – Økonomistyring (28 spørsmål)
-├── sporsmal-lom-lovavtale.js   Spørsmålsdata: LØM – Lover & Avtaler (28 spørsmål)
+├── sporsmal-lom-regnskap.js    Spørsmålsdata: LØM – Regnskapsanalyse (33 spørsmål)
+├── sporsmal-lom-okonomi.js     Spørsmålsdata: LØM – Økonomistyring (48 spørsmål)
+├── sporsmal-lom-lovavtale.js   Spørsmålsdata: LØM – Lover & Avtaler
 ├── sporsmal-rlc.js             Spørsmålsdata: RLC kretser
 └── QUIZ-FORMAT.md              Denne filen
 ```
@@ -56,8 +56,21 @@ Hvert element i arrayet ser slik ut:
     'Alternativ D'
   ],
   correct: 2,                  // indeks (0–3) for riktig svar
-  explain: 'Forklaringstekst som vises etter svar.'
+  explain: 'Forklaringstekst som vises etter svar.',
+  img: `<svg ...>...</svg>`    // valgfri SVG-illustrasjon — se regler under
 }
+```
+
+### Regler for `img`-feltet
+
+- **Bildet må ikke avsløre svaret.** Bruk nøytrale betegnelser ("Fase 1", "Steg 2", "P _ _ _") — aldri svar-teksten direkte i SVG-en.
+- SVG-en skal illustrere strukturen/konseptet, ikke gi bort hva alternativene betyr.
+- Eksempel: et SWOT-diagram viser "Positivt/Negativt intern/ekstern" — ikke "Strengths/Weaknesses/Opportunities/Threats".
+
+### Regler for svaralternativer
+
+- **Riktig svar skal ikke alltid være det lengste alternativet.** Feil svar skal ha omtrent samme lengde som riktig svar — legg til forklarende bitekst i feil-alternativene om nødvendig.
+- Alle 4 alternativer bør se like troverdige og like lange ut.
 ```
 
 ### Kategorier i LØM-filen

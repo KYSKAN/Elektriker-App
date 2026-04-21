@@ -14,8 +14,9 @@ PWA er oppe og kjører. Koblet til GitHub — automatisk deploy via GitHub Pages
 ### Quiz-app (`quiz/`)
 - **LØM – Ledelse & Organisasjon** — 28 spørsmål
 - **LØM – Markedsføringsledelse** — 35 spørsmål
-- **LØM – Regnskapsanalyse** — 27 spørsmål
-- **LØM – Økonomistyring** — 28 spørsmål
+- **LØM – Regnskapsanalyse** — 33 spørsmål
+- **LØM – Økonomistyring** — 48 spørsmål
+- **LØM – Lover & Avtaler** — se `sporsmal-lom-lovavtale.js`
 - **RLC kretser** — Fagspørsmål om RC/RL/RLC
 - Quiz-velger + flertemastøtte via `?tema=`-URL-param
 
