@@ -1,19 +1,21 @@
 // ════════════════════════════════════════════════════════════════
 //  QUIZ-DATA: LØM Fagskole – Økonomistyring
 //  Format: se quiz/QUIZ-FORMAT.md for full dokumentasjon
-//  28 spørsmål
+//  48 spørsmål
 // ════════════════════════════════════════════════════════════════
 
 const QUIZ_META = {
   id: 'lom-okonomi',
   title: 'Økonomistyring',
   subtitle: 'LØM Fagskole',
-  description: '28 spørsmål om Økonomistyring fra LØM-pensumet på fagskole.',
+  description: '48 spørsmål om Økonomistyring fra LØM-pensumet på fagskole – kalkyler, budsjettering, investeringsanalyse og kapitalbinding.',
   cats: {
-    kalkyler:{ label: 'Kalkyler & kostnader',  color: '#10b981' },
-    budsjett:{ label: 'Budsjetter',             color: '#5c7cfa' },
-    lovverk: { label: 'Lovverk & regelverk',    color: '#f59e0b' },
-    selskap: { label: 'Selskapsformer & finans',color: '#ec4899' }
+    kalkyler:      { label: 'Kalkyler & kostnader',        color: '#10b981' },
+    budsjett:      { label: 'Budsjetter',                  color: '#5c7cfa' },
+    investering:   { label: 'Investeringsanalyse',         color: '#a78bfa' },
+    kapitalbinding:{ label: 'Kapitalbinding & lagerstyring',color: '#fb923c' },
+    lovverk:       { label: 'Lovverk & regelverk',         color: '#f59e0b' },
+    selskap:       { label: 'Selskapsformer & finans',     color: '#ec4899' }
   }
 };
 
@@ -370,6 +372,257 @@ const QUESTIONS = [
     explain: 'En fullstendig prosjektkalkyle inkluderer: (1) Direkte materialkostnader (innkjøpspris + svinn), (2) Direkte lønnskostnader (estimerte timer × timesats inkl. sosiale kostnader), (3) Indirekte kostnader / OH-tillegg (rigg, firmabiler, administrasjon), (4) Fortjenestepåslag. Summen gir tilbudsprisen. Feil kalkyle = tap på prosjektet.'
   },
 
+  // ── Budsjettering (Kap 10) ──────────────────────────────────
+  {
+    cat: 'budsjett', catLabel: 'Budsjetter',
+    q: 'Hva er et budsjett?',
+    opts: [
+      'En historisk oversikt over hva bedriften har tjent',
+      'En tallmessig oppstilling av forventede økonomiske konsekvenser av planlagte aktiviteter – en økonomisk plan i kroner',
+      'Et krav fra Skatteetaten om å rapportere inntekter',
+      'En liste over alle ansatte og lønnsnivåer'
+    ],
+    correct: 1,
+    explain: 'Budsjettet er bedriftens viktigste styringsverktøy sammen med regnskapet. Det viser forventede inntekter, kostnader, inn- og utbetalinger for en fremtidig periode og gir grunnlag for budsjettkontroll og avviksanalyse.'
+  },
+  {
+    cat: 'budsjett', catLabel: 'Budsjetter',
+    q: 'Hva er budsjettkontrollens tre trinn?',
+    opts: [
+      'Bokfør → betal → rapporter',
+      'Finn avvik → analyser årsak → sett inn tiltak',
+      'Planlegg → gjennomfør → evaluer',
+      'Registrer → kalkulér → fakturer'
+    ],
+    correct: 1,
+    explain: 'Tre-trinnsmodellen: (1) Finnes det et budsjettavvik? (2) Hva er årsaken til avviket? (3) Hvilke tiltak kan rette på avviket? Et positivt avvik er positivt for bedriften; et negativt avvik er negativt.'
+  },
+  {
+    cat: 'budsjett', catLabel: 'Budsjetter',
+    q: 'En bedrift har husleie på 120 000 kr/år som betales kvartalsvis (30 000 kr). Hva er husleiekostnaden i januar i resultatbudsjettet vs. utbetalingen i januar i likviditetsbudsjettet?',
+    opts: [
+      'Resultatbudsjett: 30 000 kr – Likviditetsbudsjett: 30 000 kr',
+      'Resultatbudsjett: 10 000 kr – Likviditetsbudsjett: 30 000 kr',
+      'Resultatbudsjett: 120 000 kr – Likviditetsbudsjett: 0 kr',
+      'Resultatbudsjett: 0 kr – Likviditetsbudsjett: 10 000 kr'
+    ],
+    correct: 1,
+    explain: 'Resultatbudsjettet periodiserer kostnaden: 120 000 / 12 = 10 000 kr per måned. Likviditetsbudsjettet viser faktisk utbetaling: 30 000 kr betales 1. januar. Februar og mars: 0 kr utbetaling i likviditetsbudsjettet.'
+  },
+
+  // ── Kalkyler utvidet ─────────────────────────────────────────
+  {
+    cat: 'kalkyler', catLabel: 'Kalkyler & kostnader',
+    q: 'Hva er sprangvis faste kostnader?',
+    opts: [
+      'Kostnader som er null ved lav produksjon',
+      'Faste kostnader som øker i «sprang» ved kapasitetsutvidelse (f.eks. nytt lager når produksjonen overstiger en grense)',
+      'Variable kostnader som er spesielt høye én gang i året',
+      'Renter som stiger gradvis med lånesaldo'
+    ],
+    correct: 1,
+    explain: 'Sprangvis faste kostnader er konstante innenfor et aktivitetsnivå, men hopper til et høyere nivå når kapasitetsgrensen nås. Eksempel: ett lager dekker inntil 1 000 enheter; produserer man 1 001 enheter trenger man et nytt lager.'
+  },
+  {
+    cat: 'kalkyler', catLabel: 'Kalkyler & kostnader',
+    q: 'Hva er for- og etterkalkulasjon?',
+    opts: [
+      'Forkalkyle: kalkyle laget etter produksjon. Etterkalkyle: laget før',
+      'Forkalkyle: beregning av priser og kostnader i forkant av produksjon/oppdrag. Etterkalkyle: beregning i etterkant for å sammenligne og avdekke avvik',
+      'To ulike navn på det samme: å beregne selvkost',
+      'Forkalkyle er for store bedrifter; etterkalkyle for små'
+    ],
+    correct: 1,
+    explain: 'Forkalkyle = grunnlag for pris og tilbud (planlagte tall). Etterkalkyle = faktiske tall etter gjennomført oppdrag. Avviksanalysen sammenligner de to og gir grunnlag for forbedringer og mer treffsikre fremtidige kalkyler.'
+  },
+  {
+    cat: 'kalkyler', catLabel: 'Kalkyler & kostnader',
+    q: 'Hva er mengdeavvik og prisavvik i en avviksanalyse?',
+    opts: [
+      'Mengdeavvik: avvik i salgspris. Prisavvik: avvik i antall solgte enheter',
+      'Mengdeavvik: (forbrukt mengde − planlagt mengde) × planlagt pris. Prisavvik: (virkelig pris − planlagt pris) × virkelig mengde',
+      'Mengdeavvik og prisavvik er det samme',
+      'Mengdeavvik: avvik i antall ansatte. Prisavvik: avvik i lønnssatser'
+    ],
+    correct: 1,
+    explain: 'Avviksanalyse skiller mellom to årsaker til kostnadsavvik: Mengdeavvik (brukte mer/mindre enn planlagt) og Prisavvik (materialer/timer kostet mer/mindre enn planlagt). Lar deg identifisere om problemet er i innkjøp, effektivitet eller priser.'
+  },
+
+  // ── Lovverk utvidet ──────────────────────────────────────────
+  {
+    cat: 'lovverk', catLabel: 'Lovverk & regelverk',
+    q: 'Hva er de fire grunnleggende regnskapsprinsippene i Regnskapsloven §4-1?',
+    opts: [
+      'Lønnsomhet, likviditet, soliditet og rentabilitet',
+      'Transaksjonsprinsippet, opptjeningsprinsippet, sammenstillingsprinsippet og forsiktighetsprinsippet',
+      'FIFO, LIFO, gjennomsnittsmetoden og standardkost',
+      'Kontantprinsippet, periodiseringsprinsippet, skattekontinuitet og balansekontinuitet'
+    ],
+    correct: 1,
+    explain: 'De fire grunnprinsippene: (1) Transaksjonsprinsippet – bokfør til verdien på transaksjonstidspunktet. (2) Opptjeningsprinsippet – inntekt resultatføres når opptjent. (3) Sammenstillingsprinsippet – utgifter kostnadsføres i samme periode som tilhørende inntekt. (4) Forsiktighetsprinsippet – urealisert tap resultatføres, men ikke urealisert gevinst.'
+  },
+  {
+    cat: 'lovverk', catLabel: 'Lovverk & regelverk',
+    q: 'Hva er saldoavskrivning, og hvilken saldogruppe har personbiler og maskiner?',
+    opts: [
+      'Lineær avskrivning – personbiler: saldogruppe h (4 %)',
+      'En skattemessig avskrivningsmetode der en fast prosentandel av gjenstående saldo avskrives hvert år – personbiler og maskiner er i saldogruppe d (20 %)',
+      'En avskrivning der man kan velge fritt prosentsats hvert år',
+      'En avskrivning som kun gjelder for bygninger'
+    ],
+    correct: 1,
+    explain: 'Saldoavskrivning = skattemessig avskrivning der saldogruppe d (personbiler, maskiner, inventar) avskrives med 20 % per år. Eksempel: maskin for 1 000 000 kr → år 1: avskrivning 200 000, saldo 800 000; år 2: 160 000, saldo 640 000 osv.'
+  },
+
+  // ── Investeringsanalyse (Kap 13) ─────────────────────────────
+  {
+    cat: 'investering', catLabel: 'Investeringsanalyse',
+    q: 'Hva er tilbakebetalingsmetoden?',
+    opts: [
+      'En metode som beregner internrenten til et prosjekt',
+      'En metode som beregner nåverdien av framtidige kontantstrømmer',
+      'En metode som beregner hvor lang tid det tar å få igjen investeringsutgiften gjennom innbetalingsoverskudd',
+      'En metode for å sammenligne TKR og EKR'
+    ],
+    correct: 2,
+    explain: 'Tilbakebetalingstid = Investeringsutgift / Årlig innbetalingsoverskudd. Måler ikke lønnsomhet – kun tid til tilbakebetaling. Beslutningsregel: gjennomfør hvis tilbakebetalingstid < investeringens levetid.'
+  },
+  {
+    cat: 'investering', catLabel: 'Investeringsanalyse',
+    q: 'Hva er en svakhet ved tilbakebetalingsmetoden (payback) ved slavisk bruk?',
+    opts: [
+      'Den er for komplisert å beregne for hånd',
+      'Den krever at man kjenner avkastningskravet nøyaktig',
+      'Den ignorerer pengenes tidsverdi og det som skjer etter tilbakebetalingsperioden',
+      'Den kan kun brukes på gjensidig utelukkende prosjekter'
+    ],
+    correct: 2,
+    explain: 'Tilbakebetalingsmetoden ignorerer: (1) Pengenes tidsverdi (100 kr i dag er mer verdt enn 100 kr om 5 år). (2) Kontantstrømmene etter at investeringen er tilbakebetalt. Fordeler: enkel, gir fokus på likviditet og tar høyde for risiko.'
+  },
+  {
+    cat: 'investering', catLabel: 'Investeringsanalyse',
+    q: 'Hva er nåverdimetoden (NNV)?',
+    opts: [
+      'En metode der man deler investeringsutgiften på de årlige innbetalingene',
+      'En metode der man beregner investeringens internrente i prosent',
+      'En metode der framtidige kontantstrømmer diskonteres med avkastningskravet tilbake til i dag og sammenlignes med investeringsutgiften',
+      'En metode for å beregne budsjettavvik'
+    ],
+    correct: 2,
+    explain: 'NNV = −I₀ + Σ [Cₙ / (1+k)ⁿ]. Positiv NNV = lønnsomt. Negativ NNV = ikke lønnsomt ved valgt avkastningskrav. For uavhengige prosjekter: godta alle med positiv NNV. For gjensidig utelukkende: velg den med høyest positiv NNV.'
+  },
+  {
+    cat: 'investering', catLabel: 'Investeringsanalyse',
+    q: 'Hva betyr positiv nåverdi (NNV > 0)?',
+    opts: [
+      'At investeringen ikke bør gjennomføres',
+      'At investeringen er lønnsom – avkastningen overstiger avkastningskravet',
+      'At avkastningskravet er for lavt satt',
+      'At tilbakebetalingstiden er kort'
+    ],
+    correct: 1,
+    explain: 'NNV > 0: investeringen er lønnsom (avkastning > avkastningskrav) → gjennomfør. NNV < 0: ikke lønnsomt. For gjensidig utelukkende prosjekter: velg alltid det med høyest positiv NNV («vi lever av penger, ikke prosenter»).'
+  },
+  {
+    cat: 'investering', catLabel: 'Investeringsanalyse',
+    q: 'Hva er internrentemetoden (IRR)?',
+    opts: [
+      'En metode som beregner tilbakebetalingstiden i måneder',
+      'Den avkastningsprosenten som gjør at nåverdien av investeringen = 0',
+      'En metode som beregner gjennomsnittlig avkastning per år',
+      'En metode som måler kapitalens omløpshastighet'
+    ],
+    correct: 1,
+    explain: 'Internrenten (IR/IRR) er den renten som gjør NNV = 0. Beslutningsregel: IR > avkastningskrav → lønnsomt. IR < avkastningskrav → ikke lønnsomt. OBS: For gjensidig utelukkende prosjekter er IRR uegnet – bruk nåverdimetoden.'
+  },
+  {
+    cat: 'investering', catLabel: 'Investeringsanalyse',
+    q: 'Hva er avkastningskravet (kalkulasjonsrenten)?',
+    opts: [
+      'Driftsresultatet delt på totalkapitalen',
+      'Rentekostnadene på bankgjeld',
+      'Den minimumsavkastningen en investering må gi for å være akseptabel – basert på risikofri rente + risikotillegg + inflasjonstillegg',
+      'Det samme som internrenten'
+    ],
+    correct: 2,
+    explain: 'Avkastningskrav = Risikofri rente + Risikotillegg + Inflasjonstillegg. Brukes til å diskontere framtidige kontantstrømmer i nåverdimetoden. Jo høyere risiko i prosjektet, desto høyere avkastningskrav.'
+  },
+  {
+    cat: 'investering', catLabel: 'Investeringsanalyse',
+    q: 'Hva er forskjellen mellom uavhengige og gjensidig utelukkende investeringsprosjekter?',
+    opts: [
+      'Det er ingen praktisk forskjell',
+      'Uavhengige: alle lønnsomme prosjekter kan gjennomføres. Gjensidig utelukkende: kun ett kan velges (f.eks. tre tilbud på samme maskin) – velg det med høyest positiv NNV',
+      'Uavhengige prosjekter brukes kun i offentlig sektor',
+      'Gjensidig utelukkende prosjekter vurderes alltid med IRR-metoden'
+    ],
+    correct: 1,
+    explain: 'Uavhengige prosjekter: godta alle med positiv NNV. Gjensidig utelukkende: kun ett alternativ kan velges (samme formål/ressurs) → velg høyest NNV, ikke høyest IR. IR kan rangere feil når prosjektene har ulik størrelse eller kontantstrømprofil.'
+  },
+
+  // ── Kapitalbinding (Kap 14) ──────────────────────────────────
+  {
+    cat: 'kapitalbinding', catLabel: 'Kapitalbinding & lagerstyring',
+    q: 'Hva er DuPont-modellen?',
+    opts: [
+      'En modell for å beregne dekningsgrad',
+      'En modell som viser sammenhengen mellom kapitalbinding og lønnsomhet: TKR = Resultatgrad × Kapitalens omløpshastighet',
+      'En modell for valg av selskapsform',
+      'En modell for å beregne saldoavskrivninger'
+    ],
+    correct: 1,
+    explain: 'DuPont: TKR = Resultatgrad × Kapitalens omløpshastighet. Resultatgrad = Resultat/Omsetning × 100. Omløpshastighet = Omsetning/Totalkapital. To veier til høy TKR: høy margin (premium) eller rask kapitalomsetning (volum).'
+  },
+  {
+    cat: 'kapitalbinding', catLabel: 'Kapitalbinding & lagerstyring',
+    q: 'Hva er ABC-analyse (Pareto-prinsippet) i lagerstyring?',
+    opts: [
+      'En analyse der alle varer behandles likt',
+      'En analyse basert på at ~20 % av varene/kundene/leverandørene står for ~80 % av verdien/omsetningen – disse prioriteres (A) fremfor de minst viktige (C)',
+      'En metode for å beregne optimal bestillingsmengde',
+      'En analyse som kun gjelder finansinvesteringer'
+    ],
+    correct: 1,
+    explain: 'Pareto/80-20-regelen: 20 % av lagervarene = 80 % av lagerverdien. Varene deles i A (mest verdi, tett styring), B (middels) og C (mange varer, lav verdi, enkel styring). Brukes også på kunder, leverandører og produkter etter omsetning/DB.'
+  },
+  {
+    cat: 'kapitalbinding', catLabel: 'Kapitalbinding & lagerstyring',
+    q: 'Hva er faktoring?',
+    opts: [
+      'En metode for å beregne varelager',
+      'En finansieringsform der bedriften selger/pantsetter kundefordringer til et factoringselskap for å få inn penger raskere',
+      'En metode for saldoavskrivning',
+      'En form for aksjekapital'
+    ],
+    correct: 1,
+    explain: 'Faktoring lar bedriften få inn penger fra kundefordringer umiddelbart i stedet for å vente på kunden. Factoringselskapet betaler ut beløpet (minus renter/gebyr) og tar over innkrevingen. Forbedrer likviditeten, men koster noe i renter.'
+  },
+  {
+    cat: 'kapitalbinding', catLabel: 'Kapitalbinding & lagerstyring',
+    q: 'Hva er formelen for gjennomsnittlig kredittid kunder?',
+    opts: [
+      'Varekostnad / Varelager × 365',
+      'Gjennomsnittlige kundefordringer (inkl. mva.) × 360 / Kredittsalg (inkl. mva.)',
+      'Omsetning / Totalkapital',
+      'Kortsiktig gjeld / Omløpsmidler × 360'
+    ],
+    correct: 1,
+    explain: 'Gj.snittlig kredittid kunder = (Gj.sn. kundefordringer inkl. mva. × 360) / Kredittsalg inkl. mva. Bør være kortere enn kredittid leverandører. Lang kredittid til kunder binder kapital og svekker likviditeten.'
+  },
+  {
+    cat: 'kapitalbinding', catLabel: 'Kapitalbinding & lagerstyring',
+    q: 'Hvordan påvirker økt kapitalbinding i varelager lønnsomheten?',
+    opts: [
+      'Økt varelager øker alltid lønnsomheten fordi man aldri mangler varer',
+      'Økt kapitalbinding øker totalkapitalen → øker kostnader (tapte renter/alternativkostnad) → reduserer resultatet → reduserer rentabiliteten',
+      'Kapitalbinding i varelager har ingen effekt på lønnsomheten',
+      'Økt varelager reduserer alltid salgsprisen'
+    ],
+    correct: 1,
+    explain: 'Rentabilitet = Resultat / Totalkapital. Større varelager → høyere totalkapital → høyere rentekostnader (tapte renteinntekter) → lavere resultat → lavere rentabilitet. Tiltak: ABC-analyse, JIT/Lean, kortere bestillingsintervall.'
+  },
+
+  // ── Eksisterende lovverk-spørsmål ───────────────────────────
   {
     cat: 'lovverk', catLabel: 'Lovverk & regelverk',
     q: 'Hva er arbeidsgiveravgift, og hvor stor er standardsatsen for de fleste norske bedrifter?',

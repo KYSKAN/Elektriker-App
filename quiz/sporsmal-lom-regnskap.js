@@ -1,14 +1,14 @@
 // ════════════════════════════════════════════════════════════════
 //  QUIZ-DATA: LØM Fagskole – Regnskapsanalyse
 //  Format: se quiz/QUIZ-FORMAT.md for full dokumentasjon
-//  27 spørsmål
+//  33 spørsmål
 // ════════════════════════════════════════════════════════════════
 
 const QUIZ_META = {
   id: 'lom-regnskap',
   title: 'Regnskapsanalyse',
   subtitle: 'LØM Fagskole',
-  description: '27 spørsmål om Regnskapsanalyse fra LØM-pensumet på fagskole.',
+  description: '33 spørsmål om Regnskapsanalyse fra LØM-pensumet på fagskole – nøkkeltall, DuPont, soliditet og likviditet.',
   cats: {
     nøkkeltall:{ label: 'Nøkkeltall & lønnsomhet', color: '#10b981' },
     balanse:   { label: 'Balanse & eiendeler',      color: '#5c7cfa' },
@@ -331,6 +331,80 @@ const QUESTIONS = [
     correct: 2,
     explain: 'Totalkapital = Egenkapital + Gjeld = Sum eiendeler. Uttrykker hele balansen. Brukes i nøkkeltall som TKR og egenkapitalandel.'
   },
+  // ── Nøkkeltall fra lærerens pensum (Oppsummering.md) ────────
+  {
+    cat: 'nøkkeltall', catLabel: 'Nøkkeltall & lønnsomhet',
+    q: 'Hva er driftsmargin, og hva er kravet?',
+    opts: [
+      'Driftsinntekter / Totalkapital × 100 – kravet er over 10 %',
+      'Driftsresultat / Driftsinntekter × 100 – kravet er ca. 10 % og bør ha positiv utvikling',
+      'Resultat etter skatt / Egenkapital × 100 – kravet er over 5 %',
+      'Omsetning / Antall ansatte – kravet er over 1 million kr'
+    ],
+    correct: 1,
+    explain: 'Driftsmargin = Driftsresultat / Driftsinntekter × 100. Viser lønnsomheten av selve driften før finansposter. Krav ca. 10 %. Tiltak ved lav driftsmargin: øke inntekter eller redusere kostnader.'
+  },
+  {
+    cat: 'nøkkeltall', catLabel: 'Nøkkeltall & lønnsomhet',
+    q: 'Hva er gjennomsnittlig gjeldsrente, og hva er kravet?',
+    opts: [
+      'Rentekostnad / Gjennomsnittlig gjeld – bør være lavest mulig og lavere enn TKR',
+      'Rentekostnad / Egenkapital – bør være under 3 %',
+      'Gjeld / Egenkapital × 100 – bør være under 200 %',
+      'Renteinntekter / Totalkapital – bør være høyest mulig'
+    ],
+    correct: 0,
+    explain: 'Gj.sn. gjeldsrente = Rentekostnad / Gj.sn. gjeld. Bør være lavest mulig. TKR bør alltid være høyere enn gjeldsrenten – ellers taper bedriften penger på den lånefinansierte kapitalen (negativ «gearing»).'
+  },
+  {
+    cat: 'nøkkeltall', catLabel: 'Nøkkeltall & lønnsomhet',
+    q: 'Hva er kapitalens omløpshastighet?',
+    opts: [
+      'Antall ganger varelageret skiftes ut per år',
+      'Driftsinntekter / Gjennomsnittlig totalkapital – viser hvor mange ganger kapitalen «omsettes» til inntekter per år',
+      'Egenkapital / Totalkapital – viser soliditet',
+      'Antall kunder / Antall ansatte'
+    ],
+    correct: 1,
+    explain: 'Kapitalens omløpshastighet = Driftsinntekter / Gj.sn. totalkapital. Høyest mulig er best. DuPont: TKR = Resultatgrad × Omløpshastighet. En lavprisbutikk kan ha lav margin men høy omløpshastighet og likevel god TKR.'
+  },
+  {
+    cat: 'nøkkeltall', catLabel: 'Nøkkeltall & lønnsomhet',
+    q: 'Hva er avanse i prosent, og hvordan skiller den seg fra bruttofortjenesteprosent (BFP)?',
+    opts: [
+      'Avanse % og BFP er identiske',
+      'Avanse % = (Salgsinntekt − Varekostnad) / Varekostnad × 100. BFP = (Salgsinntekt − Varekostnad) / Salgsinntekt × 100 – avansen regnes av innkjøpsprisen, BFP av salgsprisen',
+      'Avanse % beregnes inkl. mva., BFP ekskl. mva.',
+      'Avanse brukes kun i produksjonsbedrifter, BFP kun i handel'
+    ],
+    correct: 1,
+    explain: 'Begge viser bruttofortjenesten, men nevneren er ulik: avansen regner av innkjøpsprisen (f.eks. 20 %), BFP regner av salgsprisen (f.eks. 16,7 %). Avansen er alltid høyere enn BFP. Normtall varierer sterkt etter bransje.'
+  },
+  {
+    cat: 'likviditet', catLabel: 'Likviditet & soliditet',
+    q: 'Hva er finansieringsgrad 1, og hva er kravet?',
+    opts: [
+      'Omløpsmidler / Kortsiktig gjeld – kravet er over 2',
+      'Gjeld / Egenkapital – kravet er under 2',
+      'Anleggsmidler / (Egenkapital + Langsiktig gjeld) – kravet er under 1 (AM bør finansieres langsiktig)',
+      'Totalkapital / Egenkapital – kravet er under 3'
+    ],
+    correct: 2,
+    explain: 'Finansieringsgrad 1 = Anleggsmidler / (EK + Langsiktig gjeld). Kravet er < 1 – anleggsmidler bør helst være langsiktig finansiert. FG1 > 1 betyr at deler av anleggsmidlene er finansiert med kortsiktig gjeld → svak soliditet.'
+  },
+  {
+    cat: 'nøkkeltall', catLabel: 'Nøkkeltall & lønnsomhet',
+    q: 'DuPont-modellen: TKR = Resultatgrad × Kapitalens omløpshastighet. Hva blir TKR hvis resultatgraden er 7,25 % og kapitalens omløpshastighet er 2,0?',
+    opts: [
+      '3,625 %',
+      '9,25 %',
+      '14,5 %',
+      '28,7 %'
+    ],
+    correct: 2,
+    explain: 'TKR = 7,25 % × 2,0 = 14,5 %. DuPont viser at to bedrifter kan ha lik TKR via ulike strategier: høy margin × lav omløpshastighet (premium), eller lav margin × høy omløpshastighet (volum). Nyttig for å finne flaskehalsen i lønnsomheten.'
+  },
+
   {
     cat: 'nøkkeltall', catLabel: 'Nøkkeltall & lønnsomhet',
     q: 'Hva kan en lav resultatgrad kombinert med høy kapitalomløpshastighet tyde på?',
