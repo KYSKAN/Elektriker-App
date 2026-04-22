@@ -517,7 +517,12 @@
           order: questions.map(q => QUESTIONS.indexOf(q)),
           idx: currentIdx,
           score,
-          cats: catScores
+          cats: catScores,
+          wrongs: wrongAnswers.map(item => ({
+            qIdx: QUESTIONS.indexOf(item.q),
+            chosenText: item.chosenText,
+            correctText: item.correctText
+          }))
         }));
       } catch(e) {}
     }
@@ -704,7 +709,11 @@
       score        = saved.score;
       catScores    = saved.cats;
       answered     = false;
-      wrongAnswers = [];
+      wrongAnswers = (saved.wrongs || []).map(item => ({
+        q:           QUESTIONS[item.qIdx],
+        chosenText:  item.chosenText,
+        correctText: item.correctText
+      }));
 
       document.getElementById('start-screen').style.display  = 'none';
       document.getElementById('quiz-screen').style.display   = 'block';

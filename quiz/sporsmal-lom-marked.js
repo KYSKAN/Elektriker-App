@@ -1,7 +1,7 @@
 // ════════════════════════════════════════════════════════════════
 //  QUIZ-DATA: LØM Fagskole – Markedsføringsledelse
 //  Format: se quiz/QUIZ-FORMAT.md for full dokumentasjon
-//  35 spørsmål
+//  36 spørsmål
 // ════════════════════════════════════════════════════════════════
 
 const QUIZ_META = {
