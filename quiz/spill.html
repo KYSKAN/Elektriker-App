@@ -412,7 +412,7 @@
 
   <!-- Top bar -->
   <div class="topbar">
-    <a class="back-btn" href="./"><span class="arrow">←</span> Velg quiz</a>
+    <a class="back-btn" id="back-btn" href="./"><span class="arrow">←</span> Velg quiz</a>
     <div class="topbar-title" id="topbar-title">Quiz</div>
   </div>
 
@@ -491,6 +491,9 @@
     // ── Load question file based on ?tema= URL param ─────────────
     const tema = new URLSearchParams(location.search).get('tema') || '';
     if (!tema) { location.href = './'; }
+
+    const backBtn = document.getElementById('back-btn');
+    backBtn.href = tema.startsWith('lom-') ? './' : './index-elektro.html';
 
     const script = document.createElement('script');
     script.src = `sporsmal-${tema}.js`;
