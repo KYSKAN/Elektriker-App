@@ -175,6 +175,17 @@
     .next-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
     .next-btn.show { display: block; }
 
+    /* ── Prev button ── */
+    .prev-btn {
+      margin-top: 10px; width: 100%; padding: 12px;
+      background: transparent; border: 1.5px solid var(--border); border-radius: 10px;
+      color: var(--muted); font-size: 0.9rem; font-weight: 600;
+      font-family: inherit; cursor: pointer;
+      transition: border-color 0.15s, color 0.15s; display: none;
+    }
+    .prev-btn:hover { border-color: var(--accent); color: var(--text); }
+    .prev-btn.show { display: block; }
+
     /* ── Result screen ── */
     #result-screen { max-width: 700px; width: 100%; display: none; animation: fadeIn 0.3s ease; }
     .result-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px 32px; text-align: center; }
@@ -453,6 +464,7 @@
       <div class="options" id="options-container"></div>
       <div class="explanation" id="explanation"></div>
       <button class="next-btn" id="next-btn" onclick="nextQuestion()">Neste spørsmål →</button>
+      <button class="prev-btn" id="prev-btn" onclick="prevQuestion()">← Forrige spørsmål</button>
     </div>
   </div>
 
@@ -502,12 +514,14 @@
     document.head.appendChild(script);
 
     // ── State ────────────────────────────────────────────────────
-    let questions    = [];
-    let currentIdx   = 0;
-    let score        = 0;
-    let answered     = false;
-    let catScores    = {};
-    let wrongAnswers = [];   // { q, chosenText, correctText }
+    let questions      = [];
+    let currentIdx     = 0;
+    let score          = 0;
+    let answered       = false;
+    let catScores      = {};
+    let wrongAnswers   = [];
+    let answers        = {};   // currentIdx → { indices, chosen }
+    let currentIndices = [];
 
     // ── Storage keys ─────────────────────────────────────────────
     const PROGRESS_KEY = `quiz_progress_${tema}`;
@@ -692,6 +706,7 @@
       answered     = false;
       wrongAnswers = [];
       catScores    = {};
+      answers      = {};
       questions.forEach(q => {
         if (!catScores[q.cat]) catScores[q.cat] = { correct: 0, total: 0 };
         catScores[q.cat].total++;
@@ -712,6 +727,7 @@
       score        = saved.score;
       catScores    = saved.cats;
       answered     = false;
+      answers      = {};
       wrongAnswers = (saved.wrongs || []).map(item => ({
         q:           QUESTIONS[item.qIdx],
         chosenText:  item.chosenText,
@@ -767,9 +783,10 @@
       nextBtn.className   = 'next-btn';
       nextBtn.textContent = currentIdx === questions.length - 1 ? 'Se resultat →' : 'Neste spørsmål →';
 
-      const indices      = shuffle([0, 1, 2, 3]);
-      const shuffledOpts = indices.map(i => q.opts[i]);
-      const correctIdx   = indices.indexOf(q.correct);
+      const stored       = answers[currentIdx];
+      currentIndices     = stored ? stored.indices : shuffle([0, 1, 2, 3]);
+      const shuffledOpts = currentIndices.map(i => q.opts[i]);
+      const correctIdx   = currentIndices.indexOf(q.correct);
 
       const container = document.getElementById('options-container');
       container.innerHTML = '';
@@ -780,11 +797,27 @@
         btn.addEventListener('click', () => selectAnswer(i, correctIdx, q, shuffledOpts));
         container.appendChild(btn);
       });
+
+      const prevBtn = document.getElementById('prev-btn');
+      prevBtn.className = currentIdx > 0 ? 'prev-btn show' : 'prev-btn';
+
+      if (stored) {
+        answered = true;
+        document.querySelectorAll('.option-btn').forEach((btn, i) => {
+          btn.disabled = true;
+          if (i === correctIdx)        btn.classList.add('correct');
+          else if (i === stored.chosen) btn.classList.add('wrong');
+        });
+        expl.innerHTML = `<strong>${stored.chosen === correctIdx ? '✓ Riktig!' : '✗ Feil.'}</strong> ${q.explain}`;
+        expl.classList.add('show');
+        nextBtn.classList.add('show');
+      }
     }
 
     function selectAnswer(chosen, correctIdx, q, shuffledOpts) {
       if (answered) return;
       answered = true;
+      answers[currentIdx] = { indices: currentIndices, chosen };
 
       document.querySelectorAll('.option-btn').forEach((btn, i) => {
         btn.disabled = true;
@@ -818,6 +851,13 @@
         showResult();
       } else {
         saveProgress();
+        renderQuestion();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentIdx > 0) {
+        currentIdx--;
         renderQuestion();
       }
     }
