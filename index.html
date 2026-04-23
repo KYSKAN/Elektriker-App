@@ -127,9 +127,123 @@
       color: #2a2f4a;
       pointer-events: none;
     }
+
+    /* ── Innstillinger ── */
+    #settings-btn {
+      position: fixed;
+      top: 14px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--muted);
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      -webkit-tap-highlight-color: transparent;
+      z-index: 100;
+    }
+    #settings-btn:active { background: var(--surface2); border-color: var(--accent); color: var(--accent); }
+
+    #settings-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 200;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    #settings-overlay.open { display: flex; }
+
+    #settings-sheet {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px 24px 0 0;
+      width: 100%;
+      max-width: 480px;
+      padding: 24px 20px 40px;
+      animation: slideUp 0.22s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(60px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+
+    .settings-handle {
+      width: 40px;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      margin: 0 auto 20px;
+    }
+    .settings-title {
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .settings-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-top: 1px solid var(--border);
+    }
+    .settings-row-label strong {
+      display: block;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .settings-row-label span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .settings-btn-danger {
+      background: rgba(239,68,68,0.12);
+      color: #f87171;
+      border: 1px solid rgba(239,68,68,0.3);
+      border-radius: 10px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 0.15s;
+    }
+    .settings-btn-danger:active { background: rgba(239,68,68,0.25); }
   </style>
 </head>
 <body>
+
+  <button id="settings-btn" aria-label="Innstillinger">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M16.2 12.5a1.5 1.5 0 0 0 .3 1.65l.05.05a1.8 1.8 0 0 1-2.55 2.55l-.05-.05a1.5 1.5 0 0 0-1.65-.3 1.5 1.5 0 0 0-.91 1.37V18a1.8 1.8 0 0 1-3.6 0v-.08A1.5 1.5 0 0 0 6.8 16.5a1.5 1.5 0 0 0-1.65.3l-.05.05a1.8 1.8 0 0 1-2.55-2.55l.05-.05A1.5 1.5 0 0 0 2.9 12.6a1.5 1.5 0 0 0-1.37-.91H1.5a1.8 1.8 0 0 1 0-3.6h.08A1.5 1.5 0 0 0 3 7.2a1.5 1.5 0 0 0-.3-1.65l-.05-.05A1.8 1.8 0 0 1 5.2 2.95l.05.05A1.5 1.5 0 0 0 6.9 3.3a1.5 1.5 0 0 0 .91-1.37V1.8a1.8 1.8 0 0 1 3.6 0v.08a1.5 1.5 0 0 0 .91 1.37 1.5 1.5 0 0 0 1.65-.3l.05-.05a1.8 1.8 0 0 1 2.55 2.55l-.05.05A1.5 1.5 0 0 0 17.1 7a1.5 1.5 0 0 0 1.37.91H18.5a1.8 1.8 0 0 1 0 3.6h-.08a1.5 1.5 0 0 0-1.37.91h.08Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div id="settings-overlay">
+    <div id="settings-sheet">
+      <div class="settings-handle"></div>
+      <div class="settings-title">Innstillinger</div>
+
+      <div class="settings-row">
+        <div class="settings-row-label">
+          <strong>Nullstill all score-data</strong>
+          <span>Sletter all quiz-historikk og fremgang</span>
+        </div>
+        <button class="settings-btn-danger" id="reset-scores-btn">Nullstill</button>
+      </div>
+
+    </div>
+  </div>
 
   <div class="logo">⚡</div>
   <h1>Elektriker-app</h1>
@@ -199,6 +313,31 @@
   <div id="appVersion"></div>
 
   <script>
+    // ── Innstillinger ──
+    const settingsBtn     = document.getElementById('settings-btn');
+    const settingsOverlay = document.getElementById('settings-overlay');
+    const resetBtn        = document.getElementById('reset-scores-btn');
+
+    settingsBtn.addEventListener('click', () => settingsOverlay.classList.add('open'));
+    settingsOverlay.addEventListener('click', e => {
+      if (e.target === settingsOverlay) settingsOverlay.classList.remove('open');
+    });
+
+    resetBtn.addEventListener('click', () => {
+      const keys = Object.keys(localStorage).filter(k =>
+        k.startsWith('quiz_history_') || k.startsWith('quiz_progress_')
+      );
+      keys.forEach(k => localStorage.removeItem(k));
+      resetBtn.textContent = 'Nullstilt ✓';
+      resetBtn.disabled = true;
+      setTimeout(() => {
+        resetBtn.textContent = 'Nullstill';
+        resetBtn.disabled = false;
+        settingsOverlay.classList.remove('open');
+      }, 1500);
+    });
+
+    // ── Service worker ──
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js');
       navigator.serviceWorker.addEventListener('controllerchange', () => {
