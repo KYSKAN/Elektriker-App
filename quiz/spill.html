@@ -512,7 +512,7 @@
     if (!tema) { location.href = './'; }
 
     const backBtn = document.getElementById('back-btn');
-    const bjrons = ['boolsk', 'mikrokontroller', 'minne'];
+    const bjrons = ['boolsk', 'mikrokontroller', 'minne', 'tallsystemer'];
     backBtn.href = tema.startsWith('lom-') ? './' : bjrons.includes(tema) ? './index-bjrons.html' : './index-elektro.html';
 
     const script = document.createElement('script');
