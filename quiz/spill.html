@@ -527,7 +527,7 @@
     homeLink.href = indexHref;
 
     const script = document.createElement('script');
-    script.src = `sporsmal-${tema}.js`;
+    script.src = `${tema}.js`;
     script.onerror = () => { document.getElementById('loading').textContent = 'Kunne ikke laste spørsmål.'; };
     script.onload  = initQuiz;
     document.head.appendChild(script);

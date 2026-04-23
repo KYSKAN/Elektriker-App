@@ -1,4 +1,4 @@
-const CACHE = 'kalkulator-v110';
+const CACHE = 'kalkulator-v111';
 
 const FILES = [
   './',
@@ -18,18 +18,18 @@ const FILES = [
   './quiz/index.html',
   './quiz/index-elektro.html',
   './quiz/spill.html',
-  './quiz/sporsmal-lom-ledelse.js',
-  './quiz/sporsmal-lom-marked.js',
-  './quiz/sporsmal-lom-regnskap.js',
-  './quiz/sporsmal-lom-okonomi.js',
-  './quiz/sporsmal-lom-lovavtale.js',
-  './quiz/sporsmal-rlc.js',
-  './quiz/sporsmal-boolsk.js',
-  './quiz/sporsmal-porter.js',
-  './quiz/sporsmal-mikrokontroller.js',
-  './quiz/sporsmal-minne.js',
-  './quiz/sporsmal-tallsystemer.js',
-  './quiz/sporsmal-vipper.js',
+  './quiz/lom-ledelse.js',
+  './quiz/lom-marked.js',
+  './quiz/lom-regnskap.js',
+  './quiz/lom-okonomi.js',
+  './quiz/lom-lovavtale.js',
+  './quiz/rlc.js',
+  './quiz/boolsk.js',
+  './quiz/porter.js',
+  './quiz/mikrokontroller.js',
+  './quiz/minne.js',
+  './quiz/tallsystemer.js',
+  './quiz/vipper.js',
   './quiz/index-bjrons.html',
 ];
 
