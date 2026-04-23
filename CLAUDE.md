@@ -22,16 +22,25 @@ AppTilTelefon/
 ├── icons/
 │   └── icon.svg           App-ikon (gult lyn på mørk bakgrunn)
 └── quiz/
-    ├── index.html                  Quiz-velger — kort per tema, lenker til spill.html?tema=X
-    ├── spill.html                  Quiz-spill — laster sporsmal-${tema}.js dynamisk fra URL-param
-    ├── sporsmal-lom-ledelse.js     Spørsmål: LØM – Ledelse & Organisasjon (28 spørsmål)
-    ├── sporsmal-lom-marked.js      Spørsmål: LØM – Markedsføringsledelse (35 spørsmål)
-    ├── sporsmal-lom-regnskap.js    Spørsmål: LØM – Regnskapsanalyse (33 spørsmål)
-    ├── sporsmal-lom-okonomi.js     Spørsmål: LØM – Økonomistyring (48 spørsmål)
-    ├── sporsmal-lom-lovavtale.js   Spørsmål: LØM – Lover & Avtaler
-    ├── sporsmal-rlc.js             Spørsmål: RC/RL/RLC kretser
-    ├── KILDER-lom-lovavtale.md     Kildemateriale for lovavtale-quiz
-    └── QUIZ-FORMAT.md              Format og instruksjoner for quiz-data
+    ├── index.html          Quiz LØM — velger, lenker til spill.html?tema=X
+    ├── index-elektro.html  Quiz Elektro — velger
+    ├── index-bjrons.html   Quiz Elektroniske (Bjørns) — velger
+    ├── spill.html          Quiz-motor — laster quiz-fil dynamisk fra temaFil[tema]
+    ├── lom/
+    │   ├── ledelse.js      LØM – Ledelse & Organisasjon (30 spørsmål)
+    │   ├── marked.js       LØM – Markedsføringsledelse (36 spørsmål)
+    │   ├── regnskap.js     LØM – Regnskapsanalyse (33 spørsmål)
+    │   ├── okonomi.js      LØM – Økonomistyring (50 spørsmål)
+    │   └── lovavtale.js    LØM – Lover & Avtaler (29 spørsmål)
+    ├── elektro/
+    │   └── rlc.js          RLC-kretser (29 spørsmål)
+    └── bjrons/
+        ├── boolsk.js       Boolsk algebra (25 spørsmål)
+        ├── porter.js       Logiske porter (26 spørsmål)
+        ├── mikrokontroller.js  Mikrokontroller (25 spørsmål)
+        ├── minne.js        Dataminne (25 spørsmål)
+        ├── tallsystemer.js Tallsystemer (30 spørsmål)
+        └── vipper.js       Vipper/Flip-flops (22 spørsmål)
 ```
 
 ## Kalkulatorer
@@ -42,11 +51,11 @@ AppTilTelefon/
 | krets   | calc-krets.js   | viewKrets   | RC/RL/RLC: P, Q, S, cos φ, Z, I, φ    |
 
 ## Quiz (quiz/)
-Separat app på `quiz/index.html`. Lenkes fra hoved-appen via menyen.
-- `index.html` viser temavelger — ett kort per quiz-tema
-- `spill.html` er selve quiz-motoren — laster spørsmålsfil dynamisk basert på `?tema=X`
-- Legg til nytt tema: opprett `sporsmal-X.js` + legg til kort i `index.html`
-- Se `quiz/QUIZ-FORMAT.md` for spørsmålsformat og steg-for-steg instruksjoner
+Tre separate quiz-sider lenket fra hoved-appen. Felles quiz-motor i `spill.html`.
+- `spill.html` laster quiz-fil dynamisk via `temaFil[tema]`-oppslag basert på `?tema=X` i URL
+- Tema-slugs (lom-ledelse, rlc, boolsk osv.) brukes i URL, localStorage og `bjrons`-array i spill.html
+- Legg til nytt tema: opprett JS-fil i riktig mappe, legg til i `temaFil`-tabellen i spill.html, legg til kort i riktig index-fil, legg til i service-worker FILES og bump CACHE
+- `bjrons`-array i spill.html styrer hvilken hub-side «Tilbake»-knappen peker til
 
 ## Viktige regler
 - **Service worker:** Bump `CACHE` (v18 → v19 osv.) i `service-worker.js` ved HVER deploy — ellers ser ikke telefonen endringene
