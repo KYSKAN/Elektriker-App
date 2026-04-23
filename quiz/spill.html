@@ -526,8 +526,22 @@
     backBtn.href  = indexHref;
     homeLink.href = indexHref;
 
+    const temaFil = {
+      'lom-ledelse':   'lom/ledelse.js',
+      'lom-marked':    'lom/marked.js',
+      'lom-regnskap':  'lom/regnskap.js',
+      'lom-okonomi':   'lom/okonomi.js',
+      'lom-lovavtale': 'lom/lovavtale.js',
+      'rlc':           'elektro/rlc.js',
+      'boolsk':        'bjrons/boolsk.js',
+      'porter':        'bjrons/porter.js',
+      'mikrokontroller': 'bjrons/mikrokontroller.js',
+      'minne':         'bjrons/minne.js',
+      'tallsystemer':  'bjrons/tallsystemer.js',
+      'vipper':        'bjrons/vipper.js',
+    };
     const script = document.createElement('script');
-    script.src = `${tema}.js`;
+    script.src = temaFil[tema] || `${tema}.js`;
     script.onerror = () => { document.getElementById('loading').textContent = 'Kunne ikke laste spørsmål.'; };
     script.onload  = initQuiz;
     document.head.appendChild(script);

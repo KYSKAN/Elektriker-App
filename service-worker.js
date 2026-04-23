@@ -1,4 +1,4 @@
-const CACHE = 'kalkulator-v111';
+const CACHE = 'kalkulator-v112';
 
 const FILES = [
   './',
@@ -18,18 +18,18 @@ const FILES = [
   './quiz/index.html',
   './quiz/index-elektro.html',
   './quiz/spill.html',
-  './quiz/lom-ledelse.js',
-  './quiz/lom-marked.js',
-  './quiz/lom-regnskap.js',
-  './quiz/lom-okonomi.js',
-  './quiz/lom-lovavtale.js',
-  './quiz/rlc.js',
-  './quiz/boolsk.js',
-  './quiz/porter.js',
-  './quiz/mikrokontroller.js',
-  './quiz/minne.js',
-  './quiz/tallsystemer.js',
-  './quiz/vipper.js',
+  './quiz/lom/ledelse.js',
+  './quiz/lom/marked.js',
+  './quiz/lom/regnskap.js',
+  './quiz/lom/okonomi.js',
+  './quiz/lom/lovavtale.js',
+  './quiz/elektro/rlc.js',
+  './quiz/bjrons/boolsk.js',
+  './quiz/bjrons/porter.js',
+  './quiz/bjrons/mikrokontroller.js',
+  './quiz/bjrons/minne.js',
+  './quiz/bjrons/tallsystemer.js',
+  './quiz/bjrons/vipper.js',
   './quiz/index-bjrons.html',
 ];
 
