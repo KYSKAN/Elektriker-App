@@ -164,13 +164,13 @@ const QUESTIONS = [
     q: 'Hvilken port har denne sannhetstabellen?',
     img: `<svg viewBox="0 0 280 138" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="138" fill="#161927" rx="8"/><text x="140" y="16" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Sannhetstabell for ukjent port</text><line x1="20" y1="43" x2="260" y2="43" stroke="#2a2f4a" stroke-width="1"/><line x1="103" y1="22" x2="103" y2="130" stroke="#2a2f4a" stroke-width="1"/><line x1="177" y1="22" x2="177" y2="130" stroke="#2a2f4a" stroke-width="1"/><text x="61" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">A</text><text x="140" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">B</text><text x="219" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">F</text><text x="61" y="60" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="140" y="60" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="219" y="60" fill="#e74c3c" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">0</text><text x="61" y="82" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="140" y="82" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="219" y="82" fill="#e74c3c" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">0</text><text x="61" y="104" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="140" y="104" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="219" y="104" fill="#e74c3c" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">0</text><text x="61" y="126" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="140" y="126" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="219" y="126" fill="#2ecc71" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">1</text></svg>`,
     opts: [
-      'OR-port (ELLER) — F = A + B',
-      'NAND-port (HOG) — F = A̅·̅B̅',
-      'AND-port (OG) — F = A·B',
+      'OR-port — F = A + B',
+      'NAND-port — F = A̅·̅B̅',
+      'AND-port — F = A·B',
       'XOR-port — F = A⊕B'
     ],
     correct: 2,
-    explain: 'AND-porten (OG): F = A·B. Utgangen er 1 kun når begge innganger er 1. Sannhetstabellen viser F = 0,0,0,1 for kombinasjonene 00, 01, 10, 11.'
+    explain: 'AND-porten: F = A·B. Utgangen er 1 kun når begge innganger er 1. Sannhetstabellen viser F = 0,0,0,1 for kombinasjonene 00, 01, 10, 11.'
   },
 
   {
@@ -178,18 +178,18 @@ const QUESTIONS = [
     q: 'Hvilken port har denne sannhetstabellen?',
     img: `<svg viewBox="0 0 280 138" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="138" fill="#161927" rx="8"/><text x="140" y="16" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Sannhetstabell for ukjent port</text><line x1="20" y1="43" x2="260" y2="43" stroke="#2a2f4a" stroke-width="1"/><line x1="103" y1="22" x2="103" y2="130" stroke="#2a2f4a" stroke-width="1"/><line x1="177" y1="22" x2="177" y2="130" stroke="#2a2f4a" stroke-width="1"/><text x="61" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">A</text><text x="140" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">B</text><text x="219" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">F</text><text x="61" y="60" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="140" y="60" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="219" y="60" fill="#2ecc71" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">1</text><text x="61" y="82" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="140" y="82" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="219" y="82" fill="#e74c3c" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">0</text><text x="61" y="104" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="140" y="104" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="219" y="104" fill="#e74c3c" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">0</text><text x="61" y="126" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="140" y="126" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="219" y="126" fill="#e74c3c" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">0</text></svg>`,
     opts: [
-      'AND-port (OG) — F = A·B',
-      'NOR-port (HELLER) — F = A̅+̅B̅',
-      'NAND-port (HOG) — F = A̅·̅B̅',
-      'OR-port (ELLER) — F = A + B'
+      'AND-port — F = A·B',
+      'NOR-port — F = A̅+̅B̅',
+      'NAND-port — F = A̅·̅B̅',
+      'OR-port — F = A + B'
     ],
     correct: 1,
-    explain: 'NOR-porten (HELLER): F = A̅+̅B̅. Utgangen er 1 kun når begge innganger er 0. Sannhetstabellen viser F = 1,0,0,0 — det motsatte av OR-porten.'
+    explain: 'NOR-porten: F = A̅+̅B̅. Utgangen er 1 kun når begge innganger er 0. Sannhetstabellen viser F = 1,0,0,0 — det motsatte av OR-porten.'
   },
 
   {
     cat: 'porter',
-    q: 'Hvilken boolsk funksjon beskriver en OR-port (ELLER)?',
+    q: 'Hvilken boolsk funksjon beskriver en OR-port?',
     opts: [
       'F = A·B',
       'F = A + B',
@@ -197,7 +197,7 @@ const QUESTIONS = [
       'F = A̅·̅B̅'
     ],
     correct: 1,
-    explain: 'OR-porten (ELLER): F = A + B. Utgangen er 1 når minst én inngang er 1. Norsk betegnelse: ELLER-port.'
+    explain: 'OR-porten: F = A + B. Utgangen er 1 når minst én inngang er 1.'
   },
 
   {
@@ -210,12 +210,12 @@ const QUESTIONS = [
       'F = A̅'
     ],
     correct: 3,
-    explain: 'NOT-porten (IKKE): F = A̅. Inverterer inngangssignalet. Eneste logiske port med én inngang. Norsk betegnelse: IKKE-port.'
+    explain: 'NOT-porten (inverter): F = A̅. Inverterer inngangssignalet. Eneste logiske port med én inngang.'
   },
 
   {
     cat: 'porter',
-    q: 'Hvilken boolsk funksjon beskriver en NAND-port (HOG)?',
+    q: 'Hvilken boolsk funksjon beskriver en NAND-port?',
     opts: [
       'F = A̅+̅B̅',
       'F = A·B',
@@ -223,12 +223,12 @@ const QUESTIONS = [
       'F = A + B'
     ],
     correct: 2,
-    explain: 'NAND-porten (HOG): F = A̅·̅B̅. Utgangen er 0 kun når begge innganger er 1. NAND er en universalport — alle andre porter kan bygges med NAND-porter alene.'
+    explain: 'NAND-porten: F = A̅·̅B̅. Utgangen er 0 kun når begge innganger er 1. NAND er en universalport — alle andre porter kan bygges med NAND-porter alene.'
   },
 
   {
     cat: 'porter',
-    q: 'Hvilken boolsk funksjon beskriver en NOR-port (HELLER)?',
+    q: 'Hvilken boolsk funksjon beskriver en NOR-port?',
     opts: [
       'F = A̅·̅B̅',
       'F = A̅+̅B̅',
@@ -236,12 +236,12 @@ const QUESTIONS = [
       'F = A⊕B'
     ],
     correct: 1,
-    explain: 'NOR-porten (HELLER): F = A̅+̅B̅. Utgangen er 1 kun når begge innganger er 0. NOR er også en universalport, på lik linje med NAND.'
+    explain: 'NOR-porten: F = A̅+̅B̅. Utgangen er 1 kun når begge innganger er 0. NOR er også en universalport, på lik linje med NAND.'
   },
 
   {
     cat: 'porter',
-    q: 'Hvilken boolsk funksjon beskriver en XOR-port (Eksklusiv ELLER)?',
+    q: 'Hvilken boolsk funksjon beskriver en XOR-port?',
     opts: [
       'F = A·B',
       'F = A + B',
@@ -249,47 +249,52 @@ const QUESTIONS = [
       'F = A⊕B'
     ],
     correct: 3,
-    explain: 'XOR-porten (Eksklusiv ELLER): F = A⊕B = A·B̅ + A̅·B. Utgangen er 1 når inngangene er forskjellige. Norsk betegnelse: Eksklusiv ELLER-port.'
+    explain: 'XOR-porten: F = A⊕B = A·B̅ + A̅·B. Utgangen er 1 når inngangene er forskjellige — men 0 når begge er like.'
   },
 
   {
     cat: 'porter',
-    q: 'Hva er den norske betegnelsen for AND-porten?',
-    opts: ['ELLER-port', 'IKKE-port', 'HOG-port', 'OG-port'],
-    correct: 3,
-    explain: 'AND-porten heter OG-port på norsk. Norsk: OG / Engelsk: AND. Boolsk funksjon: F = A·B.'
-  },
-
-  {
-    cat: 'porter',
-    q: 'Hva er den norske betegnelsen for OR-porten?',
-    opts: ['OG-port', 'HELLER-port', 'HOG-port', 'ELLER-port'],
-    correct: 3,
-    explain: 'OR-porten heter ELLER-port på norsk. Norsk: ELLER / Engelsk: OR. Boolsk funksjon: F = A + B.'
-  },
-
-  {
-    cat: 'porter',
-    q: 'Hva er den norske betegnelsen for NAND-porten?',
-    opts: ['OG-port', 'HOG-port', 'HELLER-port', 'NELLER-port'],
+    q: 'Hva er spesielt med NAND- og NOR-portene sammenlignet med AND, OR og NOT?',
+    opts: [
+      'De har tre innganger i stedet for to',
+      'De er universalporter — alle logiske funksjoner kan bygges med kun én av dem',
+      'De bruker mindre strøm enn andre porter',
+      'De er kun tilgjengelige i TTL-teknologi'
+    ],
     correct: 1,
-    explain: 'NAND-porten heter HOG-port på norsk. Norsk: HOG / Engelsk: NAND. Boolsk funksjon: F = A̅·̅B̅.'
+    explain: 'NAND og NOR er universalporter: ethvert logisk uttrykk kan realiseres utelukkende med NAND-porter (eller utelukkende med NOR-porter). AND, OR og NOT alene gir ikke denne egenskapen.'
   },
 
   {
     cat: 'porter',
-    q: 'Hva er den norske betegnelsen for NOR-porten?',
-    opts: ['HOG-port', 'NELLER-port', 'HELLER-port', 'IKKE-port'],
-    correct: 2,
-    explain: 'NOR-porten heter HELLER-port på norsk. Norsk: HELLER / Engelsk: NOR. Boolsk funksjon: F = A̅+̅B̅.'
+    q: 'En NAND-port har innganger A = 1 og B = 1. Hva er utgangen F?',
+    opts: ['1', '0', 'A', 'udefinert'],
+    correct: 1,
+    explain: 'NAND: F = A̅·̅B̅. Når A = 1 og B = 1 er AND-resultatet 1, og NAND inverterer dette til 0. NAND gir 0 kun for kombinasjonen 1,1.'
   },
 
   {
     cat: 'porter',
-    q: 'Hva er den norske betegnelsen for NOT-porten (inverter)?',
-    opts: ['OG-port', 'HELLER-port', 'ELLER-port', 'IKKE-port'],
+    q: 'Hvilken port gir output 1 kun når inngangene er forskjellige?',
+    opts: ['AND-port', 'OR-port', 'XNOR-port', 'XOR-port'],
     correct: 3,
-    explain: 'NOT-porten heter IKKE-port på norsk. Norsk: IKKE / Engelsk: NOT. Boolsk funksjon: F = A̅.'
+    explain: 'XOR-porten: F = A⊕B. Utgangen er 1 når A ≠ B (dvs. 0,1 eller 1,0) og 0 når A = B (dvs. 0,0 eller 1,1). Brukes mye i adderkretser og paritetskontroll.'
+  },
+
+  {
+    cat: 'porter',
+    q: 'Hvilken port er ekvivalent med en AND-port etterfulgt av en NOT-port (inverter)?',
+    opts: ['NOR-port', 'OR-port', 'NAND-port', 'XOR-port'],
+    correct: 2,
+    explain: 'NAND = NOT + AND. F = A̅·̅B̅ er det samme som å ta AND-resultatet (A·B) og invertere det. Navnet NAND kommer av Not-AND.'
+  },
+
+  {
+    cat: 'porter',
+    q: 'Hvilken port er ekvivalent med en OR-port etterfulgt av en NOT-port (inverter)?',
+    opts: ['NAND-port', 'XOR-port', 'AND-port', 'NOR-port'],
+    correct: 3,
+    explain: 'NOR = NOT + OR. F = A̅+̅B̅ er det samme som å ta OR-resultatet (A + B) og invertere det. Navnet NOR kommer av Not-OR.'
   }
 
 ];
