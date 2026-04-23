@@ -515,14 +515,18 @@
   </div>
 
   <script>
-    // ── Load question file based on ?tema= URL param ─────────────
+    // ── Load question file(s) based on ?tema= URL param ──────────
     const tema = new URLSearchParams(location.search).get('tema') || '';
     if (!tema) { location.href = './'; }
+
+    const temas = tema.split(',').map(s => s.trim()).filter(Boolean);
 
     const backBtn  = document.getElementById('back-btn');
     const homeLink = document.getElementById('home-link');
     const bjrons   = ['boolsk', 'porter', 'mikrokontroller', 'minne', 'tallsystemer', 'vipper'];
-    const indexHref = tema.startsWith('lom-') ? './' : bjrons.includes(tema) ? './index-bjrons.html' : './index-elektro.html';
+    const isLom    = temas.some(t => t.startsWith('lom-'));
+    const isBjrons = temas.some(t => bjrons.includes(t));
+    const indexHref = isLom ? './' : isBjrons ? './index-bjrons.html' : './index-elektro.html';
     backBtn.href  = indexHref;
     homeLink.href = indexHref;
 
@@ -540,11 +544,38 @@
       'tallsystemer':  'bjrons/tallsystemer.js',
       'vipper':        'bjrons/vipper.js',
     };
-    const script = document.createElement('script');
-    script.src = temaFil[tema] || `${tema}.js`;
-    script.onerror = () => { document.getElementById('loading').textContent = 'Kunne ikke laste spørsmål.'; };
-    script.onload  = initQuiz;
-    document.head.appendChild(script);
+
+    let QUESTIONS = [];
+    let QUIZ_META  = { title: '', subtitle: '', cats: {}, description: '' };
+
+    (async () => {
+      let allQ    = [];
+      let combined = null;
+      for (const t of temas) {
+        const path = temaFil[t] || (t + '.js');
+        try {
+          const resp = await fetch(path);
+          if (!resp.ok) throw new Error('HTTP ' + resp.status);
+          const text = await resp.text();
+          const fn   = new Function(text + '\nreturn { Q: QUESTIONS, M: QUIZ_META };');
+          const res  = fn();
+          allQ = allQ.concat(res.Q);
+          if (!combined) {
+            combined = { title: res.M.title, subtitle: res.M.subtitle || '', cats: Object.assign({}, res.M.cats), description: res.M.description || '' };
+          } else {
+            combined.title += ' + ' + res.M.title;
+            Object.assign(combined.cats, res.M.cats);
+          }
+        } catch(e) {
+          document.getElementById('loading').textContent = 'Kunne ikke laste spørsmål.';
+          return;
+        }
+      }
+      if (!allQ.length) { document.getElementById('loading').textContent = 'Ingen spørsmål funnet.'; return; }
+      QUESTIONS = allQ;
+      QUIZ_META  = combined;
+      initQuiz();
+    })();
 
     // ── State ────────────────────────────────────────────────────
     let questions        = [];

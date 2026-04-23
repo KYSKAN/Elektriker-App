@@ -63,8 +63,8 @@
       font-weight: 600;
     }
 
-    /* ── Settings button ── */
-    .settings-btn-topbar {
+    /* ── Dots button ── */
+    .dots-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -73,15 +73,17 @@
       border-radius: 10px;
       color: var(--muted);
       cursor: pointer;
-      padding: 8px 10px;
+      padding: 6px 13px;
+      font-size: 20px;
+      line-height: 1;
       -webkit-tap-highlight-color: transparent;
       transition: background 0.15s, border-color 0.15s, color 0.15s;
       flex-shrink: 0;
     }
-    .settings-btn-topbar:active { background: var(--surface2); border-color: var(--accent); color: var(--accent); }
+    .dots-btn:active { background: var(--surface2); border-color: var(--accent); color: var(--accent); }
 
-    /* ── Settings sheet ── */
-    .settings-overlay {
+    /* ── Combine sheet ── */
+    .combine-overlay {
       display: none;
       position: fixed;
       inset: 0;
@@ -89,8 +91,8 @@
       z-index: 100;
       align-items: flex-end;
     }
-    .settings-overlay.open { display: flex; }
-    .settings-sheet {
+    .combine-overlay.open { display: flex; }
+    .combine-sheet {
       background: var(--surface);
       border-top: 1px solid var(--border);
       border-radius: 20px 20px 0 0;
@@ -102,50 +104,49 @@
       from { transform: translateY(100%); }
       to   { transform: translateY(0); }
     }
-    .settings-handle {
+    .sheet-handle {
       width: 40px; height: 4px;
       background: var(--border);
       border-radius: 99px;
       margin: 0 auto 16px;
     }
-    .settings-title { color: var(--text); font-size: 16px; font-weight: 700; margin-bottom: 20px; }
-    .settings-row {
+    .sheet-title { color: var(--text); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .sheet-sub   { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+    .combine-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+    .combine-item {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       gap: 12px;
-      padding: 14px 0;
-      border-top: 1px solid var(--border);
-    }
-    .settings-row-label strong { display: block; color: var(--text); font-size: 14px; margin-bottom: 2px; }
-    .settings-row-label span  { color: var(--muted); font-size: 12px; }
-    .settings-btn-danger {
-      background: rgba(239,68,68,0.15);
-      color: #f87171;
-      border: 1px solid rgba(239,68,68,0.3);
-      border-radius: 8px;
-      padding: 7px 14px;
-      font-size: 13px;
-      font-weight: 600;
+      padding: 12px 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 14px;
       cursor: pointer;
-      white-space: nowrap;
       -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .combine-item input[type="checkbox"] {
+      width: 18px; height: 18px;
+      accent-color: var(--accent);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .start-combine-btn {
+      width: 100%;
+      background: var(--accent);
+      border: none;
+      border-radius: 10px;
+      padding: 13px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
       transition: background 0.15s;
     }
-    .settings-btn-danger:active { background: rgba(239,68,68,0.28); }
-    .settings-select-row { padding: 14px 0; border-top: 1px solid var(--border); }
-    .settings-select-row strong { display: block; color: var(--text); font-size: 14px; margin-bottom: 2px; }
-    .settings-select-row > span { color: var(--muted); font-size: 12px; display: block; margin-bottom: 10px; }
-    .settings-select-inner { display: flex; gap: 8px; align-items: center; }
-    .settings-select-inner select {
-      flex: 1;
-      background: var(--surface2);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 7px 10px;
-      font-size: 13px;
-    }
+    .start-combine-btn:active { background: #4a6cf7; }
 
     /* ── Heading ── */
     .page-title {
@@ -274,52 +275,23 @@
   <div class="topbar">
     <a class="back-btn" href="../"><span class="arrow">←</span> Hjem</a>
     <div class="topbar-title">Quiz Elektroniske (Bjørns)</div>
-    <button class="settings-btn-topbar" id="settings-open" aria-label="Innstillinger">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="3"/>
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-      </svg>
-    </button>
+    <button class="dots-btn" id="dots-open" aria-label="Meny">⋮</button>
   </div>
 
-  <div class="settings-overlay" id="settings-overlay">
-    <div class="settings-sheet">
-      <div class="settings-handle"></div>
-      <div class="settings-title">Innstillinger</div>
-      <div class="settings-row">
-        <div class="settings-row-label">
-          <strong>Nullstill all score-data</strong>
-          <span>Sletter all quiz-historikk og fremgang</span>
-        </div>
-        <button class="settings-btn-danger" id="reset-all-btn">Nullstill</button>
+  <div class="combine-overlay" id="combine-overlay">
+    <div class="combine-sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-title">Slå sammen quizzer</div>
+      <p class="sheet-sub">Velg to eller flere og start som én samlet quiz</p>
+      <div class="combine-list">
+        <label class="combine-item"><input type="checkbox" value="mikrokontroller"> Mikrokontroller</label>
+        <label class="combine-item"><input type="checkbox" value="minne"> Dataminne</label>
+        <label class="combine-item"><input type="checkbox" value="boolsk"> Boolsk algebra</label>
+        <label class="combine-item"><input type="checkbox" value="porter"> Logiske porter</label>
+        <label class="combine-item"><input type="checkbox" value="tallsystemer"> Tallsystemer</label>
+        <label class="combine-item"><input type="checkbox" value="vipper"> Vipper (Flip-flops)</label>
       </div>
-      <div class="settings-select-row">
-        <strong>Nullstill én quiz</strong>
-        <span>Velg quiz og slett kun den scoreen</span>
-        <div class="settings-select-inner">
-          <select id="quiz-select">
-            <optgroup label="LØM Fagskole">
-              <option value="lom-ledelse">Ledelse &amp; Organisasjon</option>
-              <option value="lom-marked">Markedsføringsledelse</option>
-              <option value="lom-regnskap">Regnskapsanalyse</option>
-              <option value="lom-okonomi">Økonomistyring</option>
-              <option value="lom-lovavtale">Lover &amp; Avtaler</option>
-            </optgroup>
-            <optgroup label="Quiz Elektro">
-              <option value="rlc">RLC-kretser</option>
-            </optgroup>
-            <optgroup label="Quiz Elektroniske (Bjørns)">
-              <option value="boolsk">Boolsk algebra</option>
-              <option value="porter">Logiske porter</option>
-              <option value="mikrokontroller">Mikrokontroller</option>
-              <option value="minne">Dataminne</option>
-              <option value="tallsystemer">Tallsystemer</option>
-              <option value="vipper">Vipper (Flip-flops)</option>
-            </optgroup>
-          </select>
-          <button class="settings-btn-danger" id="reset-one-btn">Slett</button>
-        </div>
-      </div>
+      <button class="start-combine-btn" id="start-combine-btn">Start valgte →</button>
     </div>
   </div>
 
@@ -424,28 +396,18 @@
   </div>
 
   <script>
-    // Settings
-    var overlay = document.getElementById('settings-overlay');
-    document.getElementById('settings-open').addEventListener('click', function () {
+    // Combine
+    var overlay = document.getElementById('combine-overlay');
+    document.getElementById('dots-open').addEventListener('click', function () {
       overlay.classList.add('open');
     });
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) overlay.classList.remove('open');
     });
-    document.getElementById('reset-all-btn').addEventListener('click', function () {
-      if (!confirm('Slette all quiz-historikk og fremgang?')) return;
-      Object.keys(localStorage).filter(function (k) {
-        return k.startsWith('quiz_history_') || k.startsWith('quiz_progress_');
-      }).forEach(function (k) { localStorage.removeItem(k); });
-      overlay.classList.remove('open');
-      location.reload();
-    });
-    document.getElementById('reset-one-btn').addEventListener('click', function () {
-      var tema = document.getElementById('quiz-select').value;
-      localStorage.removeItem('quiz_history_' + tema);
-      localStorage.removeItem('quiz_progress_' + tema);
-      overlay.classList.remove('open');
-      location.reload();
+    document.getElementById('start-combine-btn').addEventListener('click', function () {
+      var vals = Array.from(document.querySelectorAll('.combine-list input:checked')).map(function (cb) { return cb.value; });
+      if (vals.length === 0) { alert('Velg minst én quiz.'); return; }
+      location.href = 'spill.html?tema=' + vals.join(',');
     });
 
     document.addEventListener('DOMContentLoaded', function () {
