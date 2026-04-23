@@ -512,7 +512,8 @@
     if (!tema) { location.href = './'; }
 
     const backBtn = document.getElementById('back-btn');
-    backBtn.href = tema.startsWith('lom-') ? './' : tema === 'boolsk' ? './index-bjrons.html' : './index-elektro.html';
+    const bjrons = ['boolsk', 'mikrokontroller', 'minne'];
+    backBtn.href = tema.startsWith('lom-') ? './' : bjrons.includes(tema) ? './index-bjrons.html' : './index-elektro.html';
 
     const script = document.createElement('script');
     script.src = `sporsmal-${tema}.js`;
