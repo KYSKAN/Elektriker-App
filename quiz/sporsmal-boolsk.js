@@ -2,7 +2,7 @@
 const QUIZ_META = {
   id: 'boolsk',
   title: 'Boolsk algebra',
-  subtitle: 'Bjørns Elektroniske',
+  subtitle: 'Quiz Elektroniske (Bjørns)',
   cats: {
     boolsk: { label: 'Boolske lover', color: '#5c7cfa' },
     porter: { label: 'Logiske porter', color: '#f59e0b' }

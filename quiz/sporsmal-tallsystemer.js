@@ -2,7 +2,7 @@
 const QUIZ_META = {
   id: 'tallsystemer',
   title: 'Tallsystemer',
-  subtitle: 'Bjørns Elektroniske',
+  subtitle: 'Quiz Elektroniske (Bjørns)',
   cats: {
     konvertering: { label: 'Konvertering mellom baser', color: '#5c7cfa' },
     binær:        { label: 'Binær og heksadesimal',     color: '#f59e0b' },

@@ -2,7 +2,7 @@
 const QUIZ_META = {
   id: 'minne',
   title: 'Dataminne',
-  subtitle: 'Bjørns Elektroniske',
+  subtitle: 'Quiz Elektroniske (Bjørns)',
   cats: {
     primær:  { label: 'Primærminne og cache', color: '#5c7cfa' },
     rom:     { label: 'ROM og Flash',         color: '#f59e0b' },
