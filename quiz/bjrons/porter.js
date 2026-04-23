@@ -260,10 +260,10 @@ const QUESTIONS = [
     cat: 'avansert',
     q: 'Hvordan lages en NOT-port fra én NAND-port?',
     opts: [
-      'Koble A til den ene og B til den andre inngangen',
+      'Koble A til den ene inngangen og la B stå ubrukt',
       'Koble samme signal til begge innganger på NAND',
-      'Koble utgangen tilbake til inngangen',
-      'Det er ikke mulig'
+      'Koble utgangen tilbake som feedback til én inngang',
+      'Det er ikke mulig å lage NOT fra én NAND-port alene'
     ],
     correct: 1,
     explain: 'En NAND-port med begge innganger koblet til samme signal A gir: <span class="not">A·A</span> = <span class="not">A</span> (idempotentlov). Dette er en NOT-port laget av én NAND.'
