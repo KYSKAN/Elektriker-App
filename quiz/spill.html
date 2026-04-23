@@ -521,14 +521,15 @@
     document.head.appendChild(script);
 
     // ── State ────────────────────────────────────────────────────
-    let questions      = [];
-    let currentIdx     = 0;
-    let score          = 0;
-    let answered       = false;
-    let catScores      = {};
-    let wrongAnswers   = [];
-    let answers        = {};   // currentIdx → { indices, chosen }
-    let currentIndices = [];
+    let questions        = [];
+    let currentIdx       = 0;
+    let score            = 0;
+    let answered         = false;
+    let catScores        = {};
+    let wrongAnswers     = [];
+    let answers          = {};   // currentIdx → { indices, chosen }
+    let currentIndices   = [];
+    let minNavigableIdx  = 0;    // kan ikke gå tilbake forbi dette punktet
 
     // ── Storage keys ─────────────────────────────────────────────
     const PROGRESS_KEY = `quiz_progress_${tema}`;
@@ -713,7 +714,8 @@
       answered     = false;
       wrongAnswers = [];
       catScores    = {};
-      answers      = {};
+      answers          = {};
+      minNavigableIdx  = 0;
       questions.forEach(q => {
         if (!catScores[q.cat]) catScores[q.cat] = { correct: 0, total: 0 };
         catScores[q.cat].total++;
@@ -733,8 +735,9 @@
       currentIdx   = saved.idx;
       score        = saved.score;
       catScores    = saved.cats;
-      answered     = false;
-      answers      = {};
+      answered         = false;
+      answers          = {};
+      minNavigableIdx  = saved.idx;   // kan ikke gå tilbake til allerede talte spørsmål
       wrongAnswers = (saved.wrongs || []).map(item => ({
         q:           QUESTIONS[item.qIdx],
         chosenText:  item.chosenText,
@@ -791,7 +794,7 @@
       nextBtn.disabled = false;
 
       const prevBtn2 = document.getElementById('prev-btn');
-      prevBtn2.disabled = currentIdx === 0;
+      prevBtn2.disabled = currentIdx <= minNavigableIdx;
 
       const stored       = answers[currentIdx];
       currentIndices     = stored ? stored.indices : shuffle([0, 1, 2, 3]);
@@ -861,7 +864,7 @@
     }
 
     function prevQuestion() {
-      if (currentIdx > 0) {
+      if (currentIdx > minNavigableIdx) {
         currentIdx--;
         renderQuestion();
       }
