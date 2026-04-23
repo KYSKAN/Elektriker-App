@@ -161,6 +161,32 @@ const QUESTIONS = [
 
   {
     cat: 'porter',
+    q: 'Hvilket matematisk symbol tilsvarer AND-porten i boolsk algebra?',
+    opts: [
+      'Pluss (+)',
+      'Gangetegn (·)',
+      'Minus (−)',
+      'Divisjon (÷)'
+    ],
+    correct: 1,
+    explain: 'AND-porten tilsvarer multiplikasjon i boolsk algebra. A AND B skrives A · B (eller bare AB). Akkurat som i vanlig algebra gir 0 · 1 = 0, og 1 · 1 = 1.'
+  },
+
+  {
+    cat: 'porter',
+    q: 'Hvilket matematisk symbol tilsvarer OR-porten i boolsk algebra?',
+    opts: [
+      'Gangetegn (·)',
+      'Minus (−)',
+      'Pluss (+)',
+      'Divisjon (÷)'
+    ],
+    correct: 2,
+    explain: 'OR-porten tilsvarer addisjon i boolsk algebra. A OR B skrives A + B. Merk at 1 + 1 = 1 i boolsk algebra (ikke 2), siden resultatet alltid er 0 eller 1.'
+  },
+
+  {
+    cat: 'porter',
     q: 'Hvilken port har denne sannhetstabellen?',
     img: `<svg viewBox="0 0 280 138" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="138" fill="#161927" rx="8"/><text x="140" y="16" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Sannhetstabell for ukjent port</text><line x1="20" y1="43" x2="260" y2="43" stroke="#2a2f4a" stroke-width="1"/><line x1="103" y1="22" x2="103" y2="130" stroke="#2a2f4a" stroke-width="1"/><line x1="177" y1="22" x2="177" y2="130" stroke="#2a2f4a" stroke-width="1"/><text x="61" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">A</text><text x="140" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">B</text><text x="219" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">F</text><text x="61" y="60" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="140" y="60" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="219" y="60" fill="#e74c3c" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">0</text><text x="61" y="82" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="140" y="82" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="219" y="82" fill="#e74c3c" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">0</text><text x="61" y="104" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="140" y="104" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text><text x="219" y="104" fill="#e74c3c" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">0</text><text x="61" y="126" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="140" y="126" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text><text x="219" y="126" fill="#2ecc71" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">1</text></svg>`,
     opts: [
