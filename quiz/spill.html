@@ -884,18 +884,14 @@
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         btn.innerHTML = `<span class="letter">${LETTERS[i]}</span><span>${opt}</span>`;
-        if (isMulti) {
-          btn.addEventListener('click', () => toggleOption(btn, i));
-        } else {
-          btn.addEventListener('click', () => selectAnswer(i, correctShuffled[0], q, shuffledOpts));
-        }
+        btn.addEventListener('click', () => toggleOption(btn, i));
         container.appendChild(btn);
       });
 
-      // Confirm button – only for unanswered multi-answer questions
+      // Confirm button – always shown for unanswered questions
       const confirmWrap = document.getElementById('confirm-wrap');
       const confirmBtn  = document.getElementById('confirm-btn');
-      if (isMulti && !stored) {
+      if (!stored) {
         confirmWrap.style.display = 'block';
         confirmBtn.disabled = true;
         confirmBtn.onclick = () => confirmAnswer(correctShuffled, q, shuffledOpts);
