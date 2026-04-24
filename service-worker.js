@@ -1,4 +1,4 @@
-const CACHE = 'kalkulator-v123';
+const CACHE = 'kalkulator-v124';
 
 const FILES = [
   './',
@@ -30,6 +30,7 @@ const FILES = [
   './quiz/bjrons/minne.js',
   './quiz/bjrons/tallsystemer.js',
   './quiz/bjrons/vipper.js',
+  './quiz/bjrons/trh1ek.js',
   './quiz/index-bjrons.html',
 ];
 

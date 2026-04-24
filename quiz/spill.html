@@ -523,7 +523,7 @@
 
     const backBtn  = document.getElementById('back-btn');
     const homeLink = document.getElementById('home-link');
-    const bjrons   = ['boolsk', 'porter', 'mikrokontroller', 'minne', 'tallsystemer', 'vipper'];
+    const bjrons   = ['boolsk', 'porter', 'mikrokontroller', 'minne', 'tallsystemer', 'vipper', 'trh1ek'];
     const isLom    = temas.some(t => t.startsWith('lom-'));
     const isBjrons = temas.some(t => bjrons.includes(t));
     const indexHref = isLom ? './' : isBjrons ? './index-bjrons.html' : './index-elektro.html';
@@ -543,6 +543,7 @@
       'minne':         'bjrons/minne.js',
       'tallsystemer':  'bjrons/tallsystemer.js',
       'vipper':        'bjrons/vipper.js',
+      'trh1ek':        'bjrons/trh1ek.js',
     };
 
     let QUESTIONS = [];
