@@ -395,6 +395,46 @@ const QUESTIONS = [
   {
     cat: 'digital',
     q: 'Se figur: to krysskoblede NOR-porter med Q og Q̄-utganger. Hva er kretsen?',
+    img: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" style="display:block;margin:0 auto 8px;max-width:320px;background:#1a1a2e;border-radius:8px;padding:8px;">
+  <style>text{font:13px monospace;fill:#e2e8f0;} .lbl{font:12px monospace;fill:#a0aec0;} .wire{stroke:#63b3ed;stroke-width:1.8;fill:none;} .gate{stroke:#63b3ed;stroke-width:1.8;fill:#16213e;}</style>
+  <!-- NOR gate 1 (top) body -->
+  <path class="gate" d="M80,30 Q95,30 105,50 Q115,70 105,70 Q95,70 80,70 Q90,50 80,30Z"/>
+  <path class="gate" d="M80,30 Q70,50 80,70" fill="none"/>
+  <!-- NOR bubble top -->
+  <circle cx="116" cy="50" r="4" class="gate"/>
+  <!-- NOR gate 2 (bottom) body -->
+  <path class="gate" d="M80,130 Q95,130 105,150 Q115,170 105,170 Q95,170 80,170 Q90,150 80,130Z"/>
+  <path class="gate" d="M80,130 Q70,150 80,170" fill="none"/>
+  <!-- NOR bubble bottom -->
+  <circle cx="116" cy="150" r="4" class="gate"/>
+  <!-- S input -->
+  <line class="wire" x1="30" y1="40" x2="83" y2="40"/>
+  <text x="10" y="44" class="lbl">S</text>
+  <!-- R input -->
+  <line class="wire" x1="30" y1="160" x2="83" y2="160"/>
+  <text x="10" y="164" class="lbl">R</text>
+  <!-- Q output line from top gate -->
+  <line class="wire" x1="120" y1="50" x2="200" y2="50"/>
+  <text x="206" y="54">Q</text>
+  <!-- Q-bar output line from bottom gate -->
+  <line class="wire" x1="120" y1="150" x2="200" y2="150"/>
+  <text x="206" y="154">Q̄</text>
+  <!-- Feedback: Q → second input of bottom NOR -->
+  <line class="wire" x1="180" y1="50" x2="180" y2="100"/>
+  <line class="wire" x1="180" y1="100" x2="60" y2="100"/>
+  <line class="wire" x1="60" y1="100" x2="60" y2="160"/>
+  <line class="wire" x1="60" y1="160" x2="83" y2="160"/>
+  <!-- Feedback: Q-bar → second input of top NOR -->
+  <line class="wire" x1="160" y1="150" x2="160" y2="110"/>
+  <line class="wire" x1="160" y1="110" x2="50" y2="110"/>
+  <line class="wire" x1="50" y1="110" x2="50" y2="60"/>
+  <line class="wire" x1="50" y1="60" x2="83" y2="60"/>
+  <!-- Dots at junctions -->
+  <circle cx="180" cy="50" r="3" fill="#63b3ed"/>
+  <circle cx="160" cy="150" r="3" fill="#63b3ed"/>
+  <!-- Labels -->
+  <text x="82" y="16" style="font:11px monospace;fill:#f6ad55;">SR-krets (NOR)</text>
+</svg>`,
     opts: [
       'JK-vippe (flipflop)',
       'JK-vippe (latch)',
@@ -407,6 +447,74 @@ const QUESTIONS = [
   {
     cat: 'digital',
     q: 'Se figur: krets med klokkeingang, inverter og NAND-porter med Q og Q̄. Hva er dette?',
+    img: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" style="display:block;margin:0 auto 8px;max-width:360px;background:#1a1a2e;border-radius:8px;padding:8px;">
+  <style>text{font:13px monospace;fill:#e2e8f0;} .lbl{font:12px monospace;fill:#a0aec0;} .wire{stroke:#63b3ed;stroke-width:1.8;fill:none;} .gate{stroke:#63b3ed;stroke-width:1.8;fill:#16213e;}</style>
+  <!-- Inverter (triangle + bubble) -->
+  <polygon class="gate" points="30,95 30,115 50,105"/>
+  <circle cx="54" cy="105" r="4" class="gate"/>
+  <!-- D input -->
+  <line class="wire" x1="5" y1="105" x2="30" y2="105"/>
+  <text x="0" y="100" class="lbl" style="font:11px monospace;">D</text>
+  <!-- Clock input -->
+  <line class="wire" x1="5" y1="145" x2="80" y2="145"/>
+  <text x="0" y="150" class="lbl" style="font:11px monospace;">CLK</text>
+  <!-- NAND gate 1 (top): D̄ + CLK → S̄ -->
+  <path class="gate" d="M80,70 L80,110 Q115,110 115,90 Q115,70 80,70Z"/>
+  <circle cx="119" cy="90" r="4" class="gate"/>
+  <!-- D̄ wire from inverter to NAND1 top input -->
+  <line class="wire" x1="58" y1="105" x2="70" y2="105"/>
+  <line class="wire" x1="70" y1="105" x2="70" y2="80"/>
+  <line class="wire" x1="70" y1="80" x2="80" y2="80"/>
+  <!-- CLK wire to NAND1 bottom input -->
+  <line class="wire" x1="70" y1="145" x2="70" y2="100"/>
+  <line class="wire" x1="70" y1="100" x2="80" y2="100"/>
+  <!-- NAND gate 2 (bottom): D + CLK → R̄ -->
+  <path class="gate" d="M80,120 L80,160 Q115,160 115,140 Q115,120 80,120Z"/>
+  <circle cx="119" cy="140" r="4" class="gate"/>
+  <!-- D wire direct to NAND2 top input -->
+  <line class="wire" x1="5" y1="105" x2="15" y2="105"/>
+  <line class="wire" x1="15" y1="105" x2="15" y2="130"/>
+  <line class="wire" x1="15" y1="130" x2="80" y2="130"/>
+  <!-- CLK wire to NAND2 bottom input -->
+  <line class="wire" x1="70" y1="145" x2="80" y2="145"/>
+  <!-- NAND gate 3 (top SR): S̄ → Q -->
+  <path class="gate" d="M160,65 L160,105 Q195,105 195,85 Q195,65 160,65Z"/>
+  <circle cx="199" cy="85" r="4" class="gate"/>
+  <!-- NAND gate 4 (bottom SR): R̄ → Q̄ -->
+  <path class="gate" d="M160,115 L160,155 Q195,155 195,135 Q195,115 160,115Z"/>
+  <circle cx="199" cy="135" r="4" class="gate"/>
+  <!-- S̄ wire from NAND1 to NAND3 -->
+  <line class="wire" x1="123" y1="90" x2="145" y2="90"/>
+  <line class="wire" x1="145" y1="90" x2="145" y2="75"/>
+  <line class="wire" x1="145" y1="75" x2="160" y2="75"/>
+  <!-- R̄ wire from NAND2 to NAND4 -->
+  <line class="wire" x1="123" y1="140" x2="145" y2="140"/>
+  <line class="wire" x1="145" y1="140" x2="145" y2="145"/>
+  <line class="wire" x1="145" y1="145" x2="160" y2="145"/>
+  <!-- Q output -->
+  <line class="wire" x1="203" y1="85" x2="280" y2="85"/>
+  <text x="284" y="90">Q</text>
+  <!-- Q̄ output -->
+  <line class="wire" x1="203" y1="135" x2="280" y2="135"/>
+  <text x="284" y="140">Q̄</text>
+  <!-- Feedback Q → NAND4 top -->
+  <line class="wire" x1="255" y1="85" x2="255" y2="60"/>
+  <line class="wire" x1="255" y1="60" x2="152" y2="60"/>
+  <line class="wire" x1="152" y1="60" x2="152" y2="125"/>
+  <line class="wire" x1="152" y1="125" x2="160" y2="125"/>
+  <!-- Feedback Q̄ → NAND3 bottom -->
+  <line class="wire" x1="245" y1="135" x2="245" y2="165"/>
+  <line class="wire" x1="245" y1="165" x2="148" y2="165"/>
+  <line class="wire" x1="148" y1="165" x2="148" y2="95"/>
+  <line class="wire" x1="148" y1="95" x2="160" y2="95"/>
+  <!-- Junctions -->
+  <circle cx="255" cy="85" r="3" fill="#63b3ed"/>
+  <circle cx="245" cy="135" r="3" fill="#63b3ed"/>
+  <circle cx="70" cy="145" r="3" fill="#63b3ed"/>
+  <circle cx="15" cy="105" r="3" fill="#63b3ed"/>
+  <!-- Label -->
+  <text x="90" y="18" style="font:11px monospace;fill:#f6ad55;">D-vippe (NAND)</text>
+</svg>`,
     opts: [
       'T-vippe (flipflop)',
       'JK-vippe (flipflop)',
