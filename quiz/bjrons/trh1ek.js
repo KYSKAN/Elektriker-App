@@ -408,7 +408,7 @@ const QUESTIONS = [
   {
     cat: 'digital',
     q: 'Se figur: krets med klokkeingang, inverter og NAND-porter med Q og Q̄. Hva er dette?',
-    img: SVG_D_NAND_KRETS,
+    img: '<img src="d-nand-krets.svg" style="max-width:100%;border-radius:8px;display:block;margin:0 auto 8px;">',
     opts: [
       'T-vippe (flipflop)',
       'JK-vippe (flipflop)',
