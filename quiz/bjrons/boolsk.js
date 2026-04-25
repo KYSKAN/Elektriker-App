@@ -202,7 +202,7 @@ const QUESTIONS = [
       '<span class="not">A</span> + <span class="not">B</span>',
       '<span class="not">A+B</span>'
     ],
-    img: `<svg viewBox="0 0 280 90" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="90" fill="#161927" rx="8"/><text x="140" y="16" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">De Morgans lover — to ekvivalente former</text><rect x="14" y="26" width="110" height="34" fill="#1e2235" rx="6" stroke="#5c7cfa" stroke-width="1.5"/><text x="69" y="47" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace"><tspan text-decoration="overline">A·B</tspan> = ?</text><text x="136" y="47" fill="#7b82a8" font-size="20" text-anchor="middle">→</text><rect x="156" y="26" width="110" height="34" fill="#1e2235" rx="6" stroke="#7b82a8" stroke-width="1" stroke-dasharray="4,3"/><text x="211" y="47" fill="#7b82a8" font-size="13" text-anchor="middle" font-family="monospace">?</text><text x="140" y="78" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Hvilken av alternativene fyller inn i høyre boks?</text></svg>`,
+    img: SVG_DE_MORGAN_NAND,
     correct: 2,
     explain: 'De Morgans 1. lov: <span class="not">A·B</span> = <span class="not">A</span> + <span class="not">B</span>. En NAND-port kan realiseres som inverterte innganger med en OR-port.'
   },
@@ -223,7 +223,7 @@ const QUESTIONS = [
   {
     cat: 'uttrykk',
     q: 'Hva er sannhetsverdien til F = A·B + C når A=1, B=0, C=1?',
-    img: `<svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="80" fill="#161927" rx="8"/><text x="140" y="15" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Husk: AND evalueres før OR</text><rect x="40" y="24" width="200" height="46" fill="#1e2235" rx="6" stroke="#5c7cfa" stroke-width="1.5"/><text x="140" y="40" fill="#5c7cfa" font-size="12" text-anchor="middle" font-family="monospace">A=1, B=0, C=1</text><text x="140" y="60" fill="#e8eaf6" font-size="12" text-anchor="middle" font-family="monospace">F = A·B + C = ?</text></svg>`,
+    img: SVG_BOOLSK_EVAL_AND_OR,
     opts: ['0', 'A', 'B', '1'],
     correct: 3,
     explain: 'AND evalueres alltid før OR (som i vanlig algebra): A·B = 1·0 = 0. Deretter: 0 + C = 0 + 1 = 1. F = 1.'
@@ -232,7 +232,7 @@ const QUESTIONS = [
   {
     cat: 'uttrykk',
     q: 'Hva er sannhetsverdien til F = <span class="not">A</span>·B + A·<span class="not">B</span> når A=1, B=0?',
-    img: `<svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="80" fill="#161927" rx="8"/><text x="140" y="15" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Dette er XOR-uttrykket — evaluer for A=1, B=0</text><rect x="40" y="24" width="200" height="46" fill="#1e2235" rx="6" stroke="#5c7cfa" stroke-width="1.5"/><text x="140" y="40" fill="#5c7cfa" font-size="12" text-anchor="middle" font-family="monospace">A=1, B=0</text><text x="140" y="60" fill="#e8eaf6" font-size="12" text-anchor="middle" font-family="monospace"><tspan text-decoration="overline">A</tspan>·B + A·<tspan text-decoration="overline">B</tspan> = ?</text></svg>`,
+    img: SVG_BOOLSK_XOR,
     opts: ['0', '1', 'A', 'B'],
     correct: 1,
     explain: '<span class="not">A</span>=0, B=0: første ledd 0·0=0. A=1, <span class="not">B</span>=1: andre ledd 1·1=1. F = 0+1 = 1. Dette er XOR-uttrykket: gir 1 når A≠B.'

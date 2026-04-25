@@ -25,7 +25,7 @@ const QUESTIONS = [
     q: 'Hva er det øverste behovet i Maslows behovspyramide?',
     opts: ['Sikkerhetsbehov', 'Anerkjennelse og status', 'Selvrealisering', 'Sosiale behov'],
     correct: 2,
-    img: `<svg viewBox="0 0 280 190" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cp-maslow"><polygon points="140,4 276,186 4,186"/></clipPath></defs><rect width="280" height="190" fill="#161927" rx="8"/><rect x="0" y="4" width="280" height="36" fill="#8b5cf6" clip-path="url(#cp-maslow)"/><rect x="0" y="40" width="280" height="37" fill="#5c7cfa" clip-path="url(#cp-maslow)"/><rect x="0" y="77" width="280" height="36" fill="#00a8e8" clip-path="url(#cp-maslow)"/><rect x="0" y="113" width="280" height="36" fill="#10b981" clip-path="url(#cp-maslow)"/><rect x="0" y="149" width="280" height="37" fill="#f59e0b" clip-path="url(#cp-maslow)"/><polygon points="140,4 276,186 4,186" fill="none" stroke="#161927" stroke-width="2.5"/><line x1="113" y1="40" x2="167" y2="40" stroke="#161927" stroke-width="1.5"/><line x1="85" y1="77" x2="195" y2="77" stroke="#161927" stroke-width="1.5"/><line x1="57" y1="113" x2="223" y2="113" stroke="#161927" stroke-width="1.5"/><line x1="29" y1="149" x2="251" y2="149" stroke="#161927" stroke-width="1.5"/><text x="140" y="180" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Maslows behovspyramide – 5 nivåer</text></svg>`,
+    img: SVG_MASLOW,
     explain: 'Maslows pyramide (nedenfra): Fysiologiske behov → Sikkerhetsbehov → Sosiale behov → Anerkjennelse → Selvrealisering. Man må dekke lavere nivåer før høyere motiveres. For en elektriker betyr dette f.eks.: trygg lønn og fast ansettelse (sikkerhet) må være på plass før faglig utvikling og anerkjennelse kan motivere fullt ut.'
   },
   {
@@ -33,7 +33,7 @@ const QUESTIONS = [
     q: 'Hva er det laveste behovet i Maslows behovspyramide?',
     opts: ['Sosiale behov for vennskap, familie og gruppefellesskap', 'Fysiologiske behov (mat, vann, søvn)', 'Sikkerhetsbehov for trygghet og stabilitet i hverdagen', 'Anerkjennelse og status fra omgivelsene'],
     correct: 1,
-    img: `<svg viewBox="0 0 280 190" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cp-maslow2"><polygon points="140,4 276,186 4,186"/></clipPath></defs><rect width="280" height="190" fill="#161927" rx="8"/><rect x="0" y="4" width="280" height="36" fill="#8b5cf6" clip-path="url(#cp-maslow2)"/><rect x="0" y="40" width="280" height="37" fill="#5c7cfa" clip-path="url(#cp-maslow2)"/><rect x="0" y="77" width="280" height="36" fill="#00a8e8" clip-path="url(#cp-maslow2)"/><rect x="0" y="113" width="280" height="36" fill="#10b981" clip-path="url(#cp-maslow2)"/><rect x="0" y="149" width="280" height="37" fill="#f59e0b" clip-path="url(#cp-maslow2)"/><polygon points="140,4 276,186 4,186" fill="none" stroke="#161927" stroke-width="2.5"/><line x1="113" y1="40" x2="167" y2="40" stroke="#161927" stroke-width="1.5"/><line x1="85" y1="77" x2="195" y2="77" stroke="#161927" stroke-width="1.5"/><line x1="57" y1="113" x2="223" y2="113" stroke="#161927" stroke-width="1.5"/><line x1="29" y1="149" x2="251" y2="149" stroke="#161927" stroke-width="1.5"/><text x="140" y="180" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Maslows behovspyramide – 5 nivåer</text></svg>`,
+    img: SVG_MASLOW,
     explain: 'Fysiologiske behov ligger nederst i pyramiden – mat, vann, søvn, varme. Disse må dekkes før sikkerhetsbehov og høyere behov blir aktuelle motivasjonsfaktorer.'
   },
   {
@@ -46,7 +46,7 @@ const QUESTIONS = [
       'Faktorer som øker bedriftens lønnsomhet og produktivitet direkte'
     ],
     correct: 1,
-    img: `<svg viewBox="0 0 280 175" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="175" fill="#161927" rx="8"/><rect x="8" y="8" width="122" height="32" rx="6" fill="#3b82f6" opacity="0.85"/><rect x="150" y="8" width="122" height="32" rx="6" fill="#8b5cf6" opacity="0.85"/><text x="69" y="28" fill="white" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Hygienefaktorer</text><text x="211" y="28" fill="white" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Motivasjonsfaktorer</text><line x1="140" y1="8" x2="140" y2="167" stroke="#2a2f4a" stroke-width="1"/><rect x="18" y="48" width="102" height="100" rx="4" fill="#3b82f6" opacity="0.08"/><rect x="160" y="48" width="102" height="100" rx="4" fill="#8b5cf6" opacity="0.08"/><text x="69" y="100" fill="#3b82f6" font-size="22" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">?</text><text x="211" y="100" fill="#8b5cf6" font-size="22" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">?</text><text x="140" y="165" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Herzbergs to-faktorteori</text></svg>`,
+    img: SVG_HERZBERG,
     explain: 'Hygienefaktorer (lønn, arbeidsforhold, ledelse, trygghet) forhindrer mistrivsel hvis de er til stede – men de skaper ikke motivasjon alene. For elektrikere: fast lønn, verneutstyr og oversiktlige arbeidstider er hygienefaktorer. Motivasjonsfaktorer gjør det.'
   },
   {
@@ -59,7 +59,7 @@ const QUESTIONS = [
       'Arbeidskontrakt, arbeidstid, pauser og overtidsregler'
     ],
     correct: 2,
-    img: `<svg viewBox="0 0 280 175" xmlns="http://www.w3.org/2000/svg"><rect width="280" height="175" fill="#161927" rx="8"/><rect x="8" y="8" width="122" height="32" rx="6" fill="#3b82f6" opacity="0.85"/><rect x="150" y="8" width="122" height="32" rx="6" fill="#8b5cf6" opacity="0.85"/><text x="69" y="28" fill="white" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Hygienefaktorer</text><text x="211" y="28" fill="white" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="600">Motivasjonsfaktorer</text><line x1="140" y1="8" x2="140" y2="167" stroke="#2a2f4a" stroke-width="1"/><rect x="18" y="48" width="102" height="100" rx="4" fill="#3b82f6" opacity="0.08"/><rect x="160" y="48" width="102" height="100" rx="4" fill="#8b5cf6" opacity="0.08"/><text x="69" y="100" fill="#3b82f6" font-size="22" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">?</text><text x="211" y="100" fill="#8b5cf6" font-size="22" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">?</text><text x="140" y="165" fill="#7b82a8" font-size="9" text-anchor="middle" font-family="system-ui,sans-serif">Herzbergs to-faktorteori</text></svg>`,
+    img: SVG_HERZBERG,
     explain: 'Motivasjonsfaktorer er knyttet til selve arbeidsinnholdet: ansvar, anerkjennelse, læring og mestring. For elektrikere: selvstendige oppdrag, fagbrev/sertifisering, tillit fra leder og det å mestre krevende installasjoner er typiske motivasjonsfaktorer.'
   },
   {
@@ -162,10 +162,10 @@ const QUESTIONS = [
     cat: 'lederstil', catLabel: 'Lederstil',
     q: 'Hva er kjernen i Hersey og Blanchards situasjonsledelse?',
     opts: [
-      'En god leder bør alltid bruke den samme faste lederstilen uansett medarbeider og situasjon',
+      'En god leder bør bruke den samme faste lederstilen uavhengig av medarbeider og situasjon',
       'Lederstilen bør tilpasses medarbeiderens kompetanse og motivasjonsnivå',
-      'Den aller beste lederen er alltid den som er mest autoritær og bestemt',
-      'Situasjonsledelse handler utelukkende om å håndtere akutte kriser og nødsituasjoner'
+      'Den beste lederen er den som er mest autoritær og bestemt',
+      'Situasjonsledelse handler primært om å håndtere akutte kriser og nødsituasjoner'
     ],
     correct: 1,
     explain: 'Situasjonsledelse sier at lederen bør tilpasse atferden til medarbeiderens «modenhet» – kombinasjonen av kompetanse og motivasjon. En lærling i første opplæringsår trenger tett instruksjon og oppfølging. En erfaren montør med svennebrev trenger mer autonomi og delegering.'
@@ -198,9 +198,9 @@ const QUESTIONS = [
     cat: 'personal', catLabel: 'Personal & utvikling',
     q: 'Hva er forskjellen mellom verbal og non-verbal kommunikasjon?',
     opts: [
-      'Verbal kommunikasjon er alltid skriftlig; non-verbal kommunikasjon er alltid muntlig og direkte',
+      'Verbal kommunikasjon er skriftlig; non-verbal kommunikasjon er muntlig og direkte',
       'Verbal bruker ord (tale/skrift); non-verbal bruker kroppsspråk, mimikk, tonefall og gester',
-      'Verbal kommunikasjon er alltid formell og offisiell; non-verbal er alltid uformell og ubevisst',
+      'Verbal kommunikasjon er formell og offisiell; non-verbal er uformell og ubevisst',
       'Det er ingen praktisk forskjell – begge formene er like effektive i all kommunikasjon'
     ],
     correct: 1,
@@ -210,10 +210,10 @@ const QUESTIONS = [
     cat: 'regelverk', catLabel: 'Regelverk & HMS',
     q: 'Hva regulerer Arbeidsmiljøloven (AML)?',
     opts: [
-      'Kun regler for oppsigelse, avskjed og permisjon for ansatte i fast stilling',
-      'Utelukkende regler som gjelder lønn, feriepenger og utbetaling av overtid',
+      'Regler for oppsigelse, avskjed og permisjon – gjelder ikke arbeidsmiljø og arbeidstid',
+      'Regler som gjelder lønn, feriepenger og utbetaling av overtid',
       'Krav til arbeidsmiljø, arbeidstid, HMS og rettigheter for arbeidsgiver og arbeidstaker',
-      'Kun regler som gjelder for lærlinger, nyansatte og ansatte i prøvetid'
+      'Regler som gjelder for lærlinger, nyansatte og ansatte i prøvetid'
     ],
     correct: 2,
     explain: 'AML setter rammer for fullt forsvarlig arbeidsmiljø: fysisk og psykososialt miljø, arbeidstid, medbestemmelse, HMS-krav, vern mot diskriminering og regler om oppsigelse.'
@@ -270,8 +270,8 @@ const QUESTIONS = [
     cat: 'personal', catLabel: 'Personal & utvikling',
     q: 'Hva bør en god medarbeidersamtale handle om?',
     opts: [
-      'Kun lønnsforhandling og diskusjon om fremtidige lønnstillegg og bonusordninger',
-      'Kun advarsel, kritikk og gjennomgang av feil og mangler den ansatte har begått',
+      'Lønnsforhandling og diskusjon om fremtidige lønnstillegg og bonusordninger',
+      'Advarsel, kritikk og gjennomgang av feil og mangler den ansatte har begått',
       'Utvikling, trivsel, mål, samarbeid og konkrete forbedringspunkter – i dialog',
       'Å avklare hvilke ansatte som eventuelt skal sies opp eller omplasseres fremover'
     ],
@@ -296,8 +296,8 @@ const QUESTIONS = [
     opts: [
       'En leder som nøye planlegger, gir svært detaljerte instruksjoner og kontrollerer nøye at utførelsen er korrekt',
       'En leder som inspirerer, motiverer og utvikler ansatte gjennom en felles visjon',
-      'En leder som utelukkende fokuserer på kortsiktige resultater og kvartalsvise mål',
-      'En leder som aldri griper inn og overlater alt til de ansatte uten styring'
+      'En leder som fokuserer sterkt på kortsiktige resultater og kvartalsvise mål',
+      'En leder som sjelden griper inn og overlater det meste til de ansatte uten tydelig styring'
     ],
     correct: 1,
     explain: 'Transformasjonsledelse bygger på karisma, visjon, intellektuell stimulering og individuell hensyn. Motstykket er transaksjonsledelse, som bygger mer på bytteforhold (belønning for prestasjon).'
@@ -307,9 +307,9 @@ const QUESTIONS = [
     q: 'Hva kjennetegner konstruktiv tilbakemelding (feedback)?',
     opts: [
       'Generell, vag og svevende tilbakemelding gitt høylytt i plenum foran alle kollegaer',
-      'Direkte personangrep som utelukkende fokuserer på feil og mangler ved personen, ikke arbeidet',
+      'Personangrep som fokuserer på feil og mangler ved personen, uten å knytte det til arbeidet',
       'Konkret, knyttet til atferd eller arbeid, gitt i tide og med tanke på utvikling',
-      'Kun positiv ros uten noen form for konstruktive forbedringspunkter eller utviklingsområder'
+      'Positiv ros uten konstruktive forbedringspunkter eller utviklingsområder'
     ],
     correct: 2,
     explain: 'Konstruktiv feedback er konkret («jeg la merke til at rapporten manglet tallgrunnlag»), knyttet til atferd (ikke person), gitt i tide og framoverrettet. Både positiv og negativ feedback skal være klar og nyttig.'
@@ -320,8 +320,8 @@ const QUESTIONS = [
     opts: [
       'Å ansette så raskt som mulig, uavhengig av kompetanse og kulturell tilpasning',
       'Å finne den kandidaten som passer best til stillingen og organisasjonen, basert på krav og kultur',
-      'Å alltid foretrekke interne kandidater uansett kompetansenivå og stillingstype',
-      'Å alltid hente inn eksterne kandidater og aldri rekruttere internt i organisasjonen'
+      'Å foretrekke interne kandidater fremfor eksterne, uavhengig av kompetansenivå',
+      'Å hente inn eksterne kandidater fremfor å rekruttere internt i organisasjonen'
     ],
     correct: 1,
     explain: 'En god rekruttering starter med stillingsanalyse og kravspesifikasjon, fortsetter med utlysning, screening, intervju, tester, referansesjekk og beslutning. Målet er riktig person på riktig plass.'
@@ -332,7 +332,7 @@ const QUESTIONS = [
     opts: [
       'Å bevisst ignorere og nedprioritere alle konflikter i håp om at de løser seg selv over tid',
       'Å identifisere og løse uenigheter konstruktivt gjennom dialog og kompromiss',
-      'Å alltid gi støtte og medhold til den ansatte som klager høyest og mest',
+      'Å gi støtte og medhold til den ansatte som klager høyest og mest',
       'Å løse konflikten raskt ved å si opp den eller de ansatte som er involvert'
     ],
     correct: 1,

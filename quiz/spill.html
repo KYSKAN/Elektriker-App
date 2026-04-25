@@ -566,6 +566,12 @@
     let QUIZ_META  = { title: '', subtitle: '', cats: {}, description: '' };
 
     (async () => {
+      let illustrationsText = '';
+      try {
+        const ir = await fetch('illustrations.js');
+        if (ir.ok) illustrationsText = await ir.text() + '\n';
+      } catch(e) {}
+
       let allQ    = [];
       let combined = null;
       for (const t of temas) {
@@ -574,7 +580,7 @@
           const resp = await fetch(path);
           if (!resp.ok) throw new Error('HTTP ' + resp.status);
           const text = await resp.text();
-          const fn   = new Function(text + '\nreturn { Q: QUESTIONS, M: QUIZ_META };');
+          const fn   = new Function(illustrationsText + text + '\nreturn { Q: QUESTIONS, M: QUIZ_META };');
           const res  = fn();
           allQ = allQ.concat(res.Q);
           if (!combined) {

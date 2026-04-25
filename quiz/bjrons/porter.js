@@ -10,32 +10,6 @@ const QUIZ_META = {
   }
 };
 
-// SVG-hjelper for 2-inngangs sannhetstabell
-function tt2(f00, f01, f10, f11) {
-  const col = v => v === '1' ? '#2ecc71' : '#e74c3c';
-  return `<svg viewBox="0 0 280 138" xmlns="http://www.w3.org/2000/svg">
-    <rect width="280" height="138" fill="#161927" rx="8"/>
-    <text x="140" y="16" fill="#7b82a8" font-size="10" text-anchor="middle" font-family="system-ui,sans-serif">Sannhetstabell for ukjent port</text>
-    <line x1="20" y1="43" x2="260" y2="43" stroke="#2a2f4a" stroke-width="1"/>
-    <line x1="103" y1="22" x2="103" y2="130" stroke="#2a2f4a" stroke-width="1"/>
-    <line x1="177" y1="22" x2="177" y2="130" stroke="#2a2f4a" stroke-width="1"/>
-    <text x="61"  y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">A</text>
-    <text x="140" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">B</text>
-    <text x="219" y="37" fill="#5c7cfa" font-size="13" text-anchor="middle" font-family="monospace" font-weight="700">F</text>
-    <text x="61"  y="60"  fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text>
-    <text x="140" y="60"  fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text>
-    <text x="219" y="60"  fill="${col(f00)}" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">${f00}</text>
-    <text x="61"  y="82"  fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text>
-    <text x="140" y="82"  fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text>
-    <text x="219" y="82"  fill="${col(f01)}" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">${f01}</text>
-    <text x="61"  y="104" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text>
-    <text x="140" y="104" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">0</text>
-    <text x="219" y="104" fill="${col(f10)}" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">${f10}</text>
-    <text x="61"  y="126" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text>
-    <text x="140" y="126" fill="#e8eaf6" font-size="13" text-anchor="middle" font-family="monospace">1</text>
-    <text x="219" y="126" fill="${col(f11)}" font-size="14" text-anchor="middle" font-family="monospace" font-weight="700">${f11}</text>
-  </svg>`;
-}
 
 const QUESTIONS = [
 
@@ -147,7 +121,7 @@ const QUESTIONS = [
   {
     cat: 'tabell',
     q: 'Hvilken port har denne sannhetstabellen? (F = 0,0,0,1)',
-    img: tt2('0','0','0','1'),
+    img: SVG_TT_AND,
     opts: ['OR — F = A+B', 'NAND — F = <span class="not">A·B</span>', 'AND — F = A·B', 'XOR — F = A⊕B'],
     correct: 2,
     explain: 'AND-porten: F = A·B. Utgangen er 1 kun når begge innganger er 1. Mønsteret 0,0,0,1 er signaturen til AND.'
@@ -156,7 +130,7 @@ const QUESTIONS = [
   {
     cat: 'tabell',
     q: 'Hvilken port har denne sannhetstabellen? (F = 0,1,1,1)',
-    img: tt2('0','1','1','1'),
+    img: SVG_TT_OR,
     opts: ['AND — F = A·B', 'NOR — F = <span class="not">A+B</span>', 'NAND — F = <span class="not">A·B</span>', 'OR — F = A+B'],
     correct: 3,
     explain: 'OR-porten: F = A+B. Utgangen er 0 kun når begge innganger er 0. Mønsteret 0,1,1,1 er signaturen til OR.'
@@ -165,7 +139,7 @@ const QUESTIONS = [
   {
     cat: 'tabell',
     q: 'Hvilken port har denne sannhetstabellen? (F = 1,1,1,0)',
-    img: tt2('1','1','1','0'),
+    img: SVG_TT_NAND,
     opts: ['AND — F = A·B', 'NOR — F = <span class="not">A+B</span>', 'NAND — F = <span class="not">A·B</span>', 'OR — F = A+B'],
     correct: 2,
     explain: 'NAND-porten: F = <span class="not">A·B</span>. Utgangen er 0 kun når begge innganger er 1 — speilet AND. Mønsteret 1,1,1,0 er signaturen til NAND.'
@@ -174,7 +148,7 @@ const QUESTIONS = [
   {
     cat: 'tabell',
     q: 'Hvilken port har denne sannhetstabellen? (F = 1,0,0,0)',
-    img: tt2('1','0','0','0'),
+    img: SVG_TT_NOR,
     opts: ['AND — F = A·B', 'NOR — F = <span class="not">A+B</span>', 'NAND — F = <span class="not">A·B</span>', 'OR — F = A+B'],
     correct: 1,
     explain: 'NOR-porten: F = <span class="not">A+B</span>. Utgangen er 1 kun når begge innganger er 0 — speilet OR. Mønsteret 1,0,0,0 er signaturen til NOR.'
@@ -183,7 +157,7 @@ const QUESTIONS = [
   {
     cat: 'tabell',
     q: 'Hvilken port har denne sannhetstabellen? (F = 0,1,1,0)',
-    img: tt2('0','1','1','0'),
+    img: SVG_TT_XOR,
     opts: ['OR — F = A+B', 'XNOR — F = <span class="not">A⊕B</span>', 'NAND — F = <span class="not">A·B</span>', 'XOR — F = A⊕B'],
     correct: 3,
     explain: 'XOR-porten: F = A⊕B. Utgangen er 1 når inngangene er forskjellige (0,1 eller 1,0) og 0 når de er like. Mønsteret 0,1,1,0 er XOR-signaturen.'
@@ -192,7 +166,7 @@ const QUESTIONS = [
   {
     cat: 'tabell',
     q: 'Hvilken port har denne sannhetstabellen? (F = 1,0,0,1)',
-    img: tt2('1','0','0','1'),
+    img: SVG_TT_XNOR,
     opts: ['XOR — F = A⊕B', 'XNOR — F = <span class="not">A⊕B</span>', 'NOR — F = <span class="not">A+B</span>', 'AND — F = A·B'],
     correct: 1,
     explain: 'XNOR-porten: F = <span class="not">A⊕B</span>. Utgangen er 1 når inngangene er like og 0 når de er forskjellige — speilet XOR. Mønsteret 1,0,0,1 er XNOR-signaturen.'
