@@ -614,14 +614,14 @@ const QUESTIONS = [
   },
   {
     cat: 'arduino',
-    q: 'Et program bruker DHT22-sensor og RTC (DS3231) for å overvåke temperatur. Hva gjør programmet?',
+    q: 'Hva gjør følgende Arduino-program?<br><code class="code-block">#include &lt;RTClib.h&gt;\n#include &lt;Wire.h&gt;\n#include &lt;DHT.h&gt;\n\n#define DHTPIN 2\n#define DHTTYPE DHT22\n\nDHT dht(DHTPIN, DHTTYPE);\nRTC_DS3231 rtc;\n\nfloat maxTemp = -1000;\nfloat minTemp = 1000;\nDateTime timeMax;\nDateTime timeMin;\n\nvoid setup() {\n  Serial.begin(9600);\n  dht.begin();\n  rtc.begin();\n}\n\nvoid loop() {\n  float currentTemp = dht.readTemperature();\n  DateTime now = rtc.now();\n\n  if (isnan(currentTemp)) {\n    Serial.println("Feil ved lesing av temperatur");\n    return;\n  }\n  if (currentTemp &gt; maxTemp) {\n    maxTemp = currentTemp;\n    timeMax = now;\n  }\n  if (currentTemp &lt; minTemp) {\n    minTemp = currentTemp;\n    timeMin = now;\n  }\n  Serial.print("Temp: ");  Serial.print(currentTemp);\n  Serial.print(" | Max: "); Serial.print(maxTemp);\n  Serial.print(" (");      Serial.print(timeMax.timestamp()); Serial.print(")");\n  Serial.print(" | Min: "); Serial.print(minTemp);\n  Serial.print(" (");      Serial.println(timeMin.timestamp()); Serial.println(")");\n  delay(60000);\n}</code>',
     opts: [
-      'Logger maks/min-temperatur over ett døgn og slår på kortet',
-      'Overskriver alltid maks- og min-temperatur ved hver måling',
-      'Skriver tidspunktet når maks- og min-temperatur ble målt',
-      'Bruker kun delay() og trenger ingen sanntidsklokke',
+      'Programmet bruker DHT22 og RTC for å logge maks/min-temperatur, og skriver tidspunkt for når de ble målt',
+      'Programmet overskriver alltid både maks- og min-temperatur ved hver måling',
+      'Programmet skriver tidspunktet når maks- og min-temperatur ble målt',
+      'Programmet bruker kun delay() og trenger ingen sanntidsklokke',
     ],
     correct: 2,
-    explain: 'Programmet oppdaterer maks/min bare når en ny verdi faktisk er høyere/lavere enn gjeldende rekord, og bruker RTC til å stemple tidspunktet. Den skriver resultatet løpende via Serial.',
+    explain: 'Programmet oppdaterer maxTemp/minTemp kun når ny verdi er høyere/lavere enn gjeldende rekord, og lagrer tidspunktet (RTC) for når rekorden ble satt. Resultatet skrives løpende via Serial.',
   },
 ];
