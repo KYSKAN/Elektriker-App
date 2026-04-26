@@ -402,12 +402,12 @@ const QUESTIONS = [
       'SR-vippe (latch)',
       'SR-vippe (flipflop)',
     ],
-    correct: 3,
-    explain: 'To krysskoblede NOR-porter danner en SR-bistabil krets. I pensum kalles dette SR-vippe (flipflop). SR har ugyldig tilstand ved S=R=1 og har ingen klokkeingang.',
+    correct: 2,
+    explain: 'To krysskoblede NOR-porter danner en SR-latch. En latch har ingen klokkeingang og reagerer direkte på inngangsnivå – det er nettopp det som skiller den fra en flipflop. SR-latchen har ugyldig tilstand ved S=R=1.',
   },
   {
     cat: 'digital',
-    q: 'Se figur: krets med klokkeingang, inverter og NAND-porter med Q og Q̄. Hva er dette?',
+    q: 'Se figur: krets med klokkeingang, inverterer og NAND-porter med Q og Q̄. Hva er dette?',
     img: '<img src="d-nand-krets.svg" style="max-width:100%;border-radius:8px;display:block;margin:0 auto 8px;">',
     opts: [
       'T-vippe (flipflop)',
