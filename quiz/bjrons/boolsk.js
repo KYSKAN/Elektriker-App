@@ -131,10 +131,10 @@ const QUESTIONS = [
 
   {
     cat: 'uttrykk',
-    q: 'Hva er riktig forenkling av A·B + A·C?',
+    q: 'Bruk distributiv lov til å faktorisere A·B + A·C',
     opts: ['A + B·C', 'A + B + C', 'A·B·C', 'A·(B+C)'],
     correct: 3,
-    explain: 'Distributiv lov: A·B + A·C = A·(B+C). A faktoriseres ut, akkurat som i vanlig algebra. Nyttig for å forenkle logiske kretser.'
+    explain: 'Distributiv lov: A·B + A·C = A·(B+C). A faktoriseres ut felles, akkurat som i vanlig algebra. Dette reduserer antall porter i en krets.'
   },
 
   {
