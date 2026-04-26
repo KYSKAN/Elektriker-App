@@ -238,4 +238,84 @@ const QUESTIONS = [
     explain: '<span class="not">A</span>=0, B=0: første ledd 0·0=0. A=1, <span class="not">B</span>=1: andre ledd 1·1=1. F = 0+1 = 1. Dette er XOR-uttrykket: gir 1 når A≠B.'
   },
 
+  // ── Forenkling – lengre uttrykk ──────────────────────────────
+
+  {
+    cat: 'uttrykk',
+    q: 'Forenkle: F = A·<span class="not">B</span>·C + A·B·C + A·<span class="not">B</span>·<span class="not">C</span> + A·B·<span class="not">C</span>',
+    opts: [
+      'A + B',
+      'A·C',
+      'B + C',
+      'A',
+    ],
+    correct: 3,
+    explain: 'Grupper to og to: A·<span class="not">B</span>·(C + <span class="not">C</span>) + A·B·(C + <span class="not">C</span>) = A·<span class="not">B</span> + A·B = A·(<span class="not">B</span> + B) = A·1 = A.',
+  },
+
+  {
+    cat: 'uttrykk',
+    q: 'Forenkle: F = <span class="not">A</span>·<span class="not">B</span>·<span class="not">C</span> + <span class="not">A</span>·<span class="not">B</span>·C + <span class="not">A</span>·B·<span class="not">C</span> + <span class="not">A</span>·B·C',
+    opts: [
+      '<span class="not">A</span>·<span class="not">B</span>',
+      'A',
+      '<span class="not">A</span> + <span class="not">B</span>',
+      '<span class="not">A</span>',
+    ],
+    correct: 3,
+    explain: '<span class="not">A</span>·<span class="not">B</span>·(<span class="not">C</span> + C) + <span class="not">A</span>·B·(<span class="not">C</span> + C) = <span class="not">A</span>·<span class="not">B</span> + <span class="not">A</span>·B = <span class="not">A</span>·(<span class="not">B</span> + B) = <span class="not">A</span>.',
+  },
+
+  {
+    cat: 'uttrykk',
+    q: 'Forenkle: F = <span class="not">A</span>·B·C + A·B·C + <span class="not">A</span>·B·<span class="not">C</span> + A·B·<span class="not">C</span>',
+    opts: [
+      'B·C',
+      'A + B',
+      'B',
+      'A·B',
+    ],
+    correct: 2,
+    explain: 'B·C·(<span class="not">A</span> + A) + B·<span class="not">C</span>·(<span class="not">A</span> + A) = B·C + B·<span class="not">C</span> = B·(C + <span class="not">C</span>) = B.',
+  },
+
+  {
+    cat: 'uttrykk',
+    q: 'Forenkle: F = A·(B + C) + <span class="not">A</span>·B',
+    opts: [
+      'A·B + C',
+      'A + B·C',
+      'A·C + B',
+      'B + A·C',
+    ],
+    correct: 3,
+    explain: 'Ekspander: AB + AC + <span class="not">A</span>B = B·(A + <span class="not">A</span>) + AC = B + AC.',
+  },
+
+  {
+    cat: 'uttrykk',
+    q: 'Forenkle: F = A·B·C·D + A·B·C·<span class="not">D</span> + A·B·<span class="not">C</span>·D + A·B·<span class="not">C</span>·<span class="not">D</span>',
+    opts: [
+      'A·B·C',
+      'A·B',
+      'A·B + C·D',
+      'A + B',
+    ],
+    correct: 1,
+    explain: 'A·B·C·(D + <span class="not">D</span>) + A·B·<span class="not">C</span>·(D + <span class="not">D</span>) = A·B·C + A·B·<span class="not">C</span> = A·B·(C + <span class="not">C</span>) = A·B.',
+  },
+
+  {
+    cat: 'uttrykk',
+    q: 'Forenkle: F = A·B + <span class="not">A</span>·C + B·C',
+    opts: [
+      'A·B + B·C',
+      'A·C + B·C',
+      'A·B + <span class="not">A</span>·C',
+      'A·B + C',
+    ],
+    correct: 2,
+    explain: 'Konsensussetningen: XY + <span class="not">X</span>Z + YZ = XY + <span class="not">X</span>Z — konsensustermet YZ kan fjernes. Her X=A, Y=B, Z=C: B·C dekkes alltid av enten A·B (A=1) eller <span class="not">A</span>·C (A=0). F = A·B + <span class="not">A</span>·C.',
+  },
+
 ];
