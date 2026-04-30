@@ -1,4 +1,4 @@
-const CACHE = 'kalkulator-v176';
+const CACHE = 'kalkulator-v177';
 
 const FILES = [
   './',
@@ -28,6 +28,10 @@ const FILES = [
   './quiz/lom/oks-kalkyl.js',
   './quiz/lom/oks-budsjettering.js',
   './quiz/lom/oks-investering.js',
+  './quiz/lom/ool-ledelse.js',
+  './quiz/lom/marked-grunnlag.js',
+  './quiz/lom/lov-hms.js',
+  './quiz/lom/oks-tillegg.js',
   './quiz/elektro/rlc.js',
   './quiz/bjrons/boolsk.js',
   './quiz/bjrons/porter.js',
