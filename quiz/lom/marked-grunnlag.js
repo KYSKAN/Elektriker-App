@@ -31,7 +31,7 @@ const QUESTIONS = [
     q: 'Hva kjennetegner B2B-markedet sammenlignet med B2C?',
     opts: [
       'Færre kunder, større volum per transaksjon og mer rasjonell, formell kjøpsatferd',
-      'Mange kunder, lav lojalitet og korte beslutningsprosesser uten formelle rutiner',
+      'Mange kunder, lav lojalitet og korte beslutningsprosesser uten formelle rutiner eller innkjøpskomité',
       'Tilnærmet samme kjøpsatferd som B2C, men med høyere reklamekostnader',
       'Hyppigere kjøpssituasjoner med lavere enhetspris og impulsbaserte valg',
     ],
@@ -43,7 +43,7 @@ const QUESTIONS = [
     catLabel: 'Markedsdefinisjoner',
     q: 'Hva er et mellomhandlermarked?',
     opts: [
-      'Et marked der sluttbrukere handler direkte fra produsenten uten mellomledd',
+      'Et marked der sluttbrukere handler direkte fra produsenten uten mellomledd, og prisene settes fritt',
       'Et marked der bedrifter kjøper varer for å videreselge dem med fortjeneste',
       'Et digitalt marked for finansielle tjenester og betalingsformidling',
       'Et marked der staten kjøper inn tjenester på vegne av innbyggerne',
@@ -82,7 +82,7 @@ const QUESTIONS = [
     catLabel: 'Markedsdefinisjoner',
     q: 'Hva er relasjonsmarkedsføring?',
     opts: [
-      'Kortvarig kampanjemarkedsføring rettet mot å maksimere salg i en enkelt periode',
+      'Kortvarig kampanjemarkedsføring rettet mot å maksimere salg i en enkelt periode gjennom prisnedslag og tilbud',
       'En strategi for å bygge og vedlikeholde langvarige og lønnsomme relasjoner med kunder og partnere',
       'Markedsføring gjennom anbefalinger og muntlig videreformidling mellom kunder',
       'En prismodell der lojalitet belønnes med gradvis lavere pris over tid',
@@ -111,7 +111,7 @@ const QUESTIONS = [
       'Høye utviklingskostnader og begrenset salgsvolum i oppstartsfasen',
       'Raskt stigende salg og mange nyetableringer i bransjen',
       'Stabilt høyt salg, sterk priskonkurranse, mange aktører og behov for differensiering',
-      'Kraftig salgsfall og tydelig marginpress som tvinger aktører ut av markedet',
+      'Kraftig salgsfall og tydelig marginpress som tvinger de fleste aktører gradvis ut av markedet',
     ],
     correct: 2,
     explain: 'I modningstfasen er salget stabilt høyt, men veksten flater ut. Konkurransen er sterk, prisene presses ned, og bedriften må differensiere seg for å beholde markedsandeler.',
@@ -134,7 +134,7 @@ const QUESTIONS = [
     catLabel: 'Markedsanalyse',
     q: 'Hva brukes en SWOT-analyse til?',
     opts: [
-      'Å vurdere kundesegmentenes kjøpsmotiver og beslutningsprosess',
+      'Å vurdere kundesegmentenes kjøpsmotiver, beslutningsprosess og grad av merkelojalitet',
       'Å kartlegge interne styrker og svakheter samt eksterne muligheter og trusler',
       'Å beregne markedsandeler og estimere bransjeomsetning',
       'Å sette priser basert på kostnadsstruktur og konkurransenivå',
@@ -149,7 +149,7 @@ const QUESTIONS = [
     opts: [
       'Å kategorisere produktene etter pris, størrelse og bruksområde',
       'Å dele markedet inn i grupper med lignende behov, kjøpsatferd eller egenskaper',
-      'Å vurdere hvilke distribusjonskanaler som gir lavest logistikkostnad',
+      'Å vurdere hvilke distribusjonskanaler som gir lavest logistikkostnad og høyest dekningsbidrag',
       'Å tilpasse prisstrategien til ulike geografiske regioner',
     ],
     correct: 1,
@@ -173,7 +173,7 @@ const QUESTIONS = [
     catLabel: 'Markedsanalyse',
     q: 'Hva er posisjonering?',
     opts: [
-      'Å bestemme hvilke utsalgssteder og nettkanaler produktet skal selges gjennom',
+      'Å bestemme hvilke utsalgssteder og nettkanaler produktet skal selges gjennom, basert på målgruppens kjøpsvaner',
       'Å justere prisen basert på konkurrentenes tilbud og kampanjesyklus',
       'Å skape en tydelig, differensiert og verdifull plass i målgruppens bevissthet relativt til konkurrentene',
       'Å analysere salgsandeler fordelt på ulike geografiske regioner',
@@ -187,7 +187,7 @@ const QUESTIONS = [
     q: 'Hva er Porters verdikjede?',
     opts: [
       'En modell for å analysere hvilke aktiviteter i bedriften som skaper verdi og bygger konkurransefortrinn',
-      'En modell som beskriver flyten av varer fra råvare til sluttforbruker gjennom hele forsyningskjeden',
+      'En modell som beskriver flyten av varer fra råvare til sluttforbruker gjennom hele forsyningskjeden og logistikknettverket',
       'En metode for å beregne produktets bidragsmargin og totalkostnad per enhet',
       'En modell for å vurdere samarbeidspartnere og strategiske allianser i bransjen',
     ],
@@ -213,7 +213,7 @@ const QUESTIONS = [
     q: 'Hva står AIDA for i markedsføring?',
     opts: [
       'Attention (oppmerksomhet), Interest (interesse), Desire (ønske), Action (handling)',
-      'Analyse, Innsikt, Dialog, Avslutning – fire trinn i en markedskommunikasjonsmodell',
+      'Analyse, Innsikt, Dialog, Avslutning – fire trinn i en markedskommunikasjonsmodell for B2B-salg',
       'Anerkjennelse, Involvering, Differensiering, Aktivering',
       'Anskaffelse, Implementering, Distribusjon, Avkastning',
     ],
@@ -238,7 +238,7 @@ const QUESTIONS = [
     catLabel: 'AIDA og STP',
     q: 'Hva er rekkefølgen i STP-prosessen?',
     opts: [
-      'Targeting → Segmentering → Posisjonering',
+      'Targeting → Segmentering → Posisjonering (top-down tilnærming)',
       'Posisjonering → Segmentering → Targeting',
       'Segmentering → Targeting → Posisjonering',
       'Targeting → Posisjonering → Segmentering',
@@ -254,7 +254,7 @@ const QUESTIONS = [
       'Geografi (region, by/land)',
       'Demografi (alder, kjønn, inntekt)',
       'Leverandørens kredittverdighet og betalingsbetingelser',
-      'Psykografi (livsstil, verdier og personlighet)',
+      'Psykografi (livsstil, verdier og personlighet) – en av de fire hovedgruppene',
     ],
     correct: 2,
     explain: 'Typiske segmenteringskriterier i forbrukermarkedet: geografi, demografi, psykografi og atferd. Leverandørens kredittverdighet er en variabel relevant for leverandørvurdering, ikke kundesegmentering.',
@@ -265,7 +265,7 @@ const QUESTIONS = [
     q: 'Hva er markedsplanens funksjon?',
     opts: [
       'En rapporteringsplikt overfor Brønnøysundregistrene hvert regnskapsår',
-      'En finansiell analyse beregnet for ekstern revisjon og investorrapportering',
+      'En finansiell analyse beregnet for ekstern revisjon, kredittvurdering og investorrapportering hvert år',
       'Et styringsdokument som beskriver mål, strategi og tiltak for markedsarbeidet i en gitt periode',
       'Et opplæringshefte for nyansatte som skal lære bedriftens produktsortiment',
     ],
@@ -278,7 +278,7 @@ const QUESTIONS = [
     q: 'Hva er «place» (distribusjon) i 5P-markedsmiksen?',
     opts: [
       'Geografisk plassering av annonsering og reklamemateriell i det fysiske og digitale rom',
-      'Produksjonsstedet der varene tilvirkes, kvalitetssikres og klargjøres for salg og pakking',
+      'Produksjonsstedet der varene tilvirkes, kvalitetssikres og klargjøres for salg, pakking og utsendelse til grossist',
       'Prisnivået som gjelder for produktet i de ulike salgskanalene og geografiske markedene',
       'Alle kanaler og metoder for å gjøre produktet tilgjengelig for kunden der de ønsker å kjøpe',
     ],
@@ -304,7 +304,7 @@ const QUESTIONS = [
     q: 'Hva er Porters fem konkurransekrefter?',
     opts: [
       'Leverandørers forhandlingsmakt, kunders forhandlingsmakt, trussel fra nykommere, trussel fra substitutter og rivalisering mellom eksisterende aktører',
-      'Pris, kvalitet, distribusjon, merkevare og innovasjonstakt som de viktigste parameterne i en markedsvurdering',
+      'Pris, kvalitet, distribusjon, merkevare og innovasjonstakt som de viktigste parameterne i en markedsvurdering og strategisk analyse av konkurransedynamikken i bransjen',
       'Kostnadsstruktur, inntektsmodell, markedsandel, vekstrate og lønnsomhet per segment i bransjeregnskapet',
       'Produkt, pris, plass, påvirkning og personell i den utvidede markedsmiksen',
     ],
@@ -368,7 +368,7 @@ const QUESTIONS = [
     catLabel: 'Konkurransemiljø',
     q: 'Hva er PESTEL-analyse brukt til?',
     opts: [
-      'Å vurdere effektiviteten i bedriftens interne verdiskapingsprosesser, kostnadsstruktur og ressursbruk',
+      'Å vurdere effektiviteten i bedriftens interne verdiskapingsprosesser, kostnadsstruktur, ressursbruk og produktivitet',
       'Å utvikle en prisstrategi basert på markedets betalingsvillighet',
       'Å kartlegge og sammenligne konkurrentenes posisjonering og markedsandeler',
       'Å kartlegge makroomgivelsene: politiske, økonomiske, sosiale, teknologiske, miljø- og juridiske faktorer',

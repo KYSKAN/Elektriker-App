@@ -54,13 +54,13 @@ const QUESTIONS = [
     correct: 1,
     explain: 'Kontantstrøm = Innbetalinger − Utbetalinger. Viktig: avskrivninger er IKKE utbetalinger og holdes utenfor. Gjeldsrenter holdes utenfor (avkastningskravet dekker dette). Sunk costs (allerede pådratte kostnader) holdes utenfor.',
   },
-  // Q4 – correct=3 (58 tegn). Opt[0]=56, ingen er lengre. La stå som er – riktig er lengst.
+  // Q4 – correct=3 (58 tegn). Gjør opt[0] lengre (68 tegn).
   {
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er pengenes tidsverdi?',
     opts: [
-      'At penger er verdt mer i dag enn samme beløp i fremtiden',
+      'At penger er verdt mer i dag enn samme beløp i fremtiden, fordi de kan investeres',
       'At priser stiger over tid på grunn av inflasjon',
       'At penger i banken tjener renter og vokser over tid',
       'Alle over er riktige – de er ulike sider av samme prinsipp',
@@ -138,21 +138,21 @@ const QUESTIONS = [
     correct: 1,
     explain: 'Nåverdiprofilen viser NV på y-aksen mot avkastningskravet på x-aksen. Der kurven krysser x-aksen (NV = 0) er internrenten. Profilen viser tydelig sammenhengen mellom avkastningskrav og lønnsomhet.',
   },
-  // Q10 – correct=0 (128 tegn). Gjør opt[1] lengre enn riktig (135 tegn).
+  // Q10 – correct=0 (128 tegn). Gjør opt[1] lengre enn riktig (136 tegn).
   {
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
     q: 'Hva er gjensidig utelukkende prosjekter?',
     opts: [
       'Prosjekter der valg av ett alternativ utelukker de andre – f.eks. tre tilbud på nytt produksjonsutstyr der man kun kan velge ett',
-      'Prosjekter med ulik levetid og investeringsstørrelse som ikke kan sammenlignes direkte uten å justere for disse forskjellene',
+      'Prosjekter med ulik levetid og investeringsstørrelse som ikke kan sammenlignes direkte uten å justere for disse forskjellene ved annuitetsmethode',
       'Prosjekter som ikke kan gjennomføres i det samme regnskapsåret',
       'Prosjekter som krever godkjenning fra ulike avdelinger i bedriften',
     ],
     correct: 0,
     explain: 'Gjensidig utelukkende prosjekter er alternativer der man BARE kan velge ett – de utelukker hverandre. Eksempel: bytte produksjonsutstyr der man mottar 3 tilbud men kun kan kjøpe ett.',
   },
-  // Q11 – correct=2 (174 tegn). Gjør opt[3] lengre enn riktig (181 tegn).
+  // Q11 – correct=2 (174 tegn). Gjør opt[3] lengre enn riktig (182 tegn).
   {
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
@@ -161,7 +161,7 @@ const QUESTIONS = [
       'IRR kan bare brukes på prosjekter med jevn kontantstrøm hvert år',
       'IRR gir alltid samme rangering som nåverdimetoden, og er dermed overflødig',
       'IRR måler prosentavkastning uten å ta hensyn til prosjektets størrelse – et lite prosjekt med høy % kan gi lavere faktisk fortjeneste (kr) enn et større prosjekt med lavere %',
-      'IRR forutsetter at avkastningskravet er kjent med full sikkerhet og er konstant gjennom hele prosjektperioden, noe som sjelden er tilfellet i virkeligheten',
+      'IRR forutsetter at avkastningskravet er kjent med full sikkerhet og er konstant gjennom hele prosjektperioden, noe som sjelden er tilfellet i virkeligheten og gir feil rangering',
     ],
     correct: 2,
     explain: '"Det er pengene vi lever av, ikke prosentene." IRR viser prosentavkastning uten å ta hensyn til størrelse. Et prosjekt med IR = 100% og NV = 1 kr er dårligere enn ett med IR = 50% og NV = 50 kr. NV-metoden velger riktig.',
@@ -180,7 +180,7 @@ const QUESTIONS = [
     correct: 3,
     explain: 'Ved gjensidig utelukkende prosjekter: bruk nåverdimetoden og velg prosjektet med HØYEST POSITIV nåverdi. Dette er fordi NV viser den faktiske verdiskapingen i kroner.',
   },
-  // Q13 – correct=0 (85 tegn). Gjør opt[3] lengre enn riktig (92 tegn).
+  // Q13 – correct=0 (85 tegn). Gjør opt[3] lengre enn riktig (93 tegn).
   {
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
@@ -189,18 +189,18 @@ const QUESTIONS = [
       'Gjennomfør ALLE prosjekter med IR > avkastningskravet, forutsatt tilgjengelig kapital',
       'Velg kun det prosjektet som har høyest IR blant alle kandidatene',
       'Avvis alle prosjekter med IR under 15 %, uansett avkastningskrav',
-      'Bruk alltid nåverdimetoden i stedet – IRR er generelt uegnet og kan gi feil rangering',
+      'Bruk alltid nåverdimetoden i stedet – IRR er generelt uegnet og kan gi feil rangering ved ulik størrelse',
     ],
     correct: 0,
     explain: 'For uavhengige prosjekter (man kan gjennomføre flere) er IRR nyttig: gjennomfør alle prosjekter der IR > avkastningskrav. Hvert prosjekt vurderes for seg, og alle lønnsomme gjennomføres hvis kapital tillater det.',
   },
-  // Q14 – correct=2 (121 tegn). Gjør opt[0] lengre enn riktig (129 tegn).
+  // Q14 – correct=2 (121 tegn). Gjør opt[0] lengre enn riktig (130 tegn).
   {
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
     q: 'Hva er følsomhetsanalyse i investeringsanalyse?',
     opts: [
-      'En systematisk kartlegging av de ansattes holdninger og motstand mot planlagte investeringer i organisasjonen',
+      'En systematisk kartlegging av de ansattes holdninger og motstand mot planlagte investeringer og endringstiltak i organisasjonen',
       'En vurdering av om prosjektet tåler konjunktursvingninger over tid',
       'Man endrer én og én forutsetning i kalkylen for å se konsekvensene for nåverdien – vurderer usikkerhet i kontantstrømmene',
       'En analyse av kundenes betalingsvilje ved ulike prisnivåer',
@@ -208,21 +208,21 @@ const QUESTIONS = [
     correct: 2,
     explain: 'Følsomhetsanalyse: man endrer én og én forutsetning (salgspris, volum, investeringsbeløp, avkastningskrav) og beregner ny NV. Viser hvilke forutsetninger prosjektet er mest følsomt for og hvor mye som kan gå galt før prosjektet blir ulønnsomt.',
   },
-  // Q15 – correct=3 (133 tegn). Gjør opt[1] lengre enn riktig (141 tegn).
+  // Q15 – correct=3 (133 tegn). Gjør opt[1] lengre enn riktig (142 tegn).
   {
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
     q: 'Hva er en sunk cost, og hvorfor holdes den utenfor investeringsanalysen?',
     opts: [
       'En kalkulatorisk kostnad som ennå ikke har generert noen betaling',
-      'En fremtidig kostnad der beløpet er svært usikkert å anslå presist og derfor vanskelig å modellere inn i kontantstrømanalysen',
+      'En fremtidig kostnad der beløpet er svært usikkert å anslå presist og derfor vanskelig å modellere korrekt inn i kontantstrøm- og diskonteringsanalysen',
       'En skjult kostnad som ikke fremkommer direkte i kalkylen',
       'En allerede pådratt kostnad som ikke kan gjenvinnes – irrelevant for fremtidige beslutninger fordi den påløper uansett hva man velger',
     ],
     correct: 3,
     explain: 'Sunk cost er en kostnad som allerede er pådratt og ikke kan gjenvinnes. Den er irrelevant for investeringsbeslutningen fordi den påløper uansett hva man bestemmer seg for. Å inkludere sunk costs leder til dårlige beslutninger.',
   },
-  // Q16 – correct=0 (127 tegn). Gjør opt[2] lengre enn riktig (135 tegn).
+  // Q16 – correct=0 (127 tegn). Gjør opt[2] lengre enn riktig (136 tegn).
   {
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
@@ -230,7 +230,7 @@ const QUESTIONS = [
     opts: [
       'Kapital investert i kundefordringer, varelager og råvarer – kapital som ikke gir direkte avkastning og representerer en kostnad',
       'Kapital plassert i aksjer og andre finansielle instrumenter',
-      'Kapital bundet i anleggsmidler som bygg, maskiner og transportmidler med lang nedskrivningstid og lav likviditet',
+      'Kapital bundet i anleggsmidler som bygg, maskiner og transportmidler med lang nedskrivningstid, lav likviditet og høye avskrivninger',
       'Egenkapitalen aksjonærene har skutt inn i selskapet',
     ],
     correct: 0,
@@ -264,7 +264,7 @@ const QUESTIONS = [
     correct: 3,
     explain: 'Faktoring: bedriften selger kundefordringene til et factoringselskap som betaler umiddelbart (minus en avgift). Fordeler: reduserer kapitalbinding, gir kredittforsikring (beskyttelse mot tap) og frigjør ressurser fra kredittadministrasjon.',
   },
-  // Q19 – correct=0 (137 tegn). La riktig være lengst.
+  // Q19 – correct=0 (137 tegn). Gjør opt[2] lengre enn riktig (145 tegn).
   {
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
@@ -272,19 +272,19 @@ const QUESTIONS = [
     opts: [
       'Defensiv = unngå tap gjennom strenge purrerutiner og kredittvurdering; offensiv = bruke kredittpolitikk proaktivt som konkurransefortrinn',
       'Defensiv = sette korte betalingsfrister; offensiv = sette lange betalingsfrister',
-      'Defensiv = håndtere kredittstyring internt; offensiv = outsource til factoringselskap',
+      'Defensiv = håndtere kredittstyring internt med egne ressurser; offensiv = outsource hele kredittfunksjonen til et eksternt factoringselskap',
       'Defensiv = streng fakturakontroll; offensiv = aktiv inkassobruk ved forsinkelse',
     ],
     correct: 0,
     explain: 'Defensiv kredittstyring fokuserer på å unngå tap – grundig kredittvurdering, purrerutiner og innkreving. Offensiv kredittstyring bruker kredittpolitikken strategisk – bedre kredittbetingelser som konkurransefortrinn for å vinne kunder.',
   },
-  // Q20 – correct=2 (126 tegn). La riktig være lengst.
+  // Q20 – correct=2 (126 tegn). Gjør opt[0] lengre enn riktig (134 tegn).
   {
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
     q: 'Hva er lagringskostnader, og hva inngår?',
     opts: [
-      'Kun fraktkostnader for inn- og utgående varer fra lageret',
+      'Kun fraktkostnader for inn- og utgående varer fra lageret, inkludert toll, spedisjon og transportforsikring for alle forsendelser',
       'Kun leiekostnad for lagerlokalet per kvadratmeter',
       'Svinn og ukurans, avskrivning lagerbygg, renter på bundet kapital, forsikring og servicekostnader – oppgis som % av lagerverdi',
       'Kun lønnskostnader til lagerarbeidere og trucksjåfører',
@@ -320,14 +320,14 @@ const QUESTIONS = [
     correct: 0,
     explain: 'Totale lagerkostnader = lagringskostnader + bestillingskostnader. Lagringskostnader stiger med større lager; bestillingskostnader faller med færre og større bestillinger. Optimalt volum er der summen er lavest – der de to kurvene krysses.',
   },
-  // Q23 – correct=2 (119 tegn). La riktig være lengst.
+  // Q23 – correct=2 (119 tegn). Gjør opt[1] lengre enn riktig (128 tegn).
   {
     cat: 'abc_dupont',
     catLabel: 'ABC-analyse og DuPont',
     q: 'Hva er ABC-analyse (Paretoprinsippet)?',
     opts: [
       'En modell for å vurdere ansattes prestasjonsnivå og lønnsfastsettelse',
-      'En kostnadsklassifisering der A = direkte, B = indirekte og C = kalkulatoriske kostnader',
+      'En kostnadsklassifisering der A = direkte variable kostnader, B = indirekte faste kostnader og C = kalkulatoriske og avledede kostnader',
       'En metode basert på 20/80-regelen: 20% av varene/kundene/produktene står for 80% av lagerverdi/omsetning/dekningsbidrag',
       'En budsjetteringsmetode der de tre største kostnadspostene analyseres nøye',
     ],
@@ -348,7 +348,7 @@ const QUESTIONS = [
     correct: 3,
     explain: 'ABC-analyse gir ulike styringsprinsipper: A-varer (høy verdi, 20% av varenummer, 80% av verdi): hyppige tellinger, tett styring. C-varer (lav verdi, 50% av varenummer, 5% av verdi): enklere rutiner, kan ha større sikkerhetslagre.',
   },
-  // Q25 – correct=0 (103 tegn). La riktig være lengst.
+  // Q25 – correct=0 (103 tegn). Gjør opt[3] lengre enn riktig (113 tegn).
   {
     cat: 'abc_dupont',
     catLabel: 'ABC-analyse og DuPont',
@@ -357,12 +357,12 @@ const QUESTIONS = [
       'TKR = Kapitalens omløpshastighet × Resultatgrad – viser de to veiene til bedre totalkapitalrentabilitet',
       'TKR = Egenkapitalandel × Resultatgrad × Gjeldsgrad',
       'TKR = Bruttofortjeneste / Driftsinntekter × Totalkapital',
-      'TKR = Driftsresultat / Totalgjeld × Soliditetsprosent',
+      'TKR = Driftsresultat / Totalgjeld × Soliditetsprosent – måler gjeldsbetjeningsevne og langsiktig finansiell stabilitet',
     ],
     correct: 0,
     explain: 'DuPont: TKR = Kapitalens omløpshastighet (Driftsinntekter/Totalkapital) × Resultatgrad (Resultat/Driftsinntekter × 100). Viser at man kan forbedre TKR enten via effektivitet (mer salg per krone kapital) eller marginer (bedre resultatgrad).',
   },
-  // Q26 – correct=2 (85 tegn). La riktig være lengst.
+  // Q26 – correct=2 (85 tegn). Gjør opt[3] lengre enn riktig (94 tegn).
   {
     cat: 'abc_dupont',
     catLabel: 'ABC-analyse og DuPont',
@@ -371,19 +371,19 @@ const QUESTIONS = [
       'Gjennomsnittlig omløpstid for varelageret målt i antall dager',
       'Totalkapital / Egenkapital – også kalt gearingfaktoren',
       'Driftsinntekter / Gjennomsnittlig totalkapital – viser effektiviteten i kapitalbruken',
-      'Antall ganger den investerte kapitalen er reinvestert i løpet av ett år',
+      'Antall ganger den investerte egenkapitalen og fremmedkapitalen er reinvestert i løpet av ett regnskapsår',
     ],
     correct: 2,
     explain: 'Kapitalens omløpshastighet = Driftsinntekter / Gjennomsnittlig totalkapital. Høy omløpshastighet betyr at bedriften genererer mye omsetning per krone investert kapital – effektiv kapitalbruk. Lav omløpshastighet indikerer for mye kapital bundet.',
   },
-  // Q27 – correct=3 (104 tegn). Gjør opt[1] lengre enn riktig (112 tegn).
+  // Q27 – correct=3 (120 tegn). Gjør opt[1] lengre enn riktig (129 tegn).
   {
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'En bedrift vurderer investering A (TBT = 2 år) og investering B (TBT = 3 år), begge med 5 års levetid. Investering B har mye større kontantstrøm etter år 3. Hva bør velges?',
     opts: [
       'Investering A – kortere TBT indikerer alltid bedre lønnsomhet',
-      'Begge er like gode – TBT-metoden er tilstrekkelig som beslutningsgrunnlag når levetiden er identisk',
+      'Begge er like gode – TBT-metoden er fullt ut tilstrekkelig som beslutningsgrunnlag når prosjektenes levetid og størrelse er identiske',
       'Investering B – større kontantstrøm etter år 3 er alltid avgjørende',
       'Det avhenger av nåverdien – TBT-metoden kan være misvisende fordi den ignorerer kontantstrøm etter tilbakebetalingstiden',
     ],
@@ -404,14 +404,14 @@ const QUESTIONS = [
     correct: 2,
     explain: 'JIT (Just-In-Time): varer ankommer produksjonen akkurat når de trengs – minimerer varelagerbinding. LEAN eliminerer alle former for muda (sløsing) i prosessen, inkludert overproduksjon, unødvendig lager, venting og unødvendige bevegelser.',
   },
-  // Q29 – correct=3 (120 tegn). La riktig være lengst.
+  // Q29 – correct=3 (104 tegn). Gjør opt[1] lengre enn riktig (114 tegn).
   {
     cat: 'abc_dupont',
     catLabel: 'ABC-analyse og DuPont',
     q: 'Hvilke to tiltak kan bedre DuPont-modellens TKR?',
     opts: [
       'Styrke egenkapitalen og nedbetale langsiktig gjeld',
-      'Ansette flere selgere og øke budsjettene for markedsføring',
+      'Ansette flere selgere, øke budsjettene for markedsføring og investere mer i kundebearbeiding og CRM-systemer',
       'Utvide varelageret og øke kassekredittrammen',
       'Øke kapitalens omløpshastighet (mer salg per krone kapital) og/eller øke resultatgraden (bedre marginer)',
     ],

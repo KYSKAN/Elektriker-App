@@ -110,7 +110,7 @@ const QUESTIONS = [
     opts: [
       'Gjennomsnittlig totalkapital / Driftsinntekter – viser kapital per krone omsetning',
       'Driftsinntekter / Gjennomsnittlig totalkapital – viser hvor effektivt kapitalen brukes til å generere omsetning',
-      'Salgsinntekter / Egenkapital – viser eiernes andel av omsetningen',
+      'Salgsinntekter / Egenkapital – viser eiernes andel av omsetningen og brukes til å vurdere kapitalutnyttelse fra eierperspektiv',
       'Totalkapital / Årsresultat – viser tilbakebetalingstid på investert kapital',
     ],
     correct: 1,
@@ -160,7 +160,7 @@ const QUESTIONS = [
     catLabel: 'Soliditetsnøkkeltall',
     q: 'Hva er egenkapitalprosent, og hva er kravet?',
     opts: [
-      'Egenkapital / Salgsinntekter × 100; krav: over 10%',
+      'Egenkapital / Salgsinntekter × 100; krav: over 10% for å sikre tilstrekkelig eierfinansiert omsetningsgrunnlag',
       'Årsresultat / Egenkapital × 100; krav: over 18%',
       'Egenkapital / Gjeld × 100; krav: minst 100%',
       'Egenkapital / Totalkapital × 100; krav: ~35% eller mer',
@@ -189,7 +189,7 @@ const QUESTIONS = [
       'Omløpsmidler / Kortsiktig gjeld; krav: over 2 for å dekke kortsiktig gjeld',
       'Anleggsmidler / Totalkapital; krav: under 0,5 for balansert kapitalstruktur',
       'Anleggsmidler / (Egenkapital + Langsiktig gjeld); krav: under 1 – anleggsmidler bør finansieres av langsiktig kapital',
-      'Egenkapital / Anleggsmidler; krav: over 1 for full egenfinansiering',
+      'Egenkapital / Anleggsmidler; krav: over 1 for full egenfinansiering, og høyere verdier betyr at egenkapitalen alene overstiger anleggsmidlenes bokførte verdi',
     ],
     correct: 2,
     explain: 'Finansieringsgrad 1 = Anleggsmidler / (Egenkapital + Langsiktig gjeld). Krav: under 1. Viser om anleggsmidler er finansiert av langsiktig kapital. Over 1 betyr at kortsiktig gjeld finansierer anleggsmidler – uheldig.',
@@ -227,8 +227,8 @@ const QUESTIONS = [
     opts: [
       'Varekostnad / Gjennomsnittlig varelager; høy verdi er bra (betyr hurtig omsetning)',
       'Gjennomsnittlig varelager / Varekostnad × 365; lav verdi (færre dager) er bra',
-      'Salgsinntekter / Varelager; bør ligge nær bransjegjennomsnitt',
-      'Varelager / Varekostnad; bør være under 0,1 for effektiv lagerstyring',
+      'Salgsinntekter / Varelager; bør ligge nær bransjegjennomsnitt og justeres for sesongmessige lagerbehov',
+      'Varelager / Varekostnad; bør være under 0,1 for effektiv lagerstyring og redusert kapitalbinding i lager',
     ],
     correct: 0,
     explain: 'Varelagerets omløpshastighet = Varekostnad / Gjennomsnittlig varelager. Høy verdi betyr at varelageret omsettes raskt – lite kapital bundet opp i lager. Lav verdi kan indikere svakt salg eller overfylt lager.',
@@ -252,7 +252,7 @@ const QUESTIONS = [
     q: 'Hva er kredittid for leverandører?',
     opts: [
       'Gjennomsnittlig leverandørgjeld × 360 / Varekjøp inkl. mva – viser hvor lenge man utsetter betaling til leverandører',
-      'Antall dager leverandøren innvilger kredit ifølge kontrakten',
+      'Antall dager leverandøren innvilger kredit ifølge kontrakten, uavhengig av faktisk betalingspraksis og om bedriften betaler innen fristen',
       'Varekjøp / Gjennomsnittlig leverandørgjeld – viser leverandørgjeldets omløpshastighet',
       'Leverandørgjeld / Totale driftskostnader × 360 – viser gjeldsbyrden mot leverandører',
     ],
@@ -265,7 +265,7 @@ const QUESTIONS = [
     q: 'Hvilke tiltak kan bedre lønnsomheten?',
     opts: [
       'Redusere antall ansatte og midlertidig utsette leverandørbetalinger for å frigi kapital',
-      'Ta opp mer lån for å finansiere investeringer og vekst i nye markedssegmenter',
+      'Ta opp mer lån for å finansiere investeringer og vekst i nye markedssegmenter, og dermed øke omsetningsgrunnlaget på sikt',
       'Øke salgsprisene, redusere varekostnaden, øke bruttofortjenesteprosenten, kutte kostnader og øke omsetning',
       'Øke varelageret og innføre lengre betalingsfrister for kunder',
     ],
@@ -291,7 +291,7 @@ const QUESTIONS = [
     q: 'Hvilke tiltak kan bedre likviditeten?',
     opts: [
       'Kortere kredittid til kunder, bedre innkrevingsrutiner, redusere varelager, utvide kassekreditt, utsette utbytte',
-      'Øke varelager for å sikre leveranser og unngå utsalg, samt forlenge kundefordringer for å øke kundenes kjøpslyst',
+      'Øke varelager for å sikre leveranser og unngå utsalg, samt forlenge kundefordringer for å øke kundenes kjøpslyst og styrke salgsvolum',
       'Dele ut mer utbytte og øke egenkapitalen via emisjon for å styrke soliditeten',
       'Investere i ny produksjonskapasitet finansiert med kortsiktig gjeld og øke anleggsmidlene',
     ],
@@ -306,7 +306,7 @@ const QUESTIONS = [
       'Man bruker inngående balanse (IB) alene for å unngå periodefeil',
       'Man bruker alltid kapital per 31.12 (utgående balanse)',
       'Gjennomsnittlig kapital = (Kapital IB + Kapital UB) / 2 – for å ta hensyn til endringer i løpet av året',
-      'Gjennomsnitt beregnes som median av månedlige balansetall',
+      'Gjennomsnitt beregnes som median av månedlige balansetall for å jevne ut ekstremverdier og sesongsvingninger',
     ],
     correct: 2,
     explain: 'Gjennomsnittlig kapital = (Inngående balanse + Utgående balanse) / 2. Brukes i rentabilitetsnøkkeltall (TKR, EKR) fordi kapitalen kan endre seg gjennom året, og gjennomsnittet gir et mer korrekt bilde.',
@@ -332,7 +332,7 @@ const QUESTIONS = [
       'For lav bruttofortjenesteprosent og høye varekostnader',
       'For lav egenkapitalprosent og høy gjeldsgrad',
       'Lang kredittid til kunder, stor kapital bundet i varelager, sesonmessige svingninger og investeringer',
-      'For høy omløpshastighet på varelageret og for korte leverandørkreditter',
+      'For høy omløpshastighet på varelageret og for korte leverandørkreditter, noe som tapper driftskapitalen',
     ],
     correct: 2,
     explain: 'Dårlig likviditet skyldes typisk: lang innbetalingstid fra kunder, store varelager som binder kapital, sesongsvingninger, store investeringer og store utbyttebetalinger. God lønnsomhet garanterer ikke god likviditet.',
@@ -342,7 +342,7 @@ const QUESTIONS = [
     catLabel: 'Likviditetsnøkkeltall',
     q: 'En bedrift har LG1 = 1,4 og LG2 = 0,7. Hva sier dette om likviditeten?',
     opts: [
-      'Begge verdier er innenfor normal variasjon – ingen umiddelbar bekymring siden kravene varierer mellom bransjer',
+      'Begge verdier er innenfor normal variasjon – ingen umiddelbar bekymring siden kravene varierer mellom bransjer og man bør se trenden over flere år',
       'LG1 er akseptabel, men LG2 er ikke relevant når varelager er lite',
       'LG1 under 2 er et advarselssignal, LG2 under 1 er kritisk – bedriften kan ha problemer med å betale kortsiktig gjeld',
       'Begge verdier er for høye – bedriften binder for mye kapital i omløpsmidler og bør øke kortsiktig gjeld',
@@ -369,7 +369,7 @@ const QUESTIONS = [
     q: 'Hva er faktoring, og hva brukes det til for å bedre likviditeten?',
     opts: [
       'En metode der bedriften reduserer varelageret ved å selge ut med rabatt og frigjøre kapital fra lager',
-      'En finansieringsform der leverandøren gir lenger betalingsfrist mot en avgift, noe som utsetter kontantutgangen',
+      'En finansieringsform der leverandøren gir lenger betalingsfrist mot en avgift, noe som utsetter kontantutgangen og bedrer den kortsiktige betalingsevnen',
       'Å selge kundefordringer til et factoringselskap mot umiddelbar betaling (minus en avgift) – gir raskere innbetaling',
       'En ordning der banken overtar innkrevingen og stiller kassekreditt til disposisjon mot pant i fordringer',
     ],
@@ -383,7 +383,7 @@ const QUESTIONS = [
     opts: [
       'Bedriften er godt finansiert – TKR over 5% anses normalt som tilfredsstillende',
       'Lånerenten er irrelevant så lenge TKR er positiv',
-      'Høy gjeld er en fordel fordi skatteskjoldet reduserer nettokostnaden',
+      'Høy gjeld er en fordel fordi skatteskjoldet reduserer nettokostnaden av rentene og dermed kompenserer for lav TKR',
       'Bedriften har negativ gearingeffekt – gjeldsfinansieringen koster mer enn avkastningen, noe som svekker EKR',
     ],
     correct: 3,
@@ -395,7 +395,7 @@ const QUESTIONS = [
     q: 'Hva viser finansieringsgrad 1 over 1?',
     opts: [
       'At bedriften har god langsiktig kapitaldekning og lav finansieringsrisiko',
-      'At omløpsmidler overstiger kortsiktig gjeld – positivt for likviditeten',
+      'At omløpsmidler overstiger kortsiktig gjeld – positivt for likviditeten og tegn på god arbeidskapital',
       'At anleggsmidler finansieres av kortsiktig gjeld – en ugunstig og risikabel situasjon',
       'At egenkapitalen er større enn gjelden – bedriften er solid finansiert',
     ],
