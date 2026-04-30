@@ -107,6 +107,7 @@ PWA er oppe og kjører på https://kyskan.github.io/Elektriker-App. Koblet til G
 - All logikk i frontend — Supabase er eneste ekstern tjeneste
 - Legg til ny kalkulator: se instruksjoner i `CLAUDE.md`
 - Legg til nytt quiz-tema: se instruksjoner i `CLAUDE.md`
-- **Husk:** Bump `CACHE`-versjon i `service-worker.js` linje 1 ved hver deploy
+- **Cache-bump:** Skjer automatisk via `hooks/pre-commit` (krever `git config core.hooksPath hooks` én gang per klone)
 - **Husk:** Bruk `git add <spesifikke filer>` — ikke `git add -A` (unngå å committe .claude/)
 - **.nojekyll** i rot er kritisk — uten den feiler GitHub Pages-deploy
+- **Linjeskift:** `.gitattributes` styrer at alle tekstfiler er LF i repoet — kjør `git add --renormalize .` etter første klone for å fjerne CRLF-advarsler

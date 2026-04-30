@@ -151,13 +151,19 @@ Anon-nøkkel ligger i `spill.html` — brukes for INSERT og SELECT fra nettleser
 `saveAnswer` kalles fra `selectAnswer()` (enkeltvalg) og `confirmAnswer()` (flervalg) for hvert svar.
 
 ## Viktige regler
-- **Service worker:** Bump `CACHE` (v156 → v157 osv.) i `service-worker.js` linje 1 ved HVER deploy
-- **Deploy:** `git add <filer> && git commit -m "..." && git push` — GitHub Pages deployer automatisk
+- **Service worker:** `CACHE` bumpes automatisk av pre-commit hook (`hooks/pre-commit`) når en HTML/JS/CSS/SVG/JSON-fil er staget. Trenger ikke å gjøres manuelt.
+- **Deploy:** `git add <filer> && git commit -m "..." && git push` — hook bumper cache, så GitHub Pages deployer automatisk
 - **Legg aldri til `-A` i git add** — legg til spesifikke filer for å unngå å committe .claude/
 - **.nojekyll:** Må alltid ligge i rot — uten den krasjer GitHub Pages-builden etter 15 min
 - **Platform:** PWA på Android og iOS, nettside i alle nettlesere på mobil og PC
 - **Stil:** Mørkt tema — bakgrunn `#1a1a2e`, kort `#16213e`, aksentblå `#63b3ed`
 - **Knapper:** Aktive toggle/beregn-knapper bruker gradient `#3b82f6 → #6366f1`
+
+## Førstegangsoppsett etter klone
+- `git config core.hooksPath hooks` — aktiverer pre-commit hook for auto-bump av cache. Må kjøres én gang per klone (ellers må `CACHE`-verdien i `service-worker.js` bumpes manuelt før deploy).
+
+## Linjeskift
+`.gitattributes` setter `* text=auto eol=lf` slik at alle tekstfiler er LF i repoet uavhengig av OS. Hvis du fortsatt får `LF will be replaced by CRLF`-advarsler etter klone, kjør `git add --renormalize .` én gang for å normalisere arbeidstreet.
 
 ## Slik legger du til en ny kalkulator
 1. Opprett `kalkulator/js/calc-ny.js` med logikk og `calcNyClear()`
