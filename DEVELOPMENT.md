@@ -4,7 +4,7 @@
 PWA og nettside for elektrikere. Fagkalkulatorer og quiz. Fungerer på Android, iOS og i alle nettlesere på mobil og PC.
 
 ## Nåværende status
-PWA er oppe og kjører på https://kyskan.github.io/Elektriker-App. Koblet til GitHub — automatisk deploy via GitHub Pages ved `git push`. Service worker på v156.
+PWA er oppe og kjører på https://kyskan.github.io/Elektriker-App. Koblet til GitHub — automatisk deploy via GitHub Pages ved `git push`. Service worker på v186.
 
 **Backend:** Supabase (PostgreSQL) — tabeller `scores` (toppliste) og `svar` (alle svar per spørsmål).
 
@@ -18,16 +18,24 @@ PWA er oppe og kjører på https://kyskan.github.io/Elektriker-App. Koblet til G
 
 ---
 
-## Quiz-temaer (13 totalt, 415 spørsmål)
+## Quiz-temaer (21 totalt, 616 spørsmål)
 
-### LØM (Fagskole)
-| Tema             | Slug            | Spørsmål | Toppliste |
-|------------------|-----------------|----------|-----------|
-| Ledelse & Org.   | lom-ledelse     | 30       | ✓         |
-| Markedsføring    | lom-marked      | 36       | ✓         |
-| Regnskapsanalyse | lom-regnskap    | 33       | ✓         |
-| Økonomistyring   | lom-okonomi     | 50       | ✓         |
-| Lover & Avtaler  | lom-lovavtale   | 29       | ✓         |
+### LØM (Fagskole) — 13 temaer, 379 spørsmål
+| Tema                       | Slug                       | Spørsmål | Toppliste |
+|----------------------------|----------------------------|----------|-----------|
+| OOL – Motivasjon           | lom-ool-motivasjon         | 31       | ✓         |
+| OOL – Organisasjonskultur  | lom-ool-kultur             | 30       | ✓         |
+| OOL – Endringsledelse      | lom-ool-endring            | 30       | ✓         |
+| OOL – Lederstil & org.     | lom-ool-ledelse            | 30       | ✓         |
+| Marked – Strategi & 4P     | lom-marked-strategi        | 30       | ✓         |
+| Marked – Grunnlag          | lom-marked-grunnlag        | 30       | ✓         |
+| ØKS – Kostnader            | lom-oks-kostnader          | 29       | ✓         |
+| ØKS – Regnskapsanalyse     | lom-oks-regnskapsanalyse   | 30       | ✓         |
+| ØKS – Kalkulasjon          | lom-oks-kalkyl             | 28       | ✓         |
+| ØKS – Budsjettering        | lom-oks-budsjettering      | 27       | ✓         |
+| ØKS – Investering          | lom-oks-investering        | 29       | ✓         |
+| ØKS – Tillegg (MVA, m.m.)  | lom-oks-tillegg            | 25       | ✓         |
+| Lov – AML, ferie, HMS      | lom-lov-hms                | 30       | ✓         |
 
 ### Elektro
 | Tema       | Slug | Spørsmål | Toppliste |
@@ -73,8 +81,13 @@ PWA er oppe og kjører på https://kyskan.github.io/Elektriker-App. Koblet til G
 
 ### Quiz — toppliste
 - [x] RLC, TRH-1EK, Minne, Mikrokontroller
-- [x] Alle LØM-temaer
+- [x] Alle 13 LØM-temaer
 - [ ] Boolsk, Porter, Tallsystemer, Vipper mangler toppliste
+
+### Quiz — kvalitet (svar-mønstre)
+- [x] LØM: omskrevet alle feil-svar slik at riktig svar ikke skiller seg ut på lengde, posisjon, komma, bindestrek eller parentes (april 2026, runde 1–4)
+- [x] Verifikasjonsskript og akseptkriterier dokumentert i CLAUDE.md
+- [ ] Tilsvarende gjennomgang av Elektro- og Bjørns-quizene (RLC, boolsk, porter, mikrokontroller, minne, tallsystemer, vipper, trh1ek)
 
 ### Quiz — dataanalyse (Supabase)
 - [x] Alle svar logges til `svar`-tabellen med tema, sporsmal_idx, cat, riktig, navn

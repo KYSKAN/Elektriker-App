@@ -32,11 +32,20 @@ AppTilTelefon/
     ├── spill.html          Quiz-motor — laster quiz-fil dynamisk fra temaFil[tema]
     ├── illustrations.js    SVG-illustrasjoner lastet FØR quiz-fil evalueres
     ├── lom/
-    │   ├── ledelse.js      LØM – Ledelse & Organisasjon (30 spørsmål)
-    │   ├── marked.js       LØM – Markedsføringsledelse (36 spørsmål)
-    │   ├── regnskap.js     LØM – Regnskapsanalyse (33 spørsmål)
-    │   ├── okonomi.js      LØM – Økonomistyring (50 spørsmål)
-    │   └── lovavtale.js    LØM – Lover & Avtaler (29 spørsmål)
+    │   ├── ool-motivasjon.js       LØM OOL – Motivasjon (31 spørsmål)
+    │   ├── ool-kultur.js           LØM OOL – Organisasjonskultur (30 spørsmål)
+    │   ├── ool-endring.js          LØM OOL – Endringsledelse (30 spørsmål)
+    │   ├── ool-ledelse.js          LØM OOL – Lederstil & org.former (30 spørsmål)
+    │   ├── marked-strategi.js      LØM Marked – Strategi & 4P (30 spørsmål)
+    │   ├── marked-grunnlag.js      LØM Marked – Grunnlag (BOMOF, AIDA, STP) (30 spørsmål)
+    │   ├── oks-kostnader.js        LØM ØKS – Kostnader & dekningsbidrag (29 spørsmål)
+    │   ├── oks-regnskapsanalyse.js LØM ØKS – Regnskapsanalyse & nøkkeltall (30 spørsmål)
+    │   ├── oks-kalkyl.js           LØM ØKS – Kalkulasjon & selvkost (28 spørsmål)
+    │   ├── oks-budsjettering.js    LØM ØKS – Budsjettering (27 spørsmål)
+    │   ├── oks-investering.js      LØM ØKS – Investeringsanalyse (29 spørsmål)
+    │   ├── oks-tillegg.js          LØM ØKS – MVA, selskapsformer, lover (25 spørsmål)
+    │   ├── lov-hms.js              LØM Lov – AML, ferieloven, HMS (30 spørsmål)
+    │   └── _arkiv/                 Gamle, sammenslåtte LØM-filer (ikke i bruk)
     ├── elektro/
     │   └── rlc.js          RLC-kretser (28 spørsmål)
     └── bjrons/
@@ -63,23 +72,31 @@ Alle kalkulatorer ligger i `kalkulator/`. HTML er i `kalkulator/index.html`, JS 
 Tre separate quiz-velger-sider lenket fra hoved-appen. Felles quiz-motor i `spill.html`.
 
 ### Alle quiz-temaer
-| Slug              | Fil                       | Spørsmål | Hub               | Toppliste |
-|-------------------|---------------------------|----------|-------------------|-----------|
-| lom-ledelse       | lom/ledelse.js            | 30       | index.html        | ✓         |
-| lom-marked        | lom/marked.js             | 36       | index.html        | ✓         |
-| lom-regnskap      | lom/regnskap.js           | 33       | index.html        | ✓         |
-| lom-okonomi       | lom/okonomi.js            | 50       | index.html        | ✓         |
-| lom-lovavtale     | lom/lovavtale.js          | 29       | index.html        | ✓         |
-| rlc               | elektro/rlc.js            | 28       | index-elektro.html | ✓        |
-| boolsk            | bjrons/boolsk.js          | 31       | index-bjrons.html  |          |
-| porter            | bjrons/porter.js          | 26       | index-bjrons.html  |          |
-| mikrokontroller   | bjrons/mikrokontroller.js | 25       | index-bjrons.html  | ✓        |
-| minne             | bjrons/minne.js           | 25       | index-bjrons.html  | ✓        |
-| tallsystemer      | bjrons/tallsystemer.js    | 30       | index-bjrons.html  |          |
-| vipper            | bjrons/vipper.js          | 22       | index-bjrons.html  |          |
-| trh1ek            | bjrons/trh1ek.js          | 50       | index-bjrons.html  | ✓        |
+| Slug                     | Fil                            | Spørsmål | Hub                | Toppliste |
+|--------------------------|--------------------------------|----------|--------------------|-----------|
+| lom-ool-motivasjon       | lom/ool-motivasjon.js          | 31       | index.html         | ✓         |
+| lom-ool-kultur           | lom/ool-kultur.js              | 30       | index.html         | ✓         |
+| lom-ool-endring          | lom/ool-endring.js             | 30       | index.html         | ✓         |
+| lom-ool-ledelse          | lom/ool-ledelse.js             | 30       | index.html         | ✓         |
+| lom-marked-strategi      | lom/marked-strategi.js         | 30       | index.html         | ✓         |
+| lom-marked-grunnlag      | lom/marked-grunnlag.js         | 30       | index.html         | ✓         |
+| lom-oks-kostnader        | lom/oks-kostnader.js           | 29       | index.html         | ✓         |
+| lom-oks-regnskapsanalyse | lom/oks-regnskapsanalyse.js    | 30       | index.html         | ✓         |
+| lom-oks-kalkyl           | lom/oks-kalkyl.js              | 28       | index.html         | ✓         |
+| lom-oks-budsjettering    | lom/oks-budsjettering.js       | 27       | index.html         | ✓         |
+| lom-oks-investering      | lom/oks-investering.js         | 29       | index.html         | ✓         |
+| lom-oks-tillegg          | lom/oks-tillegg.js             | 25       | index.html         | ✓         |
+| lom-lov-hms              | lom/lov-hms.js                 | 30       | index.html         | ✓         |
+| rlc                      | elektro/rlc.js                 | 28       | index-elektro.html | ✓         |
+| boolsk                   | bjrons/boolsk.js               | 31       | index-bjrons.html  |           |
+| porter                   | bjrons/porter.js               | 26       | index-bjrons.html  |           |
+| mikrokontroller          | bjrons/mikrokontroller.js      | 25       | index-bjrons.html  | ✓         |
+| minne                    | bjrons/minne.js                | 25       | index-bjrons.html  | ✓         |
+| tallsystemer             | bjrons/tallsystemer.js         | 30       | index-bjrons.html  |           |
+| vipper                   | bjrons/vipper.js               | 22       | index-bjrons.html  |           |
+| trh1ek                   | bjrons/trh1ek.js               | 50       | index-bjrons.html  | ✓         |
 
-**Totalt: 415 spørsmål fordelt på 13 temaer**
+**Totalt: 616 spørsmål fordelt på 21 temaer (13 LØM + 1 elektro + 7 bjrons)**
 
 ### Slik fungerer spill.html
 - Leser `?tema=X` fra URL og slår opp filen i `temaFil`-tabellen
@@ -183,6 +200,68 @@ const QUESTIONS = [
 - Alltid 4 svaralternativer — quizmotoren shuffler dem tilfeldig
 - `catLabel` må matche `cats[cat].label` eksakt
 - Filen evalueres som vanlig JS via `new Function()` i spill.html — ikke bruk ES-modules (`import`/`export`)
+
+## Quiz — kvalitetskrav for å unngå tells
+
+**Bakgrunn:** I april 2026 ble alle 13 LØM-quizfiler skrevet om fordi feil-svaralternativene avslørte riktig svar systematisk. Før fix kunne man få 90% rett ved å alltid velge det lengste svaret, og 80–90% rett ved alltid å velge alternativ nr. 2 (indeks 1). Etter fix er begge mønstre nede på ~25% (random fordeling). Ikke gjeninnfør disse mønstrene når du lager nye spørsmål.
+
+### Mønstre du MÅ unngå når du skriver nye spørsmål
+
+| Tell                          | Hvorfor det avslører riktig svar                               |
+|-------------------------------|-----------------------------------------------------------------|
+| Riktig svar er lengst         | Pedagogisk svar har naturlig flere detaljer/forklaring          |
+| Riktig svar er kortest        | Hvis du overkompenserer og gjør feil-svar for utbroderende      |
+| Riktig svar har komma/parentes mens feil-svar ikke har det | Fordi du legger til presiseringer i riktig svar |
+| Riktig svar har bindestrek/tankestrek mens feil ikke har | Samme grunn |
+| Feil-svar bruker «kun», «alltid», «aldri», «alle», «ingen» | Absolutter er ofte feil — gjenkjennes av lærere/elever |
+| Riktig svar står på samme posisjon hele tiden (typisk indeks 1) | Lett å gjette hvis fordelingen ikke er jevn |
+| Riktig svar er det eneste med tall/paragrafhenvisning | Skiller seg ut visuelt |
+
+### Sjekkeliste når du lager et nytt spørsmål
+
+1. **Lengde:** alle 4 alternativer skal være innenfor ±25% av hverandre i tegn-antall. Ikke skriv kort feil-svar bare fordi de ikke trenger forklaring — utvid dem til å være pedagogiske, plausible misforståelser av samme detaljnivå som riktig svar.
+2. **Punktuasjon:** hvis riktig svar har komma, bindestrek eller parentes, skal minst 2 av feil-svarene også ha det.
+3. **Posisjon:** Fordel riktig svar jevnt mellom indeks 0, 1, 2 og 3 over hele quizen (~25% per indeks). Sjekk fordelingen FØR du committer. Quizmotoren shuffler ved kjøring, men jevn fordeling i kildekoden gjør det enklere å verifisere balanse.
+4. **Absolutter:** Bruk «kun», «alltid», «aldri», «alle», «ingen» maks 1 gang per spørsmål totalt — og fordel dem jevnt mellom riktig og feil svar (ikke bare i feil-svar).
+5. **Tall/paragrafer:** hvis riktig svar har et tall, en prosent, et kr-beløp eller en paragrafhenvisning (§ X-Y), må feil-svarene også ha det (men med forvekslede verdier).
+6. **Plausibilitet:** feil-svar skal være typiske misforståelser eller distraktorer en student kan gjøre — ikke åpenbart tull.
+
+### Verifikasjonsskript (kjør før commit)
+
+Lim inn dette i node for å sjekke en ny eller oppdatert quiz-fil:
+
+```javascript
+const fs = require('fs');
+const FIL = 'quiz/lom/min-nye-quiz.js';  // tilpass
+const content = fs.readFileSync(FIL, 'utf8');
+const fn = new Function(content + '\nreturn { QUIZ_META, QUESTIONS };');
+const { QUESTIONS } = fn();
+
+let n = 0, longest = 0, shortest = 0, posCount = [0,0,0,0];
+let correctSum = 0, wrongSum = 0, wrongN = 0;
+QUESTIONS.forEach(q => {
+  if (Array.isArray(q.correct)) return;
+  n++;
+  const c = q.opts[q.correct], wrongs = q.opts.filter((_,i)=>i!==q.correct);
+  const max = Math.max(...q.opts.map(o=>o.length));
+  const min = Math.min(...q.opts.map(o=>o.length));
+  if (c.length === max) longest++;
+  if (c.length === min) shortest++;
+  posCount[q.correct]++;
+  correctSum += c.length;
+  wrongs.forEach(w => { wrongSum += w.length; wrongN++; });
+});
+console.log('Riktig er lengst:  ' + Math.round(longest/n*100) + '% (mål ~25%)');
+console.log('Riktig er kortest: ' + Math.round(shortest/n*100) + '% (mål ~25%)');
+console.log('Posisjon: ' + posCount.map((c,i)=>'idx'+i+': '+Math.round(c/n*100)+'%').join(', '));
+console.log('Snittlengde riktig: ' + (correctSum/n).toFixed(1) + ' / feil: ' + (wrongSum/wrongN).toFixed(1));
+```
+
+**Akseptkriterier før push:**
+- Riktig er lengst: 15–35%
+- Riktig er kortest: 15–35%
+- Hver posisjon (0–3): 15–35%
+- Snittlengde riktig vs feil: forskjell ≤ 15 tegn
 
 ## kabel-data.js — tabeller og konstanter
 - `izCuPVC` / `izCuPEX`: strømkapasitetstabeller kobber (IEC 60364-5-52), metoder A1–E
