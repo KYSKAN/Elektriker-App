@@ -56,7 +56,7 @@ const QUESTIONS = [
     catLabel: 'Markedsdefinisjoner',
     q: 'Hva kjennetegner rasjonell kjøpsatferd i organisasjonsmarkedet?',
     opts: [
-      'Kjøp styrt av merkevarepreferanser og personlige relasjoner til selger',
+      'Kjøp styrt av merkevarepreferanser og personlige relasjoner til selger, gjerne basert på tidligere positive erfaringer',
       'Hurtige beslutninger tatt av én person basert på erfaring og intuisjon',
       'Systematisk behovsvurdering, innhenting av tilbud og formell godkjenning av kjøpsbeslutningen',
       'Lojalitet til eksisterende leverandør uavhengig av prisnivå og leveringskvalitet',
@@ -71,7 +71,7 @@ const QUESTIONS = [
     opts: [
       'Fokus på å øke produksjonskapasiteten for å redusere enhetskostnadene',
       'Fokus på kundens behov og ønsker som utgangspunkt for alle forretningsbeslutninger',
-      'Fokus på kontinuerlig produktinnovasjon drevet av teknologiavdelingen',
+      'Fokus på kontinuerlig produktinnovasjon drevet av teknologiavdelingen i samarbeid med R&D',
       'Fokus på å øke salgsvolum gjennom bred distribusjon og lavere priser',
     ],
     correct: 1,
@@ -121,7 +121,7 @@ const QUESTIONS = [
     catLabel: 'Markedsanalyse',
     q: 'Hva er forskjellen mellom primærdata og sekundærdata i markedsundersøkelser?',
     opts: [
-      'Primærdata er eldre arkivdata; sekundærdata er oppdatert og fersk informasjon',
+      'Primærdata er eldre arkivdata fra egne arkiver; sekundærdata er oppdatert og fersk informasjon innhentet fra eksterne kilder i nær fortid',
       'Primærdata samles inn spesifikt for formålet (f.eks. intervju/spørreskjema); sekundærdata er allerede innsamlet av andre',
       'Primærdata er alltid tallbasert og målbart; sekundærdata er alltid tekstbasert og tolkende',
       'Primærdata gir lavere kostnader enn sekundærdata fordi den er enklere å hente inn',
@@ -162,7 +162,7 @@ const QUESTIONS = [
     opts: [
       'Å velge hvilke segmenter man ønsker å betjene med sine tilbud',
       'Å skape en klar og attraktiv posisjon i målgruppens bevissthet',
-      'Å identifisere og definere homogene grupper i markedet',
+      'Å identifisere homogene grupper i markedet',
       'Å beregne lønnsomheten i ulike prisklasser og kanaler',
     ],
     correct: 0,
@@ -187,7 +187,7 @@ const QUESTIONS = [
     q: 'Hva er Porters verdikjede?',
     opts: [
       'En modell for å analysere hvilke aktiviteter i bedriften som skaper verdi og bygger konkurransefortrinn',
-      'En modell som beskriver flyten av varer fra råvare til sluttforbruker',
+      'En modell som beskriver flyten av varer fra råvare til sluttforbruker gjennom hele forsyningskjeden',
       'En metode for å beregne produktets bidragsmargin og totalkostnad per enhet',
       'En modell for å vurdere samarbeidspartnere og strategiske allianser i bransjen',
     ],
@@ -200,7 +200,7 @@ const QUESTIONS = [
     q: 'Hva er en forretningsidé i markedsplan-kontekst?',
     opts: [
       'En budsjettert salgsplan med konkrete tall for kommende kvartal',
-      'En selskapsrettslig beskrivelse av virksomhetens formål og organisasjonsform',
+      'En selskapsrettslig beskrivelse av virksomhetens formål og organisasjonsform i henhold til foretaksregisterloven',
       'En teknisk spesifikasjon over produktporteføljens egenskaper og funksjoner',
       'En kortfattet beskrivelse av hva bedriften tilbyr, til hvem og hvorfor kundene velger dem',
     ],
@@ -213,7 +213,7 @@ const QUESTIONS = [
     q: 'Hva står AIDA for i markedsføring?',
     opts: [
       'Attention (oppmerksomhet), Interest (interesse), Desire (ønske), Action (handling)',
-      'Analyse, Innsikt, Dialog, Avslutning',
+      'Analyse, Innsikt, Dialog, Avslutning – fire trinn i en markedskommunikasjonsmodell',
       'Anerkjennelse, Involvering, Differensiering, Aktivering',
       'Anskaffelse, Implementering, Distribusjon, Avkastning',
     ],
@@ -226,7 +226,7 @@ const QUESTIONS = [
     q: 'I hvilken fase av AIDA brukes tilbud, rabatter og «kjøp nå»-knapper mest effektivt?',
     opts: [
       'Attention – skape første kontakt og vekke nysgjerrighet',
-      'Interest – holde engasjementet oppe og gi mer informasjon',
+      'Interest – holde engasjementet oppe og gi mer informasjon om produktets fordeler og egenskaper',
       'Desire – styrke produktets appell og relevans for kunden',
       'Action – konvertere interesse til faktisk kjøp',
     ],
@@ -277,9 +277,9 @@ const QUESTIONS = [
     catLabel: 'AIDA og STP',
     q: 'Hva er «place» (distribusjon) i 5P-markedsmiksen?',
     opts: [
-      'Geografisk plassering av annonsering og reklamemateriell i det fysiske rom',
-      'Produksjonsstedet der varene tilvirkes og klargjøres for salg',
-      'Prisnivået som gjelder for produktet i de ulike salgskanalene',
+      'Geografisk plassering av annonsering og reklamemateriell i det fysiske og digitale rom',
+      'Produksjonsstedet der varene tilvirkes, kvalitetssikres og klargjøres for salg og pakking',
+      'Prisnivået som gjelder for produktet i de ulike salgskanalene og geografiske markedene',
       'Alle kanaler og metoder for å gjøre produktet tilgjengelig for kunden der de ønsker å kjøpe',
     ],
     correct: 3,
@@ -293,7 +293,7 @@ const QUESTIONS = [
       'Profitt (finansielt resultat og dekningsbidrag)',
       'Prosess (interne rutiner og tjenestelevering)',
       'People (mennesker/personell)',
-      'Partnerskap (strategiske allianser og samarbeidsavtaler)',
+      'Partnerskap (strategiske allianser og samarbeidsavtaler med leverandører og distributører)',
     ],
     correct: 2,
     explain: 'Den tradisjonelle 4P-en (Produkt, Pris, Plass, Påvirkning) er utvidet med People (mennesker/personell) som femte P, spesielt relevant for tjenesteyting der de ansattes kompetanse og atferd er kritisk.',
@@ -304,8 +304,8 @@ const QUESTIONS = [
     q: 'Hva er Porters fem konkurransekrefter?',
     opts: [
       'Leverandørers forhandlingsmakt, kunders forhandlingsmakt, trussel fra nykommere, trussel fra substitutter og rivalisering mellom eksisterende aktører',
-      'Pris, kvalitet, distribusjon, merkevare og innovasjonstakt',
-      'Kostnadsstruktur, inntektsmodell, markedsandel, vekstrate og lønnsomhet',
+      'Pris, kvalitet, distribusjon, merkevare og innovasjonstakt som de viktigste parameterne i en markedsvurdering',
+      'Kostnadsstruktur, inntektsmodell, markedsandel, vekstrate og lønnsomhet per segment i bransjeregnskapet',
       'Produkt, pris, plass, påvirkning og personell i den utvidede markedsmiksen',
     ],
     correct: 0,
@@ -317,7 +317,7 @@ const QUESTIONS = [
     q: 'Hva øker trusselen fra nykommere i en bransje?',
     opts: [
       'Lave inngangsbarrierer, lite merkevarelojalitet og lave byttkostnader for kundene',
-      'Høye etableringskrav, sterk merkevarelojalitet og langvarige kundekontrakter',
+      'Høye etableringskrav, sterk merkevarelojalitet og langvarige kundekontrakter som låser kjøpere',
       'Intens prisrivalisering blant etablerte aktører som gjør bransjen lite attraktiv',
       'Høy leverandørkonsentrasjon og begrenset tilgang på kritiske råvarer',
     ],
@@ -329,7 +329,7 @@ const QUESTIONS = [
     catLabel: 'Konkurransemiljø',
     q: 'Hva er et substitutt i Porters modell?',
     opts: [
-      'En konkurrent i samme bransje med et tilnærmet identisk produkt',
+      'En konkurrent i samme bransje med et tilnærmet identisk produkt og overlappende målgruppe',
       'En ny leverandør som tilbyr kortere leveringstid og lavere pris',
       'Et produkt eller tjeneste fra en annen bransje som dekker samme kundebehov',
       'En kunde som skifter til et billigere alternativ innenfor samme produktkategori',
@@ -344,7 +344,7 @@ const QUESTIONS = [
     opts: [
       'Når det finnes mange konkurrerende leverandører og bytting er enkelt og billig',
       'Når kundene i bransjen er svært mange og ingen enkelt kjøper dominerer volumet',
-      'Når bransjen har få store kjøpere med høy forhandlingsstyrke og store volum',
+      'Når bransjen har få store kjøpere med høy forhandlingsstyrke, store volum og lang innkjøpserfaring',
       'Når leverandøren er unik, leverer kritiske innsatsfaktorer og det er dyrt å bytte leverandør',
     ],
     correct: 3,
@@ -356,8 +356,8 @@ const QUESTIONS = [
     q: 'Hva er hensikten med en konkurrentanalyse?',
     opts: [
       'Å forstå konkurrentenes styrker, svakheter, strategier og posisjon for å identifisere egne muligheter og trusler',
-      'Å hente inspirasjon fra konkurrentenes markedsføring for å forbedre egne kampanjer',
-      'Å dokumentere prisnivåene i markedet slik at man kan matche dem nøyaktig',
+      'Å hente inspirasjon fra konkurrentenes markedsføring og tilpasse vellykkede kampanjeelementer til egne produkter og kanaler',
+      'Å dokumentere prisnivåene i markedet slik at man kan matche dem nøyaktig og unngå å skille seg negativt ut',
       'Å finne nisjemarkeder der konkurrentene ikke er til stede og unngå direkte møte',
     ],
     correct: 0,
@@ -368,7 +368,7 @@ const QUESTIONS = [
     catLabel: 'Konkurransemiljø',
     q: 'Hva er PESTEL-analyse brukt til?',
     opts: [
-      'Å vurdere effektiviteten i bedriftens interne verdiskapingsprosesser',
+      'Å vurdere effektiviteten i bedriftens interne verdiskapingsprosesser, kostnadsstruktur og ressursbruk',
       'Å utvikle en prisstrategi basert på markedets betalingsvillighet',
       'Å kartlegge og sammenligne konkurrentenes posisjonering og markedsandeler',
       'Å kartlegge makroomgivelsene: politiske, økonomiske, sosiale, teknologiske, miljø- og juridiske faktorer',
@@ -382,9 +382,9 @@ const QUESTIONS = [
     q: 'Hva menes med «stuck-in-the-middle» i Porters generiske strategier?',
     opts: [
       'En bedrift som verken klarer å differensiere seg eller å være kostnadsleder, og dermed mister konkurransefortrinn',
-      'En bedrift som posisjonerer seg i mellomsjiktet av markedet for å nå flest mulig kunder',
+      'En bedrift som bevisst posisjonerer seg i mellomsjiktet av markedet for å nå flest mulig kunder til en moderat pris',
       'En bedrift som satser på en avgrenset og lønnsom markedsnisje fremfor hele markedet',
-      'En situasjon der kostnadslederskap og differensiering kombineres i samme strategi',
+      'En situasjon der kostnadslederskap og differensiering kombineres vellykket i én og samme strategi',
     ],
     correct: 0,
     explain: 'Porter advarer mot «stuck-in-the-middle»: bedrifter som verken er tydelige kostnadsledere eller differensierer seg klart, risikerer å miste kunder til begge ender og stagnere lønnsomheten.',
