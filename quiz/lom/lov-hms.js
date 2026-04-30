@@ -5,19 +5,23 @@ const QUIZ_META = {
   description: '30 spørsmål om arbeidsmiljøloven, ferieloven, tariffavtaler og HMS-regelverk.',
   cats: {
     aml:     { label: 'Arbeidsmiljøloven', color: '#8b5cf6' },
-    ferie:   { label: 'Ferieloven',        color: '#3b82f6' },
-    tariff:  { label: 'Tariffavtaler',     color: '#10b981' },
-    hms_reg: { label: 'HMS og regelverk',  color: '#f59e0b' },
+    ferie:   { label: 'Ferieloven', color: '#3b82f6' },
+    tariff:  { label: 'Tariffavtaler', color: '#10b981' },
+    hms_reg: { label: 'HMS og regelverk', color: '#f59e0b' },
   }
 };
 
 const QUESTIONS = [
-  // AML (10q)
   {
     cat: 'aml',
     catLabel: 'Arbeidsmiljøloven',
     q: 'Hvem har det overordnede ansvaret for å sikre et fullt forsvarlig arbeidsmiljø etter AML § 2-1?',
-    opts: ['Verneombudet', 'Arbeidstilsynet', 'Arbeidsgiver', 'Fagforeningen'],
+    opts: [
+      'Verneombudet',
+      'Arbeidstilsynet',
+      'Arbeidsgiver',
+      'Fagforeningen',
+    ],
     correct: 2,
     explain: 'AML § 2-1 slår fast at arbeidsgiver har det overordnede ansvaret for at arbeidsmiljøet er fullt forsvarlig. Ansvaret kan ikke delegeres bort.',
   },
@@ -25,7 +29,12 @@ const QUESTIONS = [
     cat: 'aml',
     catLabel: 'Arbeidsmiljøloven',
     q: 'Hva er den alminnelige arbeidstiden per uke etter AML § 10-4?',
-    opts: ['37,5 timer', '38 timer', '40 timer', '45 timer'],
+    opts: [
+      '37,5 timer',
+      '38 timer',
+      '40 timer',
+      '45 timer',
+    ],
     correct: 2,
     explain: 'AML § 10-4 fastsetter at alminnelig arbeidstid ikke må overstige 9 timer per dag eller 40 timer per uke.',
   },
@@ -72,7 +81,12 @@ const QUESTIONS = [
     cat: 'aml',
     catLabel: 'Arbeidsmiljøloven',
     q: 'Hva er oppsigelsesfristen for en arbeidstaker med over 5 års ansettelse, etter AML § 15-3?',
-    opts: ['1 måned (gjensidig)', '2 måneder (gjensidig)', '3 måneder (gjensidig)', '6 måneder (gjensidig)'],
+    opts: [
+      '1 måned (gjensidig)',
+      '2 måneder (gjensidig)',
+      '3 måneder (gjensidig)',
+      '6 måneder (gjensidig)',
+    ],
     correct: 1,
     explain: 'AML § 15-3: ved over 5 år men under 10 år er fristen minst 2 måneder. Fra 10 år = 3 mnd, fra 15 år = 4 mnd, fra 20+ år = 6 mnd. Fristene er gjensidige.',
   },
@@ -128,13 +142,16 @@ const QUESTIONS = [
     correct: 1,
     explain: 'AML § 5-2: alvorlige arbeidsulykker og yrkessykdommer skal varsles umiddelbart til Arbeidstilsynet og politiet, og registreres i bedriftens skaderegister.',
   },
-
-  // FERIE (6q)
   {
     cat: 'ferie',
     catLabel: 'Ferieloven',
     q: 'Hvor mange virkedager ferie har norske arbeidstakere krav på etter ferieloven?',
-    opts: ['21 virkedager (3 uker)', '25 virkedager (4 uker + 1 dag)', '28 virkedager (4 uker)', '30 virkedager (5 uker)'],
+    opts: [
+      '21 virkedager (3 uker)',
+      '25 virkedager (4 uker + 1 dag)',
+      '28 virkedager (4 uker)',
+      '30 virkedager (5 uker)',
+    ],
     correct: 1,
     explain: 'Ferieloven gir rett til 25 virkedager ferie (lørdag regnes som virkedag, men ikke søndag og helligdager). 25 virkedager tilsvarer 4 uker + 1 dag.',
   },
@@ -142,15 +159,25 @@ const QUESTIONS = [
     cat: 'ferie',
     catLabel: 'Ferieloven',
     q: 'Hva er feriepengeprosenten for arbeidstakere under 60 år?',
-    opts: ['9,5 %', '10,2 %', '12,0 %', '12,5 %'],
-    correct: 1,
+    opts: [
+      '10,2 %',
+      '9,5 %',
+      '12,0 %',
+      '12,5 %',
+    ],
+    correct: 0,
     explain: 'Ferieloven fastsetter at feriepenger utgjør minst 10,2 % av feriepengegrunnlaget for arbeidstakere under 60 år.',
   },
   {
     cat: 'ferie',
     catLabel: 'Ferieloven',
     q: 'Hva er feriepengeprosenten for arbeidstakere som fyller 60 år eller mer i ferieåret?',
-    opts: ['10,2 %', '11,5 %', '12,5 %', '14,3 %'],
+    opts: [
+      '10,2 %',
+      '11,5 %',
+      '12,5 %',
+      '14,3 %',
+    ],
     correct: 2,
     explain: 'Ferieloven § 10 nr. 2: arbeidstakere som fyller 60 år i ferieåret har rett til én ekstra ferieuke og en feriepengeprosent på 12,5 % av feriepengegrunnlaget.',
   },
@@ -160,11 +187,11 @@ const QUESTIONS = [
     q: 'Hvilken periode har arbeidstaker rett til å ta ut 3 sammenhengende ferieuke (hovedferien)?',
     opts: [
       'Januar – mars (vinterferie)',
-      '1. juni – 30. september (hovedferieperioden)',
-      'Mai – oktober (sommerhalvåret)',
       'Desember – februar (juletid og vinter)',
+      'Mai – oktober (sommerhalvåret)',
+      '1. juni – 30. september (hovedferieperioden)',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Ferieloven § 7: arbeidstaker kan kreve å ta ut 3 sammenhengende ferieuke i perioden 1. juni – 30. september. Dette er lovens hovedferieperiode.',
   },
   {
@@ -172,12 +199,12 @@ const QUESTIONS = [
     catLabel: 'Ferieloven',
     q: 'Kan arbeidsgiver nekte arbeidstaker å ta ferie dersom feriepengene ikke er opptjent?',
     opts: [
-      'Ja, ferie kan kun tas ut dersom tilstrekkelige feriepenger er opptjent',
       'Nei – retten til feriefritid er uavhengig av om feriepengene er opptjent',
+      'Ja, ferie kan kun tas ut dersom tilstrekkelige feriepenger er opptjent',
       'Ja, men kun for nyansatte i det første arbeidsåret',
       'Bare dersom bedriften har inngått tariffavtale som tillater dette',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Ferieloven skiller mellom retten til feriefritid (alltid) og retten til feriepenger (basert på opptjening). Arbeidsgiver kan ikke nekte ferie selv om feriepenger ikke er fullt opptjent.',
   },
   {
@@ -193,19 +220,17 @@ const QUESTIONS = [
     correct: 2,
     explain: 'Ferieloven § 7 nr. 3: inntil 2 uker ferie kan overføres til påfølgende ferieår ved skriftlig avtale. Var avvikling umulig pga. arbeidsgivers forhold, kan arbeidstaker kreve erstatning.',
   },
-
-  // TARIFF (8q)
   {
     cat: 'tariff',
     catLabel: 'Tariffavtaler',
     q: 'Hva er Landsoverenskomsten for elektrofaget?',
     opts: [
       'En statlig lov om minstelønn i el-bransjen vedtatt av Stortinget',
-      'En tariffavtale mellom NHO Elektro og EL&IT Forbundet som regulerer lønn, arbeidstid og vilkår for elektrikere',
-      'En avtale mellom NHO og LO om generelle arbeidsvilkår i hele industrien',
       'Et EU-direktiv om arbeidsrettigheter implementert i norsk lov',
+      'En avtale mellom NHO og LO om generelle arbeidsvilkår i hele industrien',
+      'En tariffavtale mellom NHO Elektro og EL&IT Forbundet som regulerer lønn, arbeidstid og vilkår for elektrikere',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Landsoverenskomsten er tariffavtalen mellom NHO Elektro (arbeidsgiversiden) og EL&IT Forbundet (arbeidstakersiden). Den regulerer lønn, arbeidstid og andre arbeidsvilkår for elektrikere.',
   },
   {
@@ -213,19 +238,24 @@ const QUESTIONS = [
     catLabel: 'Tariffavtaler',
     q: 'Hva er ufravikelighetsprinsippet i tariffavtaler?',
     opts: [
-      'At tariffavtalen er bindende hele tariffperioden og ikke kan sies opp unilateralt',
       'At individuelle arbeidsavtaler ikke kan gi dårligere vilkår enn det tariffavtalen fastsetter',
+      'At tariffavtalen er bindende hele tariffperioden og ikke kan sies opp unilateralt',
       'At tariffavtalen kun gjelder for organiserte arbeidstakere med fagforeningsmedlemskap',
       'At arbeidsgiver aldri kan gi bedre vilkår enn tariffminimumet',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Ufravikelighetsprinsippet: individuelle arbeidsavtaler kan ikke gi dårligere vilkår enn tariffavtalen fastsetter. Tariffavtalen setter et gulv – ikke et tak. Bedre vilkår er alltid tillatt.',
   },
   {
     cat: 'tariff',
     catLabel: 'Tariffavtaler',
     q: 'Hva er normalt overtidstillegget på hverdager etter Landsoverenskomsten for elektrofaget?',
-    opts: ['25 %', '40 %', '50 %', '100 %'],
+    opts: [
+      '25 %',
+      '40 %',
+      '50 %',
+      '100 %',
+    ],
     correct: 2,
     explain: 'Landsoverenskomsten fastsetter normalt 50 % tillegg for overtid på hverdager. Tillegget øker ved nattarbeid (etter kl. 21:00) og på søndager/helligdager.',
   },
@@ -233,7 +263,12 @@ const QUESTIONS = [
     cat: 'tariff',
     catLabel: 'Tariffavtaler',
     q: 'Hva er overtidstillegget etter kl. 21:00 og på søndager/helligdager etter Landsoverenskomsten?',
-    opts: ['50 %', '75 %', '100 %', '125 %'],
+    opts: [
+      '50 %',
+      '75 %',
+      '100 %',
+      '125 %',
+    ],
     correct: 2,
     explain: 'Landsoverenskomsten: overtid etter kl. 21:00 og på søndager/helligdager gir 100 % tillegg – altså dobbel timelønn.',
   },
@@ -256,11 +291,11 @@ const QUESTIONS = [
     q: 'Hva er permittering i arbeidsretten?',
     opts: [
       'En form for oppsigelse der arbeidstaker mottar full lønn fra arbeidsgiver',
-      'Et midlertidig fritak fra arbeidsplikt og lønnsplikt, typisk ved mangel på arbeid eller råvarer',
-      'En formell advarsel gitt av arbeidsgiver som første steg mot oppsigelse',
       'Permisjon med lønn for faglig utvikling og kompetanseheving',
+      'En formell advarsel gitt av arbeidsgiver som første steg mot oppsigelse',
+      'Et midlertidig fritak fra arbeidsplikt og lønnsplikt, typisk ved mangel på arbeid eller råvarer',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Permittering er en midlertidig ordning der arbeidsgiver fritar arbeidstaker fra arbeidsplikt og lønnsplikt pga. driftsproblemer. Arbeidstaker mottar dagpenger fra NAV etter en kortere arbeidsgiverperiode.',
   },
   {
@@ -268,12 +303,12 @@ const QUESTIONS = [
     catLabel: 'Tariffavtaler',
     q: 'Hva er fast ansettelse etter AML § 14-9?',
     opts: [
-      'Ansettelse som er tidsbegrenset til 12 måneder med opsjon på forlengelse',
       'Ansettelse uten tidsbegrensning – dette er lovens klare hovedregel',
+      'Ansettelse som er tidsbegrenset til 12 måneder med opsjon på forlengelse',
       'Ansettelse på deltid med varierende arbeidstid',
       'Ansettelse i prøvetid med særskilt oppsigelsesfrist',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'AML § 14-9: fast ansettelse (uten tidsbegrensning) er lovens klare hovedregel. Midlertidig ansettelse er kun tillatt i bestemte situasjoner som er uttømmende opplistet i loven.',
   },
   {
@@ -282,26 +317,24 @@ const QUESTIONS = [
     q: 'Hva dekker sykepenger fra Folketrygdloven?',
     opts: [
       'Alle sykdommer uten krav om tilknytning til arbeidslivet',
-      'Inntektsbortfall ved arbeidsuførhet pga. sykdom eller skade, begrenset til 6G, med krav om arbeidstilknytning',
-      'Kun arbeidsulykker og godkjente yrkessykdommer',
       'Full lønn uten beløpstak i ett kalenderår uansett inntektsnivå',
+      'Kun arbeidsulykker og godkjente yrkessykdommer',
+      'Inntektsbortfall ved arbeidsuførhet pga. sykdom eller skade, begrenset til 6G, med krav om arbeidstilknytning',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Sykepenger fra Folketrygden dekker inntektsbortfall ved sykefravær i opptil 52 uker. Sykepenger beregnes av inntekt opptil 6G. Arbeidsgiverperioden er de første 16 dagene (arbeidsgiver betaler).',
   },
-
-  // HMS_REG (6q)
   {
     cat: 'hms_reg',
     catLabel: 'HMS og regelverk',
     q: 'Hva er formålet med Internkontrollforskriften (IK-forskriften)?',
     opts: [
-      'Å regulere skatteinnbetaling og avgifter fra virksomheter',
       'Å sikre systematisk HMS-arbeid i virksomheter gjennom dokumenterte rutiner og egenkontroll',
+      'Å regulere skatteinnbetaling og avgifter fra virksomheter',
       'Å sette tekniske sikkerhetskrav til elektriske anlegg',
       'Å regulere arbeidsgivers plikt til å betale overtid og tillegg',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'IK-forskriften krever at virksomheter etablerer et systematisk HMS-system med skriftlige rutiner, dokumentasjon og jevnlig revisjon – internkontroll. Forebyggende og kontinuerlig arbeid.',
   },
   {
@@ -310,11 +343,11 @@ const QUESTIONS = [
     q: 'Hva er en SHA-plan?',
     opts: [
       'En plan for salg, handel og anskaffelse i byggeprosjekter',
-      'En plan for sikkerhet, helse og arbeidsmiljø på byggeplasser, påkrevd etter byggherreforskriften',
-      'En plan for systematisk HMS-opplæring av nyansatte',
       'En plan for sykefraværsoppfølging og tilrettelegging',
+      'En plan for systematisk HMS-opplæring av nyansatte',
+      'En plan for sikkerhet, helse og arbeidsmiljø på byggeplasser, påkrevd etter byggherreforskriften',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'SHA-plan (Sikkerhet, Helse og Arbeidsmiljø) er påkrevd etter byggherreforskriften og beskriver risikovurderinger og tiltak for HMS på byggeplassen. Skal utarbeides av byggherren/koordinator FØR byggestart.',
   },
   {
@@ -322,12 +355,12 @@ const QUESTIONS = [
     catLabel: 'HMS og regelverk',
     q: 'Hva er en SJA (Sikker jobb-analyse)?',
     opts: [
-      'En juridisk analyse av arbeidskontrakters gyldighet',
       'En systematisk gjennomgang av en arbeidsoperasjon for å identifisere og redusere risiko FØR arbeidet starter',
+      'En juridisk analyse av arbeidskontrakters gyldighet',
       'En rapport som skrives ETTER at en arbeidsulykke har inntruffet',
       'En analyse av sykefraværsårsaker for å redusere turnover',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'SJA er en risikovurderingsmetode der teamet trinn for trinn gjennomgår arbeidsoppgaven, identifiserer farer og iverksetter tiltak FØR arbeidet begynner. Spesielt viktig ved ikke-rutinearbeid og høy risiko.',
   },
   {
@@ -336,11 +369,11 @@ const QUESTIONS = [
     q: 'Hva er HMS-kortet (ID-kortet) på byggeplassen?',
     opts: [
       'Et kort som viser ansattes lønnsnivå og arbeidsvilkår',
-      'Et lovpålagt identitetskort med foto og personnummer som alle på byggeplassen er pliktige å bære synlig',
-      'Et kursbevispfor gjennomført HMS-opplæring og sertifisering',
       'Et adgangskort som gir tilgang til verneutstyr og farlig materiell',
+      'Et kursbevispfor gjennomført HMS-opplæring og sertifisering',
+      'Et lovpålagt identitetskort med foto og personnummer som alle på byggeplassen er pliktige å bære synlig',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'HMS-kortet er lovpålagt på alle byggeplasser. Det inneholder foto, navn og personnummer, bæres synlig og er et tiltak mot svart arbeid og for å ha oversikt over hvem som befinner seg på plassen.',
   },
   {
@@ -348,12 +381,12 @@ const QUESTIONS = [
     catLabel: 'HMS og regelverk',
     q: 'Hva er hensikten med risikovurdering i HMS-arbeid?',
     opts: [
-      'Å fordele erstatningsansvar mellom arbeidstaker og arbeidsgiver ved ulykker i etterkant',
       'Å identifisere farer, vurdere sannsynlighet og konsekvens, og iverksette tiltak for å redusere risiko til et akseptabelt nivå',
+      'Å fordele erstatningsansvar mellom arbeidstaker og arbeidsgiver ved ulykker i etterkant',
       'Å dokumentere at alle ansatte har gyldig verneutstyr og HMS-sertifikat',
       'Å fastsette forsikringspremier og risikoprofil for bedriften',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Risikovurdering = kartlegge farekilder, vurdere sannsynlighet og konsekvens for skade, og beslutte tiltak. Dette er kjernen i forebyggende og systematisk HMS-arbeid etter IK-forskriften.',
   },
   {

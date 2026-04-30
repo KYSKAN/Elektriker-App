@@ -4,15 +4,14 @@ const QUIZ_META = {
   subtitle: 'LØM Fagskole · Supplement',
   description: '30 spørsmål om lederstil, organisasjonsformer, kommunikasjon og endringspsykologi.',
   cats: {
-    lederstil:     { label: 'Lederstil',           color: '#8b5cf6' },
+    lederstil:     { label: 'Lederstil', color: '#8b5cf6' },
     org_former:    { label: 'Organisasjonsformer', color: '#3b82f6' },
-    kommunikasjon: { label: 'Kommunikasjon',       color: '#10b981' },
-    supplement:    { label: 'Supplement',          color: '#f59e0b' },
+    kommunikasjon: { label: 'Kommunikasjon', color: '#10b981' },
+    supplement:    { label: 'Supplement', color: '#f59e0b' },
   }
 };
 
 const QUESTIONS = [
-  // LEDERSTIL (8q)
   {
     cat: 'lederstil',
     catLabel: 'Lederstil',
@@ -117,8 +116,6 @@ const QUESTIONS = [
     correct: 2,
     explain: 'Konstruktiv feedback er konkret, beskriver observert atferd og dens konsekvenser, og antyder hva som bør endres – uten å angripe personen. Fokus på atferd, ikke person.',
   },
-
-  // ORG_FORMER (8q)
   {
     cat: 'org_former',
     catLabel: 'Organisasjonsformer',
@@ -163,12 +160,12 @@ const QUESTIONS = [
     catLabel: 'Organisasjonsformer',
     q: 'Hva er forskjellen mellom formell og uformell organisasjon?',
     opts: [
-      'Den formelle er liten og effektiv, den uformelle er stor og ineffektiv',
       'Den formelle er det offisielle hierarkiet og strukturen; den uformelle er de faktiske relasjonene og kommunikasjonsmønstrene som oppstår naturlig',
+      'Den formelle er liten og effektiv, den uformelle er stor og ineffektiv',
       'Den uformelle organisasjonen er alltid skadelig for bedriften og bør motarbeides',
       'Det er ingen reell forskjell i praksis – de er synonyme begreper',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Formell organisasjon = nedfelt i organisasjonskart og stillingsbeskrivelser. Uformell organisasjon = de sosiale nettverkene og kommunikasjonsmønstrene som oppstår naturlig blant ansatte.',
   },
   {
@@ -177,11 +174,11 @@ const QUESTIONS = [
     q: 'Hva er EL&IT Forbundets funksjon?',
     opts: [
       'Å fastsette minstelønn for alle bransjer i Norge',
-      'Å representere arbeidstakerne i elektrobransjen og forhandle tariffavtaler på deres vegne',
       'Å godkjenne og sertifisere elektrikere for autorisasjon',
+      'Å representere arbeidstakerne i elektrobransjen og forhandle tariffavtaler på deres vegne',
       'Å utforme og vedta lover om arbeidsmiljø',
     ],
-    correct: 1,
+    correct: 2,
     explain: 'EL&IT Forbundet er fagforbundet for bl.a. elektrikere. De organiserer arbeidstakerne og forhandler tariffavtaler (bl.a. Landsoverenskomsten) overfor NHO Elektro.',
   },
   {
@@ -190,11 +187,11 @@ const QUESTIONS = [
     q: 'Hva er NHO Elektro sin rolle?',
     opts: [
       'En offentlig etat som regulerer el-bransjen på vegne av myndighetene',
-      'Arbeidsgiverorganisasjonen for elektroentreprenører og NHOs forhandlingsmotpart overfor EL&IT Forbundet',
-      'Et utdanningsorgan for elektriker-faget og fagopplæring',
       'En interesseorganisasjon for strømleverandører og nettselskaper',
+      'Et utdanningsorgan for elektriker-faget og fagopplæring',
+      'Arbeidsgiverorganisasjonen for elektroentreprenører og NHOs forhandlingsmotpart overfor EL&IT Forbundet',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'NHO Elektro er arbeidsgiverorganisasjonen for elektroentreprenører. De forhandler tariffavtaler, bl.a. Landsoverenskomsten, overfor EL&IT Forbundet.',
   },
   {
@@ -215,27 +212,25 @@ const QUESTIONS = [
     catLabel: 'Organisasjonsformer',
     q: 'Hvilke fem dimensjoner beskriver graden av endringskynisme hos ansatte?',
     opts: [
-      'Mål, strategi, ressurser, tid og kompetanse',
       'Behov for endringen, endringshistorie, praksis i gjennomføringen, synliggjøring av resultater og grad av medvirkning',
+      'Mål, strategi, ressurser, tid og kompetanse',
       'Visjon, misjon, verdier, kultur og formell struktur',
       'Planlegging, gjennomføring, evaluering, korrigering og forankring',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Amundsen & Kongsvik beskriver fem dimensjoner som forklarer endringskynisme: (1) behov for endring, (2) endringshistorie, (3) praksis i gjennomføringen, (4) synliggjøring av resultater, (5) grad av medvirkning.',
   },
-
-  // KOMMUNIKASJON (7q)
   {
     cat: 'kommunikasjon',
     catLabel: 'Kommunikasjon',
     q: 'Hva er forskjellen mellom verbal og non-verbal kommunikasjon?',
     opts: [
       'Verbal er skriftlig, non-verbal er muntlig',
-      'Verbal bruker ord (muntlig og skriftlig); non-verbal bruker kroppsspråk, mimikk, tonefall og gester',
       'Verbal er alltid formell, non-verbal er alltid uformell',
+      'Verbal bruker ord (muntlig og skriftlig); non-verbal bruker kroppsspråk, mimikk, tonefall og gester',
       'Non-verbal kommunikasjon er alltid mer troverdig enn verbal kommunikasjon',
     ],
-    correct: 1,
+    correct: 2,
     explain: 'Verbal kommunikasjon = ord (tale og skrift). Non-verbal = alt annet: kroppsspråk, mimikk, øyekontakt, tonefall, avstand og gester. Ca. 55–65 % av kommunikasjon er ikke-verbal.',
   },
   {
@@ -244,11 +239,11 @@ const QUESTIONS = [
     q: 'Hva er kommunikasjonsstøy?',
     opts: [
       'Høy musikk eller bråk på arbeidsplassen som forstyrrer konsentrasjonen',
-      'Alt som forstyrrer eller forvrenger budskapet mellom sender og mottaker',
-      'Konflikter mellom ansatte som hindrer samarbeid',
       'For mye informasjon på én gang (informasjonsoverbelastning)',
+      'Konflikter mellom ansatte som hindrer samarbeid',
+      'Alt som forstyrrer eller forvrenger budskapet mellom sender og mottaker',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Støy i kommunikasjon er alt som hindrer budskapet i å nå frem slik det var ment – fysisk støy, språkbarrierer, følelsesmessige filtre, kulturelle misforståelser eller tekniske feil.',
   },
   {
@@ -256,12 +251,12 @@ const QUESTIONS = [
     catLabel: 'Kommunikasjon',
     q: 'Hva innebærer intern rekruttering fremfor ekstern rekruttering?',
     opts: [
-      'Intern rekruttering er alltid billigere og gir alltid bedre resultater',
       'Intern rekruttering betyr å hente kandidater fra egne ansatte – gir motivasjon og kulturkjennskap, men kan begrense nytenkning',
+      'Intern rekruttering er alltid billigere og gir alltid bedre resultater',
       'Ekstern rekruttering er alltid best for å sikre ny og oppdatert kompetanse',
       'Intern rekruttering krever ikke utlysning eller stillingsbeskrivelse',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Intern rekruttering gir motivasjon (synlige karrieremuligheter) og god kulturforståelse. Ulempen er at det kan gi ensretting. Ekstern rekruttering bringer friske øyne og ny kompetanse, men krever mer onboarding.',
   },
   {
@@ -270,11 +265,11 @@ const QUESTIONS = [
     q: 'Hva er de fem effektene av å involvere ansatte i endringsprosesser?',
     opts: [
       'Reduserte kostnader, kortere tid, færre feil, høyere produktivitet og bedre dokumentasjon',
-      'Økt motivasjon, økt tilfredshet, bedre kvalitet på beslutninger, økt aksept for endringen og kompetanseheving',
-      'Lavere turnover, bedre rekruttering, sterkere merkevare, bedre kunderelasjoner og økt innovasjon',
       'Kortere møter, færre konflikter, tydeligere roller, klarere prosedyrer og mer effektiv ressursbruk',
+      'Lavere turnover, bedre rekruttering, sterkere merkevare, bedre kunderelasjoner og økt innovasjon',
+      'Økt motivasjon, økt tilfredshet, bedre kvalitet på beslutninger, økt aksept for endringen og kompetanseheving',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'De fem effektene av involvering: (1) økt motivasjon, (2) økt tilfredshet, (3) bedre beslutningskvalitet, (4) økt aksept for endringen, (5) kompetanseheving hos de involverte.',
   },
   {
@@ -282,12 +277,12 @@ const QUESTIONS = [
     catLabel: 'Kommunikasjon',
     q: 'Hva menes med konflikthåndtering i organisasjoner?',
     opts: [
-      'Å unngå all konflikt gjennom streng disiplin og klare regler',
       'Å identifisere, forstå og løse uenigheter på en konstruktiv måte som ivaretar relasjoner og organisasjonens mål',
+      'Å unngå all konflikt gjennom streng disiplin og klare regler',
       'Å la partene avgjøre konflikter seg imellom uten lederinnblanding',
       'Å flytte én av partene til en annen avdeling for å unngå videre konfrontasjon',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'God konflikthåndtering handler om å adressere konflikter konstruktivt: anerkjenne uenigheten, forstå begge parters perspektiv og finne løsninger som ivaretar relasjoner og produktivitet.',
   },
   {
@@ -296,11 +291,11 @@ const QUESTIONS = [
     q: 'Hva er delegering, og hva er en viktig forutsetning for at det skal fungere?',
     opts: [
       'Delegering er å kvitte seg med uønskede oppgaver; det krever ingen spesielle forutsetninger',
-      'Delegering er å overføre oppgaver og beslutningsmyndighet til medarbeidere; forutsetning: myndighet, ansvar og ressurser must følge med oppgaven',
-      'Delegering betyr at lederen alltid beholder den formelle myndigheten og bare ber andre utføre arbeidet',
       'Delegering er kun egnet for rutineoppgaver uten risiko',
+      'Delegering betyr at lederen alltid beholder den formelle myndigheten og bare ber andre utføre arbeidet',
+      'Delegering er å overføre oppgaver og beslutningsmyndighet til medarbeidere; forutsetning: myndighet, ansvar og ressurser must følge med oppgaven',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Delegering innebærer å overføre oppgaver med tilhørende myndighet og ressurser. Lederen beholder det overordnede ansvaret (ansvar kan ikke delegeres), men myndigheten til å handle overføres.',
   },
   {
@@ -316,8 +311,6 @@ const QUESTIONS = [
     correct: 2,
     explain: 'Kanter (1992) viser at motstand mot endring reduseres mest effektivt gjennom tidlig og reell involvering av de berørte. Informasjon alene er ikke tilstrekkelig – folk vil ha innflytelse, ikke bare beskjed.',
   },
-
-  // SUPPLEMENT (7q)
   {
     cat: 'supplement',
     catLabel: 'Supplement',
@@ -336,12 +329,12 @@ const QUESTIONS = [
     catLabel: 'Supplement',
     q: 'Hvilke fem effekter har organisasjonskulturen på medarbeidernes atferd?',
     opts: [
-      'Lønnsforventning, arbeidstid, stillingsbetegnelse, hierarki og formell status',
       'Tilhørighet, motivasjon, tillit, samarbeid/koordinering og styring (uformell kontroll)',
+      'Lønnsforventning, arbeidstid, stillingsbetegnelse, hierarki og formell status',
       'Rekruttering, opplæring, prestasjon, belønning og avgang',
       'Strategi, struktur, system, stab og ferdigheter',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Organisasjonskultur påvirker atferd gjennom: (1) tilhørighet – vi-følelse og identitet, (2) motivasjon – stolthet og engasjement, (3) tillit – åpenhet og psykologisk trygghet, (4) samarbeid og koordinering, (5) styring – uformell kontroll uten skriftlige regler.',
   },
   {
@@ -350,11 +343,11 @@ const QUESTIONS = [
     q: 'Hva er en av de mest effektive måtene ledere kan bygge og bevare organisasjonskulturen?',
     opts: [
       'Ansette kun faglig kompetente kandidater uansett personlighet og verdier',
-      'Velge kandidater som deler organisasjonens verdier og kulturelle forventninger',
-      'Rekruttere utelukkende fra konkurrentene for å hente inn beste praksis',
       'Ansette så raskt som mulig for å fylle kapasitetsgapet',
+      'Rekruttere utelukkende fra konkurrentene for å hente inn beste praksis',
+      'Velge kandidater som deler organisasjonens verdier og kulturelle forventninger',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Rekruttering er et av lederens viktigste kulturbyggingsverktøy. Å velge kandidater som deler organisasjonens verdier (cultural fit) bidrar til å bevare og forsterke kulturen over tid.',
   },
   {
@@ -375,12 +368,12 @@ const QUESTIONS = [
     catLabel: 'Supplement',
     q: 'Hva er kompetansemobilisering (Lai)?',
     opts: [
-      'Å sende ansatte på kurs for å øke den formelle kompetansen',
       'Å sikre at ansattes eksisterende kompetanse faktisk brukes og utnyttes i jobben',
+      'Å sende ansatte på kurs for å øke den formelle kompetansen',
       'Å rekruttere medarbeidere med høyere kompetanse enn stillingen krever',
       'Å kartlegge og dokumentere kompetansegap i organisasjonen',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Lai viser at det ikke er nok å ha kompetanse – det avgjørende er at kompetansen faktisk mobiliseres (tas i bruk) i arbeidsoppgavene. Uutnyttet kompetanse gir lavere motivasjon og høyere turnover.',
   },
   {
@@ -401,12 +394,12 @@ const QUESTIONS = [
     catLabel: 'Supplement',
     q: 'Hva menes med prososial motivasjon?',
     opts: [
-      'Motivasjon som er drevet av personlig karriereutvikling og lønn',
       'Motivasjon som kommer fra ønsket om å hjelpe andre og gjøre noe som er godt for fellesskapet',
+      'Motivasjon som er drevet av personlig karriereutvikling og lønn',
       'Motivasjon som er skapt gjennom sosiale medier og anerkjennelse fra omgivelsene',
       'Motivasjon som er knyttet til sosiale arrangementer på arbeidsplassen',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Prososial motivasjon er motivasjon som springer ut av et ønske om å bidra positivt for andre – kolleger, kunder eller samfunnet. Det er en av tre motivasjonstyper (indre, ytre og prososial).',
   },
 ];

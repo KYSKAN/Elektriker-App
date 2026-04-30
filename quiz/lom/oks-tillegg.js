@@ -5,19 +5,23 @@ const QUIZ_META = {
   description: '25 spørsmål om MVA, selskapsformer, regnskapslover og kontantstrømsanalyse.',
   cats: {
     mva_avgift:     { label: 'MVA og avgifter', color: '#8b5cf6' },
-    selskapsformer: { label: 'Selskapsformer',  color: '#3b82f6' },
+    selskapsformer: { label: 'Selskapsformer', color: '#3b82f6' },
     regnskapslover: { label: 'Regnskapsregler', color: '#10b981' },
-    kontantstrom:   { label: 'Kontantstrøm',    color: '#f59e0b' },
+    kontantstrom:   { label: 'Kontantstrøm', color: '#f59e0b' },
   }
 };
 
 const QUESTIONS = [
-  // MVA_AVGIFT (7q)
   {
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hva er den generelle merverdiavgiftssatsen (MVA) i Norge?',
-    opts: ['12 %', '15 %', '20 %', '25 %'],
+    opts: [
+      '12 %',
+      '15 %',
+      '20 %',
+      '25 %',
+    ],
     correct: 3,
     explain: 'Den generelle MVA-satsen i Norge er 25 %. Den gjelder de fleste varer og tjenester som ikke faller inn under de reduserte satsene.',
   },
@@ -25,7 +29,12 @@ const QUESTIONS = [
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hvilken MVA-sats gjelder for matvarer?',
-    opts: ['12 %', '15 %', '25 %', '0 %'],
+    opts: [
+      '12 %',
+      '15 %',
+      '25 %',
+      '0 %',
+    ],
     correct: 1,
     explain: 'Matvarer har redusert MVA-sats på 15 % i Norge. Dette gjelder næringsmidler, men ikke f.eks. restaurantmåltider (25 %).',
   },
@@ -33,7 +42,12 @@ const QUESTIONS = [
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hvilken MVA-sats gjelder for persontransport, overnatting (hotell) og kino?',
-    opts: ['6 %', '12 %', '15 %', '25 %'],
+    opts: [
+      '6 %',
+      '12 %',
+      '15 %',
+      '25 %',
+    ],
     correct: 1,
     explain: 'Persontransport (buss, tog, fly), overnattingstjenester (hotell) og kino har redusert MVA-sats på 12 % i Norge.',
   },
@@ -41,7 +55,12 @@ const QUESTIONS = [
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hva er omsetningsgrensen for MVA-registrering i Norge?',
-    opts: ['20 000 kr', '50 000 kr', '100 000 kr', '150 000 kr'],
+    opts: [
+      '20 000 kr',
+      '50 000 kr',
+      '100 000 kr',
+      '150 000 kr',
+    ],
     correct: 1,
     explain: 'Virksomheter med omsetning over 50 000 kr i løpet av en 12-månedersperiode er pliktige til å registrere seg i MVA-registeret og kreve inn og innberette MVA.',
   },
@@ -49,7 +68,12 @@ const QUESTIONS = [
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hva er arbeidsgiveravgiften (AGA) i sone 1 (sentrale strøk)?',
-    opts: ['10,6 %', '12,5 %', '14,1 %', '16,8 %'],
+    opts: [
+      '10,6 %',
+      '12,5 %',
+      '14,1 %',
+      '16,8 %',
+    ],
     correct: 2,
     explain: 'AGA i sone 1 er 14,1 % av brutto lønn. Arbeidsgiveravgiften betales av arbeidsgiver til staten i tillegg til den ansattes lønn og er ikke synlig for arbeidstaker.',
   },
@@ -79,8 +103,6 @@ const QUESTIONS = [
     correct: 1,
     explain: 'Utgående MVA er den MVA du krever inn fra kundene ved salg. Netto MVA til staten = Utgående MVA − Inngående MVA (fradragsberettiget inngående MVA).',
   },
-
-  // SELSKAPSFORMER (7q)
   {
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
@@ -98,8 +120,13 @@ const QUESTIONS = [
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
     q: 'Hva er minstekravet til aksjekapital ved stiftelse av et AS?',
-    opts: ['10 000 kr', '30 000 kr', '50 000 kr', '100 000 kr'],
-    correct: 1,
+    opts: [
+      '30 000 kr',
+      '10 000 kr',
+      '50 000 kr',
+      '100 000 kr',
+    ],
+    correct: 0,
     explain: 'Aksjeloven krever at et AS stiftes med minimum 30 000 kr i aksjekapital. Aksjeeierne har begrenset ansvar og risikerer maksimalt den innskutte aksjekapitalen.',
   },
   {
@@ -108,11 +135,11 @@ const QUESTIONS = [
     q: 'Hva skiller et ANS fra et AS mht. deltakernes ansvar?',
     opts: [
       'ANS har begrenset ansvar på lik linje med et AS',
-      'I et ANS er deltakerne solidarisk og ubegrenset ansvarlige for selskapets gjeld',
       'ANS har aksjonærer med begrenset ansvar opp til innskutt kapital',
+      'I et ANS er deltakerne solidarisk og ubegrenset ansvarlige for selskapets gjeld',
       'ANS krever statlig godkjenning og konsesjon',
     ],
-    correct: 1,
+    correct: 2,
     explain: 'ANS (Ansvarlig selskap): deltakerne er solidarisk og ubegrenset ansvarlig for selskapets forpliktelser. En kreditor kan kreve hele gjelden fra én enkelt deltaker.',
   },
   {
@@ -121,11 +148,11 @@ const QUESTIONS = [
     q: 'Hvordan beskattes overskuddet i et enkeltpersonforetak (ENK)?',
     opts: [
       'Med selskapsskatt på flat 22 % som for AS',
-      'Som personinntekt hos eieren, inkludert trinnskatt og trygdeavgift',
-      'Med utbytteskatt på 37,84 % som for AS-utbytte',
       'ENK er fritatt for skatt de første 3 driftsårene',
+      'Med utbytteskatt på 37,84 % som for AS-utbytte',
+      'Som personinntekt hos eieren, inkludert trinnskatt og trygdeavgift',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Overskuddet i ENK beskattes som personinntekt – eieren betaler trinnskatt og trygdeavgift. Dette kan gi vesentlig høyere skatt enn i et AS ved høy inntekt.',
   },
   {
@@ -133,12 +160,12 @@ const QUESTIONS = [
     catLabel: 'Selskapsformer',
     q: 'Hva er en fusjon?',
     opts: [
-      'Deling av ett selskap i to eller flere separate selskaper',
       'Sammenslåing av to eller flere selskaper til ett felles selskap',
+      'Deling av ett selskap i to eller flere separate selskaper',
       'Overdragelse av enkeltaktiva eller forretningsenheter mellom selskaper',
       'Nedleggelse og avvikling av et selskaps virksomhet',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Fusjon = to eller flere selskaper slås sammen til ett. Fisjon = ett selskap deles opp i to eller flere. Fusjon kan gi stordriftsfordeler, synergieffekter og økt markedsandel.',
   },
   {
@@ -147,11 +174,11 @@ const QUESTIONS = [
     q: 'Hva er en fisjon?',
     opts: [
       'Sammenslåing av to eller flere selskaper til ett',
-      'Deling av ett selskap i to eller flere separate selskaper',
       'Salg av aksjer til nye investorer og aksjonærer',
+      'Deling av ett selskap i to eller flere separate selskaper',
       'Avvikling og konkursbehandling av et selskap',
     ],
-    correct: 1,
+    correct: 2,
     explain: 'Fisjon betyr at ett selskap deles opp i to eller flere separate selskaper. Brukes f.eks. for å skille ut en virksomhetsgren som et eget selskap med egne eiere.',
   },
   {
@@ -167,26 +194,29 @@ const QUESTIONS = [
     correct: 2,
     explain: 'Aksjonærer i et AS har begrenset ansvar og risikerer maksimalt det de har skutt inn i selskapet. Privat formue er beskyttet mot selskapets kreditorer – dette er AS-formens fremste fordel.',
   },
-
-  // REGNSKAPSLOVER (5q)
   {
     cat: 'regnskapslover',
     catLabel: 'Regnskapsregler',
     q: 'Hvem er regnskapspliktige etter Regnskapsloven?',
     opts: [
       'Kun aksjeselskaper (AS) og allmennaksjeselskaper (ASA)',
-      'AS, ASA, ANS/DA med inntekt over terskel, ENK med omsetning over 5 mill. kr og andre foretak bestemt ved lov',
-      'Alle virksomheter uavhengig av størrelse, form og omsetning',
       'Kun børsnoterte selskaper underlagt Finanstilsynets tilsyn',
+      'Alle virksomheter uavhengig av størrelse, form og omsetning',
+      'AS, ASA, ANS/DA med inntekt over terskel, ENK med omsetning over 5 mill. kr og andre foretak bestemt ved lov',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Regnskapspliktige etter Regnskapsloven er bl.a. alle AS og ASA, ANS/DA med inntekt over terskel, og ENK med omsetning over 5 mill. kr. Små foretak har forenklede krav.',
   },
   {
     cat: 'regnskapslover',
     catLabel: 'Regnskapsregler',
     q: 'Hva er oppbevaringsplikten for regnskapsdokumentasjon etter Bokføringsloven?',
-    opts: ['3,5 år', '5 år', '7 år', '10 år'],
+    opts: [
+      '3,5 år',
+      '5 år',
+      '7 år',
+      '10 år',
+    ],
     correct: 3,
     explain: 'Bokføringsloven: primær dokumentasjon (bilag) skal oppbevares i minimum 5 år, men avtaler, korrespondanse og annen sekundær dokumentasjon skal oppbevares i minimum 10 år.',
   },
@@ -195,12 +225,12 @@ const QUESTIONS = [
     catLabel: 'Regnskapsregler',
     q: 'Hva er Bokføringsloven sitt formål?',
     opts: [
-      'Å fastsette skattesatser og avgiftsregler for norske virksomheter',
       'Å stille krav til hvordan transaksjoner registreres, dokumenteres og oppbevares for å sikre sporbarhet',
+      'Å fastsette skattesatser og avgiftsregler for norske virksomheter',
       'Å regulere utbytte fra AS og krav til aksjonæravtaler',
       'Å fastsette krav til revisjon og revisorens uavhengighet',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Bokføringsloven stiller krav til løpende bokføring, dokumentasjon (bilag) og oppbevaring av regnskapsopplysninger. Formålet er å sikre at regnskapet er etterprøvbart og kontrollerbart.',
   },
   {
@@ -209,11 +239,11 @@ const QUESTIONS = [
     q: 'Hva er forskjellen mellom finansregnskapet og driftsregnskapet?',
     opts: [
       'Finansregnskapet er til intern bruk; driftsregnskapet er rettet mot eksterne interessenter',
-      'Finansregnskapet viser virksomhetens totale økonomi for omverdenen; driftsregnskapet gir interne kalkyler per produkt/avdeling for ledelsesbeslutninger',
       'De er synonyme begreper og brukes om hverandre i praksis',
+      'Finansregnskapet viser virksomhetens totale økonomi for omverdenen; driftsregnskapet gir interne kalkyler per produkt/avdeling for ledelsesbeslutninger',
       'Driftsregnskapet er lovpålagt; finansregnskapet er et frivillig tilleggsregnskap',
     ],
-    correct: 1,
+    correct: 2,
     explain: 'Finansregnskap (eksternt): årsregnskap, balanse og resultat for aksjonærer, kreditorer og myndigheter. Driftsregnskap (internt): kalkyler og bidragsanalyser per produkt/avdeling – beslutningsstøtte for ledelsen.',
   },
   {
@@ -222,26 +252,24 @@ const QUESTIONS = [
     q: 'Hva er tidsavgrensningsprinsippet (matching principle) i regnskapet?',
     opts: [
       'At regnskapsåret alltid er nøyaktig 12 måneder',
-      'At inntekter og kostnader føres i den perioden de er opptjent/påløpt, uavhengig av når kontantbetalingen skjer',
-      'At MVA-terminer betales hvert kvartal til Skatteetaten',
       'At avskrivninger fordeles likt over hele eiendelens levetid',
+      'At MVA-terminer betales hvert kvartal til Skatteetaten',
+      'At inntekter og kostnader føres i den perioden de er opptjent/påløpt, uavhengig av når kontantbetalingen skjer',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Tidsavgrensningsprinsippet: inntekter og kostnader henføres til den regnskapsperioden de tilhører, uavhengig av kontantstrømmen. Eksempel: forhåndsbetalte abonnementer periodiseres over den aktuelle perioden.',
   },
-
-  // KONTANTSTROM (6q)
   {
     cat: 'kontantstrom',
     catLabel: 'Kontantstrøm',
     q: 'Hva er endring i arbeidskapital, og hva skjer med den i starten av et investeringsprosjekt?',
     opts: [
-      'Økning i arbeidskapital er en positiv kontantstrøm som styrker prosjektets lønnsomhet fra start',
       'Endring i arbeidskapital = økning i omløpsmidler minus økning i kortsiktig gjeld; ved prosjektstart binder mer lager og kunder kapital – negativ kontantstrøm',
+      'Økning i arbeidskapital er en positiv kontantstrøm som styrker prosjektets lønnsomhet fra start',
       'Arbeidskapital er irrelevant for investeringsanalysen og holdes alltid utenfor',
       'Endring i arbeidskapital = økning i anleggsmidler og langsiktige investeringer',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Økt arbeidskapitalbehov ved prosjektstart (mer lager, mer kundekreditt) binder opp likviditet – negativ kontantstrøm i starten. Mot slutten frigjøres arbeidskapitalen og gir positiv kontantstrøm.',
   },
   {
@@ -250,11 +278,11 @@ const QUESTIONS = [
     q: 'Hva er restverdi (terminal value) og når inntreffer den i en kontantstrømanalyse?',
     opts: [
       'Anskaffelseskostnaden for investeringen – den opptrer i år 0 som en utbetaling',
-      'Markedsverdien av investeringsobjektet og/eller frigjort arbeidskapital ved prosjektets slutt – positiv kontantstrøm i siste år',
       'De løpende vedlikeholdskostnadene knyttet til investeringen',
+      'Markedsverdien av investeringsobjektet og/eller frigjort arbeidskapital ved prosjektets slutt – positiv kontantstrøm i siste år',
       'Skattefordelen fra avskrivninger – en positiv kontantstrøm hvert driftsår',
     ],
-    correct: 1,
+    correct: 2,
     explain: 'Restverdi = antatt salgsverdi av investeringsobjektet og frigjort arbeidskapital ved prosjektslutt. Disse er POSITIVE kontantstrømmer i det siste analyseåret og øker prosjektets lønnsomhet.',
   },
   {
@@ -263,11 +291,11 @@ const QUESTIONS = [
     q: 'Hvorfor inkluderes IKKE avskrivninger som en kontantstrøm i investeringsanalysen?',
     opts: [
       'Fordi avskrivninger er for kompliserte å beregne nøyaktig',
-      'Fordi avskrivninger er en regnskapsmessig kostnad uten kontanteffekt – selve investeringen er allerede tatt som utbetaling i år 0',
-      'Fordi avskrivninger alltid er lik 0 ved nyinvesteringer',
       'Fordi avskrivninger inngår i driftsresultatet men ikke påvirker likviditeten',
+      'Fordi avskrivninger alltid er lik 0 ved nyinvesteringer',
+      'Fordi avskrivninger er en regnskapsmessig kostnad uten kontanteffekt – selve investeringen er allerede tatt som utbetaling i år 0',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Kontantstrømsanalysen inkluderer kun faktiske inn- og utbetalinger. Avskrivninger er en regnskapsmessig fordeling av investeringskostnaden – ingen ny kontantutbetaling – og skal ikke dobbeltføres.',
   },
   {
@@ -275,12 +303,12 @@ const QUESTIONS = [
     catLabel: 'Kontantstrøm',
     q: 'Hva er sunk cost (irreversibel kostnad) og hvordan behandles det i investeringsanalyse?',
     opts: [
-      'En fremtidig kostnad som kan unngås; skal alltid inkluderes i beslutningsgrunnlaget',
       'En allerede påløpt kostnad som ikke kan gjenvinnes; skal IKKE inkluderes siden den ikke påvirkes av fremtidige beslutninger',
+      'En fremtidig kostnad som kan unngås; skal alltid inkluderes i beslutningsgrunnlaget',
       'En skjult kostnad i produksjonsprosessen som undervurderes systematisk',
       'Finansieringskostnader knyttet til lån som finansierer investeringen',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Sunk cost = allerede brukte penger som ikke kan gjenvinnes uansett hvilken beslutning man tar fremover. Irreversible kostnader er ikke relevante for fremtidige beslutninger og holdes utenfor investeringsanalysen.',
   },
   {
@@ -289,11 +317,11 @@ const QUESTIONS = [
     q: 'Hva er avkastningskravet i en investeringsanalyse?',
     opts: [
       'Den gjennomsnittlige rentesatsen på banklån og kredittfasiliteter',
-      'Den minimumsavkastning investoren krever, bestående av risikofri rente, risikopremie og evt. inflasjon',
-      'Selskapsskatten på 22 % som gjelder for alle AS i Norge',
       'Den garanterte avkastningen på statsobligasjoner til enhver tid',
+      'Selskapsskatten på 22 % som gjelder for alle AS i Norge',
+      'Den minimumsavkastning investoren krever, bestående av risikofri rente, risikopremie og evt. inflasjon',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Avkastningskravet = risikofri rente + risikopremie + evt. inflasjon. Det uttrykker minimumsavkastningen investoren krever for å kompensere for kapitalbinding og den prosjektspesifikke risikoen.',
   },
   {
@@ -301,12 +329,12 @@ const QUESTIONS = [
     catLabel: 'Kontantstrøm',
     q: 'Hva er formelen for tilbakebetalingstid (TBT) og hva er metodens viktigste svakhet?',
     opts: [
-      'TBT = Investering / (Inntekter − Kostnader + Avskrivninger); svakhet: inkluderer avskrivninger',
       'TBT = Investering / Gjennomsnittlig årlig netto kontantstrøm; svakhet: ignorerer tidsverdien av penger og kontantstrømmer etter TBT',
+      'TBT = Investering / (Inntekter − Kostnader + Avskrivninger); svakhet: inkluderer avskrivninger',
       'TBT = Netto nåverdi / Avkastningskrav; svakhet: vanskelig å beregne avkastningskravet',
       'TBT = Investering × Avkastningskrav; svakhet: tar ikke hensyn til investeringsstørrelsen',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'TBT = Investering / Gjennomsnittlig netto kontantstrøm per år. Svakhetene: (1) ignorerer tidsverdien av penger, (2) ser bort fra alle kontantstrømmer etter tilbakebetalingstidspunktet.',
   },
 ];

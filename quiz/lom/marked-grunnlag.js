@@ -5,14 +5,13 @@ const QUIZ_META = {
   description: '30 spørsmål om markedsdefinisjoner, AIDA, STP, Porters fem krefter og markedsanalyse.',
   cats: {
     marked_def:      { label: 'Markedsdefinisjoner', color: '#8b5cf6' },
-    analyse:         { label: 'Markedsanalyse',      color: '#3b82f6' },
-    aida_stp:        { label: 'AIDA og STP',         color: '#10b981' },
-    konkurranse_env: { label: 'Konkurransemiljø',    color: '#f59e0b' },
+    analyse:         { label: 'Markedsanalyse', color: '#3b82f6' },
+    aida_stp:        { label: 'AIDA og STP', color: '#10b981' },
+    konkurranse_env: { label: 'Konkurransemiljø', color: '#f59e0b' },
   }
 };
 
 const QUESTIONS = [
-  // MARKED_DEF (8q)
   {
     cat: 'marked_def',
     catLabel: 'Markedsdefinisjoner',
@@ -117,8 +116,6 @@ const QUESTIONS = [
     correct: 2,
     explain: 'I modningstfasen er salget stabilt høyt, men veksten flater ut. Konkurransen er sterk, prisene presses ned, og bedriften må differensiere seg for å beholde markedsandeler.',
   },
-
-  // ANALYSE (7q)
   {
     cat: 'analyse',
     catLabel: 'Markedsanalyse',
@@ -163,12 +160,12 @@ const QUESTIONS = [
     catLabel: 'Markedsanalyse',
     q: 'Hva er «targeting» i STP-modellen?',
     opts: [
-      'Å gi produktet en tydelig posisjon i kundens bevissthet',
       'Å velge hvilke segmenter man ønsker å betjene med sine tilbud',
+      'Å gi produktet en tydelig posisjon i kundens bevissthet',
       'Å segmentere markedet i homogene grupper',
       'Å fastsette prisen relativt til konkurrentenes nivå',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Targeting = valg av målsegment(er). Etter å ha segmentert markedet velger bedriften hvilke segmenter den vil rette seg mot, basert på attraktivitet og egne ressurser/kompetanse.',
   },
   {
@@ -177,11 +174,11 @@ const QUESTIONS = [
     q: 'Hva er posisjonering?',
     opts: [
       'Å plassere produktet fysisk i butikkhyller eller nettbutikker',
-      'Å skape en tydelig, differensiert og verdifull plass i målgruppens bevissthet relativt til konkurrentene',
       'Å fastsette rabattsatser og tilbudspolitikk i markedet',
+      'Å skape en tydelig, differensiert og verdifull plass i målgruppens bevissthet relativt til konkurrentene',
       'Å analysere markedsandeler i et bestemt geografisk område',
     ],
-    correct: 1,
+    correct: 2,
     explain: 'Posisjonering handler om hvordan bedriften ønsker at kundene skal oppfatte produktet eller merkenavnet relativt til konkurrentene – hvilken plass i kundens sinn man ønsker å okkupere.',
   },
   {
@@ -203,26 +200,24 @@ const QUESTIONS = [
     q: 'Hva er en forretningsidé i markedsplan-kontekst?',
     opts: [
       'En konkret salgsplan med detaljerte budsjettall for neste kvartal',
-      'En kortfattet beskrivelse av hva bedriften tilbyr, til hvem og hvorfor kundene velger dem',
-      'En detaljert teknisk beskrivelse av alle produkter og tjenester',
       'En juridisk beskrivelse av selskapets formål og selskapsform',
+      'En detaljert teknisk beskrivelse av alle produkter og tjenester',
+      'En kortfattet beskrivelse av hva bedriften tilbyr, til hvem og hvorfor kundene velger dem',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Forretningsidéen svarer på: hvilken kundeverdi skaper vi, for hvem og på hvilken måte. Den danner grunnlag for markedsstrategi, posisjonering og differensiering.',
   },
-
-  // AIDA_STP (7q)
   {
     cat: 'aida_stp',
     catLabel: 'AIDA og STP',
     q: 'Hva står AIDA for i markedsføring?',
     opts: [
-      'Analyse, Innsikt, Dialog, Aksjon',
       'Attention (oppmerksomhet), Interest (interesse), Desire (ønske), Action (handling)',
+      'Analyse, Innsikt, Dialog, Aksjon',
       'Anerkjennelse, Identifikasjon, Differensiering, Avslutning',
       'Anskaffelse, Integrering, Distribusjon, Automatisering',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'AIDA = Attention (fange oppmerksomhet) → Interest (skape interesse) → Desire (bygge ønske/behov) → Action (stimulere til kjøp). Brukes til å forstå kjøpsprosessen og utforme kommunikasjon.',
   },
   {
@@ -270,11 +265,11 @@ const QUESTIONS = [
     q: 'Hva er markedsplanens funksjon?',
     opts: [
       'En juridisk binding overfor offentlige myndigheter',
-      'Et styringsdokument som beskriver mål, strategi og tiltak for markedsarbeidet i en gitt periode',
       'En finansiell rapport rettet mot investorer og aksjonærer',
+      'Et styringsdokument som beskriver mål, strategi og tiltak for markedsarbeidet i en gitt periode',
       'Et internt opplæringsdokument for nyansatte i salgsteamet',
     ],
-    correct: 1,
+    correct: 2,
     explain: 'Markedsplanen er et handlingsdokument som konkretiserer mål (gjerne SMART), strategi (STP, differensiering) og operasjonelle tiltak (5P) for en definert tidsperiode.',
   },
   {
@@ -283,11 +278,11 @@ const QUESTIONS = [
     q: 'Hva er «place» (distribusjon) i 5P-markedsmiksen?',
     opts: [
       'Den fysiske plasseringen av reklame og markedsmateriell',
-      'Alle kanaler og metoder for å gjøre produktet tilgjengelig for kunden der de ønsker å kjøpe',
-      'Prisen produktet selges for i ulike markedskanaler',
       'Stedet der produktet produseres og distribueres fra',
+      'Prisen produktet selges for i ulike markedskanaler',
+      'Alle kanaler og metoder for å gjøre produktet tilgjengelig for kunden der de ønsker å kjøpe',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Place (distribusjon) handler om å gjøre produktet tilgjengelig til rett tid og sted – via nettbutikk, grossister, detaljister, direkte salg eller andre kanaler.',
   },
   {
@@ -303,8 +298,6 @@ const QUESTIONS = [
     correct: 2,
     explain: 'Den tradisjonelle 4P-en (Produkt, Pris, Plass, Påvirkning) er utvidet med People (mennesker/personell) som femte P, spesielt relevant for tjenesteyting der de ansattes kompetanse og atferd er kritisk.',
   },
-
-  // KONKURRANSE_ENV (8q)
   {
     cat: 'konkurranse_env',
     catLabel: 'Konkurransemiljø',
@@ -323,12 +316,12 @@ const QUESTIONS = [
     catLabel: 'Konkurransemiljø',
     q: 'Hva øker trusselen fra nykommere i en bransje?',
     opts: [
-      'Høye inngangsbarrierer, sterke stordriftsfordeler og høy merkevarelojalitet',
       'Lave inngangsbarrierer, lite merkevarelojalitet og lave byttkostnader for kundene',
+      'Høye inngangsbarrierer, sterke stordriftsfordeler og høy merkevarelojalitet',
       'Sterk rivalisering mellom eksisterende aktører som presser ned lønnsomheten',
       'Høy leverandørmakt og sterk konsentrasjon blant råvareleverandører',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Trussel fra nykommere er høy når inngangsbarrierene er lave (lite kapital, regulering, teknologi kreves), merkevarelojaliteten er svak og kundene lett kan bytte leverandør.',
   },
   {
@@ -337,11 +330,11 @@ const QUESTIONS = [
     q: 'Hva er et substitutt i Porters modell?',
     opts: [
       'En direkte konkurrent i samme bransje med lignende produkter',
-      'Et produkt eller tjeneste fra en annen bransje som dekker samme kundebehov',
       'En ny leverandør som kan levere raskere og billigere',
+      'Et produkt eller tjeneste fra en annen bransje som dekker samme kundebehov',
       'En ny kundekategori som bedriften ikke har betjent tidligere',
     ],
-    correct: 1,
+    correct: 2,
     explain: 'Substitutter er produkter eller tjenester fra andre bransjer som kan erstatte bransjens tilbud. Eksempel: tog er et substitutt for fly; video-streaming er et substitutt for kino.',
   },
   {
@@ -350,11 +343,11 @@ const QUESTIONS = [
     q: 'Når er leverandørers forhandlingsmakt høy?',
     opts: [
       'Når det finnes mange leverandører og kunden enkelt og billig kan bytte',
-      'Når leverandøren er unik, leverer kritiske innsatsfaktorer og det er dyrt å bytte leverandør',
-      'Når bransjen er dominert av svært store kunder med høyt kjøpsvolum',
       'Når trussel fra nykommere er lav og markedet er modent',
+      'Når bransjen er dominert av svært store kunder med høyt kjøpsvolum',
+      'Når leverandøren er unik, leverer kritiske innsatsfaktorer og det er dyrt å bytte leverandør',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Leverandørers makt er høy når de er få, leverer unike eller kritiske innsatsfaktorer, og det er kostbart eller vanskelig for kunden å bytte leverandør.',
   },
   {
@@ -362,12 +355,12 @@ const QUESTIONS = [
     catLabel: 'Konkurransemiljø',
     q: 'Hva er hensikten med en konkurrentanalyse?',
     opts: [
-      'Å kopiere konkurrentenes strategi og implementere den i egen virksomhet',
       'Å forstå konkurrentenes styrker, svakheter, strategier og posisjon for å identifisere egne muligheter og trusler',
+      'Å kopiere konkurrentenes strategi og implementere den i egen virksomhet',
       'Å fastsette egne priser alltid lavere enn konkurrentenes prisnivå',
       'Å unngå å møte på konkurrentene i markedet ved å velge andre segmenter',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Konkurrentanalyse gir innsikt i hvem konkurrentene er, hva de tilbyr, hvilke segmenter de betjener og hvilke svakheter de har – grunnlag for differensiering og strategivalg.',
   },
   {
@@ -376,11 +369,11 @@ const QUESTIONS = [
     q: 'Hva er PESTEL-analyse brukt til?',
     opts: [
       'Å analysere interne prosesser og effektiviteten i verdikjeden',
-      'Å kartlegge makroomgivelsene: politiske, økonomiske, sosiale, teknologiske, miljø- og juridiske faktorer',
-      'Å analysere direkte konkurrenter og deres strategier',
       'Å fastsette prisstrategi og rabattsystem',
+      'Å analysere direkte konkurrenter og deres strategier',
+      'Å kartlegge makroomgivelsene: politiske, økonomiske, sosiale, teknologiske, miljø- og juridiske faktorer',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'PESTEL kartlegger makroomgivelsene: Political, Economic, Social, Technological, Environmental, Legal. Brukes til å identifisere eksterne faktorer som kan påvirke bedriftens fremtid.',
   },
   {
@@ -388,12 +381,12 @@ const QUESTIONS = [
     catLabel: 'Konkurransemiljø',
     q: 'Hva menes med «stuck-in-the-middle» i Porters generiske strategier?',
     opts: [
-      'En bedrift som opererer i midten av markedet geografisk eller demografisk',
       'En bedrift som verken klarer å differensiere seg eller å være kostnadsleder, og dermed mister konkurransefortrinn',
+      'En bedrift som opererer i midten av markedet geografisk eller demografisk',
       'En bedrift som satser på en smal og lønnsom markedsnisje',
       'En vellykket kombinasjon av kostnadslederskap og produktdifferensiering',
     ],
-    correct: 1,
+    correct: 0,
     explain: 'Porter advarer mot «stuck-in-the-middle»: bedrifter som verken er tydelige kostnadsledere eller differensierer seg klart, risikerer å miste kunder til begge ender og stagnere lønnsomheten.',
   },
   {
@@ -402,11 +395,11 @@ const QUESTIONS = [
     q: 'Hva er en markedsutfordrer ifølge Kotlers fire konkurranseposisjoner?',
     opts: [
       'Den bedriften med størst markedsandel som setter bransjenormen',
-      'Bedrifter som aktivt utfordrer markedslederen og søker å ta over markedsandeler',
-      'Bedrifter som betjener en smal spesialnisje og unngår direkte konkurranse',
       'Bedrifter som følger markedslederen ved å imitere produkt og pris',
+      'Bedrifter som betjener en smal spesialnisje og unngår direkte konkurranse',
+      'Bedrifter som aktivt utfordrer markedslederen og søker å ta over markedsandeler',
     ],
-    correct: 1,
+    correct: 3,
     explain: 'Kotler identifiserer fire posisjoner: markedsleder (størst andel), markedsutfordrer (nr. 2/3, angriper aktivt lederen), markedsfølger (imiterer lederen) og markedsnisje (smal spesialisert målgruppe).',
   },
 ];
