@@ -27,17 +27,18 @@ const QUESTIONS = [
     explain: 'Maslow hevder at behov er hierarkisk ordnet – lavere behov (fysiologiske, sikkerhet) må i stor grad tilfredsstilles før høyere behov (sosiale, anerkjennelse, selvrealisering) aktiveres som motivatorer.',
   },
   {
+    type: 'order',
     cat: 'maslow',
     catLabel: 'Maslows behovspyramide',
-    q: 'Hvilken rekkefølge er riktig fra bunn til topp i Maslows behovspyramide?',
-    opts: [
-      'Sikkerhet → Fysiologiske → Sosiale → Anerkjennelse → Selvrealisering',
-      'Fysiologiske → Sikkerhet → Sosiale → Anerkjennelse → Selvrealisering',
-      'Sosiale → Fysiologiske → Sikkerhet → Selvrealisering → Anerkjennelse',
-      'Fysiologiske → Sosiale → Sikkerhet → Selvrealisering → Anerkjennelse',
+    q: 'Plasser de fem behovene på riktig nivå i Maslows behovspyramide. Toppen øverst, bunnen nederst — dra boksene for å bytte plass.',
+    items: [
+      'Fysiologiske behov',
+      'Sikkerhet',
+      'Sosiale behov',
+      'Anerkjennelse',
+      'Selvrealisering',
     ],
-    correct: 1,
-    explain: 'Maslows pyramide: fysiologiske behov (mat, søvn) → sikkerhet → sosiale behov → anerkjennelse → selvrealisering øverst.',
+    explain: 'Maslows pyramide fra bunn til topp: fysiologiske behov (mat, søvn) → sikkerhet → sosiale behov → anerkjennelse → selvrealisering øverst.',
   },
   {
     cat: 'maslow',

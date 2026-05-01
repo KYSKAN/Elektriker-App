@@ -378,6 +378,14 @@ function renderQuestion() {
   const prevBtn2 = document.getElementById('prev-btn');
   prevBtn2.disabled = currentIdx <= minNavigableIdx;
 
+  const container0 = document.getElementById('options-container');
+  container0.classList.remove('order-mode');
+
+  if (q.type === 'order') {
+    renderOrderQuestion(q);
+    return;
+  }
+
   const isMulti      = Array.isArray(q.correct);
   const stored       = answers[currentIdx];
   currentIndices     = stored ? stored.indices : shuffle([0, 1, 2, 3]);
@@ -400,6 +408,7 @@ function renderQuestion() {
   // Confirm button – always shown for unanswered questions
   const confirmWrap = document.getElementById('confirm-wrap');
   const confirmBtn  = document.getElementById('confirm-btn');
+  confirmBtn.textContent = 'Bekreft svar';
   if (!stored) {
     confirmWrap.style.display = 'block';
     confirmBtn.disabled = true;
@@ -499,6 +508,198 @@ function confirmAnswer(correctShuffled, q, shuffledOpts) {
   saveAnswer(q, isCorrect);
 
   document.getElementById('score-live').textContent = `Poeng: ${score}`;
+
+  const expl = document.getElementById('explanation');
+  expl.innerHTML = `<strong>${isCorrect ? '✓ Riktig!' : '✗ Feil.'}</strong> ${q.explain}`;
+  expl.classList.add('show');
+}
+
+// ── Order question (drag pyramid) ─────────────────────────────
+function renderOrderQuestion(q) {
+  const container   = document.getElementById('options-container');
+  const confirmWrap = document.getElementById('confirm-wrap');
+  const confirmBtn  = document.getElementById('confirm-btn');
+  const expl        = document.getElementById('explanation');
+
+  container.classList.add('order-mode');
+  container.innerHTML = '';
+
+  const N = q.items.length;
+  const stored = answers[currentIdx];
+
+  let order;
+  if (stored && stored.order) {
+    order = stored.order.slice();
+  } else {
+    order = [...Array(N).keys()];
+    let tries = 0;
+    do {
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      tries++;
+    } while (order.every((v, i) => v === i) && tries < 8);
+  }
+
+  const help = document.createElement('div');
+  help.className = 'pyramid-help';
+  help.textContent = 'Dra boksene for å bytte plass. Bunnen av pyramiden er nederst.';
+  container.appendChild(help);
+
+  const pyramid = document.createElement('div');
+  pyramid.className = 'pyramid';
+  container.appendChild(pyramid);
+
+  function widthFor(level) {
+    return 44 + (N - 1 - level) * (56 / (N - 1));
+  }
+
+  for (let displayIdx = 0; displayIdx < N; displayIdx++) {
+    const level = N - 1 - displayIdx;
+    const itemIdx = order[level];
+    const box = document.createElement('div');
+    box.className = 'pyramid-box';
+    box.dataset.level = level;
+    box.style.width = widthFor(level) + '%';
+    box.innerHTML =
+      `<span class="pyramid-handle">⋮⋮</span>` +
+      `<span class="pyramid-label">${esc(q.items[itemIdx])}</span>`;
+    pyramid.appendChild(box);
+  }
+
+  function refreshLabels() {
+    pyramid.querySelectorAll('.pyramid-box').forEach(box => {
+      const level = +box.dataset.level;
+      box.querySelector('.pyramid-label').textContent = q.items[order[level]];
+    });
+  }
+
+  if (stored) {
+    answered = true;
+    pyramid.querySelectorAll('.pyramid-box').forEach(box => {
+      const level = +box.dataset.level;
+      box.classList.add(order[level] === level ? 'correct' : 'wrong');
+      box.classList.add('locked');
+    });
+    confirmWrap.style.display = 'none';
+    expl.innerHTML = `<strong>${stored.isCorrect ? '✓ Riktig!' : '✗ Feil.'}</strong> ${q.explain}`;
+    expl.classList.add('show');
+    return;
+  }
+
+  initPyramidDrag(pyramid, order, refreshLabels);
+
+  confirmWrap.style.display = 'block';
+  confirmBtn.disabled = false;
+  confirmBtn.textContent = 'Bekreft rekkefølge';
+  confirmBtn.onclick = () => confirmOrderAnswer(q, order, pyramid);
+}
+
+function initPyramidDrag(pyramid, order, refresh) {
+  let grabbed = null;
+
+  function findTargetBox(clientY) {
+    let target = null;
+    pyramid.querySelectorAll('.pyramid-box').forEach(box => {
+      const r = box.getBoundingClientRect();
+      if (clientY >= r.top && clientY <= r.bottom) target = box;
+    });
+    return target;
+  }
+
+  function onPointerDown(e) {
+    if (answered) return;
+    const box = e.currentTarget;
+    e.preventDefault();
+    const rect = box.getBoundingClientRect();
+    const ghost = box.cloneNode(true);
+    ghost.classList.add('pyramid-ghost');
+    ghost.style.position = 'fixed';
+    ghost.style.left   = rect.left + 'px';
+    ghost.style.top    = rect.top + 'px';
+    ghost.style.width  = rect.width + 'px';
+    ghost.style.height = rect.height + 'px';
+    ghost.style.margin = '0';
+    document.body.appendChild(ghost);
+    box.classList.add('grabbing-source');
+    grabbed = { box, level: +box.dataset.level, startY: e.clientY, ghost };
+    try { box.setPointerCapture(e.pointerId); } catch(_) {}
+  }
+
+  function onPointerMove(e) {
+    if (!grabbed) return;
+    const dy = e.clientY - grabbed.startY;
+    grabbed.ghost.style.transform = `translateY(${dy}px)`;
+    pyramid.querySelectorAll('.pyramid-box').forEach(b => b.classList.remove('drag-over'));
+    const target = findTargetBox(e.clientY);
+    if (target && +target.dataset.level !== grabbed.level) {
+      target.classList.add('drag-over');
+    }
+  }
+
+  function onPointerEnd(e) {
+    if (!grabbed) return;
+    const target = findTargetBox(e.clientY);
+    grabbed.box.classList.remove('grabbing-source');
+    grabbed.ghost.remove();
+    pyramid.querySelectorAll('.pyramid-box').forEach(b => b.classList.remove('drag-over'));
+    if (target) {
+      const tLevel = +target.dataset.level;
+      if (tLevel !== grabbed.level) {
+        [order[tLevel], order[grabbed.level]] = [order[grabbed.level], order[tLevel]];
+        refresh();
+      }
+    }
+    grabbed = null;
+  }
+
+  pyramid.querySelectorAll('.pyramid-box').forEach(box => {
+    box.addEventListener('pointerdown',   onPointerDown);
+    box.addEventListener('pointermove',   onPointerMove);
+    box.addEventListener('pointerup',     onPointerEnd);
+    box.addEventListener('pointercancel', onPointerEnd);
+  });
+}
+
+function confirmOrderAnswer(q, order, pyramid) {
+  if (answered) return;
+  answered = true;
+
+  const isCorrect = order.every((v, i) => v === i);
+
+  pyramid.querySelectorAll('.pyramid-box').forEach(box => {
+    const level = +box.dataset.level;
+    box.classList.add(order[level] === level ? 'correct' : 'wrong');
+    box.classList.add('locked');
+  });
+
+  const userTextBottomToTop    = order.map(i => q.items[i]).join(' → ');
+  const correctTextBottomToTop = q.items.join(' → ');
+
+  answers[currentIdx] = {
+    type: 'order',
+    order: order.slice(),
+    isCorrect,
+    chosen: 0,
+    indices: [0, 1, 2, 3],
+  };
+
+  if (isCorrect) {
+    score++;
+    catScores[q.cat].correct++;
+  } else {
+    wrongAnswers.push({
+      q,
+      chosenText:  'Bunn → topp: ' + userTextBottomToTop,
+      correctText: 'Bunn → topp: ' + correctTextBottomToTop,
+    });
+  }
+
+  saveAnswer(q, isCorrect);
+
+  document.getElementById('score-live').textContent = `Poeng: ${score}`;
+  document.getElementById('confirm-wrap').style.display = 'none';
 
   const expl = document.getElementById('explanation');
   expl.innerHTML = `<strong>${isCorrect ? '✓ Riktig!' : '✗ Feil.'}</strong> ${q.explain}`;
