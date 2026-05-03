@@ -1020,10 +1020,22 @@ function sbHeaders(extra = {}) {
 
 async function fetchLeaderboard(t) {
   const res = await fetch(
-    `${SB_URL}/rest/v1/scores?tema=eq.${t}&order=score.desc,created_at.asc&limit=10`,
+    `${SB_URL}/rest/v1/scores?tema=eq.${t}&order=score.desc,created_at.asc&limit=200`,
     { headers: sbHeaders() }
   );
-  return res.ok ? res.json() : [];
+  if (!res.ok) return [];
+  const all = await res.json();
+  // Behold kun beste score per device_id (first-wins siden allerede sortert score desc)
+  const seen = new Set();
+  const deduped = [];
+  for (const entry of all) {
+    const key = entry.device_id || `_legacy_${entry.id}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(entry);
+    if (deduped.length >= 10) break;
+  }
+  return deduped;
 }
 
 async function saveScore(navn, sc, tot, t) {
