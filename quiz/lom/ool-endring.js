@@ -139,6 +139,19 @@ const QUESTIONS = [
   {
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
+    q: 'Hvilke to kjennetegn hører hjemme i Lewins tine-fase?',
+    opts: [
+      'Skape erkjennelse av at nåværende situasjon ikke er god nok',
+      'Gjennomføre opplæring i de nye arbeidsmetodene og systemene',
+      'Løsne opp etablerte rutiner og vante tankemønstre i organisasjonen',
+      'Forankre den nye atferden som en permanent og akseptert standard',
+    ],
+    correct: [0, 2],
+    explain: 'Tine-fasen kjennetegnes av å skape erkjennelse av at status quo ikke holder, og å løsne opp etablerte mønstre. Opplæring hører til endre-fasen; forankring hører til fryse-fasen.',
+  },
+  {
+    cat: 'modeller',
+    catLabel: 'Kotters og Lewins modeller',
     q: 'Hva er første steg i Kotters 8-trinnsmodell for endring?',
     opts: [
       'Bygge koalisjon av troverdige støttespillere',
@@ -234,6 +247,19 @@ const QUESTIONS = [
   {
     cat: 'interessenter',
     catLabel: 'Interessenter og motstand',
+    q: 'Hvilke to er vanlige årsaker til motstand mot endring ifølge Kanter (1992)?',
+    opts: [
+      'Tap av kontroll og redusert selvbestemmelse i arbeidshverdagen',
+      'Mangel på digital kompetanse og kunnskap om nye systemer og verktøy',
+      'Frykt for å miste noe man verdsetter eller har bygd opp over tid',
+      'Uenighet om de prioriteringene og budsjettrammene endringen krever',
+    ],
+    correct: [0, 2],
+    explain: 'Kanter (1992) peker på tap av kontroll og frykt for å miste noe man verdsetter som sentrale drivere bak motstand mot endring – begge handler om en opplevd trussel mot det kjente og trygge.',
+  },
+  {
+    cat: 'interessenter',
+    catLabel: 'Interessenter og motstand',
     q: 'Hva er det beste virkemiddelet for å redusere motstand mot endring?',
     opts: [
       'Å gjennomføre endringen i rolig tempo, steg for steg, slik at ansatte rekker å tilpasse seg',
@@ -295,6 +321,19 @@ const QUESTIONS = [
     ],
     correct: 3,
     explain: 'LEAN er en produksjons- og ledelsesfilosofi opprinnelig fra Toyota, avledet fra TKL, med fokus på å eliminere all sløsing (muda/waste) i prosesser og levere maksimal verdi til kunden.',
+  },
+  {
+    cat: 'ou_tql',
+    catLabel: 'OU, TKL, LEAN og Senge',
+    q: 'Hvilke to kjennetegner LEAN som ledelsesfilosofi?',
+    opts: [
+      'Eliminere all sløsing (muda) i alle ledd av prosessen',
+      'Sentralisert beslutningstaking og tydelig toppstyring i organisasjonen',
+      'Levere maksimal verdi til kunden med minst mulig ressursbruk',
+      'Belønne individuelle prestasjoner gjennom intern konkurranse og rangering',
+    ],
+    correct: [0, 2],
+    explain: 'LEAN bygger på to kjerneprinsipper: eliminere sløsing (muda/waste) i alle prosesser, og levere maksimal verdi til kunden. Filosofien er avledet fra TQM og Toyota Production System.',
   },
   {
     cat: 'ou_tql',

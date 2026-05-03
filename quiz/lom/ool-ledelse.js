@@ -125,6 +125,19 @@ const QUESTIONS = [
   {
     cat: 'lederstil',
     catLabel: 'Lederstil',
+    q: 'Hvilke to beskrivelser kjennetegner coaching som ledelsesmetode?',
+    opts: [
+      'Stiller åpne spørsmål for å fremme refleksjon hos medarbeideren',
+      'Gir detaljerte instruksjoner og forklarer trinn for trinn hva som skal gjøres',
+      'Hjelper medarbeideren til å finne egne løsninger fremfor å servere svarene',
+      'Evaluerer prestasjonene opp mot fastsatte krav og belønner de beste resultatene',
+    ],
+    correct: [0, 2],
+    explain: 'Coaching kjennetegnes av åpne spørsmål som fremmer refleksjon, og av at medarbeideren selv finner løsningene. Lederen er fasilitator – ikke instruktør eller evaluator.',
+  },
+  {
+    cat: 'lederstil',
+    catLabel: 'Lederstil',
     q: 'Hva er hensikten med medarbeidersamtalen?',
     opts: [
       'Å dokumentere avvik og uønsket atferd for personalregisteret',
@@ -147,6 +160,19 @@ const QUESTIONS = [
     ],
     correct: 2,
     explain: 'Konstruktiv feedback er konkret, beskriver observert atferd og dens konsekvenser, og antyder hva som bør endres – uten å angripe personen. Fokus på atferd, ikke person.',
+  },
+  {
+    cat: 'lederstil',
+    catLabel: 'Lederstil',
+    q: 'Hvilke to kjennetegner konstruktiv feedback?',
+    opts: [
+      'Den er knyttet til konkret, observert atferd – ikke personlige egenskaper',
+      'Den formidles helst skriftlig og arkiveres i prestasjonsdokumentasjonen',
+      'Den peker på konsekvenser og antyder ønsket endring fremover',
+      'Den er kort og generell for ikke å virke krenkende overfor mottakeren',
+    ],
+    correct: [0, 2],
+    explain: 'Konstruktiv feedback (1) tar utgangspunkt i konkret, observert atferd (ikke person), og (2) peker på konsekvenser og antyder ønsket endring. Den er spesifikk og fremoverskuende.',
   },
   {
     cat: 'org_former',
@@ -349,6 +375,19 @@ const QUESTIONS = [
     ],
     correct: 3,
     explain: 'Delegering innebærer å overføre oppgaver med tilhørende myndighet og ressurser. Lederen beholder det overordnede ansvaret (ansvar kan ikke delegeres), men myndigheten til å handle overføres.',
+  },
+  {
+    cat: 'kommunikasjon',
+    catLabel: 'Kommunikasjon',
+    q: 'Hvilke to elementer er nødvendige for at delegering skal fungere godt?',
+    opts: [
+      'Myndighet til å treffe beslutninger innenfor det delegerte ansvaret',
+      'En skriftlig statusrapport til leder etter hvert enkelt steg i prosessen',
+      'Tilstrekkelige ressurser og kompetanse til å løse oppgaven selvstendig',
+      'En garanti fra lederen om at oppgaven kan gjennomføres uten feil',
+    ],
+    correct: [0, 2],
+    explain: 'For at delegering skal fungere må myndighet (beslutningsrett) og ressurser (tid, penger, kompetanse) følge med oppgaven. Uten disse kan medarbeideren ikke lykkes, uansett vilje.',
   },
   {
     cat: 'kommunikasjon',
