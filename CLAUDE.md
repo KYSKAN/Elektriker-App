@@ -74,7 +74,7 @@ Tre separate quiz-velger-sider lenket fra hoved-appen. Felles quiz-motor i `spil
 ### Alle quiz-temaer
 | Slug                     | Fil                            | Spørsmål | Hub                | Toppliste |
 |--------------------------|--------------------------------|----------|--------------------|-----------|
-| lom-ool-motivasjon       | lom/ool-motivasjon.js          | 31       | index.html         | ✓         |
+| lom-ool-motivasjon       | lom/ool-motivasjon.js          | 29       | index.html         | ✓         |
 | lom-ool-kultur           | lom/ool-kultur.js              | 30       | index.html         | ✓         |
 | lom-ool-endring          | lom/ool-endring.js             | 30       | index.html         | ✓         |
 | lom-ool-ledelse          | lom/ool-ledelse.js             | 30       | index.html         | ✓         |
@@ -96,7 +96,7 @@ Tre separate quiz-velger-sider lenket fra hoved-appen. Felles quiz-motor i `spil
 | vipper                   | bjrons/vipper.js               | 22       | index-bjrons.html  |           |
 | trh1ek                   | bjrons/trh1ek.js               | 50       | index-bjrons.html  | ✓         |
 
-**Totalt: 616 spørsmål fordelt på 21 temaer (13 LØM + 1 elektro + 7 bjrons)**
+**Totalt: 614 spørsmål fordelt på 21 temaer (13 LØM + 1 elektro + 7 bjrons)**
 
 ### Slik fungerer spill.html
 - Leser `?tema=X` fra URL og slår opp filen i `temaFil`-tabellen

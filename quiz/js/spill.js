@@ -379,10 +379,15 @@ function renderQuestion() {
   prevBtn2.disabled = currentIdx <= minNavigableIdx;
 
   const container0 = document.getElementById('options-container');
-  container0.classList.remove('order-mode');
+  container0.classList.remove('order-mode', 'sort-mode');
 
   if (q.type === 'order') {
     renderOrderQuestion(q);
+    return;
+  }
+
+  if (q.type === 'sort') {
+    renderSortQuestion(q);
     return;
   }
 
@@ -703,6 +708,222 @@ function confirmOrderAnswer(q, order, pyramid) {
 
   const expl = document.getElementById('explanation');
   expl.innerHTML = `<strong>${isCorrect ? '✓ Riktig!' : '✗ Feil.'}</strong> ${q.explain}`;
+  expl.classList.add('show');
+}
+
+// ── Sort question (drag into bins) ─────────────────────────────
+function renderSortQuestion(q) {
+  const container   = document.getElementById('options-container');
+  const confirmWrap = document.getElementById('confirm-wrap');
+  const confirmBtn  = document.getElementById('confirm-btn');
+  const expl        = document.getElementById('explanation');
+
+  container.classList.add('sort-mode');
+  container.innerHTML = '';
+
+  const stored = answers[currentIdx];
+  const placement = {};
+  if (stored && stored.placement) {
+    Object.assign(placement, stored.placement);
+  } else {
+    q.items.forEach((_, i) => placement[i] = 'tray');
+  }
+
+  const help = document.createElement('div');
+  help.className = 'sort-help';
+  help.textContent = 'Dra hver boks til riktig kategori.';
+  container.appendChild(help);
+
+  const tray = document.createElement('div');
+  tray.className = 'sort-tray';
+  tray.dataset.binId = 'tray';
+  tray.innerHTML =
+    `<div class="sort-bin-label sort-tray-label">Usortert</div>` +
+    `<div class="sort-bin-items"></div>`;
+  container.appendChild(tray);
+
+  const binsGrid = document.createElement('div');
+  binsGrid.className = 'sort-bins';
+  q.bins.forEach(bin => {
+    const binDiv = document.createElement('div');
+    binDiv.className = 'sort-bin';
+    binDiv.dataset.binId = bin.id;
+    binDiv.style.borderColor = bin.color;
+    binDiv.innerHTML =
+      `<div class="sort-bin-label" style="background:${bin.color}26;color:${bin.color}">${esc(bin.label)}</div>` +
+      `<div class="sort-bin-items"></div>`;
+    binsGrid.appendChild(binDiv);
+  });
+  container.appendChild(binsGrid);
+
+  function renderItems() {
+    container.querySelectorAll('.sort-bin-items').forEach(el => el.innerHTML = '');
+    q.items.forEach((item, idx) => {
+      const binId = placement[idx];
+      const target = container.querySelector(`[data-bin-id="${binId}"] .sort-bin-items`);
+      if (!target) return;
+      const box = document.createElement('div');
+      box.className = 'sort-item';
+      box.dataset.itemIdx = idx;
+      box.innerHTML =
+        `<span class="sort-item-handle">⋮⋮</span>` +
+        `<span class="sort-item-label">${esc(item.text)}</span>`;
+      target.appendChild(box);
+    });
+  }
+
+  renderItems();
+
+  function trayEmpty() {
+    return !Object.values(placement).includes('tray');
+  }
+
+  function lockAndShow() {
+    container.querySelectorAll('.sort-item').forEach(box => {
+      const idx = +box.dataset.itemIdx;
+      const item = q.items[idx];
+      box.classList.add(placement[idx] === item.bin ? 'correct' : 'wrong');
+      box.classList.add('locked');
+    });
+  }
+
+  if (stored) {
+    answered = true;
+    lockAndShow();
+    confirmWrap.style.display = 'none';
+    expl.innerHTML = `<strong>${stored.isCorrect ? '✓ Riktig!' : '✗ Feil.'}</strong> ${q.explain}`;
+    expl.classList.add('show');
+    return;
+  }
+
+  initSortDrag(container, placement, renderItems, () => {
+    confirmBtn.disabled = !trayEmpty();
+  });
+
+  confirmWrap.style.display = 'block';
+  confirmBtn.disabled = !trayEmpty();
+  confirmBtn.textContent = 'Bekreft sortering';
+  confirmBtn.onclick = () => confirmSortAnswer(q, placement);
+}
+
+function initSortDrag(container, placement, refresh, onChange) {
+  let grabbed = null;
+
+  function findTargetBin(clientX, clientY) {
+    let target = null;
+    container.querySelectorAll('[data-bin-id]').forEach(bin => {
+      const r = bin.getBoundingClientRect();
+      if (clientX >= r.left && clientX <= r.right && clientY >= r.top && clientY <= r.bottom) {
+        target = bin;
+      }
+    });
+    return target;
+  }
+
+  function onPointerDown(e) {
+    if (answered) return;
+    const item = e.currentTarget;
+    e.preventDefault();
+    const rect = item.getBoundingClientRect();
+    const ghost = item.cloneNode(true);
+    ghost.classList.add('sort-ghost');
+    ghost.style.position = 'fixed';
+    ghost.style.left   = rect.left + 'px';
+    ghost.style.top    = rect.top + 'px';
+    ghost.style.width  = rect.width + 'px';
+    ghost.style.height = rect.height + 'px';
+    ghost.style.margin = '0';
+    document.body.appendChild(ghost);
+    item.classList.add('grabbing-source');
+    grabbed = { item, idx: +item.dataset.itemIdx, startX: e.clientX, startY: e.clientY, ghost };
+    try { item.setPointerCapture(e.pointerId); } catch(_) {}
+  }
+
+  function onPointerMove(e) {
+    if (!grabbed) return;
+    grabbed.ghost.style.transform = `translate(${e.clientX - grabbed.startX}px, ${e.clientY - grabbed.startY}px)`;
+    container.querySelectorAll('[data-bin-id]').forEach(b => b.classList.remove('drag-over'));
+    const target = findTargetBin(e.clientX, e.clientY);
+    if (target) target.classList.add('drag-over');
+  }
+
+  function onPointerEnd(e) {
+    if (!grabbed) return;
+    const target = findTargetBin(e.clientX, e.clientY);
+    grabbed.item.classList.remove('grabbing-source');
+    grabbed.ghost.remove();
+    container.querySelectorAll('[data-bin-id]').forEach(b => b.classList.remove('drag-over'));
+    if (target) {
+      const newBin = target.dataset.binId;
+      if (placement[grabbed.idx] !== newBin) {
+        placement[grabbed.idx] = newBin;
+        refresh();
+        attachHandlers();
+        onChange();
+      }
+    }
+    grabbed = null;
+  }
+
+  function attachHandlers() {
+    container.querySelectorAll('.sort-item').forEach(item => {
+      item.addEventListener('pointerdown',   onPointerDown);
+      item.addEventListener('pointermove',   onPointerMove);
+      item.addEventListener('pointerup',     onPointerEnd);
+      item.addEventListener('pointercancel', onPointerEnd);
+    });
+  }
+
+  attachHandlers();
+}
+
+function confirmSortAnswer(q, placement) {
+  if (answered) return;
+  answered = true;
+
+  let allCorrect = true;
+  q.items.forEach((item, idx) => {
+    if (placement[idx] !== item.bin) allCorrect = false;
+  });
+
+  document.querySelectorAll('#options-container .sort-item').forEach(box => {
+    const idx = +box.dataset.itemIdx;
+    const item = q.items[idx];
+    box.classList.add(placement[idx] === item.bin ? 'correct' : 'wrong');
+    box.classList.add('locked');
+  });
+
+  const userBins = {};
+  const correctBins = {};
+  q.bins.forEach(b => { userBins[b.id] = []; correctBins[b.id] = []; });
+  q.items.forEach((item, idx) => {
+    if (userBins[placement[idx]]) userBins[placement[idx]].push(item.text);
+    correctBins[item.bin].push(item.text);
+  });
+  const userText    = q.bins.map(b => `${b.label}: ${userBins[b.id].join(', ') || '(ingen)'}`).join(' | ');
+  const correctText = q.bins.map(b => `${b.label}: ${correctBins[b.id].join(', ')}`).join(' | ');
+
+  answers[currentIdx] = {
+    type: 'sort',
+    placement: { ...placement },
+    isCorrect: allCorrect,
+    chosen: 0,
+    indices: [0, 1, 2, 3],
+  };
+
+  if (allCorrect) {
+    score++;
+    catScores[q.cat].correct++;
+  } else {
+    wrongAnswers.push({ q, chosenText: userText, correctText });
+  }
+
+  saveAnswer(q, allCorrect);
+  document.getElementById('score-live').textContent = `Poeng: ${score}`;
+  document.getElementById('confirm-wrap').style.display = 'none';
+
+  const expl = document.getElementById('explanation');
+  expl.innerHTML = `<strong>${allCorrect ? '✓ Riktig!' : '✗ Feil.'}</strong> ${q.explain}`;
   expl.classList.add('show');
 }
 
