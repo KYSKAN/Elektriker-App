@@ -1027,21 +1027,33 @@ async function fetchLeaderboard(t) {
 }
 
 async function saveScore(navn, sc, tot, t) {
-  await fetch(`${SB_URL}/rest/v1/scores`, {
+  const res = await fetch(`${SB_URL}/rest/v1/scores`, {
     method: 'POST',
-    headers: sbHeaders({ 'Prefer': 'return=minimal' }),
+    headers: sbHeaders({ 'Prefer': 'return=representation' }),
     body: JSON.stringify({ navn, score: sc, total: tot, tema: t, device_id: getDeviceId() })
   });
+  if (!res.ok) {
+    const body = await res.text().catch(() => '');
+    console.warn('[saveScore] failed', res.status, body);
+  }
 }
 
-function saveAnswer(q, isCorrect) {
+async function saveAnswer(q, isCorrect) {
   const payload = { tema: temas[0], sporsmal_idx: QUESTIONS.indexOf(q), cat: q.cat, riktig: isCorrect, device_id: getDeviceId() };
   if (currentNavn) payload.navn = currentNavn;
-  fetch(`${SB_URL}/rest/v1/svar`, {
-    method: 'POST',
-    headers: sbHeaders({ 'Prefer': 'return=minimal' }),
-    body: JSON.stringify(payload)
-  }).catch(() => {});
+  try {
+    const res = await fetch(`${SB_URL}/rest/v1/svar`, {
+      method: 'POST',
+      headers: sbHeaders({ 'Prefer': 'return=representation' }),
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) {
+      const body = await res.text().catch(() => '');
+      console.warn('[saveAnswer] failed', res.status, body, payload);
+    }
+  } catch (e) {
+    console.warn('[saveAnswer] network error', e, payload);
+  }
 }
 
 async function renderLeaderboard(highlightNavn) {
