@@ -41,6 +41,19 @@ const QUESTIONS = [
   {
     cat: 'schein',
     catLabel: 'Scheins kulturmodell',
+    q: 'Hvilke av følgende er eksempler på artefakter i Scheins kulturmodell?',
+    opts: [
+      'Kleskode, kontorlandskap og synlige symboler',
+      'Grunnleggende antakelser om menneskelig natur',
+      'Ritualer, seremonier og fellesarrangementer',
+      'Delte normer for hva som er riktig og gal atferd',
+    ],
+    correct: [0, 2],
+    explain: 'Artefakter er de synlige, konkrete uttrykkene for kulturen – kleskode, kontorlandskap, symboler, ritualer og seremonier. Grunnleggende antakelser er det dypeste nivået, og normer hører til verdier/normer-nivået.',
+  },
+  {
+    cat: 'schein',
+    catLabel: 'Scheins kulturmodell',
     q: 'Hva representerer "verdier og normer" som det midtre nivået i Scheins modell?',
     opts: [
       'Det lett observerbare laget – synlig for utenforstående gjennom symboler og ritualer',
@@ -102,6 +115,19 @@ const QUESTIONS = [
     ],
     correct: 1,
     explain: 'Intern integrasjon innebærer at kulturen skaper et felles "vi" – felles identitet, kommunikasjonsmåter, grenser for inn- og utgrupper, og felles forståelse for makt og status.',
+  },
+  {
+    cat: 'schein',
+    catLabel: 'Scheins kulturmodell',
+    q: 'Hvilke to funksjoner fyller organisasjonskultur ifølge Schein?',
+    opts: [
+      'Ekstern tilpasning – hjelper organisasjonen forstå og tilpasse seg omgivelsene',
+      'Hierarkisk kontroll – definerer maktforhold og beslutningsveier i organisasjonen',
+      'Intern integrasjon – skaper felles identitet og samhold internt i organisasjonen',
+      'Kulturell dominans – sikrer at én kultur vinner frem over konkurrerende subkulturer',
+    ],
+    correct: [0, 2],
+    explain: 'Scheins to hovefunksjoner for organisasjonskultur er ekstern tilpasning (hjelpe organisasjonen navigere omgivelsene) og intern integrasjon (skape et felles "vi" med felles identitet og samhold).',
   },
   {
     type: 'order',
@@ -258,6 +284,19 @@ const QUESTIONS = [
   {
     cat: 'subkulturer',
     catLabel: 'Subkulturer og dynamikk',
+    q: 'Hvilke to kjennetegn er typiske for gruppetenkning ifølge Janis?',
+    opts: [
+      'Gruppen undertrykker avvikende meninger for å opprettholde enighet',
+      'Gruppen søker aktivt fageksperter utenfra for å utfordre egne antagelser',
+      'Uenighet og åpen konflikt preger prosessen og fører til langsomme beslutninger',
+      'Gruppen tror den er ufeilbarlig og at egne beslutninger alltid er riktige',
+    ],
+    correct: [0, 3],
+    explain: 'To typiske kjennetegn på gruppetenkning: (1) press for konformitet undertrykker avvikende meninger, og (2) en illusjon om ufeilbarlighet – gruppen kritiserer ikke egne beslutninger.',
+  },
+  {
+    cat: 'subkulturer',
+    catLabel: 'Subkulturer og dynamikk',
     q: 'Hva er dysfunksjonell organisasjonskultur?',
     opts: [
       'En kultur som hemmer organisasjonens effektivitet, trivsel og måloppnåelse',
@@ -358,6 +397,19 @@ const QUESTIONS = [
     ],
     correct: 2,
     explain: 'Idéskaperen er den kreative og ukonvensjonelle tenkeren i gruppen – genererer originale ideer og løser vanskelige problemer, men kan være dårlig på å kommunisere ideene til andre.',
+  },
+  {
+    cat: 'belbin',
+    catLabel: 'Belbins grupperoller',
+    q: 'Hva kjennetegner Idéskaperen i Belbins modell?',
+    opts: [
+      'Genererer originale og kreative ideer for å løse vanskelige problemer',
+      'Sikrer at gruppen følger tidsplanen og ikke mister fokus på målet',
+      'Kan ha utfordringer med å kommunisere ideene sine til resten av gruppen',
+      'Ferdigstiller arbeidet og sikrer høy kvalitet og presisjon ved leveranse',
+    ],
+    correct: [0, 2],
+    explain: 'Idéskaperen er kreativ og genererer originale ideer, men har ofte utfordringer med å kommunisere dem tydelig til andre. Å holde tidsplan er Pådriverens rolle, og å ferdigstille er Avsluterens.',
   },
   {
     cat: 'belbin',
