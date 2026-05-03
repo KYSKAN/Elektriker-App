@@ -1020,7 +1020,7 @@ function sbHeaders(extra = {}) {
 
 async function fetchLeaderboard(t) {
   const res = await fetch(
-    `${SB_URL}/rest/v1/scores?tema=eq.${t}&order=score.desc,created_at.asc&limit=200`,
+    `${SB_URL}/rest/v1/scores?tema=eq.${t}&order=score.desc,created_at.asc&limit=50`,
     { headers: sbHeaders() }
   );
   if (!res.ok) return [];
