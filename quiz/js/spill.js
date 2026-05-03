@@ -1044,7 +1044,7 @@ async function saveAnswer(q, isCorrect) {
   try {
     const res = await fetch(`${SB_URL}/rest/v1/svar`, {
       method: 'POST',
-      headers: sbHeaders({ 'Prefer': 'return=representation' }),
+      headers: sbHeaders({ 'Prefer': 'return=minimal' }),
       body: JSON.stringify(payload)
     });
     if (!res.ok) {
