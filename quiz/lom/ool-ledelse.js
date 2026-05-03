@@ -65,6 +65,19 @@ const QUESTIONS = [
     explain: 'M4 (høy kompetanse, høy motivasjon) = delegerende lederstil (S4). Medarbeideren er selvgående og trenger lite styring eller støtte.',
   },
   {
+    type: 'order',
+    cat: 'lederstil',
+    catLabel: 'Lederstil',
+    q: 'Plasser Hersey & Blanchards fire modenhetsnivåer i riktig rekkefølge, fra lavest (M1) øverst til høyest (M4) nederst.',
+    items: [
+      'Lav kompetanse, høy motivasjon – entusiastisk nybegynner',
+      'Lav kompetanse, lav motivasjon – desillusjonert nybegynner',
+      'Høy kompetanse, lav motivasjon – kapabel, men nølende',
+      'Høy kompetanse, høy motivasjon – selvgående ekspert',
+    ],
+    explain: 'M1: lav kompetanse + høy motivasjon. M2: lav kompetanse + lav motivasjon. M3: høy kompetanse + lav motivasjon. M4: høy kompetanse + høy motivasjon (fullt selvgående).',
+  },
+  {
     cat: 'lederstil',
     catLabel: 'Lederstil',
     q: 'Hva skiller transformasjonsledelse fra transaksjonsledelse?',
@@ -76,6 +89,25 @@ const QUESTIONS = [
     ],
     correct: 1,
     explain: 'Transformasjonsledelse motiverer gjennom visjon, verdier og inspirasjon, og skaper indre motivasjon. Transaksjonsledelse baserer seg på klare avtaler, mål og ytre belønning/straff.',
+  },
+  {
+    type: 'sort',
+    cat: 'lederstil',
+    catLabel: 'Lederstil',
+    q: 'Sorter hvert kjennetegn under riktig ledelsesstil.',
+    bins: [
+      { id: 'transform', label: 'Transformasjonsledelse', color: '#8b5cf6' },
+      { id: 'transaksj', label: 'Transaksjonsledelse',    color: '#3b82f6' },
+    ],
+    items: [
+      { text: 'Inspirerer gjennom visjon og felles verdier', bin: 'transform' },
+      { text: 'Styrer via klare avtaler og belønning',       bin: 'transaksj' },
+      { text: 'Fremmer indre motivasjon og personlig vekst', bin: 'transform' },
+      { text: 'Bruker ytre insentiver og konsekvenser',      bin: 'transaksj' },
+      { text: 'Endrer holdninger og skaper engasjement',     bin: 'transform' },
+      { text: 'Kontrollerer at avtalte mål er innfridd',     bin: 'transaksj' },
+    ],
+    explain: 'Transformasjonsledelse: visjon, indre motivasjon, verdiendring, engasjement. Transaksjonsledelse: klare avtaler, ytre belønning og straff, resultatmåling.',
   },
   {
     cat: 'lederstil',
@@ -167,6 +199,26 @@ const QUESTIONS = [
     ],
     correct: 0,
     explain: 'Formell organisasjon = nedfelt i organisasjonskart og stillingsbeskrivelser. Uformell organisasjon = de sosiale nettverkene og kommunikasjonsmønstrene som oppstår naturlig blant ansatte.',
+  },
+  {
+    type: 'sort',
+    cat: 'org_former',
+    catLabel: 'Organisasjonsformer',
+    q: 'Sorter hvert kjennetegn under riktig organisasjonsform.',
+    bins: [
+      { id: 'linjestab', label: 'Linjestabsorg.',  color: '#3b82f6' },
+      { id: 'matrise',   label: 'Matriseorg.',      color: '#8b5cf6' },
+      { id: 'prosjekt',  label: 'Prosjektorg.',     color: '#10b981' },
+    ],
+    items: [
+      { text: 'Linjen bestemmer, staben er rådgivende',          bin: 'linjestab' },
+      { text: 'Midlertidig – oppløses etter avslutning',         bin: 'prosjekt'  },
+      { text: 'Medarbeider kan ha to ledere',                    bin: 'matrise'   },
+      { text: 'Stab uten instruksjonsmyndighet over linjen',     bin: 'linjestab' },
+      { text: 'Ressurser samles for ett spesifikt mål',          bin: 'prosjekt'  },
+      { text: 'Risiko for lojalitetskonflikter',                 bin: 'matrise'   },
+    ],
+    explain: 'Linjestab: linjen bestemmer, staben rådgir uten instruksjonsmyndighet. Matrise: to ledere, risiko for lojalitetskonflikter. Prosjekt: midlertidig, samler ressurser mot ett mål.',
   },
   {
     cat: 'org_former',
