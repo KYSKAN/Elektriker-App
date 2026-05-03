@@ -68,7 +68,7 @@ const QUESTIONS = [
     type: 'order',
     cat: 'lederstil',
     catLabel: 'Lederstil',
-    q: 'Plasser Hersey & Blanchards fire modenhetsnivåer i riktig rekkefølge, fra lavest (M1) øverst til høyest (M4) nederst.',
+    q: 'Plasser Hersey & Blanchards fire modenhetsnivåer i riktig rekkefølge, fra lavest (M1) nederst til høyest (M4) øverst.',
     items: [
       'Lav kompetanse, høy motivasjon – entusiastisk nybegynner',
       'Lav kompetanse, lav motivasjon – desillusjonert nybegynner',
@@ -345,7 +345,7 @@ const QUESTIONS = [
       'Delegering er å fordele rutineoppgaver jevnt mellom tilgjengelige medarbeidere; forutsetning: oppgavene må være klart og skriftlig beskrevet',
       'Delegering er en midlertidig overføring av arbeidsoppgaver til medarbeidere; forutsetning: at lederen alltid kan hente tilbake oppgavene ved behov',
       'Delegering betyr at lederen instruerer medarbeideren detaljert og kontrollerer hvert enkelt steg',
-      'Delegering er å overføre oppgaver og beslutningsmyndighet til medarbeidere; forutsetning: myndighet, ansvar og ressurser must følge med oppgaven',
+      'Delegering er å overføre oppgaver og beslutningsmyndighet til medarbeidere; forutsetning: myndighet, ansvar og ressurser må følge med oppgaven',
     ],
     correct: 3,
     explain: 'Delegering innebærer å overføre oppgaver med tilhørende myndighet og ressurser. Lederen beholder det overordnede ansvaret (ansvar kan ikke delegeres), men myndigheten til å handle overføres.',

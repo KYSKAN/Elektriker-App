@@ -109,9 +109,9 @@ const QUESTIONS = [
     catLabel: 'Scheins kulturmodell',
     q: 'Plasser de tre lagene i Scheins kulturmodell i riktig rekkefølge. Det mest synlige laget øverst, det dypeste laget nederst.',
     items: [
-      'Artefakter',
-      'Verdier og normer',
       'Grunnleggende antakelser',
+      'Verdier og normer',
+      'Artefakter',
     ],
     explain: 'Scheins kulturmodell fra overflate til dybde: Artefakter (synlige symboler og ritualer) øverst → Verdier og normer (delvis bevisste) i midten → Grunnleggende antakelser (ubevisste, tas for gitt) dypest.',
   },
