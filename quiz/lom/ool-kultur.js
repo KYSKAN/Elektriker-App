@@ -80,7 +80,7 @@ const QUESTIONS = [
   {
     cat: 'schein',
     catLabel: 'Scheins kulturmodell',
-    q: 'Hva er ekstern tilpasning som funksjon for organisasjonskultur?',
+    q: 'Hva betyr ekstern tilpasning i Scheins kulturmodell?',
     opts: [
       'Å rekruttere nye medarbeidere utenfra for å tilføre organisasjonen friske perspektiver og faglig fornying',
       'At kulturen hjelper organisasjonen å forstå og tilpasse seg omgivelsene – marked, konkurrenter, samfunn',
