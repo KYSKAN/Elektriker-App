@@ -121,7 +121,7 @@ const QUESTIONS = [
   {
     cat: 'herzberg',
     catLabel: 'Herzbergs to-faktorteori',
-    q: 'Hvilke av disse er typiske HYGIENEFAKTORER ifølge Herzberg? (flere kan stemme)',
+    q: 'Hvilke av disse er typiske HYGIENEFAKTORER ifølge Herzberg?',
     opts: [
       'Lønn og generelle bedriftspolitiske retningslinjer',
       'Ansvar, vekst og direkte anerkjennelse for innsats',
@@ -134,7 +134,7 @@ const QUESTIONS = [
   {
     cat: 'herzberg',
     catLabel: 'Herzbergs to-faktorteori',
-    q: 'Hvilke av disse er typiske MOTIVASJONSFAKTORER ifølge Herzberg? (flere kan stemme)',
+    q: 'Hvilke av disse er typiske MOTIVASJONSFAKTORER ifølge Herzberg?',
     opts: [
       'Anerkjennelse for utført arbeid og faglig utvikling',
       'Lønnsnivå og generelle pensjonsordninger i bedriften',
@@ -186,7 +186,7 @@ const QUESTIONS = [
   {
     cat: 'mcgregor',
     catLabel: 'Teori X og Y / Thorsrud',
-    q: 'Hvilke utsagn passer med et Teori Y-syn på ansatte? (flere kan stemme)',
+    q: 'Hvilke utsagn passer med et Teori Y-syn på ansatte?',
     opts: [
       'Ansatte er kreative, søker ansvar og kan styre seg selv',
       'Ansatte trenger tett kontroll for å yte tilfredsstillende',
@@ -251,7 +251,7 @@ const QUESTIONS = [
   {
     cat: 'motivtyper',
     catLabel: 'Motivasjonstyper',
-    q: 'Hvilke utsagn beskriver indre motivasjon? (flere kan stemme)',
+    q: 'Hvilke utsagn beskriver indre motivasjon?',
     opts: [
       'Aktiviteten i seg selv oppleves som interessant og givende',
       'Man jobber primært for å oppnå lønn, bonus eller status',
@@ -316,7 +316,7 @@ const QUESTIONS = [
   {
     cat: 'motivtyper',
     catLabel: 'Motivasjonstyper',
-    q: 'Hvilke trekk ved en arbeidsoppgave fremmer indre motivasjon? (flere kan stemme)',
+    q: 'Hvilke trekk ved en arbeidsoppgave fremmer indre motivasjon?',
     opts: [
       'Oppgaven er meningsfylt og gir tydelig mestringsfølelse',
       'Oppgaven har tett overvåking og hyppig prestasjonskontroll',
@@ -394,7 +394,7 @@ const QUESTIONS = [
   {
     cat: 'maal',
     catLabel: 'Mål og kompetanse',
-    q: 'Hvilke elementer inngår i kompetansebegrepet i arbeidslivet? (flere kan stemme)',
+    q: 'Hvilke elementer inngår i kompetansebegrepet i arbeidslivet?',
     opts: [
       'Kunnskap og praktiske ferdigheter som benyttes i arbeidet',
       'Antall år med erfaring fra samme bransje eller stilling',
