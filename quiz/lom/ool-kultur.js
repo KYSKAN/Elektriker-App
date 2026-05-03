@@ -310,7 +310,7 @@ const QUESTIONS = [
   {
     cat: 'belbin',
     catLabel: 'Belbins grupperoller',
-    q: 'Hvilke av følgende er Belbins HANDLINGSROLLER?',
+    q: 'Hvilke tre roller utgjør handlingsrollene i Belbins modell?',
     opts: [
       'Idéskaper, Vurderer og Spesialist',
       'Koordinator, Lagspiller og Ressurskontakt',
@@ -323,7 +323,7 @@ const QUESTIONS = [
   {
     cat: 'belbin',
     catLabel: 'Belbins grupperoller',
-    q: 'Hvilke av følgende er Belbins SOSIALE roller?',
+    q: 'Hvilke tre roller utgjør de sosiale rollene i Belbins modell?',
     opts: [
       'Iverksetter, Avslutter og Pådriver',
       'Idéskaper, Vurderer og Spesialist',
@@ -336,7 +336,7 @@ const QUESTIONS = [
   {
     cat: 'belbin',
     catLabel: 'Belbins grupperoller',
-    q: 'Hvilke av følgende er Belbins REFLEKTERENDE (tanke-)roller?',
+    q: 'Hvilke tre roller utgjør de reflekterende rollene i Belbins modell?',
     opts: [
       'Koordinator, Lagspiller og Ressurskontakt',
       'Pådriver, Idéskaper og Koordinator',
