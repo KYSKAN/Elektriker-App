@@ -93,7 +93,7 @@ const QUESTIONS = [
   {
     cat: 'schein',
     catLabel: 'Scheins kulturmodell',
-    q: 'Hva er intern integrasjon som funksjon for organisasjonskultur?',
+    q: 'Hva betyr intern integrasjon i Scheins kulturmodell?',
     opts: [
       'At medarbeidere har samme stillingstittel og formelt sett lik myndighet i organisasjonen',
       'At kulturen skaper felles identitet, samhold og felles forståelse internt i organisasjonen',
