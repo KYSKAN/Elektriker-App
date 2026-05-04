@@ -389,4 +389,17 @@ const QUESTIONS = [
     correct: 3,
     explain: 'Proporsjonale variable kostnader øker i eksakt samme takt som produksjonsvolumet. Eksempel: råvarekostnad per enhet er konstant – dobler man produksjonen, dobles råvarekostnaden.',
   },
+  {
+    cat: 'styring',
+    catLabel: 'Økonomistyring – grunnlag',
+    q: 'Hva er omsetning?',
+    opts: [
+      'Summen av alle kostnader og utgifter bedriften har pådratt seg i regnskapsperioden',
+      'Nettoresultatet etter at alle drifts- og finanskostnader er trukket fra salgsinntektene',
+      'Total verdi av varer og tjenester solgt i perioden – beregnes som pris × solgt mengde',
+      'Alle innbetalinger på bedriftens kontoer, inkludert lån og kapitalinnskudd fra eiere',
+    ],
+    correct: 2,
+    explain: 'Omsetning (salgsinntekter) er den totale verdien av varer og tjenester solgt i en periode. Beregnes som pris × solgt mengde. Det er utgangspunktet for alle lønnsomhetsberegninger: omsetning − kostnader = resultat.',
+  },
 ];

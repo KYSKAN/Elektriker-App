@@ -80,8 +80,8 @@ Tre separate quiz-velger-sider lenket fra hoved-appen. Felles quiz-motor i `spil
 | lom-ool-ledelse          | lom/ool-ledelse.js             | 30       | index.html         | ✓         |
 | lom-marked-strategi      | lom/marked-strategi.js         | 30       | index.html         | ✓         |
 | lom-marked-grunnlag      | lom/marked-grunnlag.js         | 30       | index.html         | ✓         |
-| lom-oks-kostnader        | lom/oks-kostnader.js           | 29       | index.html         | ✓         |
-| lom-oks-regnskapsanalyse | lom/oks-regnskapsanalyse.js    | 30       | index.html         | ✓         |
+| lom-oks-kostnader        | lom/oks-kostnader.js           | 30       | index.html         | ✓         |
+| lom-oks-regnskapsanalyse | lom/oks-regnskapsanalyse.js    | 33       | index.html         | ✓         |
 | lom-oks-kalkyl           | lom/oks-kalkyl.js              | 28       | index.html         | ✓         |
 | lom-oks-budsjettering    | lom/oks-budsjettering.js       | 27       | index.html         | ✓         |
 | lom-oks-investering      | lom/oks-investering.js         | 29       | index.html         | ✓         |
@@ -96,7 +96,7 @@ Tre separate quiz-velger-sider lenket fra hoved-appen. Felles quiz-motor i `spil
 | vipper                   | bjrons/vipper.js               | 22       | index-bjrons.html  |           |
 | trh1ek                   | bjrons/trh1ek.js               | 50       | index-bjrons.html  | ✓         |
 
-**Totalt: 614 spørsmål fordelt på 21 temaer (13 LØM + 1 elektro + 7 bjrons)**
+**Totalt: 618 spørsmål fordelt på 21 temaer (13 LØM + 1 elektro + 7 bjrons)**
 
 ### Slik fungerer spill.html
 - Leser `?tema=X` fra URL og slår opp filen i `temaFil`-tabellen

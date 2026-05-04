@@ -2,7 +2,7 @@ const QUIZ_META = {
   id: 'lom-oks-regnskapsanalyse',
   title: 'Regnskapsanalyse',
   subtitle: 'Økonomistyring – Kap. 8',
-  description: '35 spørsmål om alle nøkkeltall for lønnsomhet, soliditet og likviditet – inkludert formler, krav og tiltak for forbedring.',
+  description: '33 spørsmål om alle nøkkeltall for lønnsomhet, soliditet og likviditet – inkludert grunnleggende definisjoner, formler, krav og tiltak for forbedring.',
   cats: {
     lonnsomhet: { label: 'Lønnsomhetsnøkkeltall', color: '#8b5cf6' },
     soliditet:  { label: 'Soliditetsnøkkeltall', color: '#3b82f6' },
@@ -401,5 +401,44 @@ const QUESTIONS = [
     ],
     correct: 2,
     explain: 'Finansieringsgrad 1 > 1 betyr at egenkapital + langsiktig gjeld ikke dekker anleggsmidlene – deler av anleggsmidlene finansieres av kortsiktig gjeld. Dette er risikabelt fordi kortsiktig gjeld må fornyes hyppig.',
+  },
+  {
+    cat: 'lonnsomhet',
+    catLabel: 'Lønnsomhetsnøkkeltall',
+    q: 'Hva er lønnsomhet?',
+    opts: [
+      'Evnen til å betale alle løpende forpliktelser og regninger etter hvert som de forfaller',
+      'Andelen egenkapital av totalkapitalen, som viser evnen til å tåle tap og finansielle kriser',
+      'Frie kontantstrømmer som gjenstår etter investeringer, gjeldsbetaling og avskrivninger',
+      'Bedriftens evne til å skape overskudd og tjene penger – inntektene overstiger kostnadene',
+    ],
+    correct: 3,
+    explain: 'Lønnsomhet betyr at bedriften tjener penger: inntektene er høyere enn kostnadene. Måles med nøkkeltall som resultatmargin, driftsmargin og rentabilitet. Skilles fra likviditet (betalingsevne) og soliditet (tapsmotstand).',
+  },
+  {
+    cat: 'lonnsomhet',
+    catLabel: 'Lønnsomhetsnøkkeltall',
+    q: 'Hva er avkastning?',
+    opts: [
+      'Den totale omsetningen bedriften genererer fra salg av varer og tjenester i perioden',
+      'Reduksjonen i bokført verdi av eiendeler som følge av slit, elde og teknisk foreldelse',
+      'Bedriftens evne til å betale all kortsiktig gjeld med tilgjengelige omløpsmidler ved forfall',
+      'Gevinsten eller overskuddet man oppnår i forhold til investert kapital, normalt i prosent',
+    ],
+    correct: 3,
+    explain: 'Avkastning er gevinsten relativt til investert kapital – uttrykt i prosent. I regnskapsanalyse brukes TKR (avkastning på totalkapital) og EKR (avkastning på egenkapital). Avkastning sammenlignes mot avkastningskravet for å vurdere om en investering er lønnsom.',
+  },
+  {
+    cat: 'likviditet',
+    catLabel: 'Likviditetsnøkkeltall',
+    q: 'Hva er likviditet?',
+    opts: [
+      'Bedriftens evne til å betale alle forpliktelser og regninger etter hvert som de forfaller',
+      'Bedriftens evne til å skape overskudd over tid, der inntektene er høyere enn kostnadene',
+      'Andelen egenkapital av totalkapitalen, som viser styrken til å motstå tap og nedgangstider',
+      'Kontantstrømmene som gjenstår fra driften etter at alle investeringer og avdrag er betalt',
+    ],
+    correct: 0,
+    explain: 'Likviditet betyr betalingsevne – at bedriften til enhver tid kan betale regningene sine. Måles med likviditetsgrad 1 og 2. God lønnsomhet gir ikke automatisk god likviditet: man kan ha stort overskudd men likevel slite med å betale forpliktelsene.',
   },
 ];
