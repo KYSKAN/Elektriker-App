@@ -13,6 +13,7 @@
 
 const QUESTIONS = [
   {
+    id: 1,
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hva er den generelle merverdiavgiftssatsen (MVA) i Norge?',
@@ -26,6 +27,7 @@ const QUESTIONS = [
     explain: 'Den generelle MVA-satsen i Norge er 25 %. Den gjelder de fleste varer og tjenester som ikke faller inn under de reduserte satsene.',
   },
   {
+    id: 2,
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hvilken MVA-sats gjelder for matvarer?',
@@ -39,6 +41,7 @@ const QUESTIONS = [
     explain: 'Matvarer har redusert MVA-sats på 15 % i Norge. Dette gjelder næringsmidler, men ikke f.eks. restaurantmåltider (25 %).',
   },
   {
+    id: 3,
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hvilken MVA-sats gjelder for persontransport, overnatting (hotell) og kino?',
@@ -52,6 +55,7 @@ const QUESTIONS = [
     explain: 'Persontransport (buss, tog, fly), overnattingstjenester (hotell) og kino har redusert MVA-sats på 12 % i Norge.',
   },
   {
+    id: 4,
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hva er omsetningsgrensen for MVA-registrering i Norge?',
@@ -65,6 +69,7 @@ const QUESTIONS = [
     explain: 'Virksomheter med omsetning over 50 000 kr i løpet av en 12-månedersperiode er pliktige til å registrere seg i MVA-registeret og kreve inn og innberette MVA.',
   },
   {
+    id: 5,
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hva er arbeidsgiveravgiften (AGA) i sone 1 (sentrale strøk)?',
@@ -78,6 +83,7 @@ const QUESTIONS = [
     explain: 'AGA i sone 1 er 14,1 % av brutto lønn. Arbeidsgiveravgiften betales av arbeidsgiver til staten i tillegg til den ansattes lønn og er ikke synlig for arbeidstaker.',
   },
   {
+    id: 6,
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hva er inngående MVA?',
@@ -91,6 +97,7 @@ const QUESTIONS = [
     explain: 'Inngående MVA er den MVA du betaler på innkjøp til virksomheten. Du kan trekke denne fra utgående MVA (den du krever inn fra kundene), og betaler kun differansen til staten.',
   },
   {
+    id: 7,
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
     q: 'Hva er utgående MVA?',
@@ -104,6 +111,7 @@ const QUESTIONS = [
     explain: 'Utgående MVA er den MVA du krever inn fra kundene ved salg. Netto MVA til staten = Utgående MVA − Inngående MVA (fradragsberettiget inngående MVA).',
   },
   {
+    id: 8,
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
     q: 'Hva er den viktigste egenskapen ved et enkeltpersonforetak (ENK) mht. ansvar?',
@@ -117,6 +125,7 @@ const QUESTIONS = [
     explain: 'ENK: eieren har ubegrenset personlig ansvar. All gjeld i foretaket er også eierens private gjeld – kreditorene kan gå på eierens private formue.',
   },
   {
+    id: 9,
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
     q: 'Hva er minstekravet til aksjekapital ved stiftelse av et AS?',
@@ -130,6 +139,7 @@ const QUESTIONS = [
     explain: 'Aksjeloven krever at et AS stiftes med minimum 30 000 kr i aksjekapital. Aksjeeierne har begrenset ansvar og risikerer maksimalt den innskutte aksjekapitalen.',
   },
   {
+    id: 10,
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
     q: 'Hva skiller et ANS fra et AS mht. deltakernes ansvar?',
@@ -143,6 +153,7 @@ const QUESTIONS = [
     explain: 'ANS (Ansvarlig selskap): deltakerne er solidarisk og ubegrenset ansvarlig for selskapets forpliktelser. En kreditor kan kreve hele gjelden fra én enkelt deltaker.',
   },
   {
+    id: 11,
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
     q: 'Hvordan beskattes overskuddet i et enkeltpersonforetak (ENK)?',
@@ -156,6 +167,7 @@ const QUESTIONS = [
     explain: 'Overskuddet i ENK beskattes som personinntekt – eieren betaler trinnskatt og trygdeavgift. Dette kan gi vesentlig høyere skatt enn i et AS ved høy inntekt.',
   },
   {
+    id: 12,
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
     q: 'Hva er en fusjon?',
@@ -169,6 +181,7 @@ const QUESTIONS = [
     explain: 'Fusjon = to eller flere selskaper slås sammen til ett. Fisjon = ett selskap deles opp i to eller flere. Fusjon kan gi stordriftsfordeler, synergieffekter og økt markedsandel.',
   },
   {
+    id: 13,
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
     q: 'Hva er en fisjon?',
@@ -182,6 +195,7 @@ const QUESTIONS = [
     explain: 'Fisjon betyr at ett selskap deles opp i to eller flere separate selskaper. Brukes f.eks. for å skille ut en virksomhetsgren som et eget selskap med egne eiere.',
   },
   {
+    id: 14,
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
     q: 'Hva er den viktigste fordelen med AS fremfor ENK?',
@@ -195,6 +209,7 @@ const QUESTIONS = [
     explain: 'Aksjonærer i et AS har begrenset ansvar og risikerer maksimalt det de har skutt inn i selskapet. Privat formue er beskyttet mot selskapets kreditorer – dette er AS-formens fremste fordel.',
   },
   {
+    id: 15,
     cat: 'regnskapslover',
     catLabel: 'Regnskapsregler',
     q: 'Hvem er regnskapspliktige etter Regnskapsloven?',
@@ -208,6 +223,7 @@ const QUESTIONS = [
     explain: 'Regnskapspliktige etter Regnskapsloven er bl.a. alle AS og ASA, ANS/DA med inntekt over terskel, og ENK med omsetning over 5 mill. kr. Små foretak har forenklede krav.',
   },
   {
+    id: 16,
     cat: 'regnskapslover',
     catLabel: 'Regnskapsregler',
     q: 'Hva er oppbevaringsplikten for regnskapsdokumentasjon etter Bokføringsloven?',
@@ -221,6 +237,7 @@ const QUESTIONS = [
     explain: 'Bokføringsloven: primær dokumentasjon (bilag) skal oppbevares i minimum 5 år, men avtaler, korrespondanse og annen sekundær dokumentasjon skal oppbevares i minimum 10 år.',
   },
   {
+    id: 17,
     cat: 'regnskapslover',
     catLabel: 'Regnskapsregler',
     q: 'Hva er Bokføringsloven sitt formål?',
@@ -234,6 +251,7 @@ const QUESTIONS = [
     explain: 'Bokføringsloven stiller krav til løpende bokføring, dokumentasjon (bilag) og oppbevaring av regnskapsopplysninger. Formålet er å sikre at regnskapet er etterprøvbart og kontrollerbart.',
   },
   {
+    id: 18,
     cat: 'regnskapslover',
     catLabel: 'Regnskapsregler',
     q: 'Hva er forskjellen mellom finansregnskapet og driftsregnskapet?',
@@ -247,6 +265,7 @@ const QUESTIONS = [
     explain: 'Finansregnskap (eksternt): årsregnskap, balanse og resultat for aksjonærer, kreditorer og myndigheter. Driftsregnskap (internt): kalkyler og bidragsanalyser per produkt/avdeling – beslutningsstøtte for ledelsen.',
   },
   {
+    id: 19,
     cat: 'regnskapslover',
     catLabel: 'Regnskapsregler',
     q: 'Hva er tidsavgrensningsprinsippet (matching principle) i regnskapet?',
@@ -260,6 +279,7 @@ const QUESTIONS = [
     explain: 'Tidsavgrensningsprinsippet: inntekter og kostnader henføres til den regnskapsperioden de tilhører, uavhengig av kontantstrømmen. Eksempel: forhåndsbetalte abonnementer periodiseres over den aktuelle perioden.',
   },
   {
+    id: 20,
     cat: 'kontantstrom',
     catLabel: 'Kontantstrøm',
     q: 'Hva er endring i arbeidskapital, og hva skjer med den i starten av et investeringsprosjekt?',
@@ -273,6 +293,7 @@ const QUESTIONS = [
     explain: 'Økt arbeidskapitalbehov ved prosjektstart (mer lager, mer kundekreditt) binder opp likviditet – negativ kontantstrøm i starten. Mot slutten frigjøres arbeidskapitalen og gir positiv kontantstrøm.',
   },
   {
+    id: 21,
     cat: 'kontantstrom',
     catLabel: 'Kontantstrøm',
     q: 'Hva er restverdi (terminal value) og når inntreffer den i en kontantstrømanalyse?',
@@ -286,6 +307,7 @@ const QUESTIONS = [
     explain: 'Restverdi = antatt salgsverdi av investeringsobjektet og frigjort arbeidskapital ved prosjektslutt. Disse er POSITIVE kontantstrømmer i det siste analyseåret og øker prosjektets lønnsomhet.',
   },
   {
+    id: 22,
     cat: 'kontantstrom',
     catLabel: 'Kontantstrøm',
     q: 'Hvorfor inkluderes IKKE avskrivninger som en kontantstrøm i investeringsanalysen?',
@@ -299,6 +321,7 @@ const QUESTIONS = [
     explain: 'Kontantstrømsanalysen inkluderer kun faktiske inn- og utbetalinger. Avskrivninger er en regnskapsmessig fordeling av investeringskostnaden – ingen ny kontantutbetaling – og skal ikke dobbeltføres.',
   },
   {
+    id: 23,
     cat: 'kontantstrom',
     catLabel: 'Kontantstrøm',
     q: 'Hva er sunk cost (irreversibel kostnad) og hvordan behandles det i investeringsanalyse?',
@@ -312,6 +335,7 @@ const QUESTIONS = [
     explain: 'Sunk cost = allerede brukte penger som ikke kan gjenvinnes uansett hvilken beslutning man tar fremover. Irreversible kostnader er ikke relevante for fremtidige beslutninger og holdes utenfor investeringsanalysen.',
   },
   {
+    id: 24,
     cat: 'kontantstrom',
     catLabel: 'Kontantstrøm',
     q: 'Hva er avkastningskravet i en investeringsanalyse?',
@@ -325,6 +349,7 @@ const QUESTIONS = [
     explain: 'Avkastningskravet = risikofri rente + risikopremie + evt. inflasjon. Det uttrykker minimumsavkastningen investoren krever for å kompensere for kapitalbinding og den prosjektspesifikke risikoen.',
   },
   {
+    id: 25,
     cat: 'kontantstrom',
     catLabel: 'Kontantstrøm',
     q: 'Hva er formelen for tilbakebetalingstid (TBT) og hva er metodens viktigste svakhet?',
@@ -338,6 +363,7 @@ const QUESTIONS = [
     explain: 'TBT = Investering / Gjennomsnittlig netto kontantstrøm per år. Svakhetene: (1) ignorerer tidsverdien av penger, (2) ser bort fra alle kontantstrømmer etter tilbakebetalingstidspunktet.',
   },
   {
+    id: 26,
     type: 'order',
     cat: 'mva_avgift',
     catLabel: 'MVA og avgifter',
@@ -351,6 +377,7 @@ const QUESTIONS = [
     explain: 'MVA-satsene i Norge fra lavest til høyest: 0% (eksport), 12% (transport/hotell/kino), 15% (matvarer), 25% (generell sats). Husk at restaurantbesøk er 25%, mens mat kjøpt i butikk er 15%.',
   },
   {
+    id: 27,
     type: 'sort',
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
@@ -368,6 +395,7 @@ const QUESTIONS = [
     explain: 'Begrenset ansvar: AS og ASA – eierne risikerer kun innskutt kapital. Ubegrenset: ENK (eieren hefter personlig for all gjeld), ANS (deltakerne er solidarisk og ubegrenset ansvarlige).',
   },
   {
+    id: 28,
     cat: 'selskapsformer',
     catLabel: 'Selskapsformer',
     q: 'Hva er to kjennetegn ved et enkeltpersonforetak (ENK)?',

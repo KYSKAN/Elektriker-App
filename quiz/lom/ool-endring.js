@@ -13,6 +13,7 @@
 
 const QUESTIONS = [
   {
+    id: 1,
     cat: 'endring_def',
     catLabel: 'Endringsledelse – grunnlag',
     q: 'Hva er endringsledelse ifølge Wesenberg (2023)?',
@@ -26,6 +27,7 @@ const QUESTIONS = [
     explain: 'Endringsledelse er en planmessig og målrettet prosess for å lede mennesker og organisasjoner gjennom ønskede endringer, slik at endringene faktisk fester seg og gir ønskede resultater.',
   },
   {
+    id: 2,
     cat: 'endring_def',
     catLabel: 'Endringsledelse – grunnlag',
     q: 'Hvor stor andel av endringsforsøk mislykkes ifølge forskning på feltet?',
@@ -39,6 +41,7 @@ const QUESTIONS = [
     explain: 'Forskning viser at om lag 70 % av alle endringsinitiativ i organisasjoner mislykkes – ofte fordi man undervurderer menneskesiden og fokuserer for mye på tekniske løsninger.',
   },
   {
+    id: 3,
     cat: 'endring_def',
     catLabel: 'Endringsledelse – grunnlag',
     q: 'Hva er implementeringssuksess-formelen fra pensum?',
@@ -52,6 +55,7 @@ const QUESTIONS = [
     explain: 'Implementeringssuksess = Kvalitet × (Eierskap + Motivasjon + Kunnskap). Formelen viser at god teknisk kvalitet ikke er nok – ansatte må eie endringen, være motiverte og forstå den.',
   },
   {
+    id: 4,
     cat: 'endring_def',
     catLabel: 'Endringsledelse – grunnlag',
     q: 'Hva er endringskaleidoskopet, og hvilke dimensjoner inngår?',
@@ -65,6 +69,7 @@ const QUESTIONS = [
     explain: 'Endringskaleidoskopet er et analyseverktøy med 8 komponenter som hjelper ledere vurdere konteksten for endring: maktforhold, tid, omfang, bevaring, mangfold, kompetanse, kapasitet og forankring.',
   },
   {
+    id: 5,
     cat: 'endring_def',
     catLabel: 'Endringsledelse – grunnlag',
     q: 'Hva er akseptmodellen i endringsledelse?',
@@ -78,19 +83,21 @@ const QUESTIONS = [
     explain: 'Akseptmodellen beskriver fire trinn ansatte må gjennom for å ta til seg en endring: vite (kjenne endringen), kunne (ha kompetanse), ville (være motivert) og ha lov (ha myndighet).',
   },
   {
+    id: 6,
     cat: 'endring_def',
     catLabel: 'Endringsledelse – grunnlag',
     q: 'Hva er en kommunikasjonsplan i endringsarbeid?',
     opts: [
-      'En systematisk plan for hvem som skal informeres om hva, når og hvordan under endringsprosessen',
       'Et opplegg for å presentere endringens resultater og læringspunkter etter gjennomføring',
+      'En systematisk plan for hvem som skal informeres om hva, når og hvordan under endringsprosessen',
       'Et dokument som beskriver nye roller, ansvarsfordeling og kommunikasjonskanaler',
       'En oversikt over hvilke budskap som skal ut eksternt – til kunder, leverandører, samarbeidspartnere og media',
     ],
-    correct: 0,
+    correct: 1,
     explain: 'En kommunikasjonsplan sikrer at riktig informasjon når riktige interessenter til riktig tid og via riktige kanaler – kritisk for å redusere usikkerhet og motstand mot endring.',
   },
   {
+    id: 7,
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
     q: 'Hva er de tre fasene i Lewins endringsmodell?',
@@ -104,6 +111,7 @@ const QUESTIONS = [
     explain: 'Lewins tre faser: Tine (unfreeze – løsne opp etablerte mønstre), Endre (move – gjennomføre endringen) og Fryse (refreeze – forankre den nye tilstanden som ny norm).',
   },
   {
+    id: 8,
     type: 'sort',
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
@@ -124,19 +132,21 @@ const QUESTIONS = [
     explain: 'Tine: skape erkjennelse og løsne opp status quo. Endre: implementere ny praksis og opplæring. Fryse: forankre og stabilisere den nye normalen.',
   },
   {
+    id: 9,
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
     q: 'Hva representerer "tine"-fasen i Lewins modell?',
     opts: [
-      'Å gjennomføre den planlagte endringen strukturert og steg for steg i hele organisasjonen',
+      'Å gjennomføre den planlagte endringen strukturert – steg for steg i hele organisasjonen',
       'Å forankre ny atferd og nye rutiner som den permanente standarden etter gjennomføring',
       'Å skape motivasjon og erkjennelse av at endring er nødvendig – løsne opp status quo',
-      'Å kartlegge resultater, analysere avvik og justere kursen etter tilbakemeldinger',
+      'Å kartlegge resultater og analysere avvik – justere kursen etter tilbakemeldinger',
     ],
     correct: 2,
     explain: 'Tine-fasen handler om å destabilisere status quo og skape motivasjon for endring – folk må innse at det eksisterende ikke fungerer godt nok og at endring er nødvendig.',
   },
   {
+    id: 10,
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
     q: 'Hvilke to kjennetegn hører hjemme i Lewins tine-fase?',
@@ -150,19 +160,21 @@ const QUESTIONS = [
     explain: 'Tine-fasen kjennetegnes av å skape erkjennelse av at status quo ikke holder, og å løsne opp etablerte mønstre. Opplæring hører til endre-fasen; forankring hører til fryse-fasen.',
   },
   {
+    id: 11,
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
     q: 'Hva er første steg i Kotters 8-trinnsmodell for endring?',
     opts: [
-      'Bygge koalisjon av troverdige støttespillere',
+      'Bygge koalisjon (av troverdige støttespillere) i hele organisasjonen',
       'Skape en følelse av krise og hastverk (urgency)',
-      'Kommunisere endringsvisjonen bredt og tydelig i organisasjonen',
-      'Forankre endringene i organisasjonens kultur og daglige praksis',
+      'Kommunisere endringsvisjonen bredt og tydelig (til alle nivåer)',
+      'Forankre endringene i organisasjonens kultur (daglig praksis)',
     ],
     correct: 1,
     explain: 'Kotters første trinn er å skape en sterk følelse av nødvendighet og hastverk (urgency) – uten dette vil ikke folk prioritere endringen fremfor daglig drift.',
   },
   {
+    id: 12,
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
     q: 'Hva er det siste trinnet i Kotters 8-trinnsmodell?',
@@ -176,6 +188,7 @@ const QUESTIONS = [
     explain: 'Kotters siste (8.) trinn er å forankre endringene dypt i organisasjonens kultur – slik at de nye måtene å jobbe på blir den nye normalen og ikke glir tilbake til gammel praksis.',
   },
   {
+    id: 13,
     type: 'order',
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
@@ -193,6 +206,7 @@ const QUESTIONS = [
     explain: 'Kotters 8 trinn: 1) Urgency → 2) Koalisjon → 3) Visjon → 4) Kommuniser visjonen → 5) Fjern barrierer → 6) Kortsiktige seire → 7) Konsolider gevinster → 8) Forankre i kulturen.',
   },
   {
+    id: 14,
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
     q: 'Hva er en viktig forskjell mellom Kotters og Lewins endringsmodeller?',
@@ -206,19 +220,21 @@ const QUESTIONS = [
     explain: 'Kotter tilbyr en mer detaljert, lederorientert 8-trinnsmodell med fokus på spesifikke handlinger ledere bør ta. Lewin gir en enklere, mer overordnet 3-fasemodell.',
   },
   {
+    id: 15,
     cat: 'interessenter',
     catLabel: 'Interessenter og motstand',
     q: 'Hva er en interessentanalyse i endringsarbeid?',
     opts: [
-      'En vurdering av hvilke avdelinger som vil berøres mest av endringen og trenger ekstra støtte og oppfølging',
+      'En vurdering av hvilke avdelinger som berøres mest – de som trenger ekstra støtte og oppfølging',
       'En kartlegging av alle berørte parter etter to dimensjoner: makt og interesse – for å prioritere involvering',
-      'En analyse av markedets reaksjon på organisatoriske endringer, omdømmerisiko og ekstern legitimitet',
+      'En analyse av markedets reaksjon på organisatoriske endringer – omdømmerisiko og ekstern legitimitet',
       'Et verktøy for å kartlegge interne konflikter og avgjøre hvem som bør involveres aktivt i løsningsarbeidet',
     ],
     correct: 1,
     explain: 'Interessentanalysen kartlegger alle som berøres av endringen og plasserer dem i en 2×2 matrise etter makt (høy/lav) og interesse (høy/lav) – for å avgjøre hvor mye innsats som bør legges i å involvere dem.',
   },
   {
+    id: 16,
     cat: 'interessenter',
     catLabel: 'Interessenter og motstand',
     q: 'Hvem bør prioriteres høyest i en interessentanalyse?',
@@ -232,6 +248,7 @@ const QUESTIONS = [
     explain: 'Interessenter med høy makt og høy interesse er "nøkkelspillere" som bør involveres aktivt. De har både mulighet til å blokkere endringen og sterk motivasjon til å gjøre det.',
   },
   {
+    id: 17,
     cat: 'interessenter',
     catLabel: 'Interessenter og motstand',
     q: 'Hvilke er de vanligste årsakene til motstand mot endring ifølge Kanter (1992)?',
@@ -245,6 +262,7 @@ const QUESTIONS = [
     explain: 'Kanter identifiserte motstand mot endring som drevet av: tap av kontroll, usikkerhet om fremtiden, mangel på tilstrekkelig informasjon, frykt for å miste noe man verdsetter, og bekymring for inkompetanse.',
   },
   {
+    id: 18,
     cat: 'interessenter',
     catLabel: 'Interessenter og motstand',
     q: 'Hvilke to er vanlige årsaker til motstand mot endring ifølge Kanter (1992)?',
@@ -258,6 +276,7 @@ const QUESTIONS = [
     explain: 'Kanter (1992) peker på tap av kontroll og frykt for å miste noe man verdsetter som sentrale drivere bak motstand mot endring – begge handler om en opplevd trussel mot det kjente og trygge.',
   },
   {
+    id: 19,
     cat: 'interessenter',
     catLabel: 'Interessenter og motstand',
     q: 'Hva er det beste virkemiddelet for å redusere motstand mot endring?',
@@ -271,6 +290,7 @@ const QUESTIONS = [
     explain: 'Tidlig, ærlig og god kommunikasjon om hvorfor endringen skjer og hva den innebærer, kombinert med reell involvering av de berørte, er det mest effektive virkemiddelet mot motstand.',
   },
   {
+    id: 20,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva er organisasjonsutvikling (OU) sin todelte definisjon?',
@@ -284,6 +304,7 @@ const QUESTIONS = [
     explain: 'OU har to dimensjoner: (1) tilpasse organisasjonen til skiftende omgivelser og (2) tilfredsstille ansattes behov for vekst, mestring og utvikling – begge er nødvendige for varig suksess.',
   },
   {
+    id: 21,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva er Total Kvalitetsledelse (TKL/TQM)?',
@@ -297,6 +318,7 @@ const QUESTIONS = [
     explain: 'TKL (Total Quality Management) er en helhetlig ledelsesfilosofi opprinnelig fra Japan (Deming) med fokus på kontinuerlig forbedring, totalt kundefokus og involvering av alle ansatte i kvalitetsarbeidet.',
   },
   {
+    id: 22,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva er PDCA-hjulet, og hvem er det knyttet til?',
@@ -310,19 +332,21 @@ const QUESTIONS = [
     explain: 'PDCA-hjulet (Plan-Do-Check-Act), også kalt Deming-hjulet, er et verktøy for kontinuerlig forbedring: planlegg tiltak → gjennomfør → sjekk resultater → juster og forbedre.',
   },
   {
+    id: 23,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva er LEAN, og hva er dets hovedmål?',
     opts: [
-      'En finansmodell for å beregne avkastning og nåverdi ved investeringer i prosessforbedring',
-      'En teknisk tilnærming for å forenkle design og standardisere komponenter i produksjonen',
-      'En personalmodell for å systematisk kartlegge, dimensjonere og effektivisere bemanningsbehov på tvers av avdelinger',
+      'En finansmodell for å beregne avkastning og nåverdi (NPV) ved investeringer i prosessforbedring',
+      'En teknisk tilnærming for å forenkle design (modulbygging) og standardisere komponenter i produksjonen',
+      'En personalmodell for å kartlegge, dimensjonere og effektivisere bemanningsbehov (HR-planlegging)',
       'En ledelsesfilosofi avledet fra TKL med fokus på å eliminere all sløsing (muda) i alle prosesser',
     ],
     correct: 3,
     explain: 'LEAN er en produksjons- og ledelsesfilosofi opprinnelig fra Toyota, avledet fra TKL, med fokus på å eliminere all sløsing (muda/waste) i prosesser og levere maksimal verdi til kunden.',
   },
   {
+    id: 24,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hvilke to kjennetegner LEAN som ledelsesfilosofi?',
@@ -336,19 +360,21 @@ const QUESTIONS = [
     explain: 'LEAN bygger på to kjerneprinsipper: eliminere sløsing (muda/waste) i alle prosesser, og levere maksimal verdi til kunden. Filosofien er avledet fra TQM og Toyota Production System.',
   },
   {
+    id: 25,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva kjennetegner "den lærende organisasjon" slik Peter Senge beskriver det?',
     opts: [
-      'En organisasjon som kontinuerlig utvikler kapasitet til å skape ønskede resultater gjennom 5 disipliner',
       'En organisasjon med strukturerte opplæringsprogrammer og obligatorisk faglig påfyll hvert år',
+      'En organisasjon som kontinuerlig utvikler kapasitet til å skape ønskede resultater gjennom 5 disipliner',
       'En organisasjon som systematisk evaluerer prosjekter og deler erfaringer på tvers av team',
       'En organisasjon der ledere tar ansvar for kunnskapsoverføring og faglig veiledning av ansatte',
     ],
-    correct: 0,
+    correct: 1,
     explain: 'Senges lærende organisasjon kontinuerlig utvikler og utvider sin kapasitet gjennom 5 disipliner: systemtenkning, personlig mestring, mentale modeller, felles visjon og læring i team.',
   },
   {
+    id: 26,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva er "systemtenkning" som Senges 5. og overordnede disiplin?',
@@ -362,6 +388,7 @@ const QUESTIONS = [
     explain: 'Systemtenkning er evnen til å se organisasjonen som et komplekst system av sammenhenger og feedback-sløyfer – fremfor å fokusere på isolerte hendelser. Det er den overordnede disiplinen som binder de andre 4 sammen.',
   },
   {
+    id: 27,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva er "personlig mestring" i Senges modell?',
@@ -375,19 +402,21 @@ const QUESTIONS = [
     explain: 'Personlig mestring handler om individets forpliktelse til livslang læring, kontinuerlig klargjøring av personlig visjon og å se virkeligheten objektivt. Organisasjoner lærer bare gjennom individer som lærer.',
   },
   {
+    id: 28,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva er "felles visjon" i Senges modell?',
     opts: [
       'En ekte, delt visjon som engasjerer og forplikter alle i organisasjonen – ikke bare pålagt ovenfra',
-      'En strategiplan som ledergruppen utvikler og kommuniserer ned til resten av organisasjonen',
+      'En strategiplan som ledergruppen utvikler – kommuniseres ned til resten av organisasjonen',
       'Et sett med kjerneverdier og atferdsnormer som beskriver ønsket kultur i virksomheten',
-      'Et felles målbilde der avdelinger koordinerer sine delmål mot et overordnet resultat',
+      'Et felles målbilde der avdelinger koordinerer sine delmål – mot et overordnet resultat',
     ],
     correct: 0,
     explain: 'Felles visjon handler om å bygge en ekte, delt forståelse av hva organisasjonen ønsker å skape – en visjon som folk genuint deler og forplikter seg til, ikke bare en slogan som er pålagt ovenfra.',
   },
   {
+    id: 29,
     type: 'sort',
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
@@ -409,6 +438,7 @@ const QUESTIONS = [
     explain: 'Personlig mestring: livslang læring. Mentale modeller: utfordre antakelser. Felles visjon: delt forpliktelse. Læring i team: kollektiv intelligens. Systemtenkning: se helheter og feedback-sløyfer.',
   },
   {
+    id: 30,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hvilke OU-verktøy brukes for å fremme organisasjonsutvikling i praksis?',
@@ -422,6 +452,7 @@ const QUESTIONS = [
     explain: 'Konkrete OU-verktøy inkluderer: medarbeidersamtaler (systematisk dialog), kompetanseutvikling (kurs, hospitering) og medarbeiderundersøkelser (kartlegge trivsel og utfordringer).',
   },
   {
+    id: 31,
     cat: 'endring_def',
     catLabel: 'Endringsledelse – grunnlag',
     q: 'Hva er prestasjonsledelse i OU-sammenheng?',
@@ -435,6 +466,7 @@ const QUESTIONS = [
     explain: 'Prestasjonsledelse er en helhetlig tilnærming for å sette tydelige mål (SMART), følge opp, gi tilbakemelding og coache ansatte til kontinuerlig utvikling og forbedrede prestasjoner.',
   },
   {
+    id: 32,
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
     q: 'Hva menes med "fryse"-fasen i Lewins modell?',
@@ -448,6 +480,7 @@ const QUESTIONS = [
     explain: 'Fryse-fasen handler om å konsolidere og forankre endringene – de nye arbeidsmetodene, verdiene og atferdene skal bli den nye standarden som tas for gitt, ikke midlertidige unntak.',
   },
   {
+    id: 33,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva er "mentale modeller" som Senges disiplin?',
@@ -461,19 +494,21 @@ const QUESTIONS = [
     explain: 'Mentale modeller er de dype antakelsene, generaliseringene og bildene vi bærer med oss som påvirker hva vi ser og hvordan vi handler. Disiplinen handler om å bli bevisst på og utfordre disse for bedre beslutninger.',
   },
   {
+    id: 34,
     cat: 'ou_tql',
     catLabel: 'OU, TKL, LEAN og Senge',
     q: 'Hva er "læring i team" som Senges disiplin?',
     opts: [
-      'At teammedlemmer aktivt deler fagkunnskap, roterer på oppgaver og bygger bredere kompetanse på tvers av fagfelt og roller',
+      'At teammedlemmer deler fagkunnskap og roterer på oppgaver – bygger bred kompetanse på tvers av roller',
       'At teamet regelmessig setter av strukturert tid til felles refleksjon, erfaringsutveksling og læring etter hvert prosjekt',
-      'At leder systematisk legger til rette for individuell læring, coaching og veileder hvert enkelt teammedlem separat mot mål',
+      'At leder legger til rette for individuell læring – veileder hvert teammedlem separat mot mål',
       'Kollektiv prosess der teamet tenker og lærer som en enhet – resulterer i bedre kollektive resultater enn summen av individene',
     ],
     correct: 3,
     explain: 'Læring i team handler om kollektiv tenkning og dialog – der teamets samlede intelligens overstiger summen av enkeltindividene. Dette krever evne til å sette til side antakelser og tenke fritt sammen.',
   },
   {
+    id: 35,
     cat: 'endring_def',
     catLabel: 'Endringsledelse – grunnlag',
     q: 'Hva er en prestasjonskultur?',
@@ -487,16 +522,17 @@ const QUESTIONS = [
     explain: 'Prestasjonskultur innebærer at forventninger er tydelige og kjente, at ansatte tar eierskap til egne mål, og at kontinuerlig forbedring og læring er en naturlig del av hverdagen.',
   },
   {
+    id: 36,
     cat: 'modeller',
     catLabel: 'Kotters og Lewins modeller',
     q: 'Hva er "kortsiktige seire" i Kotters 8-trinnsmodell?',
     opts: [
-      'Å skape synlige, raske resultater av endringen for å bevise at den virker og opprettholde motivasjonen',
       'Å nå planlagte delmål i endringsplanen, dokumentere fremdrift og rapportere status regelmessig til ledergruppen',
+      'Å skape synlige, raske resultater av endringen for å bevise at den virker og opprettholde motivasjonen',
       'Å aktivt sikre at budsjettet overholdes i de første fasene, og raskt avdekke og håndtere kostnadsoverskridelser',
       'Å systematisk identifisere, prioritere og løse tekniske og organisatoriske problemer tidlig for å hindre forsinkelser',
     ],
-    correct: 0,
+    correct: 1,
     explain: 'Å planlegge og synliggjøre kortsiktige seire (trinn 6 hos Kotter) er avgjørende for å opprettholde motivasjon og tro på endringen blant ansatte – det viser at kursen er riktig.',
   },
 ];

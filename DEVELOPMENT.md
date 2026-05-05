@@ -88,10 +88,12 @@ PWA er oppe og kjører på https://kyskan.github.io/Elektriker-App. Koblet til G
 - [x] LØM: omskrevet alle feil-svar slik at riktig svar ikke skiller seg ut på lengde, posisjon, komma, bindestrek eller parentes (april 2026, runde 1–4)
 - [x] Verifikasjonsskript og akseptkriterier dokumentert i CLAUDE.md
 - [ ] Tilsvarende gjennomgang av Elektro- og Bjørns-quizene (RLC, boolsk, porter, mikrokontroller, minne, tallsystemer, vipper, trh1ek)
+- [ ] Kotters 8 trinn (ool-endring): bytt fra pyramide-visning til vanlig rekkefølge-liste — trinnene er sekvensielle, ikke hierarkiske som Maslow
 
 ### Quiz — dataanalyse (Supabase)
 - [x] Alle svar logges til `svar`-tabellen med tema, sporsmal_idx, cat, riktig, navn
 - [x] Navn påkrevd for LØM-quizzene (lagres med hvert svar)
+- [x] Stabile spørsmåls-IDer for LØM (`sporsmal_id`) — 424 spørsmål nummerert 1–N per fil. Pre-commit hook validerer integritet (`scripts/validate-lom-ids.js`). Krever Supabase-kolonne `sporsmal_id int4 NULL` i `svar`-tabellen (lagt til 2026-05).
 - [ ] Dashboard / visning av svar-statistikk (hvilke spørsmål er vanskeligst?)
 - [ ] Gjennomsnittscore per tema vist på quiz-velger-siden
 

@@ -13,6 +13,7 @@
 
 const QUESTIONS = [
   {
+    id: 1,
     cat: 'budsjetttyper',
     catLabel: 'Budsjetttyper',
     q: 'Hva er et budsjett?',
@@ -26,6 +27,7 @@ const QUESTIONS = [
     explain: 'Et budsjett er en tallmessig oppstilling av de forventede økonomiske konsekvensene av planlagte aktiviteter for en fremtidig periode – bedriftens viktigste planleggings- og styringsverktøy.',
   },
   {
+    id: 2,
     cat: 'budsjetttyper',
     catLabel: 'Budsjetttyper',
     q: 'Hva er et resultatbudsjett?',
@@ -39,6 +41,7 @@ const QUESTIONS = [
     explain: 'Resultatbudsjettet viser forventede inntekter og kostnader for perioden. Formålet er å planlegge og styre lønnsomheten. Avskrivninger og kalkulatoriske kostnader inkluderes; betalingstidspunkt ikke.',
   },
   {
+    id: 3,
     cat: 'budsjetttyper',
     catLabel: 'Budsjetttyper',
     q: 'Hva er et likviditetsbudsjett?',
@@ -52,6 +55,7 @@ const QUESTIONS = [
     explain: 'Likviditetsbudsjettet viser forventede innbetalinger og utbetalinger for å sikre at bedriften til enhver tid er i stand til å betale sine forpliktelser. Det viser likviditetsreserven over tid.',
   },
   {
+    id: 4,
     cat: 'budsjetttyper',
     catLabel: 'Budsjetttyper',
     q: 'Hva er et balansebudsjett?',
@@ -65,6 +69,7 @@ const QUESTIONS = [
     explain: 'Balansebudsjettet er en fremtidig balanse – en prognose for eiendeler, gjeld og egenkapital slik de forventes å bli ved slutten av budsjettperioden. Avledes fra resultat- og likviditetsbudsjettet.',
   },
   {
+    id: 5,
     cat: 'budsjetttyper',
     catLabel: 'Budsjetttyper',
     q: 'Hva er de to hovedbudsjettene i en bedrift?',
@@ -78,6 +83,7 @@ const QUESTIONS = [
     explain: 'De to hovedbudsjettene er: Resultatbudsjettet (planlegger lønnsomheten) og Likviditetsbudsjettet (planlegger betalingsevnen). De er nært knyttet, men viser ulike sider av virksomheten.',
   },
   {
+    id: 6,
     cat: 'budsjetttyper',
     catLabel: 'Budsjetttyper',
     q: 'Hva er de viktigste forskjellene mellom resultatbudsjett og likviditetsbudsjett?',
@@ -91,6 +97,7 @@ const QUESTIONS = [
     explain: 'Forskjellene skyldes: (1) tidsforskjell mellom inntekts-/kostnadsføring og faktisk betaling, (2) avskrivninger er en kostnad i resultat men IKKE en utbetaling i likviditet, (3) mva er en inn/utbetaling men ikke en inntekt/kostnad, (4) finanstransaksjoner (lån, avdrag) er kun i likviditet.',
   },
   {
+    id: 7,
     cat: 'budsjettprosess',
     catLabel: 'Budsjettprosessen',
     q: 'Hva er grunnlaget for budsjettprosessen?',
@@ -104,6 +111,7 @@ const QUESTIONS = [
     explain: 'Budsjettprosessen bygger på: overordnede mål og strategier, rammer fra ledelsen, regnskapsrapporter (nåsituasjon) og prognoser (forventede priser, lønns- og renteutvikling).',
   },
   {
+    id: 8,
     cat: 'budsjettprosess',
     catLabel: 'Budsjettprosessen',
     q: 'Hva er "nedenfra og opp"-budsjettering?',
@@ -117,6 +125,7 @@ const QUESTIONS = [
     explain: 'Nedenfra og opp: avdelingsledere og ansatte nær driften utarbeider egne budsjettforslag basert på lokal kunnskap. Disse sammenstilles og justeres oppover. Gir høyere eierskap, men kan resultere i for generøse mål.',
   },
   {
+    id: 9,
     cat: 'budsjettprosess',
     catLabel: 'Budsjettprosessen',
     q: 'Hva er "ovenfra og ned"-budsjettering?',
@@ -130,6 +139,7 @@ const QUESTIONS = [
     explain: 'Ovenfra og ned: toppledelsen fastsetter overordnede rammer, krav og mål som avdelingene deretter planlegger innenfor. Gir bedre kontroll og sammenheng, men kan gi lavere eierskap hos ansatte.',
   },
   {
+    id: 10,
     cat: 'budsjettprosess',
     catLabel: 'Budsjettprosessen',
     q: 'Hvem bør delta i budsjettprosessen?',
@@ -143,6 +153,7 @@ const QUESTIONS = [
     explain: 'Alle ledere og nøkkelpersoner med budsjettansvar bør involveres – dette gir eierskap til budsjettet, utnytter lokalkunnskap og øker sannsynligheten for at målene nås.',
   },
   {
+    id: 11,
     cat: 'likviditetsbudsjett',
     catLabel: 'Likviditetsbudsjettet',
     q: 'Hva er strukturen i likviditetsbudsjettet?',
@@ -156,6 +167,7 @@ const QUESTIONS = [
     explain: 'Likviditetsbudsjettet: Innbetalinger − Utbetalinger = Innbetalingsoverskudd (kan være negativt). Likviditetsreserve IB + Innbetalingsoverskudd = Likviditetsreserve UB.',
   },
   {
+    id: 12,
     cat: 'likviditetsbudsjett',
     catLabel: 'Likviditetsbudsjettet',
     q: 'Hva er likviditetsreserve?',
@@ -169,6 +181,7 @@ const QUESTIONS = [
     explain: 'Likviditetsreserve = Likviditetsbeholdning (bankinnskudd + kontanter) + Ubenyttet kassekreditt (innvilget kreditgrense minus saldo). Dette er den faktiske betalingsevnen bedriften har til rådighet.',
   },
   {
+    id: 13,
     cat: 'likviditetsbudsjett',
     catLabel: 'Likviditetsbudsjettet',
     q: 'Hvorfor er avskrivninger IKKE med i likviditetsbudsjettet?',
@@ -182,6 +195,7 @@ const QUESTIONS = [
     explain: 'Avskrivninger er en regnskapsmessig kostnadsfordeling av kjøpsprisen over levetiden – det skjer ingen faktisk utbetaling. Utbetalingen skjedde ved kjøpstidspunktet. Dermed tas avskrivninger med i resultatbudsjettet, men IKKE i likviditetsbudsjettet.',
   },
   {
+    id: 14,
     cat: 'likviditetsbudsjett',
     catLabel: 'Likviditetsbudsjettet',
     q: 'Hvordan beregner man innbetalinger fra kredittsalg i likviditetsbudsjettet?',
@@ -195,6 +209,7 @@ const QUESTIONS = [
     explain: 'Innbetalinger fra kredittsalg forskyves basert på kredittid. Eksempel: salg i januar med 30 dagers kredittid innbetales i februar. Med 15 dager kredittid: halvparten innbetales i januar og halvparten i februar.',
   },
   {
+    id: 15,
     cat: 'likviditetsbudsjett',
     catLabel: 'Likviditetsbudsjettet',
     q: 'Hva er varekjøp i likviditetsbudsjettet?',
@@ -208,6 +223,7 @@ const QUESTIONS = [
     explain: 'Varekjøp = Varekostnad ± Beholdningsendring. Øker man varelageret, kjøper man inn mer enn man bruker. Utbetalingene til leverandørene forskyves basert på leverandørenes kredittid (inkl. mva på skattepliktig varekjøp).',
   },
   {
+    id: 16,
     cat: 'likviditetsbudsjett',
     catLabel: 'Likviditetsbudsjettet',
     q: 'Hvilke tiltak kan iverksettes hvis likviditetsbudsjettet viser negativ likviditetsreserve?',
@@ -221,6 +237,7 @@ const QUESTIONS = [
     explain: 'Tiltak ved forventet negativ likviditetsreserve: (1) forskyve planlagte inn/utbetalinger, (2) droppe/utsette investeringer, (3) oppta nye lån eller utvide kassekreditt, (4) selge unødvendige eiendeler, (5) be om betalingsutsettelse fra leverandører, (6) begrense utbytte.',
   },
   {
+    id: 17,
     cat: 'budsjettkontroll',
     catLabel: 'Budsjettkontroll',
     q: 'Hva er budsjettkontroll?',
@@ -234,6 +251,7 @@ const QUESTIONS = [
     explain: 'Budsjettkontroll innebærer å sammenligne faktiske regnskapstall med de budsjetterte tallene. Avvik identifiseres, årsaker analyseres og korreksjonstiltak fastsettes. Det er fortløpende og systematisk.',
   },
   {
+    id: 18,
     cat: 'budsjettkontroll',
     catLabel: 'Budsjettkontroll',
     q: 'Hva er de tre trinnene i budsjettkontrollprosessen?',
@@ -247,6 +265,7 @@ const QUESTIONS = [
     explain: '3-trinnsmodellen: (1) Finnes det avvik? (Er forskjellen mellom budsjett og regnskap vesentlig?), (2) Hva er årsaken? (Pris, mengde, svinn, markedsendring?), (3) Hvilke tiltak? (Korreksjon av drift eller budsjett?)',
   },
   {
+    id: 19,
     cat: 'budsjettkontroll',
     catLabel: 'Budsjettkontroll',
     q: 'Hva defineres som positivt avvik i budsjettkontroll?',
@@ -260,6 +279,7 @@ const QUESTIONS = [
     explain: 'Positivt avvik = positivt for bedriften: enten mer inntekt enn budsjettert (inntektsavvik) eller lavere kostnader enn budsjettert (kostnadsavvik). Negativt avvik = negativt for bedriften.',
   },
   {
+    id: 20,
     cat: 'budsjettkontroll',
     catLabel: 'Budsjettkontroll',
     q: 'Hva er formelen for inntektsavvik?',
@@ -273,6 +293,7 @@ const QUESTIONS = [
     explain: 'Inntektsavvik = Regnskapsført inntekt − Budsjettert inntekt. Positivt tall betyr at man tjente mer enn budsjettert (bra). Kostnadsavvik = Budsjetterte kostnader − Regnskapsførte kostnader. Positivt = lavere kostnader enn budsjettert (bra).',
   },
   {
+    id: 21,
     cat: 'budsjettkontroll',
     catLabel: 'Budsjettkontroll',
     q: 'Hva er vanlige årsaker til positivt avvik i salgsinntekter?',
@@ -286,6 +307,7 @@ const QUESTIONS = [
     explain: 'Positivt salgsinntektsavvik skyldes enten mengdeavvik (solgte flere enheter enn planlagt) eller prisavvik (solgte til høyere pris enn budsjettert). Begge er gode nyheter for lønnsomheten.',
   },
   {
+    id: 22,
     cat: 'budsjettkontroll',
     catLabel: 'Budsjettkontroll',
     q: 'Hva er vanlige årsaker til negativt avvik i varekostnader?',
@@ -299,6 +321,7 @@ const QUESTIONS = [
     explain: 'Negativt varekostnadavvik skyldes typisk: økt salgsvolum (normalt – naturlig konsekvens av mer salg), høyere innkjøpspriser enn budsjettert (prisavvik), eller svinn (tyveri fra kunder/ansatte, skade, utdaterte varer).',
   },
   {
+    id: 23,
     cat: 'budsjettkontroll',
     catLabel: 'Budsjettkontroll',
     q: 'Hva er svinn, og hvorfor er det viktig å overvåke det?',
@@ -312,6 +335,7 @@ const QUESTIONS = [
     explain: 'Svinn er varer som "forsvinner" – tyveri (kunder/ansatte), skade under lagring, feilregistrering ved varemottak/kasse eller varer som går ut på dato. Svinn øker varekostnaden og reduserer bruttofortjenesten.',
   },
   {
+    id: 24,
     cat: 'budsjettkontroll',
     catLabel: 'Budsjettkontroll',
     q: 'Hva er formålet med budsjettkontrollens tilbakekobling til neste periodes budsjettprosess?',
@@ -325,6 +349,7 @@ const QUESTIONS = [
     explain: 'Budsjettkontrollens viktigste læringseffekt er at kunnskap og innsikt fra avviksanalysen – om interne og eksterne betingelser – brukes aktivt til å forbedre kvaliteten på neste periodes budsjettarbeid.',
   },
   {
+    id: 25,
     cat: 'budsjetttyper',
     catLabel: 'Budsjetttyper',
     q: 'Hva er sammenhengen mellom resultatbudsjett og likviditetsbudsjett?',
@@ -338,6 +363,7 @@ const QUESTIONS = [
     explain: 'Resultat og likviditet henger nøye sammen, men er IKKE identiske. En bedrift kan ha godt regnskapsmessig resultat men dårlig likviditet – f.eks. ved lang kredittid til kunder, store varelager eller store investeringer.',
   },
   {
+    id: 26,
     cat: 'likviditetsbudsjett',
     catLabel: 'Likviditetsbudsjettet',
     q: 'Lønnskostnaden i resultatbudsjettet inkluderer ferielønn og arbeidsgiveravgift. Hva skjer i likviditetsbudsjettet?',
@@ -351,6 +377,7 @@ const QUESTIONS = [
     explain: 'Resultatbudsjettet: alle lønnskostnader inkl. feriepenger og arb.giveravgift føres månedlig. Likviditetsbudsjettet: faktiske utbetalinger – lønn utbetales på lønningsdagen, arb.giveravgift betales terminvis (6 ganger/år), feriepenger utbetales i ferien.',
   },
   {
+    id: 27,
     cat: 'budsjettprosess',
     catLabel: 'Budsjettprosessen',
     q: 'Hva er prognose i budsjetteringssammenheng?',
@@ -364,6 +391,7 @@ const QUESTIONS = [
     explain: 'Prognoser er fremtidsrettede anslag for variabler som priser, lønnsutvikling, rentenivå og markedsforhold. Disse inngår som viktige forutsetninger i budsjettarbeidet og påvirker alle budsjettlinjer.',
   },
   {
+    id: 28,
     type: 'sort',
     cat: 'budsjetttyper',
     catLabel: 'Budsjetttyper',
@@ -384,6 +412,7 @@ const QUESTIONS = [
     explain: 'Avskrivninger: kun resultat (ingen kontantstrøm). MVA, avdrag og inn/utbetalingstidspunkt: kun likviditet. Lønn vises i begge, men betalingstidspunkt kan avvike. Salgsinntekter er i resultat; innbetalinger fra salg (forskyves) er i likviditet.',
   },
   {
+    id: 29,
     cat: 'budsjetttyper',
     catLabel: 'Budsjetttyper',
     q: 'Hva er to sentrale forskjeller mellom resultatbudsjettet og likviditetsbudsjettet?',

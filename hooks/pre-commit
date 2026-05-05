@@ -1,6 +1,13 @@
 #!/bin/sh
 # Auto-bump service-worker cache når noe som påvirker offline-cachen er staget.
 # Sjekker mot HEAD slik at manuell bump ikke gir dobbel bump.
+# Validerer også at LØM-quizfiler har gyldige stabile IDer (sporsmal_id).
+
+# Valider LØM-quiz-IDer hvis en LØM-fil er staget
+if git diff --cached --name-only --diff-filter=ACMR \
+  | grep -qE '^quiz/lom/.*\.js$'; then
+  node scripts/validate-lom-ids.js || exit 1
+fi
 
 if ! git diff --cached --name-only --diff-filter=ACMR \
   | grep -qE '\.(html|js|css|svg|json)$|^manifest\.json$'; then

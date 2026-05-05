@@ -14,6 +14,7 @@
 const QUESTIONS = [
   // Q1 – correct=1 (98 tegn). Gjør opt[0] lengre enn riktig (103 tegn).
   {
+    id: 1,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er en realinvestering?',
@@ -28,6 +29,7 @@ const QUESTIONS = [
   },
   // Q2 – correct=1 (129 tegn). Gjør opt[3] lengre enn riktig (135 tegn).
   {
+    id: 2,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er avkastningskrav i investeringsanalyse?',
@@ -42,6 +44,7 @@ const QUESTIONS = [
   },
   // Q3 – correct=1 (75 tegn). Gjør opt[2] lengre enn riktig (82 tegn).
   {
+    id: 3,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er kontantstrøm i investeringsanalyse?',
@@ -56,6 +59,7 @@ const QUESTIONS = [
   },
   // Q4 – correct=3 (58 tegn). Gjør opt[0] lengre (68 tegn).
   {
+    id: 4,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er pengenes tidsverdi?',
@@ -70,6 +74,7 @@ const QUESTIONS = [
   },
   // Q5 – correct=1 (132 tegn). Gjør opt[3] lengre enn riktig (138 tegn).
   {
+    id: 5,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er tilbakebetalingsmetoden (TBT)?',
@@ -84,6 +89,7 @@ const QUESTIONS = [
   },
   // Q6 – correct=1 (80 tegn). Gjør opt[0] lengre enn riktig (87 tegn).
   {
+    id: 6,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er en svakhet ved tilbakebetalingsmetoden?',
@@ -98,6 +104,7 @@ const QUESTIONS = [
   },
   // Q7 – correct=0 (90 tegn), opt[1]=96. Already good – correct is NOT longest. Leave as is.
   {
+    id: 7,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er nåverdimetoden, og hva er beslutningsregelen?',
@@ -112,6 +119,7 @@ const QUESTIONS = [
   },
   // Q8 – correct=1 (95 tegn). Gjør opt[2] lengre enn riktig (102 tegn).
   {
+    id: 8,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er internrentemetoden (IRR)?',
@@ -126,6 +134,7 @@ const QUESTIONS = [
   },
   // Q9 – correct=1 (118 tegn). Gjør opt[0] lengre enn riktig (126 tegn).
   {
+    id: 9,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er en nåverdiprofil?',
@@ -140,6 +149,7 @@ const QUESTIONS = [
   },
   // Q10 – correct=0 (128 tegn). Gjør opt[1] lengre enn riktig (136 tegn).
   {
+    id: 10,
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
     q: 'Hva er gjensidig utelukkende prosjekter?',
@@ -154,6 +164,7 @@ const QUESTIONS = [
   },
   // Q11 – correct=2 (174 tegn). Gjør opt[3] lengre enn riktig (182 tegn).
   {
+    id: 11,
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
     q: 'Hvorfor er internrentemetoden (IRR) UEGNET ved gjensidig utelukkende prosjekter?',
@@ -168,6 +179,7 @@ const QUESTIONS = [
   },
   // Q12 – correct=3 (46 tegn), opt[1]=66. Already good – correct is NOT longest. Leave as is.
   {
+    id: 12,
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
     q: 'Hva er beslutningsregelen for gjensidig utelukkende prosjekter med nåverdimetoden?',
@@ -182,6 +194,7 @@ const QUESTIONS = [
   },
   // Q13 – correct=0 (85 tegn). Gjør opt[3] lengre enn riktig (93 tegn).
   {
+    id: 13,
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
     q: 'Hva er beslutningsregelen for UAVHENGIGE prosjekter med internrentemetoden?',
@@ -196,6 +209,7 @@ const QUESTIONS = [
   },
   // Q14 – correct=2 (121 tegn). Gjør opt[0] lengre enn riktig (130 tegn).
   {
+    id: 14,
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
     q: 'Hva er følsomhetsanalyse i investeringsanalyse?',
@@ -210,6 +224,7 @@ const QUESTIONS = [
   },
   // Q15 – correct=3 (133 tegn). Gjør opt[1] lengre enn riktig (142 tegn).
   {
+    id: 15,
     cat: 'gjensidig',
     catLabel: 'Gjensidig utelukkende',
     q: 'Hva er en sunk cost, og hvorfor holdes den utenfor investeringsanalysen?',
@@ -224,6 +239,7 @@ const QUESTIONS = [
   },
   // Q16 – correct=0 (127 tegn). Gjør opt[2] lengre enn riktig (136 tegn).
   {
+    id: 16,
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
     q: 'Hva er kapitalbinding i omløpsmidler?',
@@ -238,6 +254,7 @@ const QUESTIONS = [
   },
   // Q17 – correct=2 (94 tegn). Gjør opt[1] lengre enn riktig (101 tegn).
   {
+    id: 17,
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
     q: 'Hva er konsekvensen av økt kapitalbinding for lønnsomheten (TKR)?',
@@ -252,6 +269,7 @@ const QUESTIONS = [
   },
   // Q18 – correct=3 (151 tegn). La riktig være lengst, men juster feil noe.
   {
+    id: 18,
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
     q: 'Hva er faktoring som virkemiddel for å redusere kapitalbinding i kundefordringer?',
@@ -266,6 +284,7 @@ const QUESTIONS = [
   },
   // Q19 – correct=0 (137 tegn). Gjør opt[2] lengre enn riktig (145 tegn).
   {
+    id: 19,
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
     q: 'Hva er defensiv vs. offensiv kredittstyring?',
@@ -280,6 +299,7 @@ const QUESTIONS = [
   },
   // Q20 – correct=2 (126 tegn). Gjør opt[0] lengre enn riktig (134 tegn).
   {
+    id: 20,
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
     q: 'Hva er lagringskostnader, og hva inngår?',
@@ -294,6 +314,7 @@ const QUESTIONS = [
   },
   // Q21 – correct=3 (125 tegn). La riktig være lengst.
   {
+    id: 21,
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
     q: 'Hva er leveringsservicenivå?',
@@ -308,6 +329,7 @@ const QUESTIONS = [
   },
   // Q22 – correct=0 (107 tegn). Gjør opt[3] lengre enn riktig (115 tegn).
   {
+    id: 22,
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
     q: 'Hva er optimalt bestillingsvolum/-tidspunkt?',
@@ -322,6 +344,7 @@ const QUESTIONS = [
   },
   // Q23 – correct=2 (119 tegn). Gjør opt[1] lengre enn riktig (128 tegn).
   {
+    id: 23,
     cat: 'abc_dupont',
     catLabel: 'ABC-analyse og DuPont',
     q: 'Hva er ABC-analyse (Paretoprinsippet)?',
@@ -336,6 +359,7 @@ const QUESTIONS = [
   },
   // Q24 – correct=3 (139 tegn). La riktig være lengst.
   {
+    id: 24,
     cat: 'abc_dupont',
     catLabel: 'ABC-analyse og DuPont',
     q: 'Hva er praktisk bruk av ABC-analyse i lagerstyring?',
@@ -350,6 +374,7 @@ const QUESTIONS = [
   },
   // Q25 – correct=0 (103 tegn). Gjør opt[3] lengre enn riktig (113 tegn).
   {
+    id: 25,
     cat: 'abc_dupont',
     catLabel: 'ABC-analyse og DuPont',
     q: 'Hva er DuPont-modellens formel og hva viser den?',
@@ -364,6 +389,7 @@ const QUESTIONS = [
   },
   // Q26 – correct=2 (85 tegn). Gjør opt[3] lengre enn riktig (94 tegn).
   {
+    id: 26,
     cat: 'abc_dupont',
     catLabel: 'ABC-analyse og DuPont',
     q: 'Hva er kapitalens omløpshastighet som del av DuPont-modellen?',
@@ -378,6 +404,7 @@ const QUESTIONS = [
   },
   // Q27 – correct=3 (120 tegn). Gjør opt[1] lengre enn riktig (129 tegn).
   {
+    id: 27,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'En bedrift vurderer investering A (TBT = 2 år) og investering B (TBT = 3 år), begge med 5 års levetid. Investering B har mye større kontantstrøm etter år 3. Hva bør velges?',
@@ -392,6 +419,7 @@ const QUESTIONS = [
   },
   // Q28 – correct=2 (145 tegn). La riktig være lengst.
   {
+    id: 28,
     cat: 'kapitalbinding',
     catLabel: 'Kapitalbinding og logistikk',
     q: 'Hva er JIT (Just-In-Time) og LEAN i logistikksammenheng?',
@@ -406,6 +434,7 @@ const QUESTIONS = [
   },
   // Q29 – correct=3 (104 tegn). Gjør opt[1] lengre enn riktig (114 tegn).
   {
+    id: 29,
     cat: 'abc_dupont',
     catLabel: 'ABC-analyse og DuPont',
     q: 'Hvilke to tiltak kan bedre DuPont-modellens TKR?',
@@ -419,6 +448,7 @@ const QUESTIONS = [
     explain: 'DuPont-modellen viser klart to veier til bedre TKR: (1) øke kapitalens omløpshastighet – bruk mindre kapital for å generere samme omsetning (reduser varelager, fordringer), eller (2) øke resultatgraden – bedre marginer via høyere priser eller lavere kostnader.',
   },
   {
+    id: 30,
     type: 'sort',
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
@@ -439,6 +469,7 @@ const QUESTIONS = [
     explain: 'TBT: enkelt men ignorerer tidsverdi og kontantstrøm etter perioden. NV: diskonterer og gir verdi i kr – den anbefalte metoden. IRR: gir % avkastning, men er uegnet alene ved gjensidig utelukkende prosjekter fordi størrelse ikke vektes.',
   },
   {
+    id: 31,
     cat: 'investeringsmetoder',
     catLabel: 'Investeringsmetoder',
     q: 'Hva er to kjente svakheter ved tilbakebetalingsmetoden (TBT)?',

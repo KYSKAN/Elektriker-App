@@ -118,13 +118,14 @@ LØM-quizzene krever at brukeren skriver inn et kallenavn på startskjermen FØR
 
 ### Legg til nytt tema
 1. Opprett JS-fil i riktig mappe med `QUIZ_META` og `QUESTIONS`
-2. Legg til i `temaFil`-tabellen i `spill.html`
-3. Legg til i `bjrons`-array hvis det er en Bjørns-quiz
-4. Legg til i `LB_TEMAS`-array i `spill.html` hvis det skal ha toppliste
-5. Legg til quiz-kort i riktig index-fil
-6. Legg til i combine-listen i riktig index-fil (index.html / index-bjrons.html)
-7. Legg til i `#quiz-select` i `index.html` (innstillinger → nullstill én quiz)
-8. Legg til i `FILES`-listen i `service-worker.js` og bump `CACHE`
+2. Hvis det er en LØM-quiz: gi hvert spørsmål et `id`-felt (1, 2, 3 …) — se «LØM ID-system»
+3. Legg til i `temaFil`-tabellen i `spill.html`
+4. Legg til i `bjrons`-array hvis det er en Bjørns-quiz
+5. Legg til i `LB_TEMAS`-array i `spill.html` hvis det skal ha toppliste
+6. Legg til quiz-kort i riktig index-fil
+7. Legg til i combine-listen i riktig index-fil (index.html / index-bjrons.html)
+8. Legg til i `#quiz-select` i `index.html` (innstillinger → nullstill én quiz)
+9. Legg til i `FILES`-listen i `service-worker.js` og bump `CACHE`
 
 ## Supabase (backend/database)
 Prosjekt-URL: `https://cimobeaszhycobffsjes.supabase.co`
@@ -134,7 +135,9 @@ Anon-nøkkel ligger i `spill.html` — brukes for INSERT og SELECT fra nettleser
 | Tabell   | Kolonner                                          | Formål                        |
 |----------|---------------------------------------------------|-------------------------------|
 | `scores` | id, navn, score, total, tema, created_at          | Toppliste per tema            |
-| `svar`   | id, tema, sporsmal_idx, cat, riktig, navn, created_at | Hvert enkelt svar loggføres |
+| `svar`   | id, tema, sporsmal_idx, sporsmal_id, cat, riktig, navn, device_id, created_at | Hvert enkelt svar loggføres |
+
+`sporsmal_id` (integer, nullable) er en stabil ID på spørsmålet som settes i kildekoden via feltet `id:` i hver LØM-quizfil. Brukes til å spore hvilke spesifikke spørsmål som er vanskelige/lette på tvers av seansjoner. `sporsmal_idx` er den løpende indeksen i `QUESTIONS`-arrayet og skifter dersom rekkefølgen endres — bruk `sporsmal_id` for stabil identifikasjon.
 
 ### RLS (Row Level Security)
 - `scores`: anon kan INSERT og SELECT
@@ -155,6 +158,7 @@ Anon-nøkkel ligger i `spill.html` — brukes for INSERT og SELECT fra nettleser
 
 ## Viktige regler
 - **Service worker:** `CACHE` bumpes automatisk av pre-commit hook (`hooks/pre-commit`) når en HTML/JS/CSS/SVG/JSON-fil er staget. Trenger ikke å gjøres manuelt.
+- **LØM ID-validering:** Pre-commit hook kjører `node scripts/validate-lom-ids.js` automatisk når en `quiz/lom/*.js`-fil er staget. Commiten avbrytes hvis det er duplikat-, manglende eller ugyldige IDer.
 - **Deploy:** `git add <filer> && git commit -m "..." && git push` — hook bumper cache, så GitHub Pages deployer automatisk
 - **Legg aldri til `-A` i git add** — legg til spesifikke filer for å unngå å committe .claude/
 - **.nojekyll:** Må alltid ligge i rot — uten den krasjer GitHub Pages-builden etter 15 min
@@ -193,6 +197,7 @@ const QUIZ_META = {
 
 const QUESTIONS = [
   {
+    id: 1,                               // KUN LØM: stabil ID per fil (1, 2, 3 …) — sendes til Supabase som sporsmal_id
     cat: 'aml',                          // nøkkel fra cats-objektet
     catLabel: 'Arbeidsmiljøloven',       // visningsnavn (lik cats[cat].label)
     q: 'Spørsmålstekst her?',
@@ -209,6 +214,61 @@ const QUESTIONS = [
 - Alltid 4 svaralternativer — quizmotoren shuffler dem tilfeldig
 - `catLabel` må matche `cats[cat].label` eksakt
 - Filen evalueres som vanlig JS via `new Function()` i spill.html — ikke bruk ES-modules (`import`/`export`)
+- **`id` (kun LØM):** stabil tallidentifikator unikt per fil. Sendes til `svar.sporsmal_id` ved hvert svar (ikke synlig i GUI). Se «LØM ID-system» under for regler.
+
+## LØM ID-system (sporsmal_id)
+
+Hver LØM-quizfil har stabile, numeriske IDer på hvert spørsmål. Disse sendes til Supabase som `sporsmal_id` slik at vi kan analysere hvilke spørsmål som er vanskelige eller lette over tid på tvers av sesjoner.
+
+**Hvorfor:** `sporsmal_idx` (array-indeks) endrer seg når spørsmål legges til/slettes/sorteres om, så historikk-data går i stykker. `id`-feltet er stabilt — én gang tildelt, alltid samme.
+
+### Regler
+
+1. **IDer er per-fil.** ID 1 i `ool-motivasjon.js` og ID 1 i `ool-kultur.js` er ulike spørsmål. Global unikhet sikres av kombinasjonen `tema` + `sporsmal_id` i databasen.
+2. **Aldri gjenbruk en ID.** Når et spørsmål slettes, hopp over IDen for alltid. Hvis du gjenbruker, blandes statistikk fra det gamle og nye spørsmålet sammen.
+3. **Aldri renumerér.** Selv om numrene har «hull», skal de stå som de er. IDene refererer til konkrete spørsmål i historikken.
+4. **Nye spørsmål får neste ledige nummer** (max + 1 i filen, ikke et hull). Kjør `node scripts/validate-lom-ids.js --next` for å se neste ledige ID per fil.
+
+### Når du gjør hva
+
+| Operasjon | Hva med IDen |
+|---|---|
+| Legg til nytt spørsmål | Sett `id: <neste-ledige>` (kjør `--next` for å se hva det er) |
+| Endre spørsmålstekst eller forklaring | Behold ID (samme spørsmål, bedre formulering) |
+| Endre svaralternativer betydelig (annen riktig svar, annen tematikk) | Slett gammelt spørsmål, lag nytt med ny ID |
+| Slett spørsmål | Bare slett blokken. Gjenværende spørsmåls IDer røres ikke |
+| Flytte spørsmål til annen quizfil | Slett fra opprinnelsesfil, lag ny ID i målfil |
+| Sortere/ordne om i samme fil | Behold IDene som de er (de er bare metadata, rekkefølgen i array styrer ikke ID) |
+
+### Validering
+
+Pre-commit hook kjører `scripts/validate-lom-ids.js` automatisk når en LØM-fil er staget. Den sjekker:
+- Alle spørsmål har `id`-felt
+- IDene er positive heltall
+- Ingen duplikater innenfor samme fil
+
+Kjør manuelt for å se neste ledige ID per fil:
+```bash
+node scripts/validate-lom-ids.js --next
+```
+
+### Database-kolonne
+
+`svar`-tabellen i Supabase har kolonnen `sporsmal_id` (int4, nullable). Eldre rader (før 2026-05) og bjrons/elektro-quizer har den som NULL. Eksempelspørring for å finne vanskeligste LØM-spørsmål:
+
+```sql
+SELECT tema, sporsmal_id,
+  COUNT(*) AS antall_svar,
+  ROUND(AVG(riktig::int) * 100, 1) AS prosent_riktig
+FROM svar
+WHERE sporsmal_id IS NOT NULL
+GROUP BY tema, sporsmal_id
+HAVING COUNT(*) >= 5
+ORDER BY prosent_riktig ASC
+LIMIT 20;
+```
+
+For å slå opp et spesifikt spørsmål: åpne den aktuelle LØM-filen og søk etter `id: N,`.
 
 ## Quiz — kvalitetskrav for å unngå tells
 

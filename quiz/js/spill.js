@@ -1052,6 +1052,7 @@ async function saveScore(navn, sc, tot, t) {
 
 async function saveAnswer(q, isCorrect) {
   const payload = { tema: temas[0], sporsmal_idx: QUESTIONS.indexOf(q), cat: q.cat, riktig: isCorrect, device_id: getDeviceId() };
+  if (q.id !== undefined) payload.sporsmal_id = q.id;
   if (currentNavn) payload.navn = currentNavn;
   try {
     const res = await fetch(`${SB_URL}/rest/v1/svar`, {

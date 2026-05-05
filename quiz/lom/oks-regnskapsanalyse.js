@@ -13,6 +13,7 @@
 
 const QUESTIONS = [
   {
+    id: 1,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er hensikten med regnskapsanalyse?',
@@ -26,6 +27,7 @@ const QUESTIONS = [
     explain: 'Regnskapsanalyse brukes for å vurdere bedriftens finansielle helse på tre dimensjoner: lønnsomhet (tjener man nok?), soliditet (tåler man tap?) og likviditet (kan man betale regningene?).',
   },
   {
+    id: 2,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er resultatmargin (resultatgrad), og hva er en typisk norm?',
@@ -39,6 +41,7 @@ const QUESTIONS = [
     explain: 'Resultatmargin = Resultat før skatt / Salgsinntekter × 100. Viser andelen av omsetningen som er igjen etter alle kostnader. Sammenlignes med bransjenormer – varierer mye mellom bransjer.',
   },
   {
+    id: 3,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er driftsmargin, og hva er kravet?',
@@ -52,6 +55,7 @@ const QUESTIONS = [
     explain: 'Driftsmargin = Driftsresultat / Salgsinntekter × 100. Viser driftsoverskuddet som andel av omsetningen. Et krav på ca. 10% er vanlig – under dette anses driften som lite lønnsom.',
   },
   {
+    id: 4,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er bruttofortjeneste og bruttofortjenesteprosent?',
@@ -65,6 +69,7 @@ const QUESTIONS = [
     explain: 'Bruttofortjeneste = Salgsinntekter − Varekostnad (i kr). BFP = Bruttofortjeneste / Salgsinntekter × 100. Viser andelen av salgsprisene som ikke går til varekostnader.',
   },
   {
+    id: 5,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er avanse, og hvordan skiller det seg fra bruttofortjenesteprosent?',
@@ -78,6 +83,7 @@ const QUESTIONS = [
     explain: 'Avanse = Bruttofortjeneste / Varekostnad × 100. BFP beregnes av salgsprisen, avansen av innkjøpsprisen. Eksempel: vare kjøpt for 100, solgt for 150: BFP = 33%, avanse = 50%.',
   },
   {
+    id: 6,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er totalkapitalrentabilitet (TKR), og hva er kravet?',
@@ -91,6 +97,7 @@ const QUESTIONS = [
     explain: 'TKR = (Driftsresultat + Renteinntekter) / Gjennomsnittlig totalkapital × 100. Viser avkastningen på all kapital (egenkapital + gjeld) uavhengig av finansiering. Krav: minst 8–10%, bør overstige gjeldsrenten.',
   },
   {
+    id: 7,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er egenkapitalrentabilitet (EKR), og hva er kravet?',
@@ -104,6 +111,7 @@ const QUESTIONS = [
     explain: 'EKR = Årsresultat / Gjennomsnittlig egenkapital × 100. Viser avkastningen eierne får på sin investering. Krav: 18–20% er vanlig referanse – bør minst overstige alternativ avkastning (aksjeindeks e.l.).',
   },
   {
+    id: 8,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er kapitalens omløpshastighet, og hva viser den?',
@@ -117,6 +125,7 @@ const QUESTIONS = [
     explain: 'Kapitalens omløpshastighet = Driftsinntekter / Gjennomsnittlig totalkapital. Viser hvor mange ganger i løpet av et år omsettes totalkapitalen. Høyere er bedre – mer omsetning per krone investert.',
   },
   {
+    id: 9,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er DuPont-modellen?',
@@ -130,6 +139,7 @@ const QUESTIONS = [
     explain: 'DuPont-modellen: TKR = Kapitalens omløpshastighet × Resultatgrad. Viser at lønnsomheten kan bedres enten ved å øke effektiviteten (mer omsetning per krone kapital) eller øke marginene (bedre resultatgrad).',
   },
   {
+    id: 10,
     cat: 'soliditet',
     catLabel: 'Soliditetsnøkkeltall',
     q: 'Hva er soliditet, og hva viser soliditetsnøkkeltallene?',
@@ -143,6 +153,7 @@ const QUESTIONS = [
     explain: 'Soliditet handler om bedriftens langsiktige finansielle styrke – evnen til å tåle tap og motstå kriser. Jo høyere andel egenkapital i forhold til total kapital, jo mer solid er bedriften.',
   },
   {
+    id: 11,
     cat: 'soliditet',
     catLabel: 'Soliditetsnøkkeltall',
     q: 'Hva er arbeidskapital, og hva er normen?',
@@ -156,6 +167,7 @@ const QUESTIONS = [
     explain: 'Arbeidskapital = Omløpsmidler − Kortsiktig gjeld. Viser den frie kapitalen som er tilgjengelig for driften. Bør være positiv – negativ arbeidskapital er et faresignal for likviditeten.',
   },
   {
+    id: 12,
     cat: 'soliditet',
     catLabel: 'Soliditetsnøkkeltall',
     q: 'Hva er egenkapitalprosent, og hva er kravet?',
@@ -169,6 +181,7 @@ const QUESTIONS = [
     explain: 'Egenkapitalprosent = Egenkapital / Totalkapital × 100. Viser andelen av totalkapitalen som er finansiert av eiere (ikke lån). Krav: ~35% er en vanlig norm – jo høyere, jo mer solid.',
   },
   {
+    id: 13,
     cat: 'soliditet',
     catLabel: 'Soliditetsnøkkeltall',
     q: 'Hva er gjeldsgrad, og hva er normen?',
@@ -182,6 +195,7 @@ const QUESTIONS = [
     explain: 'Gjeldsgrad = Gjeld / Egenkapital. Viser forholdet mellom fremmedkapital og egenkapital. Norm: under 7, men lav gjeldsgrad er bedre. Høy gjeldsgrad gir sårbarhet for renteøkninger og nedturer.',
   },
   {
+    id: 14,
     cat: 'soliditet',
     catLabel: 'Soliditetsnøkkeltall',
     q: 'Hva er finansieringsgrad 1, og hva er normen?',
@@ -195,6 +209,7 @@ const QUESTIONS = [
     explain: 'Finansieringsgrad 1 = Anleggsmidler / (Egenkapital + Langsiktig gjeld). Krav: under 1. Viser om anleggsmidler er finansiert av langsiktig kapital. Over 1 betyr at kortsiktig gjeld finansierer anleggsmidler – uheldig.',
   },
   {
+    id: 15,
     cat: 'likviditet',
     catLabel: 'Likviditetsnøkkeltall',
     q: 'Hva er likviditetsgrad 1 (LG1), og hva er kravet?',
@@ -208,6 +223,7 @@ const QUESTIONS = [
     explain: 'LG1 = Omløpsmidler / Kortsiktig gjeld. Krav: over 2 (dvs. omløpsmidler bør minst være dobbelt så store som kortsiktig gjeld). LG1 mellom 1 og 2 er advarsel; under 1 er kritisk.',
   },
   {
+    id: 16,
     cat: 'likviditet',
     catLabel: 'Likviditetsnøkkeltall',
     q: 'Hva er likviditetsgrad 2 (LG2), og hva er kravet?',
@@ -221,6 +237,7 @@ const QUESTIONS = [
     explain: 'LG2 = (Omløpsmidler − Varelager) / Kortsiktig gjeld. Krav: over 1. Viser om de mest likvide omløpsmidlene (ekskl. varelager som kan være vanskelig å selge raskt) dekker kortsiktig gjeld.',
   },
   {
+    id: 17,
     cat: 'likviditet',
     catLabel: 'Likviditetsnøkkeltall',
     q: 'Hva er varelagerets omløpshastighet, og hva er en god verdi?',
@@ -234,6 +251,7 @@ const QUESTIONS = [
     explain: 'Varelagerets omløpshastighet = Varekostnad / Gjennomsnittlig varelager. Høy verdi betyr at varelageret omsettes raskt – lite kapital bundet opp i lager. Lav verdi kan indikere svakt salg eller overfylt lager.',
   },
   {
+    id: 18,
     cat: 'likviditet',
     catLabel: 'Likviditetsnøkkeltall',
     q: 'Hva er kredittid for kunder, og hva beregner den?',
@@ -247,6 +265,7 @@ const QUESTIONS = [
     explain: 'Kredittid kunder = Gjennomsnittlige kundefordringer × 360 / Kredittsalg inkl. mva. Viser gjennomsnittlig antall dager fra fakturering til betaling. Kort kredittid er bedre for likviditeten.',
   },
   {
+    id: 19,
     cat: 'likviditet',
     catLabel: 'Likviditetsnøkkeltall',
     q: 'Hva er kredittid for leverandører?',
@@ -260,6 +279,7 @@ const QUESTIONS = [
     explain: 'Kredittid leverandører = Gjennomsnittlig leverandørgjeld × 360 / Varekjøp inkl. mva. Viser gjennomsnittlig antall dager man venter med å betale leverandørene. Lengre kredittid bedrer likviditeten på kort sikt, men kan skade leverandørforholdet.',
   },
   {
+    id: 20,
     cat: 'tiltak',
     catLabel: 'Tiltak og vurdering',
     q: 'Hvilke tiltak kan bedre lønnsomheten?',
@@ -273,6 +293,7 @@ const QUESTIONS = [
     explain: 'Lønnsomheten bedres ved: øke inntekter (høyere pris, mer salg), bedre varekostnad (forhandlinger, redusere svinn), kutte unødvendige kostnader, forbedre bruttofortjeneste og øke kapitaleffektiviteten.',
   },
   {
+    id: 21,
     cat: 'tiltak',
     catLabel: 'Tiltak og vurdering',
     q: 'Hvilke tiltak kan bedre soliditeten?',
@@ -286,6 +307,7 @@ const QUESTIONS = [
     explain: 'Soliditeten (egenkapitalandelen) bedres ved: tilbakeholde overskudd i stedet for å dele ut utbytte, skyte inn ny egenkapital fra eiere, betale ned gjeld og unngå unødvendige lån.',
   },
   {
+    id: 22,
     cat: 'tiltak',
     catLabel: 'Tiltak og vurdering',
     q: 'Hvilke tiltak kan bedre likviditeten?',
@@ -299,6 +321,7 @@ const QUESTIONS = [
     explain: 'Likviditeten bedres ved: raskere innbetaling fra kunder (kortere kredittid, faktoring), redusere varelager, forhandle lengre kredittid fra leverandører, kutte unødvendige utbetalinger og holde tilbake utbytte.',
   },
   {
+    id: 23,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er gjennomsnittsberegning av kapital i rentabilitetsnøkkeltall?',
@@ -312,6 +335,7 @@ const QUESTIONS = [
     explain: 'Gjennomsnittlig kapital = (Inngående balanse + Utgående balanse) / 2. Brukes i rentabilitetsnøkkeltall (TKR, EKR) fordi kapitalen kan endre seg gjennom året, og gjennomsnittet gir et mer korrekt bilde.',
   },
   {
+    id: 24,
     cat: 'soliditet',
     catLabel: 'Soliditetsnøkkeltall',
     q: 'Hva er sammenhengen mellom lønnsomhet og soliditet over tid?',
@@ -325,6 +349,7 @@ const QUESTIONS = [
     explain: 'Lønnsomhet og soliditet henger nøye sammen: overskudd fra god lønnsomhet kan tilbakeholdes og øker egenkapitalen, noe som styrker soliditeten. Dermed bidrar lønnsom drift til finansiell styrke over tid.',
   },
   {
+    id: 25,
     cat: 'tiltak',
     catLabel: 'Tiltak og vurdering',
     q: 'Hva er den viktigste årsaken til dårlig likviditet?',
@@ -338,6 +363,7 @@ const QUESTIONS = [
     explain: 'Dårlig likviditet skyldes typisk: lang innbetalingstid fra kunder, store varelager som binder kapital, sesongsvingninger, store investeringer og store utbyttebetalinger. God lønnsomhet garanterer ikke god likviditet.',
   },
   {
+    id: 26,
     cat: 'likviditet',
     catLabel: 'Likviditetsnøkkeltall',
     q: 'En bedrift har LG1 = 1,4 og LG2 = 0,7. Hva sier dette om likviditeten?',
@@ -351,6 +377,7 @@ const QUESTIONS = [
     explain: 'LG1 = 1,4 er under kravet på 2 (advarsel). LG2 = 0,7 er under kravet på 1 (kritisk – de likvide omløpsmidlene dekker ikke kortsiktig gjeld). Bedriften bør iverksette tiltak for å bedre likviditeten.',
   },
   {
+    id: 27,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er benchmarking i regnskapsanalyse?',
@@ -364,6 +391,7 @@ const QUESTIONS = [
     explain: 'Benchmarking i regnskapsanalyse betyr å sammenligne egne nøkkeltall mot relevante referanser: bransjegjennomsnitt, konkurrenter og egne historiske tall. Dette gir kontekst for vurderingen.',
   },
   {
+    id: 28,
     cat: 'tiltak',
     catLabel: 'Tiltak og vurdering',
     q: 'Hva er faktoring, og hva brukes det til for å bedre likviditeten?',
@@ -377,6 +405,7 @@ const QUESTIONS = [
     explain: 'Faktoring innebærer at bedriften selger sine kundefordringer til et factoringselskap som betaler umiddelbart (minus en avgift). Dette omgjør kortsiktige fordringer til kontanter og bedrer likviditeten raskt.',
   },
   {
+    id: 29,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'En bedrift har TKR = 6% og gjennomsnittlig lånerente = 8%. Hva sier dette?',
@@ -390,6 +419,7 @@ const QUESTIONS = [
     explain: 'Når TKR (6%) er lavere enn lånerenten (8%), gir gjeld negativ gearingeffekt – man betaler mer for lånet enn man tjener på kapitalen. Dette svekker egenkapitalrentabiliteten. TKR bør overstige gjeldsrenten.',
   },
   {
+    id: 30,
     cat: 'soliditet',
     catLabel: 'Soliditetsnøkkeltall',
     q: 'Hva viser finansieringsgrad 1 over 1?',
@@ -403,6 +433,7 @@ const QUESTIONS = [
     explain: 'Finansieringsgrad 1 > 1 betyr at egenkapital + langsiktig gjeld ikke dekker anleggsmidlene – deler av anleggsmidlene finansieres av kortsiktig gjeld. Dette er risikabelt fordi kortsiktig gjeld må fornyes hyppig.',
   },
   {
+    id: 31,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er lønnsomhet?',
@@ -416,6 +447,7 @@ const QUESTIONS = [
     explain: 'Lønnsomhet betyr at bedriften tjener penger: inntektene er høyere enn kostnadene. Måles med nøkkeltall som resultatmargin, driftsmargin og rentabilitet. Skilles fra likviditet (betalingsevne) og soliditet (tapsmotstand).',
   },
   {
+    id: 32,
     cat: 'lonnsomhet',
     catLabel: 'Lønnsomhetsnøkkeltall',
     q: 'Hva er avkastning?',
@@ -429,6 +461,7 @@ const QUESTIONS = [
     explain: 'Avkastning er gevinsten relativt til investert kapital – uttrykt i prosent. I regnskapsanalyse brukes TKR (avkastning på totalkapital) og EKR (avkastning på egenkapital). Avkastning sammenlignes mot avkastningskravet for å vurdere om en investering er lønnsom.',
   },
   {
+    id: 33,
     cat: 'likviditet',
     catLabel: 'Likviditetsnøkkeltall',
     q: 'Hva er likviditet?',
@@ -442,6 +475,7 @@ const QUESTIONS = [
     explain: 'Likviditet betyr betalingsevne – at bedriften til enhver tid kan betale regningene sine. Måles med likviditetsgrad 1 og 2. God lønnsomhet gir ikke automatisk god likviditet: man kan ha stort overskudd men likevel slite med å betale forpliktelsene.',
   },
   {
+    id: 34,
     type: 'sort',
     cat: 'tiltak',
     catLabel: 'Tiltak og vurdering',
@@ -464,6 +498,7 @@ const QUESTIONS = [
     explain: 'Lønnsomhet: TKR, EKR, driftsmargin, resultatmargin. Soliditet: egenkapitalprosent, gjeldsgrad, finansieringsgrad 1. Likviditet: LG1, LG2, varelagerets omløpshastighet, kredittid kunder/leverandører.',
   },
   {
+    id: 35,
     cat: 'tiltak',
     catLabel: 'Tiltak og vurdering',
     q: 'Hvilke to tiltak bedrer soliditeten til en bedrift?',

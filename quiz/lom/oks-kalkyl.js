@@ -13,6 +13,7 @@ const QUIZ_META = {
 
 const QUESTIONS = [
   {
+    id: 1,
     cat: 'driftsregnskap',
     catLabel: 'Driftsregnskap',
     q: 'Hva er formålet med driftsregnskapet?',
@@ -26,6 +27,7 @@ const QUESTIONS = [
     explain: 'Driftsregnskapet er et internt, frivillig styringsverktøy. Det viser lønnsomheten per produkt, prosjekt, avdeling eller kunde – og er grunnlaget for priskalkylering og ledelsesbeslutninger.',
   },
   {
+    id: 2,
     cat: 'driftsregnskap',
     catLabel: 'Driftsregnskap',
     q: 'Hvilke typer driftsregnskap finnes?',
@@ -39,6 +41,7 @@ const QUESTIONS = [
     explain: 'Driftsregnskapet finnes i flere former: avdelingsregnskap (per avdeling), prosjektregnskap (per oppdrag) og produktregnskap (per produkt). Alle gir mer detaljert informasjon enn finansregnskapet.',
   },
   {
+    id: 3,
     cat: 'driftsregnskap',
     catLabel: 'Driftsregnskap',
     q: 'Hva er koblingen mellom driftsregnskapet og kalkylene?',
@@ -52,6 +55,7 @@ const QUESTIONS = [
     explain: 'Flytdiagrammet viser sammenhengen: Ferdige prosjekter → Driftsregnskap → Beregning av tilleggssatser (%) → Kalkyler → Kalkulere pris for kommende prosjekter. Historisk data driver fremtidige kalkyler.',
   },
   {
+    id: 4,
     cat: 'selvkost',
     catLabel: 'Selvkostmetoden',
     q: 'Hva er selvkostmetoden?',
@@ -65,6 +69,7 @@ const QUESTIONS = [
     explain: 'Selvkostmetoden inkluderer alle kostnader i produktkalkylen: direkte materialkostnader + direkte lønnskostnader + indirekte produksjonskostnader + indirekte salgs- og administrasjonskostnader = selvkost.',
   },
   {
+    id: 5,
     cat: 'selvkost',
     catLabel: 'Selvkostmetoden',
     q: 'Hva er oppbygningen av selvkostprisen?',
@@ -78,6 +83,7 @@ const QUESTIONS = [
     explain: 'Selvkostmetoden: Direkte materialkostnad + Direkte lønnskostnad + Andre direkte kostnader = Tilvirkningskost. Tilvirkningskost + Indirekte salgs- og administrasjonskostnader = Selvkost. Selvkost + Fortjeneste = Salgsinntekt.',
   },
   {
+    id: 6,
     cat: 'selvkost',
     catLabel: 'Selvkostmetoden',
     q: 'Hva er differensierte tillegg i selvkostkalkylen?',
@@ -91,6 +97,7 @@ const QUESTIONS = [
     explain: 'Differensierte tillegg betyr at indirekte kostnader fordeles med ulike satser for ulike kostnadskategorier: materialtillegg (% av materialkostnad), driftstillegg (% av direkte lønn), administrasjonstillegg og salgstillegg.',
   },
   {
+    id: 7,
     cat: 'selvkost',
     catLabel: 'Selvkostmetoden',
     q: 'Hva er en potensiell ulempe med selvkostmetoden?',
@@ -104,6 +111,7 @@ const QUESTIONS = [
     explain: 'Selvkostmetodens svakhet er at fordelingen av indirekte kostnader kan slå uheldig ut: produkter med høy direkte lønnskostnad får uforholdsmessig høy andel av felleskostnader, og kan feilaktig virke ulønnsomme.',
   },
   {
+    id: 8,
     cat: 'selvkost',
     catLabel: 'Selvkostmetoden',
     q: 'Hva er tillegg for indirekte kostnader per faktureringstime?',
@@ -117,6 +125,7 @@ const QUESTIONS = [
     explain: 'Tillegg per faktureringstime = Total andel indirekte kostnader / Antall fakturerte timer. Dette gir en timesats som legges til direkte timer i kalkylene for å dekke indirekte kostnader.',
   },
   {
+    id: 9,
     cat: 'bidrag',
     catLabel: 'Bidragsmetoden',
     q: 'Hva er bidragsmetoden?',
@@ -130,6 +139,7 @@ const QUESTIONS = [
     explain: 'Bidragsmetoden inkluderer kun de variable kostnadene i produktkalkylen. Faste kostnader behandles som periodekostnader. Salgspris − Variable kostnader = Dekningsbidrag (DB).',
   },
   {
+    id: 10,
     cat: 'bidrag',
     catLabel: 'Bidragsmetoden',
     q: 'Hva er dekningsbidrag (DB)?',
@@ -143,6 +153,7 @@ const QUESTIONS = [
     explain: 'DB = Salgspris − Variable kostnader. Dekningsbidraget viser hva produktet bidrar med til å dekke faste kostnader og fortjeneste. Summen av DB fra alle produkter minus samlede faste kostnader = resultat.',
   },
   {
+    id: 11,
     cat: 'bidrag',
     catLabel: 'Bidragsmetoden',
     q: 'Hva er dekningsgrad (DG)?',
@@ -156,6 +167,7 @@ const QUESTIONS = [
     explain: 'DG = Dekningsbidrag / Salgsinntekter × 100. Viser hvor stor andel av salgsprisen som er igjen etter at variable kostnader er dekket. Høy DG er bra – mer bidrag per salgskrone.',
   },
   {
+    id: 12,
     cat: 'bidrag',
     catLabel: 'Bidragsmetoden',
     q: 'Hva er forutsetningene for at bidragsmetoden er gyldig?',
@@ -169,6 +181,7 @@ const QUESTIONS = [
     explain: 'Bidragsmetoden forutsetter: (1) proporsjonale variable kostnader (konstant DB per enhet), (2) stabile faste kostnader innenfor kapasitetsintervallet, og (3) fast pris uavhengig av mengde.',
   },
   {
+    id: 13,
     cat: 'bidrag',
     catLabel: 'Bidragsmetoden',
     q: 'Når anbefales bidragsmetoden fremfor selvkostmetoden?',
@@ -182,6 +195,7 @@ const QUESTIONS = [
     explain: 'Selvkostmetoden anbefales for langsiktig prissetting (alle kostnader må dekkes). Bidragsmetoden brukes kortsiktig ved ledig kapasitet, tilleggsordrer, lavsesong eller etterspørselssvikt – da er det lønnsomt å ta ordrer som gir positivt DB.',
   },
   {
+    id: 14,
     cat: 'bidrag',
     catLabel: 'Bidragsmetoden',
     q: 'Hva er salgsmerkost (minimumskostnad) i bidragsmetoden?',
@@ -195,6 +209,7 @@ const QUESTIONS = [
     explain: 'Salgsmerkost (minimumspris/differansepris) = de variable kostnadene som direkte påløper for ordren. Alt over denne prisen gir positivt dekningsbidrag og kan aksepteres når det er ledig kapasitet.',
   },
   {
+    id: 15,
     cat: 'avviksanalyse',
     catLabel: 'Kalkylasjon og avviksanalyse',
     q: 'Hva er bruttofortjeneste i varehandel, og hva er avanse?',
@@ -208,6 +223,7 @@ const QUESTIONS = [
     explain: 'I varehandel: BF = Salgsinntekter − Varekostnad (i kr). BFP = BF / Salgsinntekter × 100 (av salgsprisen). Avanse = BF / Varekostnad × 100 (av innkjøpsprisen). Avansen er alltid høyere enn BFP.',
   },
   {
+    id: 16,
     cat: 'avviksanalyse',
     catLabel: 'Kalkylasjon og avviksanalyse',
     q: 'Hva er forkalkyler og etterkalkyler?',
@@ -221,6 +237,7 @@ const QUESTIONS = [
     explain: 'Forkalkyler utarbeides FØR jobben starter og brukes som grunnlag for prissetting. Etterkalkyler beregnes ETTER jobben er ferdig basert på faktiske kostnader – og sammenlignes med forkalkylen for avviksanalyse.',
   },
   {
+    id: 17,
     cat: 'avviksanalyse',
     catLabel: 'Kalkylasjon og avviksanalyse',
     q: 'Hva er mengdeavvik i avviksanalyse?',
@@ -234,6 +251,7 @@ const QUESTIONS = [
     explain: 'Mengdeavvik = (Faktisk forbrukt mengde − Planlagt mengde) × Planlagt pris. Viser om man brukte mer eller mindre materialer/tid enn planlagt. Positivt avvik = brukte mer enn planlagt (negativt for resultat).',
   },
   {
+    id: 18,
     cat: 'avviksanalyse',
     catLabel: 'Kalkylasjon og avviksanalyse',
     q: 'Hva er prisavvik i avviksanalyse?',
@@ -247,6 +265,7 @@ const QUESTIONS = [
     explain: 'Prisavvik = (Virkelig pris − Planlagt pris) × Faktisk forbrukt mengde. Viser om prisene på innsatsfaktorer (materialer, arbeidstimer) ble som planlagt. Positivt avvik = betalte mer enn planlagt.',
   },
   {
+    id: 19,
     cat: 'avviksanalyse',
     catLabel: 'Kalkylasjon og avviksanalyse',
     q: 'Hva brukes avviksanalyse til?',
@@ -260,6 +279,7 @@ const QUESTIONS = [
     explain: 'Avviksanalyse gir innsikt i HOW og HVORFOR det oppsto avvik mellom planlagt og faktisk. Dette gir grunnlag for: tiltak, korreksjon av fremtidige kalkyler og forbedring av budsjettering.',
   },
   {
+    id: 20,
     cat: 'driftsregnskap',
     catLabel: 'Driftsregnskap',
     q: 'Hva er forskjellen mellom direkte og indirekte kostnader i driftsregnskapet?',
@@ -273,6 +293,7 @@ const QUESTIONS = [
     explain: 'Direkte kostnader er sporbare til ett bestemt produkt eller prosjekt (f.eks. råvarer til produkt A). Indirekte kostnader (overhead) kan ikke direkte tilordnes og fordeles på produkter via en fordelingsnøkkel.',
   },
   {
+    id: 21,
     cat: 'selvkost',
     catLabel: 'Selvkostmetoden',
     q: 'Hva er tilvirkningskost?',
@@ -286,6 +307,7 @@ const QUESTIONS = [
     explain: 'Tilvirkningskost = Direkte materialkostnader + Direkte lønnskostnader + Andre direkte kostnader + Indirekte produksjonskostnader. Dette er kostnadene knyttet til selve produksjonen – ekskludert salgs- og administrasjonskostnader.',
   },
   {
+    id: 22,
     cat: 'bidrag',
     catLabel: 'Bidragsmetoden',
     q: 'Hva er "salgsmerkost = minimumskostnad" i praktisk sammenheng?',
@@ -299,6 +321,7 @@ const QUESTIONS = [
     explain: 'Salgsmerkost (minimumspris) ved ledig kapasitet = de variable kostnadene for den spesifikke ordren. Alt over denne prisen gir positivt DB og bidrar til å dekke faste kostnader. Gjelder kun på kort sikt og ved ledig kapasitet.',
   },
   {
+    id: 23,
     cat: 'avviksanalyse',
     catLabel: 'Kalkylasjon og avviksanalyse',
     q: 'En snekker beregner at et skap skal koste 2 000 kr i materialer, men faktisk forbruk er 2 400 kr. Hva er avviket og hva kan årsaken være?',
@@ -312,6 +335,7 @@ const QUESTIONS = [
     explain: 'Avviktet på kr 400 kan skyldes mengdeavvik (brukte mer materiale enn planlagt p.g.a. feil eller svinn) og/eller prisavvik (innkjøpsprisene var høyere). Avviksanalysen er grunnlaget for å finne årsaken.',
   },
   {
+    id: 24,
     cat: 'selvkost',
     catLabel: 'Selvkostmetoden',
     q: 'Hva er påslag for materialer i kalkylasjon?',
@@ -325,6 +349,7 @@ const QUESTIONS = [
     explain: 'Påslag for materialer = Andel indirekte materialkostnader / Direkte materialkostnader × 100. Dette prosenttillegget legges på direkte materialkostnader i kalkylen for å fordele indirekte lagerkostnader, innkjøpskostnader osv.',
   },
   {
+    id: 25,
     cat: 'avviksanalyse',
     catLabel: 'Kalkylasjon og avviksanalyse',
     q: 'Hva er for- og etterkalkylers verdi for budsjettprosessen?',
@@ -338,6 +363,7 @@ const QUESTIONS = [
     explain: 'Etterkalkyler gir faktiske kostnadsdata som systematisk forbedrer neste periodes forkalkyler og budsjetter. Avviksanalysen identifiserer hva som gikk annerledes og gir kunnskap som gjør fremtidige kalkyler mer presise.',
   },
   {
+    id: 26,
     cat: 'bidrag',
     catLabel: 'Bidragsmetoden',
     q: 'En bedrift selger produkt A for kr 500 og har variable kostnader på kr 300. Hva er dekningsbidraget og dekningsgraden?',
@@ -351,6 +377,7 @@ const QUESTIONS = [
     explain: 'DB = Salgspris − Variable kostnader = 500 − 300 = kr 200. DG = DB / Salgspris × 100 = 200/500 × 100 = 40%. 40 øre av hver krone i salg bidrar til å dekke faste kostnader og fortjeneste.',
   },
   {
+    id: 27,
     cat: 'driftsregnskap',
     catLabel: 'Driftsregnskap',
     q: 'Hva er et prosjektregnskap?',
@@ -364,6 +391,7 @@ const QUESTIONS = [
     explain: 'Et prosjektregnskap er et driftsregnskap for ett spesifikt prosjekt eller oppdrag. Det viser alle direkte og indirekte kostnader belastet prosjektet, samt inntekter – og gir et bilde av prosjektets lønnsomhet.',
   },
   {
+    id: 28,
     cat: 'selvkost',
     catLabel: 'Selvkostmetoden',
     q: 'Hva er anbefalingen for langsiktig prissetting – selvkost eller bidragsmetode?',
@@ -377,6 +405,7 @@ const QUESTIONS = [
     explain: 'Selvkostmetoden anbefales for langsiktig prissetting fordi alle kostnader (faste og variable) må dekkes over tid for at bedriften skal overleve. Bidragsmetoden er et kortsiktig hjelpemiddel ved spesielle situasjoner.',
   },
   {
+    id: 29,
     type: 'sort',
     cat: 'selvkost',
     catLabel: 'Selvkostmetoden',
@@ -396,6 +425,7 @@ const QUESTIONS = [
     explain: 'Bidragsmetoden tar kun med variable kostnader (direkte materialer, lønn og proporsjonale variable). Selvkostmetoden tar med ALLE kostnader inkludert indirekte og faste via tilleggssatser.',
   },
   {
+    id: 30,
     cat: 'bidrag',
     catLabel: 'Bidragsmetoden',
     q: 'I hvilke to situasjoner anbefales bidragsmetoden fremfor selvkostmetoden?',

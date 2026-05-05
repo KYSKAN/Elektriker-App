@@ -13,6 +13,7 @@
 
 const QUESTIONS = [
   {
+    id: 1,
     cat: 'styring',
     catLabel: 'Økonomistyring – grunnlag',
     q: 'Hva er definisjonen på økonomistyring?',
@@ -26,6 +27,7 @@ const QUESTIONS = [
     explain: 'Økonomistyring er prosessen med å planlegge, koordinere og kontrollere en bedrifts ressurser for å skape verdier OG sikre at bedriften til enhver tid har tilstrekkelig likviditet.',
   },
   {
+    id: 2,
     cat: 'styring',
     catLabel: 'Økonomistyring – grunnlag',
     q: 'Hva er de tre styringsnivåene i en bedrift?',
@@ -39,6 +41,7 @@ const QUESTIONS = [
     explain: 'De tre styringsnivåene er: strategisk planlegging (langsiktige mål og retning), økonomistyring (ressursallokering og oppfølging) og operativ styring (daglig drift og kontroll).',
   },
   {
+    id: 3,
     cat: 'styring',
     catLabel: 'Økonomistyring – grunnlag',
     q: 'Hvem er bedriftens typiske interessenter?',
@@ -52,6 +55,7 @@ const QUESTIONS = [
     explain: 'Bedriftens interessenter er alle parter som har interesse i bedriftens resultater: leverandører, kunder, eiere, ansatte, långivere (banker) og myndigheter (stat, kommune).',
   },
   {
+    id: 4,
     cat: 'styring',
     catLabel: 'Økonomistyring – grunnlag',
     q: 'Hva er de fire regnskapstypene i en bedrift?',
@@ -65,6 +69,7 @@ const QUESTIONS = [
     explain: 'Fire regnskapstyper: Finansregnskap (lovpålagt, til eksterne), Skatteregnskap (grunnlag for skatt), Likviditetsoversikt (kontantstrøm) og Driftsregnskap (internt styringsverktøy).',
   },
   {
+    id: 5,
     cat: 'styring',
     catLabel: 'Økonomistyring – grunnlag',
     q: 'Hva er sammenhengen mellom lønnsomhet og balansen?',
@@ -78,6 +83,7 @@ const QUESTIONS = [
     explain: 'Lønnsomhet = Inntekter − Kostnader = Resultat. Balanselikningen: Eiendeler = Gjeld + Egenkapital. Overskudd øker egenkapitalen i balansen over tid.',
   },
   {
+    id: 6,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er forskjellen mellom utgift, kostnad og utbetaling?',
@@ -91,6 +97,7 @@ const QUESTIONS = [
     explain: 'Utgift oppstår når man anskaffer noe (f.eks. kjøper varer). Kostnad oppstår når varen forbrukes i produksjonen. Utbetaling er den faktiske kontantbetalingen – disse tre tidspunktene er ofte forskjellige.',
   },
   {
+    id: 7,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er faste kostnader?',
@@ -104,6 +111,7 @@ const QUESTIONS = [
     explain: 'Faste kostnader er uavhengige av produksjonsvolumet innenfor et kapasitetsintervall – f.eks. husleie, administrasjonslønn, forsikring. De endres ikke om man produserer mer eller mindre.',
   },
   {
+    id: 8,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er sprangvise faste kostnader?',
@@ -117,6 +125,7 @@ const QUESTIONS = [
     explain: 'Sprangvise faste kostnader er faste innenfor et intervall, men stiger brått (i "sprang") når produksjonen overstiger en kapasitetsgrense – f.eks. når man må leie ett ekstra lager.',
   },
   {
+    id: 9,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er variable kostnader, og hva er de tre undertypene?',
@@ -130,6 +139,7 @@ const QUESTIONS = [
     explain: 'Variable kostnader varierer med produksjonen. Tre typer: proporsjonale (øker likt med produksjon), overproposjonale (øker raskere enn produksjon – f.eks. overtid) og underproposjonale (øker saktere).',
   },
   {
+    id: 10,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er direkte kostnader?',
@@ -143,6 +153,7 @@ const QUESTIONS = [
     explain: 'Direkte kostnader er kostnader som kan knyttes direkte til et bestemt produkt, prosjekt eller ordre – f.eks. råvarer og direkte arbeidstid for et spesifikt produkt.',
   },
   {
+    id: 11,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er indirekte kostnader, og hvordan håndteres de?',
@@ -156,6 +167,7 @@ const QUESTIONS = [
     explain: 'Indirekte kostnader (overhead) kan ikke direkte knyttes til ett produkt – f.eks. administrasjonslønn, strøm, husleie. De fordeles ut på produkter/prosjekter ved hjelp av en fordelingsnøkkel.',
   },
   {
+    id: 12,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er kalkulatoriske kostnader?',
@@ -169,6 +181,7 @@ const QUESTIONS = [
     explain: 'Kalkulatoriske kostnader representerer alternativkostnad – hva ressurser alternativt kunne ha innbrakt. Eksempler: kalkulatorisk rente på egenkapital (avkastning man går glipp av), kalkulatorisk eierlønn og kalkulatoriske avskrivninger.',
   },
   {
+    id: 13,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er differansepris (minimumspris)?',
@@ -182,6 +195,7 @@ const QUESTIONS = [
     explain: 'Differansepris (minimumspris) er den prisen som dekker de variable kostnadene som påløper spesifikt for en ordre, pluss eventuelt et bidrag til dekning av faste kostnader. Brukes når man har ledig kapasitet.',
   },
   {
+    id: 14,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er inntekt definert som i pensum?',
@@ -195,6 +209,7 @@ const QUESTIONS = [
     explain: 'Inntekt = Pris × Mengde. Det er verdien av varer og tjenester levert til kunder i perioden – uavhengig av om betaling er mottatt. Inntekt opptjenes ved levering, ikke ved betaling.',
   },
   {
+    id: 15,
     cat: 'regnskapsprinsipper',
     catLabel: 'Regnskapsprinsipper',
     q: 'Hva sier transaksjonsprinsippet i regnskapsloven?',
@@ -208,6 +223,7 @@ const QUESTIONS = [
     explain: 'Transaksjonsprinsippet: transaksjoner skal regnskapsføres til den verdien de hadde på transaksjonstidspunktet (historisk kost). Dette gir objektivitet og etterprøvbarhet.',
   },
   {
+    id: 16,
     cat: 'regnskapsprinsipper',
     catLabel: 'Regnskapsprinsipper',
     q: 'Hva sier opptjeningsprinsippet?',
@@ -221,6 +237,7 @@ const QUESTIONS = [
     explain: 'Opptjeningsprinsippet: inntekter skal regnskapsføres i den perioden de opptjenes (varen leveres eller tjenesten utføres) – ikke når betaling mottas. Dette sikrer korrekt periodematch.',
   },
   {
+    id: 17,
     cat: 'regnskapsprinsipper',
     catLabel: 'Regnskapsprinsipper',
     q: 'Hva sier sammenstillingsprinsippet?',
@@ -234,6 +251,7 @@ const QUESTIONS = [
     explain: 'Sammenstillingsprinsippet: kostnader skal periodiseres og regnskapsføres i samme regnskapsperiode som de inntektene de er med på å generere – dette gir et korrekt bilde av periodens resultat.',
   },
   {
+    id: 18,
     cat: 'regnskapsprinsipper',
     catLabel: 'Regnskapsprinsipper',
     q: 'Hva sier forsiktighetsprinsippet?',
@@ -247,6 +265,7 @@ const QUESTIONS = [
     explain: 'Forsiktighetsprinsippet: usikre tap og nedskrivninger skal regnskapsføres når de identifiseres, men urealiserte gevinster skal IKKE tas med. Dette gir et forsiktig, ikke for optimistisk bilde.',
   },
   {
+    id: 19,
     cat: 'avskrivninger',
     catLabel: 'Avskrivninger',
     q: 'Hva er formålet med avskrivninger?',
@@ -260,6 +279,7 @@ const QUESTIONS = [
     explain: 'Avskrivninger fordeler anskaffelseskostnaden for et varig driftsmiddel (maskin, bil, bygg) over den perioden det benyttes – i tråd med sammenstillingsprinsippet.',
   },
   {
+    id: 20,
     cat: 'avskrivninger',
     catLabel: 'Avskrivninger',
     q: 'Hva er lineær avskrivning?',
@@ -273,6 +293,7 @@ const QUESTIONS = [
     explain: 'Lineær avskrivning: kostprisen minus eventuell restverdi deles likt på antall bruksår. Brukes i finansregnskapet. Eksempel: bil til kr 300 000 med 5 års levetid gir kr 60 000 i avskrivning per år.',
   },
   {
+    id: 21,
     cat: 'avskrivninger',
     catLabel: 'Avskrivninger',
     q: 'Hva er saldoavskrivning (skattemessig avskrivning)?',
@@ -286,6 +307,7 @@ const QUESTIONS = [
     explain: 'Saldoavskrivning er den skattemessige metoden: man avskriver en fast prosentsats av gjenstående bokført verdi (saldo) hvert år. Dette gir fallende avskrivningsbeløp over tid. Driftsmidler gruppes i saldogrupper a–j.',
   },
   {
+    id: 22,
     cat: 'avskrivninger',
     catLabel: 'Avskrivninger',
     q: 'Hva er saldogrupper i skattemessig avskrivning?',
@@ -299,6 +321,7 @@ const QUESTIONS = [
     explain: 'Saldogrupper a–j er kategorier driftsmidler plasseres i for skattemessig avskrivning. Ulike grupper har ulike prosentsatser – f.eks. gruppe b (personbiler) avskrives med 20 %, gruppe d (maskiner) med 20 %.',
   },
   {
+    id: 23,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Et trykkeri kjøper inn papir for 50 000 kr i mars og bruker det i produksjonen i april. Hva er utgift, kostnad og utbetaling?',
@@ -312,6 +335,7 @@ const QUESTIONS = [
     explain: 'Utgift oppstår i mars (kjøpstidspunktet). Kostnad oppstår i april (forbrukstidspunktet). Utbetaling skjer når fakturaen betales – avhenger av kredittiden til leverandøren.',
   },
   {
+    id: 24,
     cat: 'regnskapsprinsipper',
     catLabel: 'Regnskapsprinsipper',
     q: 'Hva er tidsavgrensning i regnskap?',
@@ -325,6 +349,7 @@ const QUESTIONS = [
     explain: 'Tidsavgrensning handler om å matche inntekter og kostnader til den perioden de faktisk tilhører, ikke til den perioden pengene strømmer. Dette er kjernen i god regnskapsføring.',
   },
   {
+    id: 25,
     cat: 'styring',
     catLabel: 'Økonomistyring – grunnlag',
     q: 'Hva er finansregnskapet, og hvem er det primært beregnet for?',
@@ -338,6 +363,7 @@ const QUESTIONS = [
     explain: 'Finansregnskapet er lovpålagt og viser bedriftens samlede økonomi i et standardisert format. Det er primært beregnet for eksterne interessenter: investorer, kreditorer, myndigheter og kunder.',
   },
   {
+    id: 26,
     cat: 'styring',
     catLabel: 'Økonomistyring – grunnlag',
     q: 'Hva er driftsregnskapet, og hva brukes det til?',
@@ -351,6 +377,7 @@ const QUESTIONS = [
     explain: 'Driftsregnskapet er ikke lovpålagt og er et internt styringsverktøy. Det gir detaljert lønnsomhetsinformasjon per produkt, prosjekt, kunde eller avdeling – grunnlaget for priskalkylering og beslutninger.',
   },
   {
+    id: 27,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er alternativkostnad?',
@@ -364,6 +391,7 @@ const QUESTIONS = [
     explain: 'Alternativkostnad er det man ofrer ved å velge ett alternativ – f.eks. om du bruker egne lokaler i stedet for å leie dem ut, er alternativkostnaden leieinntekten du mister. Viktig i kalkulatoriske kostnader.',
   },
   {
+    id: 28,
     cat: 'avskrivninger',
     catLabel: 'Avskrivninger',
     q: 'Hva er forskjellen mellom finansregnskapets lineære avskrivninger og skattemessige saldoavskrivninger?',
@@ -377,6 +405,7 @@ const QUESTIONS = [
     explain: 'Lineær avskrivning (finansregnskap) gir likt beløp hvert år. Saldoavskrivning (skatteregnskap) gir høyere beløp de første årene (fallende med fast %) og lavere etter hvert. Dette skaper midlertidige skattemessige forskjeller.',
   },
   {
+    id: 29,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er proporsjonale variable kostnader?',
@@ -390,6 +419,7 @@ const QUESTIONS = [
     explain: 'Proporsjonale variable kostnader øker i eksakt samme takt som produksjonsvolumet. Eksempel: råvarekostnad per enhet er konstant – dobler man produksjonen, dobles råvarekostnaden.',
   },
   {
+    id: 30,
     cat: 'styring',
     catLabel: 'Økonomistyring – grunnlag',
     q: 'Hva er omsetning?',
@@ -403,6 +433,7 @@ const QUESTIONS = [
     explain: 'Omsetning (salgsinntekter) er den totale verdien av varer og tjenester solgt i en periode. Beregnes som pris × solgt mengde. Det er utgangspunktet for alle lønnsomhetsberegninger: omsetning − kostnader = resultat.',
   },
   {
+    id: 31,
     type: 'sort',
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
@@ -422,6 +453,7 @@ const QUESTIONS = [
     explain: 'Faste kostnader (husleie, adm.lønn, forsikring) er uavhengige av produksjonsvolumet. Variable kostnader (råvarer, emballasje, provisjon) varierer direkte med produksjon og salg.',
   },
   {
+    id: 32,
     type: 'sort',
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
@@ -441,6 +473,7 @@ const QUESTIONS = [
     explain: 'Direkte kostnader kan sporbarbart knyttes til ett bestemt produkt eller prosjekt. Indirekte kostnader (overhead) kan ikke direkte tilordnes og fordeles på produkter via en fordelingsnøkkel.',
   },
   {
+    id: 33,
     cat: 'kostnadsbegreper',
     catLabel: 'Kostnadsbegreper',
     q: 'Hva er to kjennetegn ved proporsjonale variable kostnader?',

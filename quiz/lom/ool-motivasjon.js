@@ -14,19 +14,21 @@ const QUIZ_META = {
 
 const QUESTIONS = [
   {
+    id: 1,
     cat: 'maslow',
     catLabel: 'Maslows behovspyramide',
     q: 'Hva er kjernen i Maslows behovsteori?',
     opts: [
       'Mennesker styres først og fremst av ytre belønning, som lønn og status',
-      'Mennesker motiveres av behov ordnet i et hierarki fra grunnleggende til høyere',
-      'Sosial tilhørighet i grupper overstyrer alle andre motivasjonsfaktorer',
-      'Anerkjennelse fra ledere er den dominerende drivkraften bak arbeidsinnsats',
+      'Mennesker motiveres av behov ordnet i et hierarki, fra grunnleggende til høyere',
+      'Sosial tilhørighet i grupper, vennskap og fellesskap overstyrer andre motivasjonsfaktorer',
+      'Anerkjennelse fra ledere, ros og synlig status er den dominerende drivkraften',
     ],
     correct: 1,
     explain: 'Maslow hevder at behov er hierarkisk ordnet – lavere behov (fysiologiske, sikkerhet) må i stor grad tilfredsstilles før høyere behov (sosiale, anerkjennelse, selvrealisering) aktiveres som motivatorer.',
   },
   {
+    id: 2,
     type: 'order',
     cat: 'maslow',
     catLabel: 'Maslows behovspyramide',
@@ -41,6 +43,7 @@ const QUESTIONS = [
     explain: 'Maslows pyramide fra bunn til topp: fysiologiske behov (mat, søvn) → sikkerhet → sosiale behov → anerkjennelse → selvrealisering øverst.',
   },
   {
+    id: 3,
     cat: 'maslow',
     catLabel: 'Maslows behovspyramide',
     q: 'Hva representerer toppen av Maslows behovspyramide?',
@@ -54,6 +57,7 @@ const QUESTIONS = [
     explain: 'Selvrealisering er det høyeste behovet – ønsket om å vokse, lære og realisere sine evner og sitt potensial fullt ut.',
   },
   {
+    id: 4,
     cat: 'maslow',
     catLabel: 'Maslows behovspyramide',
     q: 'Hva kjennetegner fysiologiske behov i Maslows pyramide?',
@@ -67,6 +71,7 @@ const QUESTIONS = [
     explain: 'Fysiologiske behov er de mest grunnleggende overlevelsesbehovene: mat, vann, søvn, varme og husly. Disse må dekkes først.',
   },
   {
+    id: 5,
     cat: 'maslow',
     catLabel: 'Maslows behovspyramide',
     q: 'Fast ansettelsesforhold og jobbsikkerhet dekker primært hvilket nivå i Maslows pyramide?',
@@ -80,6 +85,7 @@ const QUESTIONS = [
     explain: 'Fast ansettelse, trygg arbeidsplass og forutsigbar inntekt dekker sikkerhetsbehov – det andre nivået i pyramiden.',
   },
   {
+    id: 6,
     cat: 'maslow',
     catLabel: 'Maslows behovspyramide',
     q: 'Et godt sosialt arbeidsmiljø med sterkt samhold dekker primært hvilket nivå?',
@@ -93,6 +99,7 @@ const QUESTIONS = [
     explain: 'Sosiale behov (tredje nivå) handler om tilhørighet, vennskap og sosial kontakt – noe et godt arbeidsmiljø bidrar til.',
   },
   {
+    id: 7,
     cat: 'maslow',
     catLabel: 'Maslows behovspyramide',
     q: 'Hva kjennetegner anerkjennelsesbehov i Maslows pyramide?',
@@ -106,6 +113,7 @@ const QUESTIONS = [
     explain: 'Anerkjennelsesbehov (fjerde nivå) handler om ønsket om status, respekt fra andre, anerkjennelse for prestasjoner og selvtillit.',
   },
   {
+    id: 8,
     cat: 'herzberg',
     catLabel: 'Herzbergs to-faktorteori',
     q: 'Hva skiller motivasjonsfaktorer fra hygienefaktorer i Herzbergs teori?',
@@ -119,6 +127,7 @@ const QUESTIONS = [
     explain: 'Herzberg fant at motivasjonsfaktorer (ansvar, anerkjennelse, vekst, mestring) øker motivasjonen. Hygienefaktorer (lønn, arbeidsforhold) skaper bare mistrivsel hvis de er dårlige, men motiverer ikke i seg selv.',
   },
   {
+    id: 9,
     type: 'sort',
     cat: 'herzberg',
     catLabel: 'Herzbergs to-faktorteori',
@@ -140,19 +149,21 @@ const QUESTIONS = [
     explain: 'Hygienefaktorer er ytre forhold (lønn, bedriftspolitikk, fysiske arbeidsforhold, forhold til leder) som fjerner mistrivsel. Motivasjonsfaktorer er indre forhold (ansvar, anerkjennelse, faglig vekst, meningsfylte oppgaver) som skaper motivasjon.',
   },
   {
+    id: 10,
     cat: 'herzberg',
     catLabel: 'Herzbergs to-faktorteori',
     q: 'Hva skjer med motivasjonen dersom hygienefaktorene er på plass, men motivasjonsfaktorene mangler?',
     opts: [
-      'Ansatte opplever sterk motivasjon fordi grunnleggende behov er dekket',
+      'Ansatte opplever sterk motivasjon, fordi de grunnleggende behovene nå er dekket',
       'Ansatte mistrives ikke, men de er heller ikke motiverte',
-      'Ansatte søker seg bort fra jobben innen kort tid',
-      'Hygienefaktorene kompenserer og gir tilstrekkelig motivasjon over tid',
+      'Ansatte søker seg raskt bort fra jobben, fordi mistrivselen blir for stor',
+      'Hygienefaktorene kompenserer for mangelen, og gir tilstrekkelig motivasjon over tid',
     ],
     correct: 1,
     explain: 'Ifølge Herzberg fjerner gode hygienefaktorer mistrivsel, men de skaper ikke motivasjon. For å skape motivasjon må motivasjonsfaktorene også være til stede.',
   },
   {
+    id: 11,
     cat: 'herzberg',
     catLabel: 'Herzbergs to-faktorteori',
     q: 'Hva er Herzbergs praktiske anbefaling til ledere?',
@@ -166,6 +177,7 @@ const QUESTIONS = [
     explain: 'Herzbergs anbefaling er todelt: hygienefaktorer (lønn, arbeidsforhold) må være på plass for å unngå mistrivsel, og ledere bør aktivt jobbe med motivasjonsfaktorer (ansvar, vekst) for å skape motivasjon.',
   },
   {
+    id: 12,
     type: 'sort',
     cat: 'mcgregor',
     catLabel: 'Teori X og Y / Thorsrud',
@@ -185,19 +197,21 @@ const QUESTIONS = [
     explain: 'Teori X bygger på et negativt menneskesyn: ansatte er late, må kontrolleres tett og motiveres av frykt og lønn. Teori Y bygger på et positivt menneskesyn: ansatte er kreative, søker ansvar selv og yter best med autonomi.',
   },
   {
+    id: 13,
     cat: 'mcgregor',
     catLabel: 'Teori X og Y / Thorsrud',
     q: 'Hvilken ledelsesstil passer best med Teori Y ifølge McGregor?',
     opts: [
-      'Autoritær og kontrollorientert ledelse med tette rapporteringsrutiner',
-      'Transaksjonsledelse med klare kontrakter og individuelle prestasjonsplaner',
+      'Autoritær, kontrollorientert ledelse med tette rapporteringsrutiner',
+      'Transaksjonsledelse med klare kontrakter, individuelle prestasjonsplaner og bonusstruktur',
       'Delegerende, tillitsbasert ledelse som gir ansvar og autonomi',
-      'Direktivbasert ledelse med faste mål og hyppig resultatkontroll',
+      'Direktivbasert ledelse med faste mål, hyppig resultatkontroll og avviksrapportering',
     ],
     correct: 2,
     explain: 'Teori Y forutsetter et positivt menneskesyn og passer best med delegerende ledelse, tillit, medbestemmelse og autonomi.',
   },
   {
+    id: 14,
     cat: 'mcgregor',
     catLabel: 'Teori X og Y / Thorsrud',
     q: 'Hvem er Einar Thorsrud, og hva er hans bidrag til arbeidslivsforskning?',
@@ -211,6 +225,7 @@ const QUESTIONS = [
     explain: 'Einar Thorsrud var en norsk arbeidspsykolog som, gjennom samarbeid mellom LO og NAF, utviklet den skandinaviske arbeidslivsmodellen med vekt på medbestemmelse, meningsfylte oppgaver og variasjon i arbeidet.',
   },
   {
+    id: 15,
     cat: 'mcgregor',
     catLabel: 'Teori X og Y / Thorsrud',
     q: 'Hva er autonomi som motivasjonsfaktor?',
@@ -224,19 +239,21 @@ const QUESTIONS = [
     explain: 'Autonomi innebærer selvbestemmelse og kontroll over eget arbeid. Forskning viser at autonomi er en av de sterkeste kildene til indre motivasjon.',
   },
   {
+    id: 16,
     cat: 'mcgregor',
     catLabel: 'Teori X og Y / Thorsrud',
     q: 'Hvilken norsk ordning er særlig knyttet til den skandinaviske modellen Thorsrud var med å utvikle?',
     opts: [
-      'Resultatbasert lønn med individuelle bonusavtaler',
-      'Streng arbeidstidskontroll og regulert overtidsbetaling',
+      'Resultatbasert lønn, individuelle bonusavtaler og prestasjonstillegg',
+      'Streng arbeidstidskontroll, regulert overtidsbetaling og fast skiftplan',
       'Medbestemmelse, verneombud og tillitsvalgtordninger i bedrifter',
-      'Outsourcing av støttefunksjoner og bruk av midlertidige ansettelser',
+      'Outsourcing av støttefunksjoner, midlertidige ansettelser og innleie',
     ],
     correct: 2,
     explain: 'Den skandinaviske modellen vektlegger medbestemmelse, tillitsvalgte og verneombud – ansattes rett til å medvirke i beslutninger om eget arbeid.',
   },
   {
+    id: 17,
     cat: 'motivtyper',
     catLabel: 'Motivasjonstyper',
     q: 'Hvilke utsagn beskriver indre motivasjon?',
@@ -250,19 +267,21 @@ const QUESTIONS = [
     explain: 'Indre motivasjon kommer innenfra – aktiviteten oppleves som interessant og givende i seg selv, og glede/mening ved oppgaven driver innsatsen. Lønn, status og frykt for konsekvenser er ytre motivasjon.',
   },
   {
+    id: 18,
     cat: 'motivtyper',
     catLabel: 'Motivasjonstyper',
     q: 'Hva kjennetegner ytre motivasjon?',
     opts: [
       'Man jobber for å oppnå ytre belønning som lønn, bonus eller anerkjennelse',
-      'Man jobber fordi oppgaven i seg selv oppleves som meningsfull og engasjerende',
-      'Man hjelper andre fordi man bryr seg om dem og ønsker å bidra',
-      'Man er motivert av personlig vekst og ønsket om selvrealisering',
+      'Man jobber fordi oppgaven i seg selv oppleves som meningsfull, engasjerende og lærerik',
+      'Man hjelper andre fordi man bryr seg, ønsker å bidra og finner det meningsfullt',
+      'Man er motivert av personlig vekst, mestring og ønsket om selvrealisering',
     ],
     correct: 0,
     explain: 'Ytre motivasjon drives av faktorer utenfor selve aktiviteten – lønn, bonus, status, ros eller frykt for konsekvenser.',
   },
   {
+    id: 19,
     cat: 'motivtyper',
     catLabel: 'Motivasjonstyper',
     q: 'Hva er prososial motivasjon?',
@@ -276,19 +295,21 @@ const QUESTIONS = [
     explain: 'Prososial motivasjon er ønsket om å hjelpe andre, gjøre noe meningsfylt for samfunnet eller bidra til kollegenes trivsel og suksess.',
   },
   {
+    id: 20,
     cat: 'motivtyper',
     catLabel: 'Motivasjonstyper',
     q: 'Hva kan skje med indre motivasjon dersom en person begynner å motta ytre belønning for noe de tidligere likte gratis?',
     opts: [
-      'Den indre motivasjonen styrkes fordi belønning bekrefter at innsatsen er verdsatt',
-      'Ytre belønning forsterker den indre motivasjonen og øker engasjementet',
-      'De to motivasjonstypene virker uavhengig og påvirker ikke hverandre',
+      'Den indre motivasjonen styrkes – belønning bekrefter at innsatsen er verdsatt',
+      'Ytre belønning forsterker den indre motivasjonen – effekten kalles forsterkningsspiral',
+      'De to motivasjonstypene virker uavhengig av hverandre, uten gjensidig påvirkning',
       'Den indre motivasjonen kan svekkes – det kalles korrumperingseffekten',
     ],
     correct: 3,
     explain: 'Forskning viser at innføring av ytre belønning for aktiviteter man allerede er indre motivert for, kan redusere den indre motivasjonen – dette kalles korrumperingseffekten.',
   },
   {
+    id: 21,
     cat: 'motivtyper',
     catLabel: 'Motivasjonstyper',
     q: 'Hvilke tre motivasjonstyper skiller man vanligvis mellom i moderne motivasjonsteori?',
@@ -302,6 +323,7 @@ const QUESTIONS = [
     explain: 'Tre sentrale motivasjonstyper: indre motivasjon (glede ved oppgaven), ytre motivasjon (lønn/belønning) og prososial motivasjon (ønske om å hjelpe andre).',
   },
   {
+    id: 22,
     cat: 'motivtyper',
     catLabel: 'Motivasjonstyper',
     q: 'Hvilke trekk ved en arbeidsoppgave fremmer indre motivasjon?',
@@ -315,6 +337,7 @@ const QUESTIONS = [
     explain: 'Indre motivasjon fremmes av meningsfylte oppgaver med mestringsfølelse og av autonomi (frihet til å påvirke utførelsen). Tett overvåking og detaljstyrt belønning kan tvert imot svekke indre motivasjon (korrumperingseffekten).',
   },
   {
+    id: 23,
     cat: 'maal',
     catLabel: 'Mål og kompetanse',
     q: 'Hva betyr forkortelsen SMART i forbindelse med målsetting?',
@@ -328,6 +351,7 @@ const QUESTIONS = [
     explain: 'SMART-mål er Spesifikke, Målbare, Aksepterte (av de det gjelder), Realistiske og Tidsbestemte. Modellen brukes for å sette klare og motiverende mål.',
   },
   {
+    id: 24,
     cat: 'maal',
     catLabel: 'Mål og kompetanse',
     q: 'Hvorfor er det viktig at mål er "aksepterte" ifølge SMART-modellen?',
@@ -341,6 +365,7 @@ const QUESTIONS = [
     explain: 'Aksepterte mål – som ansatte har medvirket i å sette eller forstår og aksepterer – gir sterkere eierskap og høyere motivasjon til å nå dem.',
   },
   {
+    id: 25,
     cat: 'maal',
     catLabel: 'Mål og kompetanse',
     q: 'Hva mener Linda Lai med begrepet "kompetansemobilisering"?',
@@ -354,6 +379,7 @@ const QUESTIONS = [
     explain: 'Kompetansemobilisering (Lai, 2011) handler om at ansattes kompetanse faktisk brukes, verdsettes og utnyttes i arbeidet – ikke bare at de innehar kompetansen.',
   },
   {
+    id: 26,
     cat: 'maal',
     catLabel: 'Mål og kompetanse',
     q: 'Hva er konsekvensen av lav kompetansemobilisering for en ansatt?',
@@ -367,6 +393,7 @@ const QUESTIONS = [
     explain: 'Lav kompetansemobilisering fører til at ansatte opplever at kompetansen deres ikke brukes, noe som svekker motivasjon, engasjement og tilfredshet.',
   },
   {
+    id: 27,
     cat: 'maal',
     catLabel: 'Mål og kompetanse',
     q: 'Hva er forskjellen på et SMART-mål og et vagt mål?',
@@ -380,6 +407,7 @@ const QUESTIONS = [
     explain: 'Et SMART-mål er presist: "Øke salget med 10% innen Q2" er SMART. "Vi skal bli bedre" er vagt. Klare mål gir bedre fokus og motivasjon.',
   },
   {
+    id: 28,
     cat: 'maal',
     catLabel: 'Mål og kompetanse',
     q: 'Hvilke elementer inngår i kompetansebegrepet i arbeidslivet?',
@@ -393,6 +421,7 @@ const QUESTIONS = [
     explain: 'Kompetanse i arbeidslivet omfatter kunnskap, ferdigheter, evner og holdninger som benyttes i utførelsen av oppgaver. Erfaring og formelle sertifikater er deler av bildet, men dekker ikke kompetansebegrepet alene.',
   },
   {
+    id: 29,
     cat: 'herzberg',
     catLabel: 'Herzbergs to-faktorteori',
     q: 'Et selskap forbedrer kantinen, maler kontorlokalene og øker parkeringsdekningen. Hvilken effekt har dette ifølge Herzberg?',

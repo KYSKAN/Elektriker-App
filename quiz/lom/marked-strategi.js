@@ -13,6 +13,7 @@
 
 const QUESTIONS = [
   {
+    id: 1,
     cat: 'vekst',
     catLabel: 'Vekststrategier (Ansoff)',
     q: 'Hva beskriver produkt/markedsmatrisen (Ansoff-matrisen)?',
@@ -26,6 +27,7 @@ const QUESTIONS = [
     explain: 'Ansoff-matrisen kombinerer produktdimensjonen (eksisterende/nye) med markedsdimensjonen (eksisterende/nye) og gir fire vekststrategier: markedspenetrasjon, markedsutvikling, produktutvikling og diversifisering.',
   },
   {
+    id: 2,
     cat: 'vekst',
     catLabel: 'Vekststrategier (Ansoff)',
     q: 'Hva er markedspenetrasjon som vekststrategi?',
@@ -39,6 +41,7 @@ const QUESTIONS = [
     explain: 'Markedspenetrasjon betyr å øke markedsandelen for eksisterende produkter i eksisterende markeder – for eksempel gjennom lavere pris, mer markedsføring eller bedre distribusjon.',
   },
   {
+    id: 3,
     cat: 'vekst',
     catLabel: 'Vekststrategier (Ansoff)',
     q: 'Hva er markedsutvikling som vekststrategi?',
@@ -52,6 +55,7 @@ const QUESTIONS = [
     explain: 'Markedsutvikling innebærer å ta eksisterende produkter og selge dem i nye markeder (geografisk) eller til nye kundesegmenter man ikke har betjent tidligere.',
   },
   {
+    id: 4,
     cat: 'vekst',
     catLabel: 'Vekststrategier (Ansoff)',
     q: 'Hva er produktutvikling som vekststrategi?',
@@ -65,6 +69,7 @@ const QUESTIONS = [
     explain: 'Produktutvikling innebærer å skape nye eller forbedrede produkter og selge dem til de eksisterende kundene og markedene bedriften allerede betjener.',
   },
   {
+    id: 5,
     cat: 'vekst',
     catLabel: 'Vekststrategier (Ansoff)',
     q: 'Hva er diversifisering som vekststrategi, og hvorfor er det den mest risikable?',
@@ -78,6 +83,7 @@ const QUESTIONS = [
     explain: 'Diversifisering er den mest risikable strategien – nye produkter i nye markeder – fordi bedriften mangler erfaring på begge dimensjoner. Det kan være relatert (innen kjent bransje) eller urelatert diversifisering.',
   },
   {
+    id: 6,
     cat: 'vekst',
     catLabel: 'Vekststrategier (Ansoff)',
     q: 'Hva er vertikal integrasjon som vekststrategi?',
@@ -91,6 +97,7 @@ const QUESTIONS = [
     explain: 'Vertikal integrasjon betyr å ekspandere i verdikjeden: bakover (kjøpe leverandør) eller fremover (kjøpe distributør/forhandler). Det gir mer kontroll og reduserer avhengighet.',
   },
   {
+    id: 7,
     cat: 'vekst',
     catLabel: 'Vekststrategier (Ansoff)',
     q: 'Hva er horisontal integrasjon?',
@@ -104,6 +111,7 @@ const QUESTIONS = [
     explain: 'Horisontal integrasjon innebærer å kjøpe opp eller fusjonere med konkurrenter på samme nivå i verdikjeden – dette øker markedsandelen og kan gi stordriftsfordeler.',
   },
   {
+    id: 8,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hva er Porters tre grunnleggende konkurransestrategier?',
@@ -117,6 +125,7 @@ const QUESTIONS = [
     explain: 'Porter identifiserte tre generiske strategier: kostnadslederskap (laveste pris), differensiering (unikt produkt som kunden betaler mer for) og fokusering (betjene et smalt segment svært godt).',
   },
   {
+    id: 9,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hva er kostnadslederskap som konkurransestrategi?',
@@ -130,6 +139,7 @@ const QUESTIONS = [
     explain: 'Kostnadslederskap betyr å ha de laveste produksjons- og distribusjonskostnadene i bransjen, slik at man kan selge til lavere pris enn konkurrentene og fortsatt ha god margin.',
   },
   {
+    id: 10,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hva er differensiering som konkurransestrategi?',
@@ -143,6 +153,7 @@ const QUESTIONS = [
     explain: 'Differensiering innebærer å skape et produkt eller en tjeneste som oppleves som unikt av kundene – på en slik måte at de er villige til å betale en høyere pris for det.',
   },
   {
+    id: 11,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hva er fokusering som Porters tredje konkurransestrategi?',
@@ -156,6 +167,7 @@ const QUESTIONS = [
     explain: 'Fokusering betyr å velge et smalt markedssegment og betjene det bedre enn noen andre – enten via kostnadsfokus (lavest pris til segmentet) eller differensieringsfokus (unikt tilbud til segmentet).',
   },
   {
+    id: 12,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hva er de fire markedsposisjonene ifølge Kotler?',
@@ -169,6 +181,7 @@ const QUESTIONS = [
     explain: 'Kotler beskriver fire konkurranseposisjoner: Markedsleder (størst markedsandel), Markedsutfordrer (angriper lederen), Markedsfølger (kopierer lederen) og Nisjespesialist (betjener smalt segment).',
   },
   {
+    id: 13,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hva kjennetegner en markedsutfordrer?',
@@ -182,6 +195,7 @@ const QUESTIONS = [
     explain: 'Markedsutfordreren er nummer 2 eller 3 i markedet og angriper aktivt markedslederen – gjerne via lavere priser, mer innovasjon eller aggressiv markedsføring for å ta markedsandeler.',
   },
   {
+    id: 14,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hva er typisk strategi for en markedsfølger?',
@@ -195,6 +209,7 @@ const QUESTIONS = [
     explain: 'Markedsfølgeren velger ikke å utfordre lederen direkte, men kopierer eller tilpasser suksessrike produkter. Dette er mindre risikabelt og krever lavere FoU-investering.',
   },
   {
+    id: 15,
     cat: 'markedsplan',
     catLabel: 'Markedsplan og mål',
     q: 'Hva er en markedsstrategi?',
@@ -208,6 +223,7 @@ const QUESTIONS = [
     explain: 'Markedsstrategien er en overordnet, langsiktig plan som angir hvordan bedriften skal nå sine markedsmål – gjennom valg av segmenter, målgrupper og sammensetning av markedsmiksen.',
   },
   {
+    id: 16,
     cat: 'markedsplan',
     catLabel: 'Markedsplan og mål',
     q: 'Hva er riktig rekkefølge for prosessen med å utarbeide en markedsplan?',
@@ -221,6 +237,7 @@ const QUESTIONS = [
     explain: 'Markedsplanprosessen starter med overordnede mål og forretningsidé, går via situasjonsanalyse og SMART-markedsmål, til strategi, program, konkrete aktiviteter og til slutt kontroll av resultater.',
   },
   {
+    id: 17,
     cat: 'markedsplan',
     catLabel: 'Markedsplan og mål',
     q: 'Hva er en forretningsidé?',
@@ -234,6 +251,7 @@ const QUESTIONS = [
     explain: 'Forretningsidéen er den grunnleggende ideen bak bedriften – hva som selges, til hvem, og hvilken nytte/verdi dette skaper for kundene. Den er styrende for alle strategiske valg.',
   },
   {
+    id: 18,
     cat: 'markedsplan',
     catLabel: 'Markedsplan og mål',
     q: 'Hva er et markedssegment?',
@@ -247,6 +265,7 @@ const QUESTIONS = [
     explain: 'Et markedssegment er en gruppe potensielle kunder med felles kjennetegn (geografi, demografi, psykografi, atferd) som reagerer relativt likt på et markedsbudskap eller -tilbud.',
   },
   {
+    id: 19,
     cat: 'markedsplan',
     catLabel: 'Markedsplan og mål',
     q: 'Hvorfor er segmentering viktig i markedsføring?',
@@ -260,6 +279,7 @@ const QUESTIONS = [
     explain: 'Segmentering gjør at bedriften kan skreddersy produkter, priser, distribusjon og kommunikasjon til ulike kundegrupper – noe som gir høyere effektivitet og bedre match mellom tilbud og behov.',
   },
   {
+    id: 20,
     cat: 'markedsmiks',
     catLabel: 'Markedsmiksen 5P',
     q: 'Hva er de fem P-ene i markedsmiksen?',
@@ -273,6 +293,7 @@ const QUESTIONS = [
     explain: 'Markedsmiksen 5P: Produkt (hva selges), Pris (hva koster det), Distribusjon/Place (hvor og hvordan kjøper kunden), Påvirkning/Promotion (hvordan kommuniseres det) og Personale (mennesker som leverer tjenesten).',
   },
   {
+    id: 21,
     cat: 'markedsmiks',
     catLabel: 'Markedsmiksen 5P',
     q: 'Hva innebærer "Produkt"-P-en i markedsmiksen?',
@@ -286,6 +307,7 @@ const QUESTIONS = [
     explain: 'Produkt-P-en encompasser alt bedriften tilbyr kunden – fysiske egenskaper, design, kvalitet, merkevare, emballasje, service, garantier og tilleggstjenester.',
   },
   {
+    id: 22,
     cat: 'markedsmiks',
     catLabel: 'Markedsmiksen 5P',
     q: 'Hva innebærer "Distribusjon" (Place) i markedsmiksen?',
@@ -299,6 +321,7 @@ const QUESTIONS = [
     explain: 'Distribusjon handler om valg av salgskanaler (nettsalg, butikk, grossist, direkte salg), lagrings- og logistikkløsninger og alt som sikrer at produktet er tilgjengelig der kunden ønsker det.',
   },
   {
+    id: 23,
     cat: 'markedsmiks',
     catLabel: 'Markedsmiksen 5P',
     q: 'Hva innebærer "Påvirkning" (Promotion) i markedsmiksen?',
@@ -312,6 +335,7 @@ const QUESTIONS = [
     explain: 'Påvirkning (Promotion) er kommunikasjonsmiksen – alle tiltak for å informere og overtale målgruppen: reklame, PR, sosiale medier, event-markedsføring, direkte markedsføring og personlig salg.',
   },
   {
+    id: 24,
     cat: 'markedsmiks',
     catLabel: 'Markedsmiksen 5P',
     q: 'Hvorfor er "Personale" inkludert som en P i markedsmiksen?',
@@ -325,6 +349,7 @@ const QUESTIONS = [
     explain: 'Personale er spesielt viktig i tjenestesektoren der ansatte er en integrert del av det som leveres – kundebehandlernes kunnskap, holdning og service påvirker direkte kundens opplevelse og tilfredshet.',
   },
   {
+    id: 25,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hva er en nisjespesialist som markedsposisjon?',
@@ -338,6 +363,7 @@ const QUESTIONS = [
     explain: 'Nisjespesialisten fokuserer på et smalt og veldefinert segment – gjerne for smal for store aktører – og betjener dette segmentet langt bedre enn noen generalist kan. Høy lojalitet og ofte god margin.',
   },
   {
+    id: 26,
     cat: 'vekst',
     catLabel: 'Vekststrategier (Ansoff)',
     q: 'Et norsk fiskeoppdrettsselskap begynner å selge laks i det kinesiske markedet. Hvilken Ansoff-strategi er dette?',
@@ -351,6 +377,7 @@ const QUESTIONS = [
     explain: 'Å selge et eksisterende produkt (laks) i et nytt marked (Kina) er markedsutvikling – man ekspanderer geografisk eller til nye kundesegmenter med eksisterende produkter.',
   },
   {
+    id: 27,
     cat: 'markedsplan',
     catLabel: 'Markedsplan og mål',
     q: 'Hva kjennetegner et godt markedsmål ifølge SMART-prinsippet?',
@@ -364,6 +391,7 @@ const QUESTIONS = [
     explain: 'Et SMART markedsmål er Spesifikt (5 prosentpoeng), Målbart (kan verifiseres), Akseptert, Realistisk og Tidsbestemt (innen utgangen av kalenderåret). Vage formuleringer er ikke SMART.',
   },
   {
+    id: 28,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hva er en "strategisk felle" man bør unngå ifølge Porter?',
@@ -377,6 +405,7 @@ const QUESTIONS = [
     explain: 'Porter advarer mot å bli "stuck in the middle" – å prøve å gjøre alt og dermed ikke lykkes med noen av strategiene. Bedrifter bør velge én tydelig konkurransestrategi og holde seg til den.',
   },
   {
+    id: 29,
     cat: 'markedsmiks',
     catLabel: 'Markedsmiksen 5P',
     q: 'Hva påvirker valg av prisstrategi for et produkt?',
@@ -390,6 +419,7 @@ const QUESTIONS = [
     explain: 'Prissetting er komplekst og avhenger av mange faktorer: egne kostnader, konkurrentenes priser, kundenes betalingsvilje, ønsket posisjonering (premium vs. massemarked) og overordnet markedsstrategi.',
   },
   {
+    id: 30,
     cat: 'vekst',
     catLabel: 'Vekststrategier (Ansoff)',
     q: 'Hva er en integrasjonsstrategi, og hvilke to typer finnes?',
@@ -403,6 +433,7 @@ const QUESTIONS = [
     explain: 'Integrasjonsstrategier handler om vekst gjennom å bevege seg i verdikjeden: vertikal integrasjon (bakover mot leverandør eller fremover mot distribusjon/kunde) og horisontal integrasjon (kjøpe opp konkurrenter).',
   },
   {
+    id: 31,
     type: 'order',
     cat: 'markedsplan',
     catLabel: 'Markedsplan og mål',
@@ -419,6 +450,7 @@ const QUESTIONS = [
     explain: 'Markedsplanprosessen: 1) Overordnede mål → 2) Situasjonsanalyse → 3) Markedsmål → 4) Strategi → 5) Program → 6) Aktiviteter → 7) Kontroll.',
   },
   {
+    id: 32,
     type: 'sort',
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
@@ -440,6 +472,7 @@ const QUESTIONS = [
     explain: 'Kotlers fire posisjoner: Markedsleder (størst andel, setter normen), Markedsutfordrer (angriper lederen aktivt), Markedsfølger (imiterer lederen), Nisjespesialist (smal spesialnisje).',
   },
   {
+    id: 33,
     cat: 'konkurranse',
     catLabel: 'Konkurransestrategier',
     q: 'Hvilke to kjennetegn er riktige om markedsutfordreren?',
