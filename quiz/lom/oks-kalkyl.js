@@ -376,4 +376,36 @@ const QUESTIONS = [
     correct: 3,
     explain: 'Selvkostmetoden anbefales for langsiktig prissetting fordi alle kostnader (faste og variable) må dekkes over tid for at bedriften skal overleve. Bidragsmetoden er et kortsiktig hjelpemiddel ved spesielle situasjoner.',
   },
+  {
+    type: 'sort',
+    cat: 'selvkost',
+    catLabel: 'Selvkostmetoden',
+    q: 'Sorter hvert kostnadselement etter hvilke(n) kalkylemetode(r) som tar det med i produktkalkylen.',
+    bins: [
+      { id: 'begge',  label: 'Inngår i begge metoder',  color: '#10b981' },
+      { id: 'kun_sk', label: 'Kun i selvkostkalkylen',  color: '#8b5cf6' },
+    ],
+    items: [
+      { text: 'Direkte materialkostnader per enhet',             bin: 'begge' },
+      { text: 'Direkte lønnskostnader per enhet',                bin: 'begge' },
+      { text: 'Indirekte administrasjonskostnader (tillegg)',     bin: 'kun_sk' },
+      { text: 'Indirekte salgskostnader (tillegg)',               bin: 'kun_sk' },
+      { text: 'Proporsjonale variable produksjonskostnader',      bin: 'begge' },
+      { text: 'Andel faste produksjonsomkostninger (tillegg)',    bin: 'kun_sk' },
+    ],
+    explain: 'Bidragsmetoden tar kun med variable kostnader (direkte materialer, lønn og proporsjonale variable). Selvkostmetoden tar med ALLE kostnader inkludert indirekte og faste via tilleggssatser.',
+  },
+  {
+    cat: 'bidrag',
+    catLabel: 'Bidragsmetoden',
+    q: 'I hvilke to situasjoner anbefales bidragsmetoden fremfor selvkostmetoden?',
+    opts: [
+      'Langsiktig prissetting der alle kostnader skal dekkes inn over tid',
+      'Lavsesong der bedriften har ledig produksjonskapasitet som ellers er ubrukt',
+      'Vurdering av en tilleggsordre som kan aksepteres til lavere enn normal pris',
+      'Beregning av normalpriser som skal dekke alle faste og variable kostnader',
+    ],
+    correct: [1, 2],
+    explain: 'Bidragsmetoden brukes kortsiktig ved ledig kapasitet (lavsesong) og ved tilleggsordrer – da er det lønnsomt å ta ordrer som gir positivt dekningsbidrag selv om de ikke dekker alle kostnader. Selvkostmetoden brukes til langsiktig normalprissetting.',
+  },
 ];

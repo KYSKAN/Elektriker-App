@@ -363,4 +363,37 @@ const QUESTIONS = [
     correct: 0,
     explain: 'Prognoser er fremtidsrettede anslag for variabler som priser, lønnsutvikling, rentenivå og markedsforhold. Disse inngår som viktige forutsetninger i budsjettarbeidet og påvirker alle budsjettlinjer.',
   },
+  {
+    type: 'sort',
+    cat: 'budsjetttyper',
+    catLabel: 'Budsjetttyper',
+    q: 'Sorter hver post til riktig budsjett – resultatbudsjett eller likviditetsbudsjett.',
+    bins: [
+      { id: 'res',   label: 'Kun i resultatbudsjettet',    color: '#8b5cf6' },
+      { id: 'lik',   label: 'Kun i likviditetsbudsjettet', color: '#10b981' },
+      { id: 'begge', label: 'I begge budsjetter',          color: '#3b82f6' },
+    ],
+    items: [
+      { text: 'Avskrivninger på driftsmidler',                  bin: 'res' },
+      { text: 'MVA på varekjøp (innbetalt til leverandør)',      bin: 'lik' },
+      { text: 'Lønnskostnader (kostnad og utbetaling sammenfaller)', bin: 'begge' },
+      { text: 'Avdrag på langsiktig lån',                        bin: 'lik' },
+      { text: 'Varekostnad (solgte varers kost)',                 bin: 'res' },
+      { text: 'Innbetaling fra kredittsalg (forskyves med kredittid)', bin: 'lik' },
+    ],
+    explain: 'Avskrivninger: kun resultat (ingen kontantstrøm). MVA, avdrag og inn/utbetalingstidspunkt: kun likviditet. Lønn vises i begge, men betalingstidspunkt kan avvike. Salgsinntekter er i resultat; innbetalinger fra salg (forskyves) er i likviditet.',
+  },
+  {
+    cat: 'budsjetttyper',
+    catLabel: 'Budsjetttyper',
+    q: 'Hva er to sentrale forskjeller mellom resultatbudsjettet og likviditetsbudsjettet?',
+    opts: [
+      'Avskrivninger tas med i resultatbudsjettet men ikke i likviditetsbudsjettet',
+      'Resultatbudsjettet viser alltid et høyere tall enn likviditetsbudsjettet',
+      'MVA er inkludert i likviditetsbudsjettet men ikke i resultatbudsjettet',
+      'Begge budsjettene bruker opptjeningsprinsippet men med ulike tidshorisonter',
+    ],
+    correct: [0, 2],
+    explain: 'To nøkkelforskjeller: (1) Avskrivninger er en kostnad i resultat men ingen utbetaling i likviditet. (2) MVA er en inn-/utbetaling i likviditet men ikke en inntekt/kostnad i resultat. Låneavdrag er i likviditet men ikke i resultat.',
+  },
 ];

@@ -69,10 +69,10 @@ const QUESTIONS = [
     catLabel: 'Endringsledelse – grunnlag',
     q: 'Hva er akseptmodellen i endringsledelse?',
     opts: [
-      'En kartleggingsmodell for akseptgrad blant berørte grupper',
+      'En kartleggingsmodell: identifisere → kartlegge → vurdere → prioritere',
       'Fire trinn ansatte må gjennom: vite → kunne → ville → ha lov',
-      'En tilnærming for å vurdere om endringsmålet ble nådd i tide',
-      'En prosess for å håndtere motstand – fra dialog til godkjenning',
+      'En tilnærming: sette mål → måle → evaluere → justere kursen',
+      'En prosess for motstand: informere → lytte → forhandle → godkjenne',
     ],
     correct: 1,
     explain: 'Akseptmodellen beskriver fire trinn ansatte må gjennom for å ta til seg en endring: vite (kjenne endringen), kunne (ha kompetanse), ville (være motivert) og ha lov (ha myndighet).',

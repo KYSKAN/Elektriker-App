@@ -337,4 +337,47 @@ const QUESTIONS = [
     correct: 0,
     explain: 'TBT = Investering / Gjennomsnittlig netto kontantstrøm per år. Svakhetene: (1) ignorerer tidsverdien av penger, (2) ser bort fra alle kontantstrømmer etter tilbakebetalingstidspunktet.',
   },
+  {
+    type: 'order',
+    cat: 'mva_avgift',
+    catLabel: 'MVA og avgifter',
+    q: 'Sett MVA-satsene i riktig rekkefølge. Laveste sats øverst, høyeste sats nederst.',
+    items: [
+      '25 % – generell sats for de fleste varer og tjenester',
+      '15 % – redusert sats for matvarer og næringsmidler',
+      '12 % – redusert sats for persontransport, overnatting og kino',
+      '0 % – eksport av varer og tjenester til utlandet',
+    ],
+    explain: 'MVA-satsene i Norge fra lavest til høyest: 0% (eksport), 12% (transport/hotell/kino), 15% (matvarer), 25% (generell sats). Husk at restaurantbesøk er 25%, mens mat kjøpt i butikk er 15%.',
+  },
+  {
+    type: 'sort',
+    cat: 'selskapsformer',
+    catLabel: 'Selskapsformer',
+    q: 'Sorter selskapsformene etter deltakernes ansvar for selskapets gjeld.',
+    bins: [
+      { id: 'begrenset',   label: 'Begrenset ansvar',             color: '#10b981' },
+      { id: 'ubegrenset',  label: 'Ubegrenset / solidarisk ansvar', color: '#ef4444' },
+    ],
+    items: [
+      { text: 'AS (Aksjeselskap)',              bin: 'begrenset' },
+      { text: 'ASA (Allmennaksjeselskap)',      bin: 'begrenset' },
+      { text: 'ENK (Enkeltpersonforetak)',      bin: 'ubegrenset' },
+      { text: 'ANS (Ansvarlig selskap)',        bin: 'ubegrenset' },
+    ],
+    explain: 'Begrenset ansvar: AS og ASA – eierne risikerer kun innskutt kapital. Ubegrenset: ENK (eieren hefter personlig for all gjeld), ANS (deltakerne er solidarisk og ubegrenset ansvarlige).',
+  },
+  {
+    cat: 'selskapsformer',
+    catLabel: 'Selskapsformer',
+    q: 'Hva er to kjennetegn ved et enkeltpersonforetak (ENK)?',
+    opts: [
+      'Eieren er personlig og ubegrenset ansvarlig for all gjeld i foretaket',
+      'Foretaket er pliktig til å ha styre og daglig leder registrert i Brønnøysund',
+      'Overskuddet beskattes som personinntekt med trinnskatt og trygdeavgift',
+      'Stiftelse krever minimum 30 000 kr i aksjekapital i henhold til aksjeloven',
+    ],
+    correct: [0, 2],
+    explain: 'ENK kjennetegnes av (1) ubegrenset personlig ansvar – eieren hefter med hele sin private formue, og (2) beskatning som personinntekt – overskuddet legges til eierens øvrige inntekt og beskattes med trinnskatt og trygdeavgift.',
+  },
 ];

@@ -418,4 +418,37 @@ const QUESTIONS = [
     correct: 3,
     explain: 'DuPont-modellen viser klart to veier til bedre TKR: (1) øke kapitalens omløpshastighet – bruk mindre kapital for å generere samme omsetning (reduser varelager, fordringer), eller (2) øke resultatgraden – bedre marginer via høyere priser eller lavere kostnader.',
   },
+  {
+    type: 'sort',
+    cat: 'investeringsmetoder',
+    catLabel: 'Investeringsmetoder',
+    q: 'Sorter hvert utsagn under riktig investeringsmetode.',
+    bins: [
+      { id: 'tbt', label: 'Tilbakebetalingsmetoden (TBT)', color: '#10b981' },
+      { id: 'nv',  label: 'Nåverdimetoden (NV)',            color: '#3b82f6' },
+      { id: 'irr', label: 'Internrentemetoden (IRR)',        color: '#8b5cf6' },
+    ],
+    items: [
+      { text: 'Ignorerer kontantstrøm etter tilbakebetalingstiden',        bin: 'tbt' },
+      { text: 'Tar hensyn til pengenes tidsverdi ved diskontering',        bin: 'nv' },
+      { text: 'Gir avkastning uttrykt i prosent, ikke i kroner',           bin: 'irr' },
+      { text: 'Enklest å beregne – krever ikke kjennskap til avkastningskrav', bin: 'tbt' },
+      { text: 'Beslutningsregel: gjennomfør hvis resultatet er positivt',  bin: 'nv' },
+      { text: 'Uegnet som eneste metode ved gjensidig utelukkende prosjekter', bin: 'irr' },
+    ],
+    explain: 'TBT: enkelt men ignorerer tidsverdi og kontantstrøm etter perioden. NV: diskonterer og gir verdi i kr – den anbefalte metoden. IRR: gir % avkastning, men er uegnet alene ved gjensidig utelukkende prosjekter fordi størrelse ikke vektes.',
+  },
+  {
+    cat: 'investeringsmetoder',
+    catLabel: 'Investeringsmetoder',
+    q: 'Hva er to kjente svakheter ved tilbakebetalingsmetoden (TBT)?',
+    opts: [
+      'Den ignorerer pengenes tidsverdi – tidlige og sene kontantstrømmer vektes likt',
+      'Den er for komplisert å beregne for de fleste bedrifter og krever finansekspertise',
+      'Den tar ikke hensyn til kontantstrøm som oppstår etter at prosjektet er nedbetalt',
+      'Den krever nøyaktig fastsettelse av avkastningskravet for å gi meningsfullt resultat',
+    ],
+    correct: [0, 2],
+    explain: 'TBTs to store svakheter: (1) den ignorerer pengenes tidsverdi – kr i år 1 og år 5 behandles likt. (2) Den ser bort fra all kontantstrøm etter tilbakebetalingstiden – lønnsom langsiktig investering kan feilaktig bli avvist.',
+  },
 ];
