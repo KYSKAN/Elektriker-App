@@ -29,22 +29,24 @@ AppTilTelefon/
     ├── index.html          Quiz LØM — velger, lenker til spill.html?tema=X
     ├── index-elektro.html  Quiz Elektro — velger
     ├── index-bjrons.html   Quiz Elektroniske (Bjørns) — velger
-    ├── spill.html          Quiz-motor — laster quiz-fil dynamisk fra temaFil[tema]
+    ├── spill.html          Quiz-motor (HTML + CSS) — laster js/spill.js
+    ├── js/
+    │   └── spill.js        All quiz-logikk: state, rendering, drag&drop, Supabase
     ├── illustrations.js    SVG-illustrasjoner lastet FØR quiz-fil evalueres
     ├── lom/
-    │   ├── ool-motivasjon.js       LØM OOL – Motivasjon (31 spørsmål)
-    │   ├── ool-kultur.js           LØM OOL – Organisasjonskultur (30 spørsmål)
-    │   ├── ool-endring.js          LØM OOL – Endringsledelse (30 spørsmål)
-    │   ├── ool-ledelse.js          LØM OOL – Lederstil & org.former (30 spørsmål)
-    │   ├── marked-strategi.js      LØM Marked – Strategi & 4P (30 spørsmål)
-    │   ├── marked-grunnlag.js      LØM Marked – Grunnlag (BOMOF, AIDA, STP) (30 spørsmål)
-    │   ├── oks-kostnader.js        LØM ØKS – Kostnader & dekningsbidrag (29 spørsmål)
-    │   ├── oks-regnskapsanalyse.js LØM ØKS – Regnskapsanalyse & nøkkeltall (30 spørsmål)
-    │   ├── oks-kalkyl.js           LØM ØKS – Kalkulasjon & selvkost (28 spørsmål)
-    │   ├── oks-budsjettering.js    LØM ØKS – Budsjettering (27 spørsmål)
-    │   ├── oks-investering.js      LØM ØKS – Investeringsanalyse (29 spørsmål)
-    │   ├── oks-tillegg.js          LØM ØKS – MVA, selskapsformer, lover (25 spørsmål)
-    │   ├── lov-hms.js              LØM Lov – AML, ferieloven, HMS (30 spørsmål)
+    │   ├── ool-motivasjon.js       LØM OOL – Motivasjon (29 spørsmål)
+    │   ├── ool-kultur.js           LØM OOL – Organisasjonskultur (37 spørsmål)
+    │   ├── ool-endring.js          LØM OOL – Endringsledelse (36 spørsmål)
+    │   ├── ool-ledelse.js          LØM OOL – Lederstil & org.former (36 spørsmål)
+    │   ├── marked-strategi.js      LØM Marked – Strategi & 4P (33 spørsmål)
+    │   ├── marked-grunnlag.js      LØM Marked – Grunnlag (BOMOF, AIDA, STP) (34 spørsmål)
+    │   ├── oks-kostnader.js        LØM ØKS – Kostnader & dekningsbidrag (33 spørsmål)
+    │   ├── oks-regnskapsanalyse.js LØM ØKS – Regnskapsanalyse & nøkkeltall (35 spørsmål)
+    │   ├── oks-kalkyl.js           LØM ØKS – Kalkulasjon & selvkost (30 spørsmål)
+    │   ├── oks-budsjettering.js    LØM ØKS – Budsjettering (29 spørsmål)
+    │   ├── oks-investering.js      LØM ØKS – Investeringsanalyse (31 spørsmål)
+    │   ├── oks-tillegg.js          LØM ØKS – MVA, selskapsformer, lover (28 spørsmål)
+    │   ├── lov-hms.js              LØM Lov – AML, ferieloven, HMS (33 spørsmål)
     │   └── _arkiv/                 Gamle, sammenslåtte LØM-filer (ikke i bruk)
     ├── elektro/
     │   └── rlc.js          RLC-kretser (28 spørsmål)
@@ -98,7 +100,8 @@ Tre separate quiz-velger-sider lenket fra hoved-appen. Felles quiz-motor i `spil
 
 **Totalt: 661 spørsmål fordelt på 21 temaer (13 LØM + 1 elektro + 7 bjrons)**
 
-### Slik fungerer spill.html
+### Slik fungerer quiz-motoren
+`spill.html` inneholder HTML-struktur og CSS. All logikk ligger i `quiz/js/spill.js`.
 - Leser `?tema=X` fra URL og slår opp filen i `temaFil`-tabellen
 - Støtter multi-tema: `?tema=tema1,tema2` — slår sammen QUESTIONS og CAT_META
 - `isLom = temas.some(t => t.startsWith('lom-'))` — styrer navigasjon og navn-krav

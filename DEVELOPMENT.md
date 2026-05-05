@@ -18,24 +18,24 @@ PWA er oppe og kjører på https://kyskan.github.io/Elektriker-App. Koblet til G
 
 ---
 
-## Quiz-temaer (21 totalt, 616 spørsmål)
+## Quiz-temaer (21 totalt, 661 spørsmål)
 
-### LØM (Fagskole) — 13 temaer, 379 spørsmål
+### LØM (Fagskole) — 13 temaer, 424 spørsmål
 | Tema                       | Slug                       | Spørsmål | Toppliste |
 |----------------------------|----------------------------|----------|-----------|
-| OOL – Motivasjon           | lom-ool-motivasjon         | 31       | ✓         |
-| OOL – Organisasjonskultur  | lom-ool-kultur             | 30       | ✓         |
-| OOL – Endringsledelse      | lom-ool-endring            | 30       | ✓         |
-| OOL – Lederstil & org.     | lom-ool-ledelse            | 30       | ✓         |
-| Marked – Strategi & 4P     | lom-marked-strategi        | 30       | ✓         |
-| Marked – Grunnlag          | lom-marked-grunnlag        | 30       | ✓         |
-| ØKS – Kostnader            | lom-oks-kostnader          | 29       | ✓         |
-| ØKS – Regnskapsanalyse     | lom-oks-regnskapsanalyse   | 30       | ✓         |
-| ØKS – Kalkulasjon          | lom-oks-kalkyl             | 28       | ✓         |
-| ØKS – Budsjettering        | lom-oks-budsjettering      | 27       | ✓         |
-| ØKS – Investering          | lom-oks-investering        | 29       | ✓         |
-| ØKS – Tillegg (MVA, m.m.)  | lom-oks-tillegg            | 25       | ✓         |
-| Lov – AML, ferie, HMS      | lom-lov-hms                | 30       | ✓         |
+| OOL – Motivasjon           | lom-ool-motivasjon         | 29       | ✓         |
+| OOL – Organisasjonskultur  | lom-ool-kultur             | 37       | ✓         |
+| OOL – Endringsledelse      | lom-ool-endring            | 36       | ✓         |
+| OOL – Lederstil & org.     | lom-ool-ledelse            | 36       | ✓         |
+| Marked – Strategi & 4P     | lom-marked-strategi        | 33       | ✓         |
+| Marked – Grunnlag          | lom-marked-grunnlag        | 34       | ✓         |
+| ØKS – Kostnader            | lom-oks-kostnader          | 33       | ✓         |
+| ØKS – Regnskapsanalyse     | lom-oks-regnskapsanalyse   | 35       | ✓         |
+| ØKS – Kalkulasjon          | lom-oks-kalkyl             | 30       | ✓         |
+| ØKS – Budsjettering        | lom-oks-budsjettering      | 29       | ✓         |
+| ØKS – Investering          | lom-oks-investering        | 31       | ✓         |
+| ØKS – Tillegg (MVA, m.m.)  | lom-oks-tillegg            | 28       | ✓         |
+| Lov – AML, ferie, HMS      | lom-lov-hms                | 33       | ✓         |
 
 ### Elektro
 | Tema       | Slug | Spørsmål | Toppliste |
