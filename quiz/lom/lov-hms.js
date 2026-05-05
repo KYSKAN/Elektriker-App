@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-lov-hms',
   title: 'Lover, Avtaler og HMS',
   subtitle: 'LØM Fagskole · Supplement',
-  description: '30 spørsmål om arbeidsmiljøloven, ferieloven, tariffavtaler og HMS-regelverk.',
+  description: '33 spørsmål om arbeidsmiljøloven, ferieloven, tariffavtaler og HMS-regelverk.',
   cats: {
     aml:     { label: 'Arbeidsmiljøloven', color: '#8b5cf6' },
     ferie:   { label: 'Ferieloven', color: '#3b82f6' },

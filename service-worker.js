@@ -1,4 +1,4 @@
-const CACHE = 'kalkulator-v209';
+const CACHE = 'kalkulator-v210';
 
 const FILES = [
   './',

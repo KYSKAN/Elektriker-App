@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-oks-investering',
   title: 'Investering og kapitalbinding',
   subtitle: 'Økonomistyring – Kap. 13 og 14',
-  description: '30 spørsmål om investeringsanalyse (TBT, NV, IRR), gjensidig utelukkende prosjekter, kapitalbinding, ABC-analyse og DuPont-modellen.',
+  description: '31 spørsmål om investeringsanalyse (TBT, NV, IRR), gjensidig utelukkende prosjekter, kapitalbinding, ABC-analyse og DuPont-modellen.',
   cats: {
     investeringsmetoder: { label: 'Investeringsmetoder', color: '#8b5cf6' },
     gjensidig:           { label: 'Gjensidig utelukkende', color: '#3b82f6' },

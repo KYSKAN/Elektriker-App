@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-marked-strategi',
   title: 'Utforming av markedsstrategien',
   subtitle: 'Markedsføringsledelse',
-  description: '30 spørsmål om vekststrategier (Ansoff), konkurransestrategier (Porter og Kotler), markedsplan og markedsmiksen 5P.',
+  description: '33 spørsmål om vekststrategier (Ansoff), konkurransestrategier (Porter og Kotler), markedsplan og markedsmiksen 5P.',
   cats: {
     vekst:       { label: 'Vekststrategier (Ansoff)', color: '#8b5cf6' },
     konkurranse: { label: 'Konkurransestrategier', color: '#3b82f6' },

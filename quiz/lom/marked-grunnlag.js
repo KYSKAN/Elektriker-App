@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-marked-grunnlag',
   title: 'Markedsføring: Grunnlag',
   subtitle: 'LØM Fagskole',
-  description: '30 spørsmål om markedsdefinisjoner, AIDA, STP, Porters fem krefter og markedsanalyse.',
+  description: '34 spørsmål om markedsdefinisjoner, AIDA, STP, Porters fem krefter og markedsanalyse.',
   cats: {
     marked_def:      { label: 'Markedsdefinisjoner', color: '#8b5cf6' },
     analyse:         { label: 'Markedsanalyse', color: '#3b82f6' },

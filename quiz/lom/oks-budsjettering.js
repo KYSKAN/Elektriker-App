@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-oks-budsjettering',
   title: 'Budsjettering',
   subtitle: 'Økonomistyring – Kap. 10',
-  description: '28 spørsmål om budsjetttyper, budsjettprosess, likviditetsbudsjettet og budsjettkontroll med avviksanalyse.',
+  description: '29 spørsmål om budsjetttyper, budsjettprosess, likviditetsbudsjettet og budsjettkontroll med avviksanalyse.',
   cats: {
     budsjetttyper:       { label: 'Budsjetttyper', color: '#8b5cf6' },
     budsjettprosess:     { label: 'Budsjettprosessen', color: '#3b82f6' },

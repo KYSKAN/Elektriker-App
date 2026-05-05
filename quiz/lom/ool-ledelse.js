@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-ool-ledelse',
   title: 'Lederstil og organisasjon',
   subtitle: 'LØM Fagskole · Supplement',
-  description: '30 spørsmål om lederstil, organisasjonsformer, kommunikasjon og endringspsykologi.',
+  description: '36 spørsmål om lederstil, organisasjonsformer, kommunikasjon og endringspsykologi.',
   cats: {
     lederstil:     { label: 'Lederstil', color: '#8b5cf6' },
     org_former:    { label: 'Organisasjonsformer', color: '#3b82f6' },

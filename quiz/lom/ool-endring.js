@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-ool-endring',
   title: 'Endringsledelse og organisasjonsutvikling',
   subtitle: 'Organisasjon og ledelse – Kap. 7',
-  description: '32 spørsmål om endringsledelse, Kotters 8 trinn, Lewins faser, interessentanalyse, OU, TKL, LEAN og den lærende organisasjon.',
+  description: '36 spørsmål om endringsledelse, Kotters 8 trinn, Lewins faser, interessentanalyse, OU, TKL, LEAN og den lærende organisasjon.',
   cats: {
     endring_def:   { label: 'Endringsledelse – grunnlag', color: '#8b5cf6' },
     modeller:      { label: 'Kotters og Lewins modeller', color: '#3b82f6' },

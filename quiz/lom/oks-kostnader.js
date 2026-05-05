@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-oks-kostnader',
   title: 'Grunnlag, inntekter og kostnader',
   subtitle: 'Økonomistyring – Kap. 1-2 og 5',
-  description: '30 spørsmål om økonomistyringens grunnlag, regnskapstyper, kostnadsbegreper, regnskapsprinsipper og avskrivninger.',
+  description: '33 spørsmål om økonomistyringens grunnlag, regnskapstyper, kostnadsbegreper, regnskapsprinsipper og avskrivninger.',
   cats: {
     styring:             { label: 'Økonomistyring – grunnlag', color: '#8b5cf6' },
     kostnadsbegreper:    { label: 'Kostnadsbegreper', color: '#3b82f6' },

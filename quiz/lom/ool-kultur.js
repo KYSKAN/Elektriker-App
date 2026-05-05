@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-ool-kultur',
   title: 'Organisasjonskultur',
   subtitle: 'Organisasjon og ledelse – Kap. 5',
-  description: '30 spørsmål om Scheins kulturmodell, de 4 kulturtypene, subkulturer, gruppetenkning og Belbins 9 grupperoller.',
+  description: '37 spørsmål om Scheins kulturmodell, de 4 kulturtypene, subkulturer, gruppetenkning og Belbins 9 grupperoller.',
   cats: {
     schein:      { label: 'Scheins kulturmodell', color: '#8b5cf6' },
     kulturtyper: { label: 'De fire kulturtypene', color: '#3b82f6' },

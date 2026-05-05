@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-oks-regnskapsanalyse',
   title: 'Regnskapsanalyse',
   subtitle: 'Økonomistyring – Kap. 8',
-  description: '33 spørsmål om alle nøkkeltall for lønnsomhet, soliditet og likviditet – inkludert grunnleggende definisjoner, formler, krav og tiltak for forbedring.',
+  description: '35 spørsmål om alle nøkkeltall for lønnsomhet, soliditet og likviditet – inkludert grunnleggende definisjoner, formler, krav og tiltak for forbedring.',
   cats: {
     lonnsomhet: { label: 'Lønnsomhetsnøkkeltall', color: '#8b5cf6' },
     soliditet:  { label: 'Soliditetsnøkkeltall', color: '#3b82f6' },

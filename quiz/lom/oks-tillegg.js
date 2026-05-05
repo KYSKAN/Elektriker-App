@@ -1,8 +1,8 @@
-const QUIZ_META = {
+﻿const QUIZ_META = {
   id: 'lom-oks-tillegg',
   title: 'Økonomi: Tillegg',
   subtitle: 'LØM Fagskole · Supplement',
-  description: '25 spørsmål om MVA, selskapsformer, regnskapslover og kontantstrømsanalyse.',
+  description: '28 spørsmål om MVA, selskapsformer, regnskapslover og kontantstrømsanalyse.',
   cats: {
     mva_avgift:     { label: 'MVA og avgifter', color: '#8b5cf6' },
     selskapsformer: { label: 'Selskapsformer', color: '#3b82f6' },
