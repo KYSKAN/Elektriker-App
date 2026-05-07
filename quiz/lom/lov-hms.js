@@ -158,10 +158,10 @@ const QUESTIONS = [
     catLabel: 'Ferieloven',
     q: 'Hvor mange virkedager ferie har norske arbeidstakere krav på etter ferieloven?',
     opts: [
-      '21 virkedager (3 uker)',
+      '18 virkedager (3 uker)',
       '25 virkedager (4 uker + 1 dag)',
       '24 virkedager (4 uker)',
-      '30 virkedager (5 uker) – gjelder for arbeidstakere over 60 år med lang ansiennitet',
+      '31 virkedager – arbeidstakere over 60 år har rett på 6 ekstra virkedager',
     ],
     correct: 1,
     explain: 'Ferieloven gir rett til 25 virkedager ferie (lørdag regnes som virkedag, men ikke søndag og helligdager). 25 virkedager tilsvarer 4 uker + 1 dag.',
