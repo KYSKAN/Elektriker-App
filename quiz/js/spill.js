@@ -549,7 +549,9 @@ function renderOrderQuestion(q) {
 
   const help = document.createElement('div');
   help.className = 'pyramid-help';
-  help.textContent = 'Dra boksene for å bytte plass. Bunnen av pyramiden er nederst.';
+  help.textContent = q.pyramid
+    ? 'Dra boksene for å bytte plass. Bunnen av pyramiden er nederst.'
+    : 'Dra boksene for å bytte plass.';
   container.appendChild(help);
 
   const pyramid = document.createElement('div');
@@ -557,6 +559,7 @@ function renderOrderQuestion(q) {
   container.appendChild(pyramid);
 
   function widthFor(level) {
+    if (!q.pyramid) return 100;
     return 44 + (N - 1 - level) * (56 / (N - 1));
   }
 

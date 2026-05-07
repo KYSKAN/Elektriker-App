@@ -30,6 +30,7 @@ const QUESTIONS = [
   {
     id: 2,
     type: 'order',
+    pyramid: true,
     cat: 'maslow',
     catLabel: 'Maslows behovspyramide',
     q: 'Plasser de fem behovene på riktig nivå i Maslows behovspyramide. Toppen øverst, bunnen nederst — dra boksene for å bytte plass.',

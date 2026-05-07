@@ -141,6 +141,7 @@ const QUESTIONS = [
   {
     id: 10,
     type: 'order',
+    pyramid: true,
     cat: 'schein',
     catLabel: 'Scheins kulturmodell',
     q: 'Plasser de tre lagene i Scheins kulturmodell i riktig rekkefølge. Det mest synlige laget øverst, det dypeste laget nederst.',
