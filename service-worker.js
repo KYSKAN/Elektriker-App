@@ -1,4 +1,4 @@
-const CACHE = 'kalkulator-v215';
+const CACHE = 'kalkulator-v216';
 
 const FILES = [
   './',
@@ -23,16 +23,24 @@ const FILES = [
   './quiz/illustrations.js',
   './quiz/lom/ool-motivasjon.js',
   './quiz/lom/ool-kultur.js',
+  './quiz/lom/ool-kultur-2.js',
   './quiz/lom/ool-endring.js',
+  './quiz/lom/ool-endring-2.js',
+  './quiz/lom/ool-ledelse.js',
+  './quiz/lom/ool-ledelse-2.js',
   './quiz/lom/marked-strategi.js',
+  './quiz/lom/marked-strategi-2.js',
+  './quiz/lom/marked-grunnlag.js',
+  './quiz/lom/marked-grunnlag-2.js',
   './quiz/lom/oks-kostnader.js',
+  './quiz/lom/oks-kostnader-2.js',
   './quiz/lom/oks-regnskapsanalyse.js',
+  './quiz/lom/oks-regnskapsanalyse-2.js',
   './quiz/lom/oks-kalkyl.js',
   './quiz/lom/oks-budsjettering.js',
   './quiz/lom/oks-investering.js',
-  './quiz/lom/ool-ledelse.js',
-  './quiz/lom/marked-grunnlag.js',
   './quiz/lom/lov-hms.js',
+  './quiz/lom/lov-hms-2.js',
   './quiz/lom/oks-tillegg.js',
   './quiz/elektro/rlc.js',
   './quiz/bjrons/boolsk.js',

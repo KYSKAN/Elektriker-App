@@ -1,605 +1,415 @@
-﻿const QUIZ_META = {
-  id: 'lom-marked-grunnlag',
-  title: 'Markedsføring: Grunnlag',
-  subtitle: 'LØM Fagskole',
-  description: '41 spørsmål om markedsdefinisjoner, AIDA, STP, Porters fem krefter, markedsanalyse og kjøpsprosess.',
-  cats: {
-    marked_def:      { label: 'Markedsdefinisjoner', color: '#8b5cf6' },
-    analyse:         { label: 'Markedsanalyse', color: '#3b82f6' },
-    aida_stp:        { label: 'AIDA og STP', color: '#10b981' },
-    konkurranse_env: { label: 'Konkurransemiljø', color: '#f59e0b' },
-    kjopsatferd:     { label: 'Kjøpsprosess og kjøpsatferd', color: '#ef4444' },
+const QUIZ_META = {
+  "id": "lom-marked-grunnlag-1",
+  "title": "Markedsgrunnlag Del 1",
+  "subtitle": "LØM Fagskole – Markedsdefinisjon, Analyse & STP/AIDA",
+  "description": "25 spørsmål – Markedsdefinisjoner, Markedsanalyse, AIDA og STP.",
+  "cats": {
+    "marked_def": {
+      "label": "Markedsdefinisjoner",
+      "color": "#8b5cf6"
+    },
+    "analyse": {
+      "label": "Markedsanalyse",
+      "color": "#3b82f6"
+    },
+    "aida_stp": {
+      "label": "AIDA og STP",
+      "color": "#10b981"
+    }
   }
 };
 
 const QUESTIONS = [
   {
-    id: 1,
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Hva er BOMOF-modellen en beskrivelse av?',
-    opts: [
-      'Trinnene i Kotlers strategiske markedsplanleggingsprosess',
-      'De fem grunnleggende markeds- og kjøpersegmentene',
-      'Nøkkelelementene i den utvidede markedsmiksen (5P)',
-      'Fasene i produktets livssyklus fra introduksjon til tilbakegang',
+    "id": 1,
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Hva er BOMOF-modellen en beskrivelse av?",
+    "opts": [
+      "Trinnene i Kotlers strategiske markedsplanleggingsprosess",
+      "De fem grunnleggende markeds- og kjøpersegmentene",
+      "Nøkkelelementene i den utvidede markedsmiksen (5P)",
+      "Fasene i produktets livssyklus fra introduksjon til tilbakegang"
     ],
-    correct: 1,
-    explain: 'BOMOF = Forbrukermarkedet (B), Organisasjonsmarkedet (O), Mellomhandlermarkedet (M), det Offentlige markedet (O) og Finansmarkedet (F) – de fem grunnleggende kjøpermarkedene.',
+    "correct": 1,
+    "explain": "BOMOF = Forbrukermarkedet (B), Organisasjonsmarkedet (O), Mellomhandlermarkedet (M), det Offentlige markedet (O) og Finansmarkedet (F) – de fem grunnleggende kjøpermarkedene."
   },
   {
-    id: 2,
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Hva kjennetegner B2B-markedet sammenlignet med B2C?',
-    opts: [
-      'Færre kunder, større volum per transaksjon og mer rasjonell, formell kjøpsatferd',
-      'Mange kunder, lav lojalitet og korte beslutningsprosesser uten formelle rutiner eller innkjøpskomité',
-      'Tilnærmet samme kjøpsatferd som B2C, men med høyere reklamekostnader',
-      'Hyppigere kjøpssituasjoner med lavere enhetspris og impulsbaserte valg',
+    "id": 2,
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Hva kjennetegner B2B-markedet sammenlignet med B2C?",
+    "opts": [
+      "Færre kunder, større volum per transaksjon og mer rasjonell, formell kjøpsatferd",
+      "Mange kunder, lav lojalitet og korte beslutningsprosesser uten formelle rutiner eller innkjøpskomité",
+      "Tilnærmet samme kjøpsatferd som B2C, men med høyere reklamekostnader",
+      "Hyppigere kjøpssituasjoner med lavere enhetspris og impulsbaserte valg"
     ],
-    correct: 0,
-    explain: 'B2B (business-to-business) kjennetegnes av færre kjøpere, høyere transaksjonsvolum og mer rasjonell, formell kjøpsprosess med innkjøpskomiteer, enn B2C (business-to-consumer).',
+    "correct": 0,
+    "explain": "B2B (business-to-business) kjennetegnes av færre kjøpere, høyere transaksjonsvolum og mer rasjonell, formell kjøpsprosess med innkjøpskomiteer, enn B2C (business-to-consumer)."
   },
   {
-    id: 3,
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Hva er et mellomhandlermarked?',
-    opts: [
-      'Et marked der sluttbrukere handler direkte fra produsenten uten mellomledd, og prisene settes fritt',
-      'Et marked der bedrifter kjøper varer for å videreselge dem med fortjeneste',
-      'Et digitalt marked for finansielle tjenester og betalingsformidling',
-      'Et marked der staten kjøper inn tjenester på vegne av innbyggerne',
+    "id": 3,
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Hva er et mellomhandlermarked?",
+    "opts": [
+      "Et marked der sluttbrukere handler direkte fra produsenten uten mellomledd, og prisene settes fritt",
+      "Et marked der bedrifter kjøper varer for å videreselge dem med fortjeneste",
+      "Et digitalt marked for finansielle tjenester og betalingsformidling",
+      "Et marked der staten kjøper inn tjenester på vegne av innbyggerne"
     ],
-    correct: 1,
-    explain: 'Mellomhandlermarkedet (videreforhandlermarkedet) består av aktører som kjøper varer for å videreselge – f.eks. grossister og detaljister. De kjøper for å selge videre, ikke til eget forbruk.',
+    "correct": 1,
+    "explain": "Mellomhandlermarkedet (videreforhandlermarkedet) består av aktører som kjøper varer for å videreselge – f.eks. grossister og detaljister. De kjøper for å selge videre, ikke til eget forbruk."
   },
   {
-    id: 4,
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Hva kjennetegner rasjonell kjøpsatferd i organisasjonsmarkedet?',
-    opts: [
-      'Kjøp styrt av merkevarepreferanser og personlige relasjoner til selger, gjerne basert på tidligere positive erfaringer',
-      'Hurtige beslutninger tatt av én person basert på erfaring og intuisjon',
-      'Systematisk behovsvurdering, innhenting av tilbud og formell godkjenning av kjøpsbeslutningen',
-      'Lojalitet til eksisterende leverandør uavhengig av prisnivå og leveringskvalitet',
+    "id": 4,
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Hva kjennetegner rasjonell kjøpsatferd i organisasjonsmarkedet?",
+    "opts": [
+      "Kjøp styrt av merkevarepreferanser og personlige relasjoner til selger, gjerne basert på tidligere positive erfaringer",
+      "Hurtige beslutninger tatt av én person basert på erfaring og intuisjon",
+      "Systematisk behovsvurdering, innhenting av tilbud og formell godkjenning av kjøpsbeslutningen",
+      "Lojalitet til eksisterende leverandør uavhengig av prisnivå og leveringskvalitet"
     ],
-    correct: 2,
-    explain: 'Organisasjonsmarkedet kjennetegnes av rasjonell kjøpsatferd: systematisk behovsvurdering, tilbudsinnhenting, formelle innkjøpsprosedyrer og beslutninger som involverer flere personer (innkjøpskomité).',
+    "correct": 2,
+    "explain": "Organisasjonsmarkedet kjennetegnes av rasjonell kjøpsatferd: systematisk behovsvurdering, tilbudsinnhenting, formelle innkjøpsprosedyrer og beslutninger som involverer flere personer (innkjøpskomité)."
   },
   {
-    id: 5,
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Hva er markedsorientering?',
-    opts: [
-      'Fokus på å øke produksjonskapasiteten for å redusere enhetskostnadene',
-      'Fokus på kundens behov og ønsker som utgangspunkt for alle forretningsbeslutninger',
-      'Fokus på kontinuerlig produktinnovasjon drevet av teknologiavdelingen i samarbeid med R&D',
-      'Fokus på å øke salgsvolum gjennom bred distribusjon og lavere priser',
+    "id": 5,
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Hva er markedsorientering?",
+    "opts": [
+      "Fokus på å øke produksjonskapasiteten for å redusere enhetskostnadene",
+      "Fokus på kundens behov og ønsker som utgangspunkt for alle forretningsbeslutninger",
+      "Fokus på kontinuerlig produktinnovasjon drevet av teknologiavdelingen i samarbeid med R&D",
+      "Fokus på å øke salgsvolum gjennom bred distribusjon og lavere priser"
     ],
-    correct: 1,
-    explain: 'En markedsorientert bedrift tar utgangspunkt i kundens behov og bygger strategi og produktutvikling rundt dette. I motsetning til produktorientering (fokus på produktet) og salgsorientering.',
+    "correct": 1,
+    "explain": "En markedsorientert bedrift tar utgangspunkt i kundens behov og bygger strategi og produktutvikling rundt dette. I motsetning til produktorientering (fokus på produktet) og salgsorientering."
   },
   {
-    id: 6,
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Hva er relasjonsmarkedsføring?',
-    opts: [
-      'Kortvarig kampanjemarkedsføring rettet mot å maksimere salg i en enkelt periode gjennom prisnedslag og tilbud',
-      'En strategi for å bygge og vedlikeholde langvarige og lønnsomme relasjoner med kunder og partnere',
-      'Markedsføring gjennom anbefalinger og muntlig videreformidling mellom kunder',
-      'En prismodell der lojalitet belønnes med gradvis lavere pris over tid',
+    "id": 6,
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Hva er relasjonsmarkedsføring?",
+    "opts": [
+      "Kortvarig kampanjemarkedsføring rettet mot å maksimere salg i en enkelt periode gjennom prisnedslag og tilbud",
+      "En strategi for å bygge og vedlikeholde langvarige og lønnsomme relasjoner med kunder og partnere",
+      "Markedsføring gjennom anbefalinger og muntlig videreformidling mellom kunder",
+      "En prismodell der lojalitet belønnes med gradvis lavere pris over tid"
     ],
-    correct: 1,
-    explain: 'Relasjonsmarkedsføring fokuserer på langvarige kundeforhold fremfor enkelttransaksjoner. Lojale kunder er mer lønnsomme, klager sjeldnere og fungerer som ambassadører for merkevaren.',
+    "correct": 1,
+    "explain": "Relasjonsmarkedsføring fokuserer på langvarige kundeforhold fremfor enkelttransaksjoner. Lojale kunder er mer lønnsomme, klager sjeldnere og fungerer som ambassadører for merkevaren."
   },
   {
-    id: 7,
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Hva er de fire fasene i produktlivssyklusen?',
-    opts: [
-      'Utvikling, lansering, ekspansjon og avvikling',
-      'Introduksjon, vekst, modning og gradvis tilbakegang',
-      'Konsept, pilottest, skalering og optimalisering',
-      'Analyse, design, produksjon og distribusjon',
+    "id": 7,
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Hva er de fire fasene i produktlivssyklusen?",
+    "opts": [
+      "Utvikling, lansering, ekspansjon og avvikling",
+      "Introduksjon, vekst, modning og gradvis tilbakegang",
+      "Konsept, pilottest, skalering og optimalisering",
+      "Analyse, design, produksjon og distribusjon"
     ],
-    correct: 1,
-    explain: 'Produktlivssyklusen: Introduksjon (lavt salg, høye kostnader) → Vekst (raskt stigende salg) → Modning (stabilt høyt salg, sterk konkurranse) → Tilbakegang (synkende salg).',
+    "correct": 1,
+    "explain": "Produktlivssyklusen: Introduksjon (lavt salg, høye kostnader) → Vekst (raskt stigende salg) → Modning (stabilt høyt salg, sterk konkurranse) → Tilbakegang (synkende salg)."
   },
   {
-    id: 8,
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Hva kjennetegner modningstfasen i produktlivssyklusen?',
-    opts: [
-      'Høye utviklingskostnader og begrenset salgsvolum i oppstartsfasen',
-      'Raskt stigende salg og mange nyetableringer i bransjen',
-      'Stabilt høyt salg, sterk priskonkurranse, mange aktører og behov for differensiering',
-      'Kraftig salgsfall og tydelig marginpress som tvinger de fleste aktører gradvis ut av markedet',
+    "id": 8,
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Hva kjennetegner modningstfasen i produktlivssyklusen?",
+    "opts": [
+      "Høye utviklingskostnader og begrenset salgsvolum i oppstartsfasen",
+      "Raskt stigende salg og mange nyetableringer i bransjen",
+      "Stabilt høyt salg, sterk priskonkurranse, mange aktører og behov for differensiering",
+      "Kraftig salgsfall og tydelig marginpress som tvinger de fleste aktører gradvis ut av markedet"
     ],
-    correct: 2,
-    explain: 'I modningstfasen er salget stabilt høyt, men veksten flater ut. Konkurransen er sterk, prisene presses ned, og bedriften må differensiere seg for å beholde markedsandeler.',
+    "correct": 2,
+    "explain": "I modningstfasen er salget stabilt høyt, men veksten flater ut. Konkurransen er sterk, prisene presses ned, og bedriften må differensiere seg for å beholde markedsandeler."
   },
   {
-    id: 9,
-    cat: 'analyse',
-    catLabel: 'Markedsanalyse',
-    q: 'Hva er forskjellen mellom primærdata og sekundærdata i markedsundersøkelser?',
-    opts: [
-      'Primærdata er eldre arkivdata fra egne arkiver; sekundærdata er oppdatert og fersk informasjon innhentet fra eksterne kilder i nær fortid',
-      'Primærdata samles inn spesifikt for formålet (f.eks. intervju/spørreskjema); sekundærdata er allerede innsamlet av andre',
-      'Primærdata er alltid tallbasert, strukturert og målbart; sekundærdata er alltid tekstbasert og åpent tolkende',
-      'Primærdata gir alltid lavere kostnader enn sekundærdata fordi den er enklere og raskere å hente inn',
+    "id": 9,
+    "cat": "analyse",
+    "catLabel": "Markedsanalyse",
+    "q": "Hva er forskjellen mellom primærdata og sekundærdata i markedsundersøkelser?",
+    "opts": [
+      "Primærdata er eldre arkivdata fra egne arkiver; sekundærdata er oppdatert og fersk informasjon innhentet fra eksterne kilder i nær fortid",
+      "Primærdata samles inn spesifikt for formålet (f.eks. intervju/spørreskjema); sekundærdata er allerede innsamlet av andre",
+      "Primærdata er alltid tallbasert, strukturert og målbart; sekundærdata er alltid tekstbasert og åpent tolkende",
+      "Primærdata gir alltid lavere kostnader enn sekundærdata fordi den er enklere og raskere å hente inn"
     ],
-    correct: 1,
-    explain: 'Primærdata = ny data samlet inn for dette spesifikke formålet (intervjuer, spørreskjema, observasjon). Sekundærdata = eksisterende data fra andres undersøkelser, statistikk, rapporter og databaser.',
+    "correct": 1,
+    "explain": "Primærdata = ny data samlet inn for dette spesifikke formålet (intervjuer, spørreskjema, observasjon). Sekundærdata = eksisterende data fra andres undersøkelser, statistikk, rapporter og databaser."
   },
   {
-    id: 10,
-    cat: 'analyse',
-    catLabel: 'Markedsanalyse',
-    q: 'Hva brukes en SWOT-analyse til?',
-    opts: [
-      'Å vurdere kundesegmentenes kjøpsmotiver, beslutningsprosess og grad av merkelojalitet',
-      'Å kartlegge interne styrker og svakheter samt eksterne muligheter og trusler',
-      'Å beregne markedsandeler og estimere bransjeomsetning',
-      'Å sette priser basert på kostnadsstruktur og konkurransenivå',
+    "id": 10,
+    "cat": "analyse",
+    "catLabel": "Markedsanalyse",
+    "q": "Hva brukes en SWOT-analyse til?",
+    "opts": [
+      "Å vurdere kundesegmentenes kjøpsmotiver, beslutningsprosess og grad av merkelojalitet",
+      "Å kartlegge interne styrker og svakheter samt eksterne muligheter og trusler",
+      "Å beregne markedsandeler og estimere bransjeomsetning",
+      "Å sette priser basert på kostnadsstruktur og konkurransenivå"
     ],
-    correct: 1,
-    explain: 'SWOT = Strengths (styrker), Weaknesses (svakheter), Opportunities (muligheter), Threats (trusler). SWOT analyserer virksomhetens interne og eksterne strategiske situasjon.',
+    "correct": 1,
+    "explain": "SWOT = Strengths (styrker), Weaknesses (svakheter), Opportunities (muligheter), Threats (trusler). SWOT analyserer virksomhetens interne og eksterne strategiske situasjon."
   },
   {
-    id: 11,
-    cat: 'analyse',
-    catLabel: 'Markedsanalyse',
-    q: 'Hva er segmentering i markedsføring?',
-    opts: [
-      'Å kategorisere produktene etter pris, størrelse og bruksområde',
-      'Å dele markedet inn i grupper med lignende behov, kjøpsatferd eller egenskaper',
-      'Å vurdere hvilke distribusjonskanaler som gir lavest logistikkostnad og høyest dekningsbidrag',
-      'Å tilpasse prisstrategien til ulike geografiske regioner',
+    "id": 11,
+    "cat": "analyse",
+    "catLabel": "Markedsanalyse",
+    "q": "Hva er segmentering i markedsføring?",
+    "opts": [
+      "Å kategorisere produktene etter pris, størrelse og bruksområde",
+      "Å dele markedet inn i grupper med lignende behov, kjøpsatferd eller egenskaper",
+      "Å vurdere hvilke distribusjonskanaler som gir lavest logistikkostnad og høyest dekningsbidrag",
+      "Å tilpasse prisstrategien til ulike geografiske regioner"
     ],
-    correct: 1,
-    explain: 'Segmentering innebærer å dele et marked inn i homogene grupper (segmenter) slik at man kan tilpasse markedsføringen til hvert segments spesifikke behov og ønsker.',
+    "correct": 1,
+    "explain": "Segmentering innebærer å dele et marked inn i homogene grupper (segmenter) slik at man kan tilpasse markedsføringen til hvert segments spesifikke behov og ønsker."
   },
   {
-    id: 12,
-    cat: 'analyse',
-    catLabel: 'Markedsanalyse',
-    q: 'Hva er «targeting» i STP-modellen?',
-    opts: [
-      'Å velge hvilke kundesegmenter man ønsker å betjene med sine tilbud',
-      'Å skape en klar og attraktiv posisjon i målgruppens bevissthet',
-      'Å identifisere homogene grupper i markedet',
-      'Å beregne lønnsomheten i ulike prisklasser og kanaler',
+    "id": 12,
+    "cat": "analyse",
+    "catLabel": "Markedsanalyse",
+    "q": "Hva er «targeting» i STP-modellen?",
+    "opts": [
+      "Å velge hvilke kundesegmenter man ønsker å betjene med sine tilbud",
+      "Å skape en klar og attraktiv posisjon i målgruppens bevissthet",
+      "Å identifisere homogene grupper i markedet",
+      "Å beregne lønnsomheten i ulike prisklasser og kanaler"
     ],
-    correct: 0,
-    explain: 'Targeting = valg av målsegment(er). Etter å ha segmentert markedet velger bedriften hvilke segmenter den vil rette seg mot, basert på attraktivitet og egne ressurser/kompetanse.',
+    "correct": 0,
+    "explain": "Targeting = valg av målsegment(er). Etter å ha segmentert markedet velger bedriften hvilke segmenter den vil rette seg mot, basert på attraktivitet og egne ressurser/kompetanse."
   },
   {
-    id: 13,
-    cat: 'analyse',
-    catLabel: 'Markedsanalyse',
-    q: 'Hva er posisjonering?',
-    opts: [
-      'Å bestemme hvilke utsalgssteder og nettkanaler produktet skal selges gjennom, basert på målgruppens kjøpsvaner',
-      'Å justere og tilpasse prisen kontinuerlig basert på konkurrentenes løpende tilbud og kampanjesyklus',
-      'Å skape en tydelig, differensiert og varig, verdifull plass i målgruppens bevissthet relativt til konkurrentene',
-      'Å analysere salgstall og markedsandeler fordelt på ulike geografiske regioner og distrikter',
+    "id": 13,
+    "cat": "analyse",
+    "catLabel": "Markedsanalyse",
+    "q": "Hva er posisjonering?",
+    "opts": [
+      "Å bestemme hvilke utsalgssteder og nettkanaler produktet skal selges gjennom, basert på målgruppens kjøpsvaner",
+      "Å justere og tilpasse prisen kontinuerlig basert på konkurrentenes løpende tilbud og kampanjesyklus",
+      "Å skape en tydelig, differensiert og varig, verdifull plass i målgruppens bevissthet relativt til konkurrentene",
+      "Å analysere salgstall og markedsandeler fordelt på ulike geografiske regioner og distrikter"
     ],
-    correct: 2,
-    explain: 'Posisjonering handler om hvordan bedriften ønsker at kundene skal oppfatte produktet eller merkenavnet relativt til konkurrentene – hvilken plass i kundens sinn man ønsker å okkupere.',
+    "correct": 2,
+    "explain": "Posisjonering handler om hvordan bedriften ønsker at kundene skal oppfatte produktet eller merkenavnet relativt til konkurrentene – hvilken plass i kundens sinn man ønsker å okkupere."
   },
   {
-    id: 14,
-    cat: 'analyse',
-    catLabel: 'Markedsanalyse',
-    q: 'Hva er Porters verdikjede?',
-    opts: [
-      'En modell for å analysere hvilke aktiviteter i bedriften som skaper verdi og bygger konkurransefortrinn',
-      'En modell som beskriver flyten av varer fra råvare til sluttforbruker gjennom hele forsyningskjeden og logistikknettverket',
-      'En metode for å beregne produktets bidragsmargin og totalkostnad per enhet',
-      'En modell for å vurdere samarbeidspartnere og strategiske allianser i bransjen',
+    "id": 14,
+    "cat": "analyse",
+    "catLabel": "Markedsanalyse",
+    "q": "Hva er Porters verdikjede?",
+    "opts": [
+      "En modell for å analysere hvilke aktiviteter i bedriften som skaper verdi og bygger konkurransefortrinn",
+      "En modell som beskriver flyten av varer fra råvare til sluttforbruker gjennom hele forsyningskjeden og logistikknettverket",
+      "En metode for å beregne produktets bidragsmargin og totalkostnad per enhet",
+      "En modell for å vurdere samarbeidspartnere og strategiske allianser i bransjen"
     ],
-    correct: 0,
-    explain: 'Porters verdikjede deler bedriftens aktiviteter i primæraktiviteter (inngående logistikk, drift, utgående logistikk, markedsføring, service) og støtteaktiviteter, og identifiserer hvor verdi skapes.',
+    "correct": 0,
+    "explain": "Porters verdikjede deler bedriftens aktiviteter i primæraktiviteter (inngående logistikk, drift, utgående logistikk, markedsføring, service) og støtteaktiviteter, og identifiserer hvor verdi skapes."
   },
   {
-    id: 15,
-    cat: 'analyse',
-    catLabel: 'Markedsanalyse',
-    q: 'Hva er en forretningsidé i markedsplan-kontekst?',
-    opts: [
-      'En budsjettert salgsplan med konkrete tall for kommende kvartal',
-      'En selskapsrettslig beskrivelse av virksomhetens formål og organisasjonsform i henhold til foretaksregisterloven',
-      'En teknisk spesifikasjon over produktporteføljens egenskaper og funksjoner',
-      'En kortfattet beskrivelse av hva bedriften tilbyr, til hvem og hvorfor kundene velger dem',
+    "id": 15,
+    "cat": "analyse",
+    "catLabel": "Markedsanalyse",
+    "q": "Hva er en forretningsidé i markedsplan-kontekst?",
+    "opts": [
+      "En budsjettert salgsplan med konkrete tall for kommende kvartal",
+      "En selskapsrettslig beskrivelse av virksomhetens formål og organisasjonsform i henhold til foretaksregisterloven",
+      "En teknisk spesifikasjon over produktporteføljens egenskaper og funksjoner",
+      "En kortfattet beskrivelse av hva bedriften tilbyr, til hvem og hvorfor kundene velger dem"
     ],
-    correct: 3,
-    explain: 'Forretningsidéen svarer på: hvilken kundeverdi skaper vi, for hvem og på hvilken måte. Den danner grunnlag for markedsstrategi, posisjonering og differensiering.',
+    "correct": 3,
+    "explain": "Forretningsidéen svarer på: hvilken kundeverdi skaper vi, for hvem og på hvilken måte. Den danner grunnlag for markedsstrategi, posisjonering og differensiering."
   },
   {
-    id: 16,
-    cat: 'aida_stp',
-    catLabel: 'AIDA og STP',
-    q: 'Hva står AIDA for i markedsføring?',
-    opts: [
-      'Attention (oppmerksomhet), Interest (interesse), Desire (ønske), Action (handling)',
-      'Analyse, Innsikt, Dialog, Avslutning – fire trinn i en markedskommunikasjonsmodell for B2B-salg',
-      'Anerkjennelse, Involvering, Differensiering, Aktivering',
-      'Anskaffelse, Implementering, Distribusjon, Avkastning',
+    "id": 16,
+    "cat": "aida_stp",
+    "catLabel": "AIDA og STP",
+    "q": "Hva står AIDA for i markedsføring?",
+    "opts": [
+      "Attention (oppmerksomhet), Interest (interesse), Desire (ønske), Action (handling)",
+      "Analyse, Innsikt, Dialog, Avslutning – fire trinn i en markedskommunikasjonsmodell for B2B-salg",
+      "Anerkjennelse, Involvering, Differensiering, Aktivering",
+      "Anskaffelse, Implementering, Distribusjon, Avkastning"
     ],
-    correct: 0,
-    explain: 'AIDA = Attention (fange oppmerksomhet) → Interest (skape interesse) → Desire (bygge ønske/behov) → Action (stimulere til kjøp). Brukes til å forstå kjøpsprosessen og utforme kommunikasjon.',
+    "correct": 0,
+    "explain": "AIDA = Attention (fange oppmerksomhet) → Interest (skape interesse) → Desire (bygge ønske/behov) → Action (stimulere til kjøp). Brukes til å forstå kjøpsprosessen og utforme kommunikasjon."
   },
   {
-    id: 17,
-    cat: 'aida_stp',
-    catLabel: 'AIDA og STP',
-    q: 'I hvilken fase av AIDA brukes tilbud, rabatter og «kjøp nå»-knapper mest effektivt?',
-    opts: [
-      'Attention – skape første kontakt og vekke nysgjerrighet',
-      'Interest – holde engasjementet oppe og gi mer informasjon om produktets fordeler og egenskaper',
-      'Desire – styrke produktets appell og relevans for kunden',
-      'Action – konvertere interesse og begjær til faktisk kjøp og handling',
+    "id": 17,
+    "cat": "aida_stp",
+    "catLabel": "AIDA og STP",
+    "q": "I hvilken fase av AIDA brukes tilbud, rabatter og «kjøp nå»-knapper mest effektivt?",
+    "opts": [
+      "Attention – skape første kontakt og vekke nysgjerrighet",
+      "Interest – holde engasjementet oppe og gi mer informasjon om produktets fordeler og egenskaper",
+      "Desire – styrke produktets appell og relevans for kunden",
+      "Action – konvertere interesse og begjær til faktisk kjøp og handling"
     ],
-    correct: 3,
-    explain: 'Action-fasen handler om å få kunden til å handle nå. Tilbud, rabatter, enkle bestillingsprosesser og tydelige handlingsoppfordringer (call to action) er typiske virkemidler her.',
+    "correct": 3,
+    "explain": "Action-fasen handler om å få kunden til å handle nå. Tilbud, rabatter, enkle bestillingsprosesser og tydelige handlingsoppfordringer (call to action) er typiske virkemidler her."
   },
   {
-    id: 18,
-    cat: 'aida_stp',
-    catLabel: 'AIDA og STP',
-    q: 'Hva er rekkefølgen i STP-prosessen?',
-    opts: [
-      'Targeting → Segmentering → Posisjonering (top-down tilnærming)',
-      'Posisjonering → Segmentering → Targeting',
-      'Segmentering → Targeting → Posisjonering',
-      'Targeting → Posisjonering → Segmentering',
+    "id": 18,
+    "cat": "aida_stp",
+    "catLabel": "AIDA og STP",
+    "q": "Hva er rekkefølgen i STP-prosessen?",
+    "opts": [
+      "Targeting → Segmentering → Posisjonering (top-down tilnærming)",
+      "Posisjonering → Segmentering → Targeting",
+      "Segmentering → Targeting → Posisjonering",
+      "Targeting → Posisjonering → Segmentering"
     ],
-    correct: 2,
-    explain: 'STP-prosessen: (1) Segmentering – del markedet inn i grupper, (2) Targeting – velg hvilke segmenter du vil betjene, (3) Posisjonering – avgjør hvordan du vil oppfattes i det valgte segmentet.',
+    "correct": 2,
+    "explain": "STP-prosessen: (1) Segmentering – del markedet inn i grupper, (2) Targeting – velg hvilke segmenter du vil betjene, (3) Posisjonering – avgjør hvordan du vil oppfattes i det valgte segmentet."
   },
   {
-    id: 19,
-    cat: 'aida_stp',
-    catLabel: 'AIDA og STP',
-    q: 'Hvilken variabel er IKKE et typisk segmenteringskriterium i forbrukermarkedet?',
-    opts: [
-      'Geografi (region, by/land)',
-      'Demografi (alder, kjønn, inntekt)',
-      'Leverandørens kredittverdighet og betalingsbetingelser',
-      'Psykografi (livsstil, verdier og personlighet) – en av de fire hovedgruppene',
+    "id": 19,
+    "cat": "aida_stp",
+    "catLabel": "AIDA og STP",
+    "q": "Hvilken variabel er IKKE et typisk segmenteringskriterium i forbrukermarkedet?",
+    "opts": [
+      "Geografi (region, by/land)",
+      "Demografi (alder, kjønn, inntekt)",
+      "Leverandørens kredittverdighet og betalingsbetingelser",
+      "Psykografi (livsstil, verdier og personlighet) – en av de fire hovedgruppene"
     ],
-    correct: 2,
-    explain: 'Typiske segmenteringskriterier i forbrukermarkedet: geografi, demografi, psykografi og atferd. Leverandørens kredittverdighet er en variabel relevant for leverandørvurdering, ikke kundesegmentering.',
+    "correct": 2,
+    "explain": "Typiske segmenteringskriterier i forbrukermarkedet: geografi, demografi, psykografi og atferd. Leverandørens kredittverdighet er en variabel relevant for leverandørvurdering, ikke kundesegmentering."
   },
   {
-    id: 20,
-    cat: 'aida_stp',
-    catLabel: 'AIDA og STP',
-    q: 'Hva er markedsplanens funksjon?',
-    opts: [
-      'En rapporteringsplikt overfor Brønnøysundregistrene hvert regnskapsår',
-      'En finansiell analyse beregnet for ekstern revisjon, kredittvurdering og investorrapportering hvert år',
-      'Et styringsdokument som beskriver mål, strategi og tiltak for markedsarbeidet i en gitt periode',
-      'Et opplæringshefte for nyansatte som skal lære bedriftens produktsortiment',
+    "id": 20,
+    "cat": "aida_stp",
+    "catLabel": "AIDA og STP",
+    "q": "Hva er markedsplanens funksjon?",
+    "opts": [
+      "En rapporteringsplikt overfor Brønnøysundregistrene hvert regnskapsår",
+      "En finansiell analyse beregnet for ekstern revisjon, kredittvurdering og investorrapportering hvert år",
+      "Et styringsdokument som beskriver mål, strategi og tiltak for markedsarbeidet i en gitt periode",
+      "Et opplæringshefte for nyansatte som skal lære bedriftens produktsortiment"
     ],
-    correct: 2,
-    explain: 'Markedsplanen er et handlingsdokument som konkretiserer mål (gjerne SMART), strategi (STP, differensiering) og operasjonelle tiltak (5P) for en definert tidsperiode.',
+    "correct": 2,
+    "explain": "Markedsplanen er et handlingsdokument som konkretiserer mål (gjerne SMART), strategi (STP, differensiering) og operasjonelle tiltak (5P) for en definert tidsperiode."
   },
   {
-    id: 21,
-    cat: 'aida_stp',
-    catLabel: 'AIDA og STP',
-    q: 'Hva er «place» (distribusjon) i 5P-markedsmiksen?',
-    opts: [
-      'Geografisk plassering av annonsering og reklamemateriell i det fysiske og digitale markedsrom',
-      'Produksjonsstedet der varene tilvirkes, kvalitetssikres og klargjøres for salg, pakking og utsendelse til grossist',
-      'Prisnivået som til enhver tid gjelder for produktet i de ulike salgskanalene og geografiske markedene',
-      'Alle kanaler og metoder for å gjøre produktet tilgjengelig for kunden der de ønsker å kjøpe',
+    "id": 21,
+    "cat": "aida_stp",
+    "catLabel": "AIDA og STP",
+    "q": "Hva er «place» (distribusjon) i 5P-markedsmiksen?",
+    "opts": [
+      "Geografisk plassering av annonsering og reklamemateriell i det fysiske og digitale markedsrom",
+      "Produksjonsstedet der varene tilvirkes, kvalitetssikres og klargjøres for salg, pakking og utsendelse til grossist",
+      "Prisnivået som til enhver tid gjelder for produktet i de ulike salgskanalene og geografiske markedene",
+      "Alle kanaler og metoder for å gjøre produktet tilgjengelig for kunden der de ønsker å kjøpe"
     ],
-    correct: 3,
-    explain: 'Place (distribusjon) handler om å gjøre produktet tilgjengelig til rett tid og sted – via nettbutikk, grossister, detaljister, direkte salg eller andre kanaler.',
+    "correct": 3,
+    "explain": "Place (distribusjon) handler om å gjøre produktet tilgjengelig til rett tid og sted – via nettbutikk, grossister, detaljister, direkte salg eller andre kanaler."
   },
   {
-    id: 22,
-    cat: 'aida_stp',
-    catLabel: 'AIDA og STP',
-    q: 'Hva er den femte P-en i den utvidede 5P-markedsmiksen?',
-    opts: [
-      'Profitt (finansielt nettoresultat og dekningsbidrag)',
-      'Prosess (interne styringsrutiner og tjenestelevering)',
-      'People (menneskene og personalet som møter kunden)',
-      'Partnerskap (strategiske allianser og samarbeidsavtaler med leverandører)',
+    "id": 22,
+    "cat": "aida_stp",
+    "catLabel": "AIDA og STP",
+    "q": "Hva er den femte P-en i den utvidede 5P-markedsmiksen?",
+    "opts": [
+      "Profitt (finansielt nettoresultat og dekningsbidrag)",
+      "Prosess (interne styringsrutiner og tjenestelevering)",
+      "People (menneskene og personalet som møter kunden)",
+      "Partnerskap (strategiske allianser og samarbeidsavtaler med leverandører)"
     ],
-    correct: 2,
-    explain: 'Den tradisjonelle 4P-en (Produkt, Pris, Plass, Påvirkning) er utvidet med People (mennesker/personell) som femte P, spesielt relevant for tjenesteyting der de ansattes kompetanse og atferd er kritisk.',
+    "correct": 2,
+    "explain": "Den tradisjonelle 4P-en (Produkt, Pris, Plass, Påvirkning) er utvidet med People (mennesker/personell) som femte P, spesielt relevant for tjenesteyting der de ansattes kompetanse og atferd er kritisk."
   },
   {
-    id: 23,
-    cat: 'konkurranse_env',
-    catLabel: 'Konkurransemiljø',
-    q: 'Hva er Porters fem konkurransekrefter?',
-    opts: [
-      'Leverandørers forhandlingsmakt, kunders forhandlingsmakt, trusler fra nykommere og substitutter, og rivaliseringsintensiteten',
-      'Pris, kvalitet, distribusjon, merkevare og innovasjonstakt – de viktigste parameterne for å vurdere bransjens konkurransedynamikk',
-      'Kostnadsstruktur, inntektsmodell, markedsandel, vekstrate og lønnsomhet per segment i bransjeregnskapet',
-      'Produkt, pris, plass (distribusjon), påvirkning (promotion) og personell i den utvidede 5P-markedsmiksen',
+    "id": 31,
+    "type": "order",
+    "cat": "aida_stp",
+    "catLabel": "AIDA og STP",
+    "q": "Sett AIDA-modellens faser i riktig rekkefølge. Første fase øverst, siste fase nederst.",
+    "items": [
+      "Action – stimulere til konkret kjøpshandling",
+      "Desire – bygge ønske og relevans for produktet",
+      "Interest – skape interesse og engasjement",
+      "Attention – fange målgruppens oppmerksomhet"
     ],
-    correct: 0,
-    explain: 'Porters fem krefter: (1) Leverandørers makt, (2) Kunders makt, (3) Trussel fra nykommere, (4) Trussel fra substitutter (erstatningsprodukter), (5) Rivalisering blant eksisterende aktører.',
+    "explain": "AIDA: 1) Attention (fange oppmerksomheten) → 2) Interest (skape interesse) → 3) Desire (bygge ønske) → 4) Action (stimulere til kjøp). Modellen beskriver kjøperens vei fra første kontakt til kjøpsbeslutning."
   },
   {
-    id: 24,
-    cat: 'konkurranse_env',
-    catLabel: 'Konkurransemiljø',
-    q: 'Hva øker trusselen fra nykommere i en bransje?',
-    opts: [
-      'Lave inngangsbarrierer, lite merkevarelojalitet og lave byttkostnader for kundene',
-      'Høye etableringskrav, sterk merkevarelojalitet og langvarige kundekontrakter som låser kjøpere',
-      'Intens prisrivalisering blant etablerte aktører som gjør bransjen lite attraktiv',
-      'Høy leverandørkonsentrasjon og begrenset tilgang på kritiske råvarer',
+    "id": 32,
+    "type": "order",
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Sett produktlivssyklusens faser i riktig rekkefølge. Første fase øverst, siste fase nederst.",
+    "items": [
+      "Tilbakegang – synkende salg, mange trekker seg ut av markedet",
+      "Modning – stabilt høyt salg, sterk priskonkurranse",
+      "Vekst – raskt stigende salg, nye aktører entrer bransjen",
+      "Introduksjon – lavt salg, høye kostnader og begrenset distribusjon"
     ],
-    correct: 0,
-    explain: 'Trussel fra nykommere er høy når inngangsbarrierene er lave (lite kapital, regulering, teknologi kreves), merkevarelojaliteten er svak og kundene lett kan bytte leverandør.',
+    "explain": "Produktlivssyklusen: 1) Introduksjon → 2) Vekst → 3) Modning → 4) Tilbakegang. Markedsstrategien bør tilpasses fasen – reklame og distribusjon i introduksjon, priskutt i modning."
   },
   {
-    id: 25,
-    cat: 'konkurranse_env',
-    catLabel: 'Konkurransemiljø',
-    q: 'Hva er et substitutt i Porters modell?',
-    opts: [
-      'En konkurrent i samme bransje med et tilnærmet identisk produkt og overlappende målgruppe',
-      'En ny leverandør som tilbyr kortere leveringstid og lavere pris',
-      'Et produkt eller tjeneste fra en annen bransje som dekker samme kundebehov',
-      'En kunde som skifter til et billigere alternativ innenfor samme produktkategori',
+    "id": 33,
+    "type": "sort",
+    "cat": "marked_def",
+    "catLabel": "Markedsdefinisjoner",
+    "q": "Sorter hvert eksempel til riktig marked i BOMOF-modellen.",
+    "bins": [
+      {
+        "id": "b",
+        "label": "B – Forbrukermarkedet",
+        "color": "#8b5cf6"
+      },
+      {
+        "id": "o_org",
+        "label": "O – Organisasjonsmarkedet",
+        "color": "#3b82f6"
+      },
+      {
+        "id": "m",
+        "label": "M – Mellomhandlermarkedet",
+        "color": "#10b981"
+      },
+      {
+        "id": "o_off",
+        "label": "O – Det offentlige markedet",
+        "color": "#f59e0b"
+      }
     ],
-    correct: 2,
-    explain: 'Substitutter er produkter eller tjenester fra andre bransjer som kan erstatte bransjens tilbud. Eksempel: tog er et substitutt for fly; video-streaming er et substitutt for kino.',
-  },
-  {
-    id: 26,
-    cat: 'konkurranse_env',
-    catLabel: 'Konkurransemiljø',
-    q: 'Når er leverandørers forhandlingsmakt høy?',
-    opts: [
-      'Når det finnes mange konkurrerende leverandører og bytting er enkelt og billig',
-      'Når kundene i bransjen er svært mange og ingen enkelt kjøper dominerer volumet',
-      'Når bransjen har få store kjøpere med høy forhandlingsstyrke, store volum og lang innkjøpserfaring',
-      'Når leverandøren er unik, leverer kritiske innsatsfaktorer og det er dyrt å bytte leverandør',
+    "items": [
+      {
+        "text": "En privatperson kjøper mat i dagligvarebutikken",
+        "bin": "b"
+      },
+      {
+        "text": "En storbedrift kjøper kontormøbler til nye lokaler",
+        "bin": "o_org"
+      },
+      {
+        "text": "En grossist kjøper tekstiler for å videreselge til butikker",
+        "bin": "m"
+      },
+      {
+        "text": "Et sykehus kjøper medisinsk utstyr gjennom anbud",
+        "bin": "o_off"
+      },
+      {
+        "text": "En student kjøper laptop til eget studiebruk",
+        "bin": "b"
+      },
+      {
+        "text": "En detaljist kjøper inn varer fra produsent for salg i butikk",
+        "bin": "m"
+      }
     ],
-    correct: 3,
-    explain: 'Leverandørers makt er høy når de er få, leverer unike eller kritiske innsatsfaktorer, og det er kostbart eller vanskelig for kunden å bytte leverandør.',
-  },
-  {
-    id: 27,
-    cat: 'konkurranse_env',
-    catLabel: 'Konkurransemiljø',
-    q: 'Hva er hensikten med en konkurrentanalyse?',
-    opts: [
-      'Å forstå konkurrentenes styrker, svakheter, strategier og posisjon for å identifisere egne muligheter og trusler',
-      'Å hente inspirasjon fra konkurrentenes markedsføring og tilpasse vellykkede kampanjeelementer til egne produkter og kanaler',
-      'Å dokumentere prisnivåene i markedet slik at man kan matche dem nøyaktig og unngå å skille seg negativt ut',
-      'Å finne nisjemarkeder der konkurrentene ikke er til stede og unngå direkte møte',
-    ],
-    correct: 0,
-    explain: 'Konkurrentanalyse gir innsikt i hvem konkurrentene er, hva de tilbyr, hvilke segmenter de betjener og hvilke svakheter de har – grunnlag for differensiering og strategivalg.',
-  },
-  {
-    id: 28,
-    cat: 'konkurranse_env',
-    catLabel: 'Konkurransemiljø',
-    q: 'Hva er PESTEL-analyse brukt til?',
-    opts: [
-      'Å vurdere effektiviteten i bedriftens interne verdiskapingsprosesser, kostnadsstruktur, ressursbruk og produktivitet',
-      'Å utvikle og tilpasse en prisstrategi basert på markedets betalingsvillighet og konkurrentenes priser',
-      'Å kartlegge og sammenligne konkurrentenes posisjonering og markedsandeler',
-      'Å kartlegge makroomgivelsene: politiske, økonomiske, sosiale, teknologiske, miljø- og juridiske faktorer',
-    ],
-    correct: 3,
-    explain: 'PESTEL kartlegger makroomgivelsene: Political, Economic, Social, Technological, Environmental, Legal. Brukes til å identifisere eksterne faktorer som kan påvirke bedriftens fremtid.',
-  },
-  {
-    id: 29,
-    cat: 'konkurranse_env',
-    catLabel: 'Konkurransemiljø',
-    q: 'Hva menes med «stuck-in-the-middle» i Porters generiske strategier?',
-    opts: [
-      'En bedrift som verken klarer å differensiere seg eller å være kostnadsleder, og dermed mister konkurransefortrinn',
-      'En bedrift som bevisst posisjonerer seg i mellomsjiktet av markedet for å nå flest mulig kunder til en moderat pris',
-      'En bedrift som satser på en avgrenset og lønnsom markedsnisje fremfor hele markedet',
-      'En situasjon der kostnadslederskap og differensiering kombineres vellykket i én og samme strategi',
-    ],
-    correct: 0,
-    explain: 'Porter advarer mot «stuck-in-the-middle»: bedrifter som verken er tydelige kostnadsledere eller differensierer seg klart, risikerer å miste kunder til begge ender og stagnere lønnsomheten.',
-  },
-  {
-    id: 30,
-    cat: 'konkurranse_env',
-    catLabel: 'Konkurransemiljø',
-    q: 'Hva er en markedsutfordrer ifølge Kotlers fire konkurranseposisjoner?',
-    opts: [
-      'Bedriften med størst markedsandel som i stor grad setter bransjestandarden',
-      'Bedrifter som holder seg nær markedslederen ved å imitere produkt og pris',
-      'Bedrifter som konsentrerer seg om en avgrenset spesialnisje for å unngå direkte konkurranse',
-      'Bedrifter som aktivt utfordrer markedslederen og søker å ta over markedsandeler',
-    ],
-    correct: 3,
-    explain: 'Kotler identifiserer fire posisjoner: markedsleder (størst andel), markedsutfordrer (nr. 2/3, angriper aktivt lederen), markedsfølger (imiterer lederen) og markedsnisje (smal spesialisert målgruppe).',
-  },
-  {
-    id: 31,
-    type: 'order',
-    cat: 'aida_stp',
-    catLabel: 'AIDA og STP',
-    q: 'Sett AIDA-modellens faser i riktig rekkefølge. Første fase øverst, siste fase nederst.',
-    items: [
-      'Action – stimulere til konkret kjøpshandling',
-      'Desire – bygge ønske og relevans for produktet',
-      'Interest – skape interesse og engasjement',
-      'Attention – fange målgruppens oppmerksomhet',
-    ],
-    explain: 'AIDA: 1) Attention (fange oppmerksomheten) → 2) Interest (skape interesse) → 3) Desire (bygge ønske) → 4) Action (stimulere til kjøp). Modellen beskriver kjøperens vei fra første kontakt til kjøpsbeslutning.',
-  },
-  {
-    id: 32,
-    type: 'order',
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Sett produktlivssyklusens faser i riktig rekkefølge. Første fase øverst, siste fase nederst.',
-    items: [
-      'Tilbakegang – synkende salg, mange trekker seg ut av markedet',
-      'Modning – stabilt høyt salg, sterk priskonkurranse',
-      'Vekst – raskt stigende salg, nye aktører entrer bransjen',
-      'Introduksjon – lavt salg, høye kostnader og begrenset distribusjon',
-    ],
-    explain: 'Produktlivssyklusen: 1) Introduksjon → 2) Vekst → 3) Modning → 4) Tilbakegang. Markedsstrategien bør tilpasses fasen – reklame og distribusjon i introduksjon, priskutt i modning.',
-  },
-  {
-    id: 33,
-    type: 'sort',
-    cat: 'marked_def',
-    catLabel: 'Markedsdefinisjoner',
-    q: 'Sorter hvert eksempel til riktig marked i BOMOF-modellen.',
-    bins: [
-      { id: 'b',     label: 'B – Forbrukermarkedet',    color: '#8b5cf6' },
-      { id: 'o_org', label: 'O – Organisasjonsmarkedet', color: '#3b82f6' },
-      { id: 'm',     label: 'M – Mellomhandlermarkedet', color: '#10b981' },
-      { id: 'o_off', label: 'O – Det offentlige markedet', color: '#f59e0b' },
-    ],
-    items: [
-      { text: 'En privatperson kjøper mat i dagligvarebutikken',            bin: 'b' },
-      { text: 'En storbedrift kjøper kontormøbler til nye lokaler',         bin: 'o_org' },
-      { text: 'En grossist kjøper tekstiler for å videreselge til butikker', bin: 'm' },
-      { text: 'Et sykehus kjøper medisinsk utstyr gjennom anbud',           bin: 'o_off' },
-      { text: 'En student kjøper laptop til eget studiebruk',               bin: 'b' },
-      { text: 'En detaljist kjøper inn varer fra produsent for salg i butikk', bin: 'm' },
-    ],
-    explain: 'BOMOF: B=Forbrukermarkedet (privatpersoner til eget forbruk), O=Organisasjonsmarkedet (bedrifter til bruk i driften), M=Mellomhandlermarkedet (kjøper for å videreselge), O=Offentlig markedet (stat og kommune).',
-  },
-  {
-    id: 34,
-    cat: 'konkurranse_env',
-    catLabel: 'Konkurransemiljø',
-    q: 'Hvilke to av Porters fem krefter handler om forhandlingsmakt mellom bedriften og direkte motparter i verdikjeden?',
-    opts: [
-      'Leverandørers forhandlingsmakt – leverandøren er unik og det er dyrt å bytte',
-      'Rivalisering mellom eksisterende aktører – prispress og aggressiv merkevarebygging',
-      'Kunders forhandlingsmakt – kunder kan kreve lavere pris eller bedre kvalitet',
-      'Trussel fra nye inntrengere – nye aktører utfordrer eksisterende markedsandeler',
-    ],
-    correct: [0, 2],
-    explain: 'Av Porters fem krefter handler leverandørers og kunders forhandlingsmakt direkte om maktforholdet mellom bedriften og dens motparter i verdikjeden. De tre andre (rivalisering, nykommere, substitutter) handler om bransjens attraktivitet på andre måter.',
-  },
-  {
-    id: 35,
-    cat: 'kjopsatferd',
-    catLabel: 'Kjøpsprosess og kjøpsatferd',
-    q: 'Hva skjer i trinnet «vurdering av alternativer» i kjøpsprosessen?',
-    opts: [
-      'Kjøper innser at det eksisterer et udekket behov og begynner å tenke på mulige løsninger',
-      'Kjøper sammenligner aktuelle produkter ut fra pris, kvalitet og andre personlige kjøpskriterier',
-      'Kjøper gjennomfører selve transaksjonen og bestemmer seg for leverandør og betalingsform',
-      'Kjøper evaluerer i etterkant om det gjennomførte kjøpet svarte til forventningene og behovet',
-    ],
-    correct: 1,
-    explain: 'I «vurdering av alternativer» sammenligner kjøper de produktene som er aktuelle ut fra personlige kjøpskriterier (pris, kvalitet, egenskaper, merkevare). Resultatet er en rangering som leder til kjøpsbeslutningen.',
-  },
-  {
-    id: 36,
-    cat: 'kjopsatferd',
-    catLabel: 'Kjøpsprosess og kjøpsatferd',
-    q: 'Hva er kognitiv dissonans i kjøpssammenheng?',
-    opts: [
-      'En uro eller tvil som oppstår hos kjøper etter gjennomført kjøp, der man tviler på at valget var det riktige',
-      'En bevisst strategi der selger følger opp kunden etter salg for å bekrefte at kjøpet var riktig',
-      'Systematisk motstand mot å endre kjøpsvaner til tross for kjennskap til bedre og billigere alternativer',
-      'En psykologisk metode for å kartlegge kundens underbevisste preferanser og kjøpsmotiver gjennom undersøkelse',
-    ],
-    correct: 0,
-    explain: 'Kognitiv dissonans (kjøperangst) oppstår etter kjøp når forventningene ikke stemmer med erfaringen, eller når man angrer valget. Markedsførere kan redusere den ved å bekrefte at kjøpet var fornuftig – f.eks. gjennom oppfølgingsmail og garanti.',
-  },
-  {
-    id: 37,
-    cat: 'kjopsatferd',
-    catLabel: 'Kjøpsprosess og kjøpsatferd',
-    q: 'Hva kjennetegner et lavinvolveringskjøp?',
-    opts: [
-      'Høyt engasjement med grundig produktsammenligning, mange informasjonskilder og lang beslutningsprosess',
-      'Rutinepreget kjøp med lav risiko, begrenset informasjonsinnhenting og rask, vanebasert beslutning',
-      'Kjøp med høy finansiell, sosial eller personlig risiko som krever grundig gjennomgang av alternativer',
-      'Formell innkjøpsprosess med tilbudsinnhenting, grundig leverandørevaluering og skriftlig avtaleinngåelse',
-    ],
-    correct: 1,
-    explain: 'Lavinvolveringskjøp (f.eks. dagligvarer) kjennetegnes av at forbrukeren ikke bruker mye tid eller energi. Beslutningen tas raskt, gjerne basert på vane eller hylleplassering. Høyinvolvering (f.eks. bil, hus) krever derimot grundig søk og vurdering.',
-  },
-  {
-    id: 38,
-    cat: 'kjopsatferd',
-    catLabel: 'Kjøpsprosess og kjøpsatferd',
-    q: 'Hvilke fire faktorer påvirker forbrukerens kjøpsatferd ifølge Kotler?',
-    opts: [
-      'Marked, produkt, pris og distribusjon – de fire P-ene i markedsmiksen som former tilbudet',
-      'Politiske, økonomiske, sosiale og teknologiske faktorer – fra makroanalysen av omgivelsene',
-      'Motivasjon, persepsjon, læring og holdninger – psykologiske prosesser internt hos forbrukeren',
-      'Kulturelle, sosiale, personlige og psykologiske faktorer – fra Kotlers modell for kjøperatferd',
-    ],
-    correct: 3,
-    explain: 'Kotlers modell: kulturelle faktorer (kultur, subkultur, sosial klasse), sosiale faktorer (referansegrupper, familie, roller), personlige faktorer (alder, livsstil, økonomi) og psykologiske faktorer (motivasjon, persepsjon, holdninger, læring).',
-  },
-  {
-    id: 39,
-    cat: 'kjopsatferd',
-    catLabel: 'Kjøpsprosess og kjøpsatferd',
-    q: 'Hva er kundereisen (customer journey)?',
-    opts: [
-      'Logistikkreisen som produktet gjennomgår fra produksjon, via distribusjonsledd, til den fysiske sluttbrukeren',
-      'En kartlegging av kundens bevegelse mellom nettbutikk, fysiske butikker og relevante sosiale medieplattformer',
-      'Summen av alle kontaktpunkter og opplevelser kunden har med en bedrift, fra første bevissthet til lojalitet',
-      'Bedriftens interne salgsprosess fra prospekt til avsluttet ordre, etter-salgsoppfølging og CRM-registrering',
-    ],
-    correct: 2,
-    explain: 'Kundereisen (customer journey) beskriver alle kontaktpunkter kunden har med en bedrift – fra bevissthet og vurdering via kjøp til bruk og lojalitet. Kartlegging av kundereisen avdekker forbedringsmuligheter og friksjonspunkter i hvert steg.',
-  },
-  {
-    id: 40,
-    type: 'sort',
-    cat: 'kjopsatferd',
-    catLabel: 'Kjøpsprosess og kjøpsatferd',
-    q: 'Sorter hvert kjennetegn under riktig kjøpstype.',
-    bins: [
-      { id: 'b2c', label: 'B2C (forbrukermarkedet)',      color: '#ef4444' },
-      { id: 'b2b', label: 'B2B (organisasjonsmarkedet)',  color: '#3b82f6' },
-    ],
-    items: [
-      { text: 'Rask, ofte vanebasert kjøpsbeslutning',               bin: 'b2c' },
-      { text: 'Formell innkjøpsprosess med innkjøpskomité',           bin: 'b2b' },
-      { text: 'Kjøp styrt av personlige preferanser og følelser',     bin: 'b2c' },
-      { text: 'Stor ordrestørrelse og lang beslutningsprosess',       bin: 'b2b' },
-      { text: 'Mange kjøpere med lav lojalitet til leverandør',      bin: 'b2c' },
-      { text: 'Noen få store kjøpere med tette leverandørforhold',   bin: 'b2b' },
-    ],
-    explain: 'B2C: mange kjøpere, følelsesbaserte beslutninger, lav involvering, lav lojalitet. B2B: få store kjøpere, rasjonell og formell prosess med innkjøpskomité, langsiktige leverandørforhold.',
-  },
-  {
-    id: 41,
-    type: 'order',
-    cat: 'kjopsatferd',
-    catLabel: 'Kjøpsprosess og kjøpsatferd',
-    q: 'Sett kjøpsprosessens fem trinn i riktig rekkefølge. Første trinn øverst, siste trinn nederst.',
-    items: [
-      'Etterkjøpsevaluering – vurderer om produktet møtte forventningene',
-      'Kjøpsbeslutning – gjennomfører selve kjøpet',
-      'Vurdering av alternativer – sammenligner produkter ut fra kjøpskriterier',
-      'Informasjonssøk – henter inn informasjon om mulige produkter og leverandører',
-      'Behovserkjennelse – innser et udekket behov eller ønske',
-    ],
-    explain: 'Kjøpsprosessens 5 trinn: 1) Behovserkjennelse → 2) Informasjonssøk → 3) Vurdering av alternativer → 4) Kjøpsbeslutning → 5) Etterkjøpsevaluering (Kotlers forbrukeratferdsmodell).',
-  },
+    "explain": "BOMOF: B=Forbrukermarkedet (privatpersoner til eget forbruk), O=Organisasjonsmarkedet (bedrifter til bruk i driften), M=Mellomhandlermarkedet (kjøper for å videreselge), O=Offentlig markedet (stat og kommune)."
+  }
 ];

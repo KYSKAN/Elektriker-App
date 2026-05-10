@@ -1,538 +1,315 @@
-﻿const QUIZ_META = {
-  id: 'lom-ool-endring',
-  title: 'Endringsledelse og organisasjonsutvikling',
-  subtitle: 'Organisasjon og ledelse – Kap. 7',
-  description: '36 spørsmål om endringsledelse, Kotters 8 trinn, Lewins faser, interessentanalyse, OU, TKL, LEAN og den lærende organisasjon.',
-  cats: {
-    endring_def:   { label: 'Endringsledelse – grunnlag', color: '#8b5cf6' },
-    modeller:      { label: 'Kotters og Lewins modeller', color: '#3b82f6' },
-    interessenter: { label: 'Interessenter og motstand', color: '#ef4444' },
-    ou_tql:        { label: 'OU, TKL, LEAN og Senge', color: '#10b981' },
+const QUIZ_META = {
+  "id": "lom-ool-endring-1",
+  "title": "Endringsledelse Del 1",
+  "subtitle": "LØM Fagskole – Endringsdefinisjon & Modeller",
+  "description": "18 spørsmål – Endringsledelse – grunnlag, Kotters og Lewins modeller.",
+  "cats": {
+    "endring_def": {
+      "label": "Endringsledelse – grunnlag",
+      "color": "#8b5cf6"
+    },
+    "modeller": {
+      "label": "Kotters og Lewins modeller",
+      "color": "#3b82f6"
+    }
   }
 };
 
 const QUESTIONS = [
   {
-    id: 1,
-    cat: 'endring_def',
-    catLabel: 'Endringsledelse – grunnlag',
-    q: 'Hva er endringsledelse ifølge Wesenberg (2023)?',
-    opts: [
-      'En planmessig og målrettet prosess for å lede mennesker og organisasjoner gjennom ønskede endringer',
-      'En styringsmodell for budsjettering og ressursfordeling i omstillingsperioder, som sikrer kostnadseffektiv drift',
-      'Et rammeverk for å revidere organisasjonsstrukturen og rapporteringslinjene, tilpasset nye strategiske mål',
-      'En metode for å vurdere behovet for teknologi, kompetanse og systemoppgraderinger i virksomheten',
+    "id": 1,
+    "cat": "endring_def",
+    "catLabel": "Endringsledelse – grunnlag",
+    "q": "Hva er endringsledelse ifølge Wesenberg (2023)?",
+    "opts": [
+      "En planmessig og målrettet prosess for å lede mennesker og organisasjoner gjennom ønskede endringer",
+      "En styringsmodell for budsjettering og ressursfordeling i omstillingsperioder, som sikrer kostnadseffektiv drift",
+      "Et rammeverk for å revidere organisasjonsstrukturen og rapporteringslinjene, tilpasset nye strategiske mål",
+      "En metode for å vurdere behovet for teknologi, kompetanse og systemoppgraderinger i virksomheten"
     ],
-    correct: 0,
-    explain: 'Endringsledelse er en planmessig og målrettet prosess for å lede mennesker og organisasjoner gjennom ønskede endringer, slik at endringene faktisk fester seg og gir ønskede resultater.',
+    "correct": 0,
+    "explain": "Endringsledelse er en planmessig og målrettet prosess for å lede mennesker og organisasjoner gjennom ønskede endringer, slik at endringene faktisk fester seg og gir ønskede resultater."
   },
   {
-    id: 2,
-    cat: 'endring_def',
-    catLabel: 'Endringsledelse – grunnlag',
-    q: 'Hvor stor andel av endringsforsøk mislykkes ifølge forskning på feltet?',
-    opts: [
-      '30 %',
-      '50 %',
-      '70 %',
-      '90 %',
+    "id": 2,
+    "cat": "endring_def",
+    "catLabel": "Endringsledelse – grunnlag",
+    "q": "Hvor stor andel av endringsforsøk mislykkes ifølge forskning på feltet?",
+    "opts": [
+      "30 %",
+      "50 %",
+      "70 %",
+      "90 %"
     ],
-    correct: 2,
-    explain: 'Forskning viser at om lag 70 % av alle endringsinitiativ i organisasjoner mislykkes – ofte fordi man undervurderer menneskesiden og fokuserer for mye på tekniske løsninger.',
+    "correct": 2,
+    "explain": "Forskning viser at om lag 70 % av alle endringsinitiativ i organisasjoner mislykkes – ofte fordi man undervurderer menneskesiden og fokuserer for mye på tekniske løsninger."
   },
   {
-    id: 3,
-    cat: 'endring_def',
-    catLabel: 'Endringsledelse – grunnlag',
-    q: 'Hva er implementeringssuksess-formelen fra pensum?',
-    opts: [
-      'Suksess = Strategi × (Mål + Ressurser + Tidsplan)',
-      'Suksess = Kvalitet × (Eierskap + Motivasjon + Kunnskap)',
-      'Suksess = Ledelse × (Struktur + Prosess + Kultur)',
-      'Suksess = Kompetanse × (Vilje + Kapasitet + Forankring)',
+    "id": 3,
+    "cat": "endring_def",
+    "catLabel": "Endringsledelse – grunnlag",
+    "q": "Hva er implementeringssuksess-formelen fra pensum?",
+    "opts": [
+      "Suksess = Strategi × (Mål + Ressurser + Tidsplan)",
+      "Suksess = Kvalitet × (Eierskap + Motivasjon + Kunnskap)",
+      "Suksess = Ledelse × (Struktur + Prosess + Kultur)",
+      "Suksess = Kompetanse × (Vilje + Kapasitet + Forankring)"
     ],
-    correct: 1,
-    explain: 'Implementeringssuksess = Kvalitet × (Eierskap + Motivasjon + Kunnskap). Formelen viser at god teknisk kvalitet ikke er nok – ansatte må eie endringen, være motiverte og forstå den.',
+    "correct": 1,
+    "explain": "Implementeringssuksess = Kvalitet × (Eierskap + Motivasjon + Kunnskap). Formelen viser at god teknisk kvalitet ikke er nok – ansatte må eie endringen, være motiverte og forstå den."
   },
   {
-    id: 4,
-    cat: 'endring_def',
-    catLabel: 'Endringsledelse – grunnlag',
-    q: 'Hva er endringskaleidoskopet, og hvilke dimensjoner inngår?',
-    opts: [
-      'En analysemodell med 8 komponenter: makt, tid, omfang, bevaring, mangfold, kompetanse, kapasitet og forankring',
-      'En strategimodell med 6 dimensjoner: visjon, mål, kommunikasjon, struktur, kultur og løpende evaluering av fremdrift',
-      'En beslutningsmodell med 5 faser inspirert av Lewins tine-endre-fryse-tilnærming til organisatorisk endring',
-      'En kartleggingsmodell med 4 kategorier basert på interessentenes makt, engasjement og påvirkningspotensial',
+    "id": 4,
+    "cat": "endring_def",
+    "catLabel": "Endringsledelse – grunnlag",
+    "q": "Hva er endringskaleidoskopet, og hvilke dimensjoner inngår?",
+    "opts": [
+      "En analysemodell med 8 komponenter: makt, tid, omfang, bevaring, mangfold, kompetanse, kapasitet og forankring",
+      "En strategimodell med 6 dimensjoner: visjon, mål, kommunikasjon, struktur, kultur og løpende evaluering av fremdrift",
+      "En beslutningsmodell med 5 faser inspirert av Lewins tine-endre-fryse-tilnærming til organisatorisk endring",
+      "En kartleggingsmodell med 4 kategorier basert på interessentenes makt, engasjement og påvirkningspotensial"
     ],
-    correct: 0,
-    explain: 'Endringskaleidoskopet er et analyseverktøy med 8 komponenter som hjelper ledere vurdere konteksten for endring: maktforhold, tid, omfang, bevaring, mangfold, kompetanse, kapasitet og forankring.',
+    "correct": 0,
+    "explain": "Endringskaleidoskopet er et analyseverktøy med 8 komponenter som hjelper ledere vurdere konteksten for endring: maktforhold, tid, omfang, bevaring, mangfold, kompetanse, kapasitet og forankring."
   },
   {
-    id: 5,
-    cat: 'endring_def',
-    catLabel: 'Endringsledelse – grunnlag',
-    q: 'Hva er akseptmodellen i endringsledelse?',
-    opts: [
-      'En kartleggingsmodell: identifisere → kartlegge → vurdere → prioritere',
-      'Fire trinn ansatte må gjennom: vite → kunne → ville → ha lov',
-      'En tilnærming: sette mål → måle → evaluere → justere kursen',
-      'En prosess for motstand: informere → lytte → forhandle → godkjenne',
+    "id": 5,
+    "cat": "endring_def",
+    "catLabel": "Endringsledelse – grunnlag",
+    "q": "Hva er akseptmodellen i endringsledelse?",
+    "opts": [
+      "En kartleggingsmodell: identifisere → kartlegge → vurdere → prioritere",
+      "Fire trinn ansatte må gjennom: vite → kunne → ville → ha lov",
+      "En tilnærming: sette mål → måle → evaluere → justere kursen",
+      "En prosess for motstand: informere → lytte → forhandle → godkjenne"
     ],
-    correct: 1,
-    explain: 'Akseptmodellen beskriver fire trinn ansatte må gjennom for å ta til seg en endring: vite (kjenne endringen), kunne (ha kompetanse), ville (være motivert) og ha lov (ha myndighet).',
+    "correct": 1,
+    "explain": "Akseptmodellen beskriver fire trinn ansatte må gjennom for å ta til seg en endring: vite (kjenne endringen), kunne (ha kompetanse), ville (være motivert) og ha lov (ha myndighet)."
   },
   {
-    id: 6,
-    cat: 'endring_def',
-    catLabel: 'Endringsledelse – grunnlag',
-    q: 'Hva er en kommunikasjonsplan i endringsarbeid?',
-    opts: [
-      'Et opplegg for å presentere endringens resultater og læringspunkter etter gjennomføring',
-      'En systematisk plan for hvem som skal informeres om hva, når og hvordan under endringsprosessen',
-      'Et dokument som beskriver nye roller, ansvarsfordeling og kommunikasjonskanaler',
-      'En oversikt over hvilke budskap som skal ut eksternt – til kunder, leverandører, samarbeidspartnere og media',
+    "id": 6,
+    "cat": "endring_def",
+    "catLabel": "Endringsledelse – grunnlag",
+    "q": "Hva er en kommunikasjonsplan i endringsarbeid?",
+    "opts": [
+      "Et opplegg for å presentere endringens resultater og læringspunkter etter gjennomføring",
+      "En systematisk plan for hvem som skal informeres om hva, når og hvordan under endringsprosessen",
+      "Et dokument som beskriver nye roller, ansvarsfordeling og kommunikasjonskanaler",
+      "En oversikt over hvilke budskap som skal ut eksternt – til kunder, leverandører, samarbeidspartnere og media"
     ],
-    correct: 1,
-    explain: 'En kommunikasjonsplan sikrer at riktig informasjon når riktige interessenter til riktig tid og via riktige kanaler – kritisk for å redusere usikkerhet og motstand mot endring.',
+    "correct": 1,
+    "explain": "En kommunikasjonsplan sikrer at riktig informasjon når riktige interessenter til riktig tid og via riktige kanaler – kritisk for å redusere usikkerhet og motstand mot endring."
   },
   {
-    id: 7,
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Hva er de tre fasene i Lewins endringsmodell?',
-    opts: [
-      'Planlegge → Gjennomføre → Evaluere',
-      'Analysere → Implementere → Følge opp',
-      'Tine → Endre → Fryse',
-      'Mobilisere → Endre → Forankre',
+    "id": 7,
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Hva er de tre fasene i Lewins endringsmodell?",
+    "opts": [
+      "Planlegge → Gjennomføre → Evaluere",
+      "Analysere → Implementere → Følge opp",
+      "Tine → Endre → Fryse",
+      "Mobilisere → Endre → Forankre"
     ],
-    correct: 2,
-    explain: 'Lewins tre faser: Tine (unfreeze – løsne opp etablerte mønstre), Endre (move – gjennomføre endringen) og Fryse (refreeze – forankre den nye tilstanden som ny norm).',
+    "correct": 2,
+    "explain": "Lewins tre faser: Tine (unfreeze – løsne opp etablerte mønstre), Endre (move – gjennomføre endringen) og Fryse (refreeze – forankre den nye tilstanden som ny norm)."
   },
   {
-    id: 8,
-    type: 'sort',
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Sorter hvert tiltak under riktig fase i Lewins endringsmodell.',
-    bins: [
-      { id: 'tine',  label: 'Tine (unfreeze)',  color: '#3b82f6' },
-      { id: 'endre', label: 'Endre (move)',      color: '#f59e0b' },
-      { id: 'fryse', label: 'Fryse (refreeze)', color: '#10b981' },
+    "id": 8,
+    "type": "sort",
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Sorter hvert tiltak under riktig fase i Lewins endringsmodell.",
+    "bins": [
+      {
+        "id": "tine",
+        "label": "Tine (unfreeze)",
+        "color": "#3b82f6"
+      },
+      {
+        "id": "endre",
+        "label": "Endre (move)",
+        "color": "#f59e0b"
+      },
+      {
+        "id": "fryse",
+        "label": "Fryse (refreeze)",
+        "color": "#10b981"
+      }
     ],
-    items: [
-      { text: 'Skape erkjennelse av at endring er nødvendig',  bin: 'tine'  },
-      { text: 'Løsne opp etablerte rutiner og mønstre',        bin: 'tine'  },
-      { text: 'Gjennomføre opplæring i nye arbeidsmetoder',    bin: 'endre' },
-      { text: 'Implementere ny organisasjonsstruktur',         bin: 'endre' },
-      { text: 'Forankre ny atferd som den nye standarden',     bin: 'fryse' },
-      { text: 'Revidere belønningsstrukturer og systemer',     bin: 'fryse' },
+    "items": [
+      {
+        "text": "Skape erkjennelse av at endring er nødvendig",
+        "bin": "tine"
+      },
+      {
+        "text": "Løsne opp etablerte rutiner og mønstre",
+        "bin": "tine"
+      },
+      {
+        "text": "Gjennomføre opplæring i nye arbeidsmetoder",
+        "bin": "endre"
+      },
+      {
+        "text": "Implementere ny organisasjonsstruktur",
+        "bin": "endre"
+      },
+      {
+        "text": "Forankre ny atferd som den nye standarden",
+        "bin": "fryse"
+      },
+      {
+        "text": "Revidere belønningsstrukturer og systemer",
+        "bin": "fryse"
+      }
     ],
-    explain: 'Tine: skape erkjennelse og løsne opp status quo. Endre: implementere ny praksis og opplæring. Fryse: forankre og stabilisere den nye normalen.',
+    "explain": "Tine: skape erkjennelse og løsne opp status quo. Endre: implementere ny praksis og opplæring. Fryse: forankre og stabilisere den nye normalen."
   },
   {
-    id: 9,
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Hva representerer "tine"-fasen i Lewins modell?',
-    opts: [
-      'Å gjennomføre den planlagte endringen strukturert – steg for steg i hele organisasjonen',
-      'Å forankre ny atferd og nye rutiner som den permanente standarden etter gjennomføring',
-      'Å skape motivasjon og erkjennelse av at endring er nødvendig – løsne opp status quo',
-      'Å kartlegge resultater og analysere avvik – justere kursen etter tilbakemeldinger',
+    "id": 9,
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Hva representerer \"tine\"-fasen i Lewins modell?",
+    "opts": [
+      "Å gjennomføre den planlagte endringen strukturert – steg for steg i hele organisasjonen",
+      "Å forankre ny atferd og nye rutiner som den permanente standarden etter gjennomføring",
+      "Å skape motivasjon og erkjennelse av at endring er nødvendig – løsne opp status quo",
+      "Å kartlegge resultater og analysere avvik – justere kursen etter tilbakemeldinger"
     ],
-    correct: 2,
-    explain: 'Tine-fasen handler om å destabilisere status quo og skape motivasjon for endring – folk må innse at det eksisterende ikke fungerer godt nok og at endring er nødvendig.',
+    "correct": 2,
+    "explain": "Tine-fasen handler om å destabilisere status quo og skape motivasjon for endring – folk må innse at det eksisterende ikke fungerer godt nok og at endring er nødvendig."
   },
   {
-    id: 10,
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Hvilke to kjennetegn hører hjemme i Lewins tine-fase?',
-    opts: [
-      'Skape erkjennelse av at nåværende situasjon ikke er god nok',
-      'Gjennomføre opplæring i de nye arbeidsmetodene og systemene',
-      'Løsne opp etablerte rutiner og vante tankemønstre i organisasjonen',
-      'Forankre den nye atferden som en permanent og akseptert standard',
+    "id": 10,
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Hvilke to kjennetegn hører hjemme i Lewins tine-fase?",
+    "opts": [
+      "Skape erkjennelse av at nåværende situasjon ikke er god nok",
+      "Gjennomføre opplæring i de nye arbeidsmetodene og systemene",
+      "Løsne opp etablerte rutiner og vante tankemønstre i organisasjonen",
+      "Forankre den nye atferden som en permanent og akseptert standard"
     ],
-    correct: [0, 2],
-    explain: 'Tine-fasen kjennetegnes av å skape erkjennelse av at status quo ikke holder, og å løsne opp etablerte mønstre. Opplæring hører til endre-fasen; forankring hører til fryse-fasen.',
+    "correct": [
+      0,
+      2
+    ],
+    "explain": "Tine-fasen kjennetegnes av å skape erkjennelse av at status quo ikke holder, og å løsne opp etablerte mønstre. Opplæring hører til endre-fasen; forankring hører til fryse-fasen."
   },
   {
-    id: 11,
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Hva er første steg i Kotters 8-trinnsmodell for endring?',
-    opts: [
-      'Bygge koalisjon (av troverdige støttespillere) i hele organisasjonen',
-      'Skape en følelse av krise og hastverk (urgency)',
-      'Kommunisere endringsvisjonen bredt og tydelig (til alle nivåer)',
-      'Forankre endringene i organisasjonens kultur (daglig praksis)',
+    "id": 11,
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Hva er første steg i Kotters 8-trinnsmodell for endring?",
+    "opts": [
+      "Bygge koalisjon (av troverdige støttespillere) i hele organisasjonen",
+      "Skape en følelse av krise og hastverk (urgency)",
+      "Kommunisere endringsvisjonen bredt og tydelig (til alle nivåer)",
+      "Forankre endringene i organisasjonens kultur (daglig praksis)"
     ],
-    correct: 1,
-    explain: 'Kotters første trinn er å skape en sterk følelse av nødvendighet og hastverk (urgency) – uten dette vil ikke folk prioritere endringen fremfor daglig drift.',
+    "correct": 1,
+    "explain": "Kotters første trinn er å skape en sterk følelse av nødvendighet og hastverk (urgency) – uten dette vil ikke folk prioritere endringen fremfor daglig drift."
   },
   {
-    id: 12,
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Hva er det siste trinnet i Kotters 8-trinnsmodell?',
-    opts: [
-      'Planlegge kortsiktige seire for å holde motivasjonen oppe',
-      'Kommunisere endringsvisjonen til alle',
-      'Forankre endringene i organisasjonens kultur',
-      'Fjerne barrierer og strukturer som hemmer gjennomføringen',
+    "id": 12,
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Hva er det siste trinnet i Kotters 8-trinnsmodell?",
+    "opts": [
+      "Planlegge kortsiktige seire for å holde motivasjonen oppe",
+      "Kommunisere endringsvisjonen til alle",
+      "Forankre endringene i organisasjonens kultur",
+      "Fjerne barrierer og strukturer som hemmer gjennomføringen"
     ],
-    correct: 2,
-    explain: 'Kotters siste (8.) trinn er å forankre endringene dypt i organisasjonens kultur – slik at de nye måtene å jobbe på blir den nye normalen og ikke glir tilbake til gammel praksis.',
+    "correct": 2,
+    "explain": "Kotters siste (8.) trinn er å forankre endringene dypt i organisasjonens kultur – slik at de nye måtene å jobbe på blir den nye normalen og ikke glir tilbake til gammel praksis."
   },
   {
-    id: 13,
-    type: 'order',
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Plasser Kotters 8 trinn i riktig rekkefølge. Første trinn øverst, siste trinn nederst.',
-    items: [
-      'Forankre endringene i kulturen',
-      'Konsolidere gevinster og gå videre',
-      'Planlegge og synliggjøre seire',
-      'Fjerne barrierer for gjennomføring',
-      'Kommunisere endringsvisjonen bredt',
-      'Utvikle klar visjon og strategi',
-      'Bygge koalisjon av støttespillere',
-      'Skape urgency og hastverk',
+    "id": 13,
+    "type": "order",
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Plasser Kotters 8 trinn i riktig rekkefølge. Første trinn øverst, siste trinn nederst.",
+    "items": [
+      "Forankre endringene i kulturen",
+      "Konsolidere gevinster og gå videre",
+      "Planlegge og synliggjøre seire",
+      "Fjerne barrierer for gjennomføring",
+      "Kommunisere endringsvisjonen bredt",
+      "Utvikle klar visjon og strategi",
+      "Bygge koalisjon av støttespillere",
+      "Skape urgency og hastverk"
     ],
-    explain: 'Kotters 8 trinn: 1) Urgency → 2) Koalisjon → 3) Visjon → 4) Kommuniser visjonen → 5) Fjern barrierer → 6) Kortsiktige seire → 7) Konsolider gevinster → 8) Forankre i kulturen.',
+    "explain": "Kotters 8 trinn: 1) Urgency → 2) Koalisjon → 3) Visjon → 4) Kommuniser visjonen → 5) Fjern barrierer → 6) Kortsiktige seire → 7) Konsolider gevinster → 8) Forankre i kulturen."
   },
   {
-    id: 14,
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Hva er en viktig forskjell mellom Kotters og Lewins endringsmodeller?',
-    opts: [
-      'Lewin er primært utviklet for offentlig sektor; Kotter for kommersielle virksomheter',
-      'Kotter har 8 detaljerte trinn med fokus på lederatferd; Lewin har 3 overordnede faser',
-      'Lewin vektlegger tekniske løsninger; Kotter vektlegger menneskelige og kulturelle faktorer',
-      'Kotter passer best for raske transformasjoner; Lewin for gradvise og langsiktige endringer',
+    "id": 14,
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Hva er en viktig forskjell mellom Kotters og Lewins endringsmodeller?",
+    "opts": [
+      "Lewin er primært utviklet for offentlig sektor; Kotter for kommersielle virksomheter",
+      "Kotter har 8 detaljerte trinn med fokus på lederatferd; Lewin har 3 overordnede faser",
+      "Lewin vektlegger tekniske løsninger; Kotter vektlegger menneskelige og kulturelle faktorer",
+      "Kotter passer best for raske transformasjoner; Lewin for gradvise og langsiktige endringer"
     ],
-    correct: 1,
-    explain: 'Kotter tilbyr en mer detaljert, lederorientert 8-trinnsmodell med fokus på spesifikke handlinger ledere bør ta. Lewin gir en enklere, mer overordnet 3-fasemodell.',
+    "correct": 1,
+    "explain": "Kotter tilbyr en mer detaljert, lederorientert 8-trinnsmodell med fokus på spesifikke handlinger ledere bør ta. Lewin gir en enklere, mer overordnet 3-fasemodell."
   },
   {
-    id: 15,
-    cat: 'interessenter',
-    catLabel: 'Interessenter og motstand',
-    q: 'Hva er en interessentanalyse i endringsarbeid?',
-    opts: [
-      'En vurdering av hvilke avdelinger som berøres mest – de som trenger ekstra støtte og oppfølging',
-      'En kartlegging av alle berørte parter etter to dimensjoner: makt og interesse – for å prioritere involvering',
-      'En analyse av markedets reaksjon på organisatoriske endringer – omdømmerisiko og ekstern legitimitet',
-      'Et verktøy for å kartlegge interne konflikter og avgjøre hvem som bør involveres aktivt i løsningsarbeidet',
+    "id": 31,
+    "cat": "endring_def",
+    "catLabel": "Endringsledelse – grunnlag",
+    "q": "Hva er prestasjonsledelse i OU-sammenheng?",
+    "opts": [
+      "En helhetlig tilnærming for å sette mål, følge opp og utvikle ansattes prestasjoner kontinuerlig",
+      "Et system for å rapportere og håndtere avvik i produktivitet og måloppnåelse",
+      "Et lønns- og insentivsystem koblet til individuelle resultater og teamprestasjoner",
+      "En metode for å kartlegge kompetansegap og planlegge opplæringstiltak i organisasjonen"
     ],
-    correct: 1,
-    explain: 'Interessentanalysen kartlegger alle som berøres av endringen og plasserer dem i en 2×2 matrise etter makt (høy/lav) og interesse (høy/lav) – for å avgjøre hvor mye innsats som bør legges i å involvere dem.',
+    "correct": 0,
+    "explain": "Prestasjonsledelse er en helhetlig tilnærming for å sette tydelige mål (SMART), følge opp, gi tilbakemelding og coache ansatte til kontinuerlig utvikling og forbedrede prestasjoner."
   },
   {
-    id: 16,
-    cat: 'interessenter',
-    catLabel: 'Interessenter og motstand',
-    q: 'Hvem bør prioriteres høyest i en interessentanalyse?',
-    opts: [
-      'De med lav makt og høy interesse',
-      'De med høy makt og lav interesse',
-      'De med høy makt og høy interesse',
-      'De med lav makt og lav interesse',
+    "id": 32,
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Hva menes med \"fryse\"-fasen i Lewins modell?",
+    "opts": [
+      "Å avslutte endringsprosessen formelt og overlevere ansvar til linjeledelsen",
+      "Å stabilisere organisasjonen etter endringen ved å sette alle videre initiativ på vent",
+      "Å dokumentere erfaringene fra endringsprosessen og evaluere resultatene grundig",
+      "Å forankre den nye atferden og de nye rutinene som den nye normalen i organisasjonen"
     ],
-    correct: 2,
-    explain: 'Interessenter med høy makt og høy interesse er "nøkkelspillere" som bør involveres aktivt. De har både mulighet til å blokkere endringen og sterk motivasjon til å gjøre det.',
+    "correct": 3,
+    "explain": "Fryse-fasen handler om å konsolidere og forankre endringene – de nye arbeidsmetodene, verdiene og atferdene skal bli den nye standarden som tas for gitt, ikke midlertidige unntak."
   },
   {
-    id: 17,
-    cat: 'interessenter',
-    catLabel: 'Interessenter og motstand',
-    q: 'Hvilke er de vanligste årsakene til motstand mot endring ifølge Kanter (1992)?',
-    opts: [
-      'Tap av kontroll, høy usikkerhet, mangel på informasjon og frykt for å tape noe man har',
-      'Manglende digital kompetanse og utfordringer med nye teknologiske systemer',
-      'Uenighet om endringsstrategien og ønsket om andre prioriteringer',
-      'Dårlig timing, for høyt endringstempo og utilstrekkelige ressurser',
+    "id": 35,
+    "cat": "endring_def",
+    "catLabel": "Endringsledelse – grunnlag",
+    "q": "Hva er en prestasjonskultur?",
+    "opts": [
+      "En kultur der forventninger er tydelige, ansatte har eierskap til mål og kontinuerlig forbedring er normen",
+      "En kultur der individuelle og kollektive bidrag synliggjøres, anerkjennes og belønnes gjennom regelmessige og strukturerte tilbakemeldinger",
+      "En kultur der toppledelsen setter ambisiøse, målbare mål og systematisk holder mellomledere ansvarlige for levering og resultater",
+      "En kultur der resultater overvåkes tett, avvik fra plan analyseres grundig og korrigerende tiltak iverksettes raskt og systematisk"
     ],
-    correct: 0,
-    explain: 'Kanter identifiserte motstand mot endring som drevet av: tap av kontroll, usikkerhet om fremtiden, mangel på tilstrekkelig informasjon, frykt for å miste noe man verdsetter, og bekymring for inkompetanse.',
+    "correct": 0,
+    "explain": "Prestasjonskultur innebærer at forventninger er tydelige og kjente, at ansatte tar eierskap til egne mål, og at kontinuerlig forbedring og læring er en naturlig del av hverdagen."
   },
   {
-    id: 18,
-    cat: 'interessenter',
-    catLabel: 'Interessenter og motstand',
-    q: 'Hvilke to er vanlige årsaker til motstand mot endring ifølge Kanter (1992)?',
-    opts: [
-      'Tap av kontroll og redusert selvbestemmelse i arbeidshverdagen',
-      'Mangel på digital kompetanse og kunnskap om nye systemer og verktøy',
-      'Frykt for å miste noe man verdsetter eller har bygd opp over tid',
-      'Uenighet om de prioriteringene og budsjettrammene endringen krever',
+    "id": 36,
+    "cat": "modeller",
+    "catLabel": "Kotters og Lewins modeller",
+    "q": "Hva er \"kortsiktige seire\" i Kotters 8-trinnsmodell?",
+    "opts": [
+      "Å nå planlagte delmål i endringsplanen, dokumentere fremdrift og rapportere status regelmessig til ledergruppen",
+      "Å skape synlige, raske resultater av endringen for å bevise at den virker og opprettholde motivasjonen",
+      "Å aktivt sikre at budsjettet overholdes i de første fasene, og raskt avdekke og håndtere kostnadsoverskridelser",
+      "Å systematisk identifisere, prioritere og løse tekniske og organisatoriske problemer tidlig for å hindre forsinkelser"
     ],
-    correct: [0, 2],
-    explain: 'Kanter (1992) peker på tap av kontroll og frykt for å miste noe man verdsetter som sentrale drivere bak motstand mot endring – begge handler om en opplevd trussel mot det kjente og trygge.',
-  },
-  {
-    id: 19,
-    cat: 'interessenter',
-    catLabel: 'Interessenter og motstand',
-    q: 'Hva er det beste virkemiddelet for å redusere motstand mot endring?',
-    opts: [
-      'Å gjennomføre endringen i rolig tempo, steg for steg, slik at ansatte rekker å tilpasse seg',
-      'Å gi berørte medarbeidere ekstra tid og ressurser til å mestre den nye situasjonen',
-      'Tidlig og ærlig kommunikasjon kombinert med reell involvering av berørte parter',
-      'Å sikre at ledere er synlige og tilgjengelige gjennom hele gjennomføringsfasen',
-    ],
-    correct: 2,
-    explain: 'Tidlig, ærlig og god kommunikasjon om hvorfor endringen skjer og hva den innebærer, kombinert med reell involvering av de berørte, er det mest effektive virkemiddelet mot motstand.',
-  },
-  {
-    id: 20,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva er organisasjonsutvikling (OU) sin todelte definisjon?',
-    opts: [
-      'Å styrke lederkompetansen og forbedre samhandlingen mellom avdelinger',
-      'Å forbedre interne prosesser og øke produktiviteten gjennom systematisk forbedringsarbeid',
-      'Å modernisere strukturer og innføre ny teknologi tilpasset markedets behov',
-      'Å tilpasse organisasjonen til omgivelsene og tilfredsstille ansattes behov for vekst og utvikling',
-    ],
-    correct: 3,
-    explain: 'OU har to dimensjoner: (1) tilpasse organisasjonen til skiftende omgivelser og (2) tilfredsstille ansattes behov for vekst, mestring og utvikling – begge er nødvendige for varig suksess.',
-  },
-  {
-    id: 21,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva er Total Kvalitetsledelse (TKL/TQM)?',
-    opts: [
-      'En ledelsesfilosofi opprinnelig fra Japan med fokus på kontinuerlig forbedring, kundefokus og beste praksis i alle ledd',
-      'Et styringssystem for å overvåke kostnader og avvik i produksjon, leverandørkjede og interne prosesser på tvers av enheter',
-      'En sertifiseringsordning for systematisk kvalitetssikring av produkter, tjenester og prosesser gjennom hele verdikjeden',
-      'En metode for å rangere og belønne ansatte etter individuelle bidrag til kvalitetsmål og kundeklagehåndtering',
-    ],
-    correct: 0,
-    explain: 'TKL (Total Quality Management) er en helhetlig ledelsesfilosofi opprinnelig fra Japan (Deming) med fokus på kontinuerlig forbedring, totalt kundefokus og involvering av alle ansatte i kvalitetsarbeidet.',
-  },
-  {
-    id: 22,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva er PDCA-hjulet, og hvem er det knyttet til?',
-    opts: [
-      'En markedsføringssirkel (Product, Distribution, Communication, Audience) – Kotler',
-      'En endringsledelsesmodell (Prioritize, Delegate, Control, Adjust) – Kotter',
-      'En kvalitetsforbedringssirkel (Plan, Do, Check, Act) – Deming',
-      'En budsjetteringssyklus (Plan, Control, Assess) – Lewin',
-    ],
-    correct: 2,
-    explain: 'PDCA-hjulet (Plan-Do-Check-Act), også kalt Deming-hjulet, er et verktøy for kontinuerlig forbedring: planlegg tiltak → gjennomfør → sjekk resultater → juster og forbedre.',
-  },
-  {
-    id: 23,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva er LEAN, og hva er dets hovedmål?',
-    opts: [
-      'En finansmodell for å beregne avkastning og nåverdi (NPV) ved investeringer i prosessforbedring',
-      'En teknisk tilnærming for å forenkle design (modulbygging) og standardisere komponenter i produksjonen',
-      'En personalmodell for å kartlegge, dimensjonere og effektivisere bemanningsbehov (HR-planlegging)',
-      'En ledelsesfilosofi avledet fra TKL med fokus på å eliminere all sløsing (muda) i alle prosesser',
-    ],
-    correct: 3,
-    explain: 'LEAN er en produksjons- og ledelsesfilosofi opprinnelig fra Toyota, avledet fra TKL, med fokus på å eliminere all sløsing (muda/waste) i prosesser og levere maksimal verdi til kunden.',
-  },
-  {
-    id: 24,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hvilke to kjennetegner LEAN som ledelsesfilosofi?',
-    opts: [
-      'Eliminere all sløsing (muda) i alle ledd av prosessen',
-      'Sentralisert beslutningstaking og tydelig toppstyring i organisasjonen',
-      'Levere maksimal verdi til kunden med minst mulig ressursbruk',
-      'Belønne individuelle prestasjoner gjennom intern konkurranse og rangering',
-    ],
-    correct: [0, 2],
-    explain: 'LEAN bygger på to kjerneprinsipper: eliminere sløsing (muda/waste) i alle prosesser, og levere maksimal verdi til kunden. Filosofien er avledet fra TQM og Toyota Production System.',
-  },
-  {
-    id: 25,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva kjennetegner "den lærende organisasjon" slik Peter Senge beskriver det?',
-    opts: [
-      'En organisasjon med strukturerte opplæringsprogrammer og obligatorisk faglig påfyll hvert år',
-      'En organisasjon som kontinuerlig utvikler kapasitet til å skape ønskede resultater gjennom 5 disipliner',
-      'En organisasjon som systematisk evaluerer prosjekter og deler erfaringer på tvers av team',
-      'En organisasjon der ledere tar ansvar for kunnskapsoverføring og faglig veiledning av ansatte',
-    ],
-    correct: 1,
-    explain: 'Senges lærende organisasjon kontinuerlig utvikler og utvider sin kapasitet gjennom 5 disipliner: systemtenkning, personlig mestring, mentale modeller, felles visjon og læring i team.',
-  },
-  {
-    id: 26,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva er "systemtenkning" som Senges 5. og overordnede disiplin?',
-    opts: [
-      'Å digitalisere informasjonsflyt og knytte avdelinger gjennom felles IT-plattformer',
-      'Å kartlegge delsystemer, tydeliggjøre ansvarsområder og definere grensesnitt mellom enheter',
-      'Å se helheten og sammenhengene mellom deler i organisasjonen fremfor å se på isolerte hendelser',
-      'Å bruke strukturerte analysemetoder og datagrunnlag for å planlegge og fordele ressurser optimalt på tvers av enheter',
-    ],
-    correct: 2,
-    explain: 'Systemtenkning er evnen til å se organisasjonen som et komplekst system av sammenhenger og feedback-sløyfer – fremfor å fokusere på isolerte hendelser. Det er den overordnede disiplinen som binder de andre 4 sammen.',
-  },
-  {
-    id: 27,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva er "personlig mestring" i Senges modell?',
-    opts: [
-      'At lederen tar aktivt ansvar for å forme organisasjonskulturen og sette tydelige standarder for ønsket atferd i teamet',
-      'At ledere systematisk bygger bred faglig kompetanse og fleksibelt kan fylle ulike roller og funksjoner i organisasjonen',
-      'At ansatte jobber målrettet mot toppresultater og konkurrerer om de beste prestasjonene',
-      'At hvert individ forplikter seg til livslang læring og kontinuerlig utvikling av egne ferdigheter og forståelse',
-    ],
-    correct: 3,
-    explain: 'Personlig mestring handler om individets forpliktelse til livslang læring, kontinuerlig klargjøring av personlig visjon og å se virkeligheten objektivt. Organisasjoner lærer bare gjennom individer som lærer.',
-  },
-  {
-    id: 28,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva er "felles visjon" i Senges modell?',
-    opts: [
-      'En ekte, delt visjon som engasjerer og forplikter alle i organisasjonen – ikke bare pålagt ovenfra',
-      'En strategiplan som ledergruppen utvikler – kommuniseres ned til resten av organisasjonen',
-      'Et sett med kjerneverdier og atferdsnormer som beskriver ønsket kultur i virksomheten',
-      'Et felles målbilde der avdelinger koordinerer sine delmål – mot et overordnet resultat',
-    ],
-    correct: 0,
-    explain: 'Felles visjon handler om å bygge en ekte, delt forståelse av hva organisasjonen ønsker å skape – en visjon som folk genuint deler og forplikter seg til, ikke bare en slogan som er pålagt ovenfra.',
-  },
-  {
-    id: 29,
-    type: 'sort',
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Match hvert utsagn med riktig disiplin hos Peter Senge.',
-    bins: [
-      { id: 'personlig',  label: 'Personlig mestring',  color: '#8b5cf6' },
-      { id: 'mentale',    label: 'Mentale modeller',     color: '#3b82f6' },
-      { id: 'visjon',     label: 'Felles visjon',        color: '#10b981' },
-      { id: 'team',       label: 'Læring i team',        color: '#f59e0b' },
-      { id: 'systemtenk', label: 'Systemtenkning',       color: '#ef4444' },
-    ],
-    items: [
-      { text: 'Forplikte seg til livslang læring og personlig utvikling',    bin: 'personlig'  },
-      { text: 'Bevisstgjøre og utfordre egne antakelser og forestillinger',  bin: 'mentale'    },
-      { text: 'Bygge en ekte, delt retning alle genuint forplikter seg til', bin: 'visjon'     },
-      { text: 'Teamet tenker og lærer som en enhet – mer enn summen',        bin: 'team'       },
-      { text: 'Se helheten og sammenhengene fremfor isolerte hendelser',     bin: 'systemtenk' },
-    ],
-    explain: 'Personlig mestring: livslang læring. Mentale modeller: utfordre antakelser. Felles visjon: delt forpliktelse. Læring i team: kollektiv intelligens. Systemtenkning: se helheter og feedback-sløyfer.',
-  },
-  {
-    id: 30,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hvilke OU-verktøy brukes for å fremme organisasjonsutvikling i praksis?',
-    opts: [
-      'Lønnssamtaler, stillingsbeskrivelser og ansettelsesprosedyrer',
-      'Prosjektplaner, milepælsrapporter og risikoanalyser for endringsinitiativer',
-      'Organisasjonskart, rolleavklaringer og styringsmodeller for teamstruktur',
-      'Medarbeidersamtaler, kompetanseutvikling og medarbeiderundersøkelser',
-    ],
-    correct: 3,
-    explain: 'Konkrete OU-verktøy inkluderer: medarbeidersamtaler (systematisk dialog), kompetanseutvikling (kurs, hospitering) og medarbeiderundersøkelser (kartlegge trivsel og utfordringer).',
-  },
-  {
-    id: 31,
-    cat: 'endring_def',
-    catLabel: 'Endringsledelse – grunnlag',
-    q: 'Hva er prestasjonsledelse i OU-sammenheng?',
-    opts: [
-      'En helhetlig tilnærming for å sette mål, følge opp og utvikle ansattes prestasjoner kontinuerlig',
-      'Et system for å rapportere og håndtere avvik i produktivitet og måloppnåelse',
-      'Et lønns- og insentivsystem koblet til individuelle resultater og teamprestasjoner',
-      'En metode for å kartlegge kompetansegap og planlegge opplæringstiltak i organisasjonen',
-    ],
-    correct: 0,
-    explain: 'Prestasjonsledelse er en helhetlig tilnærming for å sette tydelige mål (SMART), følge opp, gi tilbakemelding og coache ansatte til kontinuerlig utvikling og forbedrede prestasjoner.',
-  },
-  {
-    id: 32,
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Hva menes med "fryse"-fasen i Lewins modell?',
-    opts: [
-      'Å avslutte endringsprosessen formelt og overlevere ansvar til linjeledelsen',
-      'Å stabilisere organisasjonen etter endringen ved å sette alle videre initiativ på vent',
-      'Å dokumentere erfaringene fra endringsprosessen og evaluere resultatene grundig',
-      'Å forankre den nye atferden og de nye rutinene som den nye normalen i organisasjonen',
-    ],
-    correct: 3,
-    explain: 'Fryse-fasen handler om å konsolidere og forankre endringene – de nye arbeidsmetodene, verdiene og atferdene skal bli den nye standarden som tas for gitt, ikke midlertidige unntak.',
-  },
-  {
-    id: 33,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva er "mentale modeller" som Senges disiplin?',
-    opts: [
-      'Bevissthet om og utfordring av egne og kollektive antakelser og forestillinger som påvirker beslutninger',
-      'Psykologiske profiler og tester som kartlegger ansattes personlighetstyper, kognitiv stil og individuelle beslutningsstiler',
-      'Strukturerte tankemodeller og rammeverk som teamet bruker for systematisk å planlegge, prioritere og gjennomføre prosjekter',
-      'Møtemetodikk og fasiliterte prosesser som aktivt fremmer åpen dialog, psykologisk trygghet og felles problemløsning',
-    ],
-    correct: 0,
-    explain: 'Mentale modeller er de dype antakelsene, generaliseringene og bildene vi bærer med oss som påvirker hva vi ser og hvordan vi handler. Disiplinen handler om å bli bevisst på og utfordre disse for bedre beslutninger.',
-  },
-  {
-    id: 34,
-    cat: 'ou_tql',
-    catLabel: 'OU, TKL, LEAN og Senge',
-    q: 'Hva er "læring i team" som Senges disiplin?',
-    opts: [
-      'At teammedlemmer deler fagkunnskap og roterer på oppgaver – bygger bred kompetanse på tvers av roller',
-      'At teamet regelmessig setter av strukturert tid til felles refleksjon, erfaringsutveksling og læring etter hvert prosjekt',
-      'At leder legger til rette for individuell læring – veileder hvert teammedlem separat mot mål',
-      'Kollektiv prosess der teamet tenker og lærer som en enhet – resulterer i bedre kollektive resultater enn summen av individene',
-    ],
-    correct: 3,
-    explain: 'Læring i team handler om kollektiv tenkning og dialog – der teamets samlede intelligens overstiger summen av enkeltindividene. Dette krever evne til å sette til side antakelser og tenke fritt sammen.',
-  },
-  {
-    id: 35,
-    cat: 'endring_def',
-    catLabel: 'Endringsledelse – grunnlag',
-    q: 'Hva er en prestasjonskultur?',
-    opts: [
-      'En kultur der forventninger er tydelige, ansatte har eierskap til mål og kontinuerlig forbedring er normen',
-      'En kultur der individuelle og kollektive bidrag synliggjøres, anerkjennes og belønnes gjennom regelmessige og strukturerte tilbakemeldinger',
-      'En kultur der toppledelsen setter ambisiøse, målbare mål og systematisk holder mellomledere ansvarlige for levering og resultater',
-      'En kultur der resultater overvåkes tett, avvik fra plan analyseres grundig og korrigerende tiltak iverksettes raskt og systematisk',
-    ],
-    correct: 0,
-    explain: 'Prestasjonskultur innebærer at forventninger er tydelige og kjente, at ansatte tar eierskap til egne mål, og at kontinuerlig forbedring og læring er en naturlig del av hverdagen.',
-  },
-  {
-    id: 36,
-    cat: 'modeller',
-    catLabel: 'Kotters og Lewins modeller',
-    q: 'Hva er "kortsiktige seire" i Kotters 8-trinnsmodell?',
-    opts: [
-      'Å nå planlagte delmål i endringsplanen, dokumentere fremdrift og rapportere status regelmessig til ledergruppen',
-      'Å skape synlige, raske resultater av endringen for å bevise at den virker og opprettholde motivasjonen',
-      'Å aktivt sikre at budsjettet overholdes i de første fasene, og raskt avdekke og håndtere kostnadsoverskridelser',
-      'Å systematisk identifisere, prioritere og løse tekniske og organisatoriske problemer tidlig for å hindre forsinkelser',
-    ],
-    correct: 1,
-    explain: 'Å planlegge og synliggjøre kortsiktige seire (trinn 6 hos Kotter) er avgjørende for å opprettholde motivasjon og tro på endringen blant ansatte – det viser at kursen er riktig.',
-  },
+    "correct": 1,
+    "explain": "Å planlegge og synliggjøre kortsiktige seire (trinn 6 hos Kotter) er avgjørende for å opprettholde motivasjon og tro på endringen blant ansatte – det viser at kursen er riktig."
+  }
 ];

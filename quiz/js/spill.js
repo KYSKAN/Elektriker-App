@@ -14,27 +14,35 @@ backBtn.href  = indexHref;
 homeLink.href = indexHref;
 
 const temaFil = {
-  'lom-ool-motivasjon':      'lom/ool-motivasjon.js',
-  'lom-ool-kultur':          'lom/ool-kultur.js',
-  'lom-ool-endring':         'lom/ool-endring.js',
-  'lom-marked-strategi':     'lom/marked-strategi.js',
-  'lom-oks-kostnader':       'lom/oks-kostnader.js',
-  'lom-oks-regnskapsanalyse':'lom/oks-regnskapsanalyse.js',
-  'lom-oks-kalkyl':          'lom/oks-kalkyl.js',
-  'lom-oks-budsjettering':   'lom/oks-budsjettering.js',
-  'lom-oks-investering':     'lom/oks-investering.js',
-  'lom-ool-ledelse':         'lom/ool-ledelse.js',
-  'lom-marked-grunnlag':     'lom/marked-grunnlag.js',
-  'lom-lov-hms':             'lom/lov-hms.js',
-  'lom-oks-tillegg':         'lom/oks-tillegg.js',
-  'rlc':           'elektro/rlc.js',
-  'boolsk':        'bjrons/boolsk.js',
-  'porter':        'bjrons/porter.js',
+  'lom-ool-motivasjon':          'lom/ool-motivasjon.js',
+  'lom-ool-kultur-1':            'lom/ool-kultur.js',
+  'lom-ool-kultur-2':            'lom/ool-kultur-2.js',
+  'lom-ool-endring-1':           'lom/ool-endring.js',
+  'lom-ool-endring-2':           'lom/ool-endring-2.js',
+  'lom-ool-ledelse-1':           'lom/ool-ledelse.js',
+  'lom-ool-ledelse-2':           'lom/ool-ledelse-2.js',
+  'lom-marked-strategi-1':       'lom/marked-strategi.js',
+  'lom-marked-strategi-2':       'lom/marked-strategi-2.js',
+  'lom-marked-grunnlag-1':       'lom/marked-grunnlag.js',
+  'lom-marked-grunnlag-2':       'lom/marked-grunnlag-2.js',
+  'lom-oks-kostnader-1':         'lom/oks-kostnader.js',
+  'lom-oks-kostnader-2':         'lom/oks-kostnader-2.js',
+  'lom-oks-regnskapsanalyse-1':  'lom/oks-regnskapsanalyse.js',
+  'lom-oks-regnskapsanalyse-2':  'lom/oks-regnskapsanalyse-2.js',
+  'lom-oks-kalkyl':              'lom/oks-kalkyl.js',
+  'lom-oks-budsjettering':       'lom/oks-budsjettering.js',
+  'lom-oks-investering':         'lom/oks-investering.js',
+  'lom-lov-hms-1':               'lom/lov-hms.js',
+  'lom-lov-hms-2':               'lom/lov-hms-2.js',
+  'lom-oks-tillegg':             'lom/oks-tillegg.js',
+  'rlc':             'elektro/rlc.js',
+  'boolsk':          'bjrons/boolsk.js',
+  'porter':          'bjrons/porter.js',
   'mikrokontroller': 'bjrons/mikrokontroller.js',
-  'minne':         'bjrons/minne.js',
-  'tallsystemer':  'bjrons/tallsystemer.js',
-  'vipper':        'bjrons/vipper.js',
-  'trh1ek':        'bjrons/trh1ek.js',
+  'minne':           'bjrons/minne.js',
+  'tallsystemer':    'bjrons/tallsystemer.js',
+  'vipper':          'bjrons/vipper.js',
+  'trh1ek':          'bjrons/trh1ek.js',
 };
 
 let QUESTIONS = [];
@@ -1003,7 +1011,7 @@ function restartQuiz() {
 // ── Supabase leaderboard ──────────────────────────────────────
 const SB_URL  = 'https://cimobeaszhycobffsjes.supabase.co';
 const SB_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNpbW9iZWFzemh5Y29iZmZzamVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyODM3MjQsImV4cCI6MjA5Mjg1OTcyNH0.iaivOt6lh0bXwxB9gTutuDhHizOcmK_7da2cE-Iw5vU';
-const LB_TEMAS = ['rlc', 'trh1ek', 'minne', 'mikrokontroller', 'lom-ool-motivasjon', 'lom-ool-kultur', 'lom-ool-endring', 'lom-marked-strategi', 'lom-oks-kostnader', 'lom-oks-regnskapsanalyse', 'lom-oks-kalkyl', 'lom-oks-budsjettering', 'lom-oks-investering', 'lom-ool-ledelse', 'lom-marked-grunnlag', 'lom-lov-hms', 'lom-oks-tillegg'];
+const LB_TEMAS = ['rlc', 'trh1ek', 'minne', 'mikrokontroller', 'lom-ool-motivasjon', 'lom-ool-kultur-1', 'lom-ool-kultur-2', 'lom-ool-endring-1', 'lom-ool-endring-2', 'lom-ool-ledelse-1', 'lom-ool-ledelse-2', 'lom-marked-strategi-1', 'lom-marked-strategi-2', 'lom-marked-grunnlag-1', 'lom-marked-grunnlag-2', 'lom-oks-kostnader-1', 'lom-oks-kostnader-2', 'lom-oks-regnskapsanalyse-1', 'lom-oks-regnskapsanalyse-2', 'lom-oks-kalkyl', 'lom-oks-budsjettering', 'lom-oks-investering', 'lom-lov-hms-1', 'lom-lov-hms-2', 'lom-oks-tillegg'];
 
 let pendingScore  = null;
 let currentNavn   = '';
