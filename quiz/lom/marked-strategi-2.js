@@ -55,8 +55,8 @@ const QUESTIONS = [
     "q": "Hva er en forretningsidé?",
     "opts": [
       "En overordnet beskrivelse av hva bedriften gjør, for hvem og hvilken verdi som skapes",
-      "En oversikt over hvilke produktkategorier og markedssegmenter bedriften planlegger å prioritere fremover",
-      "En flerårig finansiell prognose med budsjett, likviditet og resultatmål for alle forretningsområder",
+      "En oversikt over prioriterte produktkategorier og planlagte markedssegmenter",
+      "En finansiell prognose med budsjett, likviditet og resultatmål",
       "En nøyaktig gjennomgang av produksjonsprosessen og ressursbruken i bedriften"
     ],
     "correct": 0,
@@ -82,8 +82,8 @@ const QUESTIONS = [
     "catLabel": "Markedsplan og mål",
     "q": "Hvorfor er segmentering viktig i markedsføring?",
     "opts": [
-      "Det gir mulighet til å nå alle kunder med én felles kampanje og felles budskap på tvers av alle kanaler",
-      "Det er primært nyttig for store konsern med mange produktlinjer, datterselskaper og internasjonale markeder",
+      "Det gir mulighet til å nå alle kunder med én felles kampanje og ett budskap",
+      "Det er primært nyttig for store konsern med mange produktlinjer og internasjonale markeder",
       "Det gjør det mulig å tilby identiske produkter til alle kundegrupper uten kostbar tilpasning",
       "Det gjør at man kan tilpasse markedsbudskapet til ulike grupper og bruke ressurser mer effektivt"
     ],

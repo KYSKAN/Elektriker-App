@@ -166,8 +166,8 @@ const QUESTIONS = [
     "catLabel": "Rekruttering og kompetanse",
     "q": "Hva er en kompetansegap-analyse?",
     "opts": [
-      "En evaluering av kandidaters tekniske ferdigheter gjennom praktiske prøver i en ansettelsesprosess",
-      "En medarbeiderundersøkelse som kartlegger avvik mellom faktisk jobbinnhold og formell kompetansebeskrivelse i stillingen",
+      "En evaluering av kandidaters tekniske ferdigheter via praktiske prøver i rekruttering",
+      "En undersøkelse som kartlegger avvik mellom faktisk jobbinnhold og formell kompetansebeskrivelse",
       "En kartlegging av avviket mellom virksomhetens nåværende kompetanse og fremtidig kompetansebehov",
       "En vurdering av om opplæringstilbudet dekker bransjens sertifiseringskrav og faglige standarder"
     ],

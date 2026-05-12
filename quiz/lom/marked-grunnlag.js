@@ -68,10 +68,10 @@ const QUESTIONS = [
     "catLabel": "Markedsdefinisjoner",
     "q": "Hva kjennetegner rasjonell kjøpsatferd i organisasjonsmarkedet?",
     "opts": [
-      "Kjøp styrt av merkevarepreferanser og personlige relasjoner til selger, gjerne basert på tidligere positive erfaringer",
-      "Hurtige beslutninger tatt av én person basert på erfaring og intuisjon",
+      "Kjøp styrt av merkevarepreferanser og eksisterende relasjoner til en bestemt selger",
+      "Hurtige beslutninger tatt av én person basert på erfaring, intuisjon og forrige kjøp",
       "Systematisk behovsvurdering, innhenting av tilbud og formell godkjenning av kjøpsbeslutningen",
-      "Lojalitet til eksisterende leverandør uavhengig av prisnivå og leveringskvalitet"
+      "Lojalitet til eksisterende leverandør uavhengig av prisnivå, kvalitet og leveringsdyktighet"
     ],
     "correct": 2,
     "explain": "Organisasjonsmarkedet kjennetegnes av rasjonell kjøpsatferd: systematisk behovsvurdering, tilbudsinnhenting, formelle innkjøpsprosedyrer og beslutninger som involverer flere personer (innkjøpskomité)."

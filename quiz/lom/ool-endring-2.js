@@ -25,7 +25,7 @@ const QUESTIONS = [
       "En vurdering av hvilke avdelinger som berøres mest – de som trenger ekstra støtte og oppfølging",
       "En kartlegging av alle berørte parter etter to dimensjoner: makt og interesse – for å prioritere involvering",
       "En analyse av markedets reaksjon på organisatoriske endringer – omdømmerisiko og ekstern legitimitet",
-      "Et verktøy for å kartlegge interne konflikter og avgjøre hvem som bør involveres aktivt i løsningsarbeidet"
+      "Et verktøy for å kartlegge interne konflikter og avgjøre hvem som bør involveres aktivt i endrings- og løsningsarbeidet"
     ],
     "correct": 1,
     "explain": "Interessentanalysen kartlegger alle som berøres av endringen og plasserer dem i en 2×2 matrise etter makt (høy/lav) og interesse (høy/lav) – for å avgjøre hvor mye innsats som bør legges i å involvere dem."
@@ -51,9 +51,9 @@ const QUESTIONS = [
     "q": "Hvilke er de vanligste årsakene til motstand mot endring ifølge Kanter (1992)?",
     "opts": [
       "Tap av kontroll, høy usikkerhet, mangel på informasjon og frykt for å tape noe man har",
-      "Manglende digital kompetanse og utfordringer med nye teknologiske systemer",
-      "Uenighet om endringsstrategien og ønsket om andre prioriteringer",
-      "Dårlig timing, for høyt endringstempo og utilstrekkelige ressurser"
+      "Manglende digital kompetanse og vansker med å tilpasse seg nye teknologiske systemer",
+      "Uenighet om endringsstrategien og ønske om andre prioriteringer i bedriften",
+      "Dårlig timing, for høyt endringstempo og for utilstrekkelige ressurser til gjennomføringen"
     ],
     "correct": 0,
     "explain": "Kanter identifiserte motstand mot endring som drevet av: tap av kontroll, usikkerhet om fremtiden, mangel på tilstrekkelig informasjon, frykt for å miste noe man verdsetter, og bekymring for inkompetanse."
@@ -98,7 +98,7 @@ const QUESTIONS = [
       "Å styrke lederkompetansen og forbedre samhandlingen mellom avdelinger",
       "Å forbedre interne prosesser og øke produktiviteten gjennom systematisk forbedringsarbeid",
       "Å modernisere strukturer og innføre ny teknologi tilpasset markedets behov",
-      "Å tilpasse organisasjonen til omgivelsene og tilfredsstille ansattes behov for vekst og utvikling"
+      "Å tilpasse organisasjonen til omgivelsene og møte ansattes behov for vekst og utvikling"
     ],
     "correct": 3,
     "explain": "OU har to dimensjoner: (1) tilpasse organisasjonen til skiftende omgivelser og (2) tilfredsstille ansattes behov for vekst, mestring og utvikling – begge er nødvendige for varig suksess."
@@ -281,7 +281,7 @@ const QUESTIONS = [
     "catLabel": "OU, TKL, LEAN og Senge",
     "q": "Hvilke OU-verktøy brukes for å fremme organisasjonsutvikling i praksis?",
     "opts": [
-      "Lønnssamtaler, stillingsbeskrivelser og ansettelsesprosedyrer",
+      "Lønnssamtaler, stillingsbeskrivelser og formelle ansettelsesprosedyrer",
       "Prosjektplaner, milepælsrapporter og risikoanalyser for endringsinitiativer",
       "Organisasjonskart, rolleavklaringer og styringsmodeller for teamstruktur",
       "Medarbeidersamtaler, kompetanseutvikling og medarbeiderundersøkelser"
@@ -295,7 +295,7 @@ const QUESTIONS = [
     "catLabel": "OU, TKL, LEAN og Senge",
     "q": "Hva er \"mentale modeller\" som Senges disiplin?",
     "opts": [
-      "Bevissthet om og utfordring av egne og kollektive antakelser og forestillinger som påvirker beslutninger",
+      "Bevissthet om og kritisk utfordring av egne og kollektive antakelser og forestillinger som påvirker beslutninger",
       "Psykologiske profiler og tester som kartlegger ansattes personlighetstyper, kognitiv stil og individuelle beslutningsstiler",
       "Strukturerte tankemodeller og rammeverk som teamet bruker for systematisk å planlegge, prioritere og gjennomføre prosjekter",
       "Møtemetodikk og fasiliterte prosesser som aktivt fremmer åpen dialog, psykologisk trygghet og felles problemløsning"
@@ -312,7 +312,7 @@ const QUESTIONS = [
       "At teammedlemmer deler fagkunnskap og roterer på oppgaver – bygger bred kompetanse på tvers av roller",
       "At teamet regelmessig setter av strukturert tid til felles refleksjon, erfaringsutveksling og læring etter hvert prosjekt",
       "At leder legger til rette for individuell læring – veileder hvert teammedlem separat mot mål",
-      "Kollektiv prosess der teamet tenker og lærer som en enhet – resulterer i bedre kollektive resultater enn summen av individene"
+      "Kollektiv prosess der teamet tenker og lærer som en enhet, noe som gir bedre resultater enn summen av individene"
     ],
     "correct": 3,
     "explain": "Læring i team handler om kollektiv tenkning og dialog – der teamets samlede intelligens overstiger summen av enkeltindividene. Dette krever evne til å sette til side antakelser og tenke fritt sammen."

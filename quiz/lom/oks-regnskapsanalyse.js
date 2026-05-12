@@ -38,7 +38,7 @@ const QUESTIONS = [
     "opts": [
       "Resultatmargin = Driftsresultat / Salgsinntekter × 100; indikerer driftsoverskuddet som andel av omsetning",
       "Resultatmargin = Resultat før skatt / Salgsinntekter × 100; indikerer andelen av omsetningen som er nettoresultat",
-      "Resultatmargin = Bruttofortjeneste / Salgsinntekter × 100; bør minst være lik bransjenorm og justeres for sesongvariasjoner",
+      "Resultatmargin = Bruttofortjeneste / Salgsinntekter × 100; bransjenormen er referansenivå for sammenligning",
       "Resultatmargin = Årsresultat / Totalkapital × 100; viser avkastning på investert kapital"
     ],
     "correct": 1,
@@ -50,10 +50,10 @@ const QUESTIONS = [
     "catLabel": "Lønnsomhetsnøkkeltall",
     "q": "Hva er driftsmargin, og hva er kravet?",
     "opts": [
-      "Driftsresultat / Totale eiendeler × 100; krav: over 8%",
+      "Driftsresultat / Totale eiendeler × 100; krav: 8% eller høyere for lønnsomhet",
       "Driftsresultat / Salgsinntekter × 100; krav: ~10% eller mer",
       "Salgsinntekter / Totale driftskostnader × 100; krav: over 100%",
-      "Bruttofortjeneste / Salgsinntekter × 100; krav: bransjenorm"
+      "Bruttofortjeneste / Salgsinntekter × 100; sammenlignes alltid med bransjenorm"
     ],
     "correct": 1,
     "explain": "Driftsmargin = Driftsresultat / Salgsinntekter × 100. Viser driftsoverskuddet som andel av omsetningen. Et krav på ca. 10% er vanlig – under dette anses driften som lite lønnsom."
@@ -123,7 +123,7 @@ const QUESTIONS = [
       "Gjennomsnittlig totalkapital / Driftsinntekter – viser kapital per krone omsetning",
       "Driftsinntekter / Gjennomsnittlig totalkapital – viser hvor effektivt kapitalen brukes til å generere omsetning",
       "Salgsinntekter / Egenkapital – viser eiernes andel av omsetningen og brukes til å vurdere kapitalutnyttelse fra eierperspektiv",
-      "Totalkapital / Årsresultat – viser tilbakebetalingstid på investert kapital"
+      "Totalkapital / Årsresultat – viser gjennomsnittlig tilbakebetalingstid på investert kapital"
     ],
     "correct": 1,
     "explain": "Kapitalens omløpshastighet = Driftsinntekter / Gjennomsnittlig totalkapital. Viser hvor mange ganger i løpet av et år omsettes totalkapitalen. Høyere er bedre – mer omsetning per krone investert."
@@ -148,8 +148,8 @@ const QUESTIONS = [
     "catLabel": "Soliditetsnøkkeltall",
     "q": "Hva er soliditet, og hva viser soliditetsnøkkeltallene?",
     "opts": [
-      "Bedriftens evne til å betale kortsiktig gjeld ved forfall og unngå betalingsproblemer i det daglige",
-      "Bedriftens evne til å øke omsetningen fra år til år",
+      "Bedriftens evne til å betale gjeld ved forfall og unngå betalingsproblemer",
+      "Bedriftens evne til å øke omsetning, vinne nye kunder og vokse over tid",
       "Bedriftens evne til å tåle tap over tid – jo mer egenkapital, jo bedre rustet mot nedturer",
       "Bedriftens evne til å hente inn ekstern finansiering ved behov fra banker og investorer"
     ],
@@ -162,10 +162,10 @@ const QUESTIONS = [
     "catLabel": "Soliditetsnøkkeltall",
     "q": "Hva er arbeidskapital, og hva er normen?",
     "opts": [
-      "Arbeidskapital = Omløpsmidler − Kortsiktig gjeld; bør være positiv",
-      "Arbeidskapital = Egenkapital − Langsiktig gjeld; krav: over null for å unngå underdekning av faste forpliktelser",
-      "Arbeidskapital = Omløpsmidler / Kortsiktig gjeld; krav: over 2",
-      "Arbeidskapital = Anleggsmidler − Langsiktig gjeld; viser langsiktig finansieringsbuffer"
+      "Arbeidskapital = Omløpsmidler − Kortsiktig gjeld; bør alltid holdes positiv",
+      "Arbeidskapital = Egenkapital − Langsiktig gjeld; krav: over null for å unngå finansiell underdekning",
+      "Arbeidskapital = Omløpsmidler / Kortsiktig gjeld; bør ligge over 2 for god likviditet",
+      "Arbeidskapital = Anleggsmidler − Langsiktig gjeld; viser finansieringsbuffer"
     ],
     "correct": 0,
     "explain": "Arbeidskapital = Omløpsmidler − Kortsiktig gjeld. Viser den frie kapitalen som er tilgjengelig for driften. Bør være positiv – negativ arbeidskapital er et faresignal for likviditeten."
@@ -176,9 +176,9 @@ const QUESTIONS = [
     "catLabel": "Soliditetsnøkkeltall",
     "q": "Hva er egenkapitalprosent, og hva er kravet?",
     "opts": [
-      "Egenkapital / Salgsinntekter × 100; krav: over 10% for å sikre tilstrekkelig eierfinansiert omsetningsgrunnlag",
-      "Årsresultat / Egenkapital × 100; krav: over 18%",
-      "Egenkapital / Gjeld × 100; krav: minst 100%",
+      "Egenkapital / Salgsinntekter × 100; bransjenorm rundt 10%",
+      "Årsresultat / Gjennomsnittlig egenkapital × 100; krav: over 18%",
+      "Egenkapital / Gjeld × 100; krav: minst 100% for ren egenfinansiering",
       "Egenkapital / Totalkapital × 100; krav: ~35% eller mer"
     ],
     "correct": 3,
@@ -218,10 +218,10 @@ const QUESTIONS = [
     "catLabel": "Lønnsomhetsnøkkeltall",
     "q": "Hva er gjennomsnittsberegning av kapital i rentabilitetsnøkkeltall?",
     "opts": [
-      "Man bruker inngående balanse (IB) alene for å unngå periodefeil",
-      "Man bruker alltid kapital per 31.12 (utgående balanse)",
+      "Man bruker kun inngående balanse (IB) alene for å unngå periodiserings- og sammenligningsfeil",
+      "Man bruker alltid kapital per 31.12 (utgående balanse) for å sikre konsistens og sammenlignbarhet",
       "Gjennomsnittlig kapital = (Kapital IB + Kapital UB) / 2 – for å ta hensyn til endringer i løpet av året",
-      "Gjennomsnitt beregnes som median av månedlige balansetall for å jevne ut ekstremverdier og sesongsvingninger"
+      "Gjennomsnitt beregnes som median av månedlige balansetall for å jevne ut sesongsvingninger"
     ],
     "correct": 2,
     "explain": "Gjennomsnittlig kapital = (Inngående balanse + Utgående balanse) / 2. Brukes i rentabilitetsnøkkeltall (TKR, EKR) fordi kapitalen kan endre seg gjennom året, og gjennomsnittet gir et mer korrekt bilde."
@@ -246,9 +246,9 @@ const QUESTIONS = [
     "catLabel": "Lønnsomhetsnøkkeltall",
     "q": "Hva er benchmarking i regnskapsanalyse?",
     "opts": [
-      "En revisjonsmetode der regnskapet kontrolleres mot lovpålagte standarder",
-      "En teknikk for å fastsette interne budsjettkrav basert på forrige periode",
-      "En metode for å anslå fremtidig kontantstrøm fra historiske nøkkeltall",
+      "En lovpålagt revisjonsmetode der regnskapet kontrolleres systematisk mot gjeldende regnskapsstandarder og lovkrav",
+      "En intern planleggingsteknikk for å fastsette de budsjett- og resultatkrav som er basert på foregående periode",
+      "En prognosemetode for å anslå bedriftens fremtidige kontantstrøm basert på historiske nøkkeltall og trender",
       "Å sammenligne bedriftens nøkkeltall med bransjenormer, konkurrenter eller historiske tall for å vurdere prestasjoner"
     ],
     "correct": 3,
@@ -260,8 +260,8 @@ const QUESTIONS = [
     "catLabel": "Lønnsomhetsnøkkeltall",
     "q": "En bedrift har TKR = 6% og gjennomsnittlig lånerente = 8%. Hva sier dette?",
     "opts": [
-      "Bedriften er godt finansiert – TKR over 5% anses normalt som tilfredsstillende",
-      "Lånerenten er irrelevant så lenge TKR er positiv",
+      "Bedriften er rimelig godt finansiert – TKR over 5% anses normalt som tilfredsstillende i de fleste bransjer",
+      "Lånerenten er irrelevant for lønnsomheten så lenge TKR er positiv og gjelden betjenes",
       "Høy gjeld er en fordel fordi skatteskjoldet reduserer nettokostnaden av rentene og dermed kompenserer for lav TKR",
       "Bedriften har negativ gearingeffekt – gjeldsfinansieringen koster mer enn avkastningen, noe som svekker EKR"
     ],

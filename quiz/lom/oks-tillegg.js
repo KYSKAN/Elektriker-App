@@ -173,7 +173,7 @@ const QUESTIONS = [
     q: 'Hva er en fusjon?',
     opts: [
       'Sammenslåing av to eller flere selskaper til ett felles selskap',
-      'Oppdeling av ett selskap i to eller flere selvstendige, separate selskaper med egne styrer og eierstrukturer',
+      'Oppdeling av ett selskap i to selvstendige, separate selskaper med egne styrer',
       'Overdragelse av enkeltaktiva eller forretningsenheter mellom to selskaper',
       'Avvikling og formell nedleggelse av et selskaps samlede virksomhet',
     ],
@@ -186,7 +186,7 @@ const QUESTIONS = [
     catLabel: 'Selskapsformer',
     q: 'Hva er en fisjon?',
     opts: [
-      'Sammenslåing av to eller flere selskaper til ett nytt felles selskap med felles styre og ledelse',
+      'Sammenslåing av to eller flere selskaper til ett nytt felles selskap',
       'Salg av nye aksjer til eksterne investorer for å hente inn egenkapital',
       'Deling av ett selskap i to eller flere separate selskaper',
       'Frivillig avvikling og avslutning av et selskaps virksomhet',
@@ -216,7 +216,7 @@ const QUESTIONS = [
     opts: [
       'Kun aksjeselskaper (AS) og allmennaksjeselskaper (ASA) med mer enn 10 ansatte og omsetning over 5 mill. kr',
       'Kun børsnoterte selskaper som er underlagt løpende tilsyn fra Finanstilsynet og IFRS-krav',
-      'Alle registrerte virksomheter, uavhengig av størrelse, form og omsetning',
+      'Alle registrerte virksomheter i Norge, uavhengig av størrelse, juridisk form og total omsetning per regnskapsår',
       'AS, ASA, ANS/DA med inntekt over terskel, ENK med omsetning over 5 mill. kr og andre foretak bestemt ved lov',
     ],
     correct: 3,
@@ -258,8 +258,8 @@ const QUESTIONS = [
     opts: [
       'Finansregnskapet er primært til intern styring; driftsregnskapet leveres til Brønnøysundregistrene',
       'De to begrepene er i praksis synonyme og brukes om hverandre i norsk regnskapslitteratur',
-      'Finansregnskapet viser virksomhetens totale økonomi for omverdenen; driftsregnskapet gir interne kalkyler per produkt/avdeling for ledelsesbeslutninger',
-      'Driftsregnskapet er lovpålagt og leveres til Skatteetaten; finansregnskapet er et frivillig tilleggsregnskap',
+      'Finansregnskap: eksternt for omverdenen; driftsregnskap: internt per produkt/avdeling for ledelsesbeslutninger',
+      'Driftsregnskapet er lovpålagt og leveres til Skatteetaten; finansregnskapet er et frivillig tilleggsregnskap for internt bruk',
     ],
     correct: 2,
     explain: 'Finansregnskap (eksternt): årsregnskap, balanse og resultat for aksjonærer, kreditorer og myndigheter. Driftsregnskap (internt): kalkyler og bidragsanalyser per produkt/avdeling – beslutningsstøtte for ledelsen.',
@@ -271,9 +271,9 @@ const QUESTIONS = [
     q: 'Hva er tidsavgrensningsprinsippet (matching principle) i regnskapet?',
     opts: [
       'At regnskapsåret alltid utgjør nøyaktig 12 hele måneder fra januar til desember',
-      'At avskrivninger beregnes og fordeles likt over hele eiendelens forventede levetid',
+      'At avskrivninger beregnes og fordeles likt over hele eiendelens forventede levetid og brukstid',
       'At innberetning og betaling av MVA-terminer skjer hvert kvartal til Skatteetaten',
-      'At inntekter og kostnader føres i den perioden de er opptjent/påløpt, uavhengig av når kontantbetalingen skjer',
+      'At inntekter og kostnader føres i perioden de er opptjent, uavhengig av når betaling skjer',
     ],
     correct: 3,
     explain: 'Tidsavgrensningsprinsippet: inntekter og kostnader henføres til den regnskapsperioden de tilhører, uavhengig av kontantstrømmen. Eksempel: forhåndsbetalte abonnementer periodiseres over den aktuelle perioden.',
@@ -313,9 +313,9 @@ const QUESTIONS = [
     q: 'Hvorfor inkluderes IKKE avskrivninger som en kontantstrøm i investeringsanalysen?',
     opts: [
       'Fordi avskrivningsmetoden er vanskelig å fastslå nøyaktig over hele prosjektperioden',
-      'Fordi avskrivninger inngår i driftsresultatet, men er inkludert separat under finansposter',
+      'Fordi avskrivninger inngår i driftsresultatet, men er allerede inkludert separat under finansposter og renteutgifter',
       'Fordi nyinvesteringer alltid avskrives lineært og dermed gir null netto kontanteffekt',
-      'Fordi avskrivninger er en regnskapsmessig kostnad uten kontanteffekt – selve investeringen er allerede tatt som utbetaling i år 0',
+      'Fordi avskrivninger er en regnskapsmessig kostnad uten kontanteffekt – investeringen er tatt i år 0',
     ],
     correct: 3,
     explain: 'Kontantstrømsanalysen inkluderer kun faktiske inn- og utbetalinger. Avskrivninger er en regnskapsmessig fordeling av investeringskostnaden – ingen ny kontantutbetaling – og skal ikke dobbeltføres.',
@@ -342,7 +342,7 @@ const QUESTIONS = [
     opts: [
       'Den gjennomsnittlige rentesatsen på virksomhetens banklån og kredittfasiliteter',
       'Den forventede, garanterte avkastningen på norske statsobligasjoner til enhver tid',
-      'Selskapsskatten på 22 % som er lovbestemt for alle norske AS og ASA',
+      'Selskapsskatten på 22 % som er fastsatt i skatteloven og gjelder for alle norske aksjeselskaper (AS) og ASA',
       'Den minimumsavkastning investoren krever, bestående av risikofri rente, risikopremie og evt. inflasjon',
     ],
     correct: 3,

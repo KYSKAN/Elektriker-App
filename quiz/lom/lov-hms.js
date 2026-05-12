@@ -121,7 +121,7 @@ const QUESTIONS = [
     "q": "Hva krever AML § 14-6 om arbeidsavtalen?",
     "opts": [
       "Muntlig avtale er tilstrekkelig for kortere arbeidsforhold, men begge parter kan til enhver tid kreve at avtalen settes opp skriftlig",
-      "Arbeidsavtalen skal alltid være skriftlig og inneholde minimumskrav som partenes navn, arbeidsplass, stillingstittel og lønn",
+      "Arbeidsavtalen skal alltid inngås skriftlig og inneholde lovpålagte minimumskrav: partenes navn, arbeidsplass, stillingstittel og lønn",
       "Arbeidsavtalen kan bekreftes digitalt uten fysisk signatur fra arbeidsgiver, forutsatt at begge parter samtykker til elektronisk kommunikasjon",
       "Skriftlig kontrakt kreves kun for ansettelser over 6 måneder, mens kortere vikariater kan inngås muntlig uten dokumentasjonsplikt"
     ],
@@ -135,7 +135,7 @@ const QUESTIONS = [
     "q": "Hva kontrollerer Arbeidstilsynet?",
     "opts": [
       "Skatteinnbetaling, moms, merverdiavgift og særavgifter fra norske bedrifter og enkeltpersonforetak",
-      "At virksomheter overholder arbeidsmiljølovgivningen – HMS, arbeidstid, krav til arbeidsavtale m.m.",
+      "At virksomheter overholder arbeidsmiljølovgivningen – HMS, arbeidstid, lønn og krav til arbeidsavtale m.m.",
       "At lønnsoppgjør, tariffforhandlinger og streikevarsler gjennomføres i samsvar med arbeidstvistlovens krav",
       "At feriepengeutbetaling, skattetrekk og arbeidsgiveravgift innberettes og utbetales til rett tid"
     ],
@@ -177,9 +177,9 @@ const QUESTIONS = [
     "q": "Hva er ufravikelighetsprinsippet i tariffavtaler?",
     "opts": [
       "At individuelle arbeidsavtaler ikke kan gi dårligere vilkår enn det tariffavtalen fastsetter",
-      "At tariffavtalen ikke kan endres i perioden, kun reforhandles ved utløp",
-      "At tariffavtalen kun er bindende for fagforeningsmedlemmer",
-      "At verken arbeidsgiver eller arbeidstaker ensidig og uten motpartens samtykke kan fravike tariffavtalens fastsatte krav"
+      "At tariffavtalen ikke kan endres i perioden og kun reforhandles ved kontraktens utløp",
+      "At tariffavtalen kun er bindende for fagforeningsmedlemmer i den aktuelle organisasjonen",
+      "At verken arbeidsgiver eller arbeidstaker ensidig kan fravike tariffavtalens fastsatte vilkår"
     ],
     "correct": 0,
     "explain": "Ufravikelighetsprinsippet: individuelle arbeidsavtaler kan ikke gi dårligere vilkår enn tariffavtalen fastsetter. Tariffavtalen setter et gulv – ikke et tak. Bedre vilkår er alltid tillatt."

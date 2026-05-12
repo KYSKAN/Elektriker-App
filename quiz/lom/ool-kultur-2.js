@@ -22,7 +22,7 @@ const QUESTIONS = [
     "catLabel": "Subkulturer og dynamikk",
     "q": "Hva er en subkultur i en organisasjon?",
     "opts": [
-      "En svakere kulturvariant som gradvis løses opp – absorberes og innlemmes i dominantkulturen over tid",
+      "En svakere kulturvariant som gradvis løses opp og over tid absorberes og innlemmes i den dominerende organisasjonskulturen",
       "En distinkt kultur som eksisterer innenfor den dominerende organisasjonskulturen – gjerne i en avdeling eller faggruppe",
       "En kulturvariant som primært oppstår i multinasjonale selskaper – med mange nasjonale avdelinger og lokale kontorer",
       "En uformell sosial gruppe med egne aktiviteter, men uten varig innvirkning på organisasjonens kultur"
@@ -53,7 +53,7 @@ const QUESTIONS = [
       "En gruppebasert teknikk for effektiv idéinnsamling og kreativ problemløsning i team",
       "En kognitiv evne til å koordinere tankeprosesser og handle som én enhet i krevende situasjoner",
       "En fasilitert teknikk for å bygge felles forståelse og styrke teamkulturen i en gruppe",
-      "Et fenomen der press for konformitet undertrykker kritisk tenkning og gir dårlige beslutninger"
+      "Et fenomen der konformitetspress undertrykker kritisk tenkning og gir dårlige beslutninger"
     ],
     "correct": 3,
     "explain": "Gruppetenkning (Janis) oppstår når press for konsensus i gruppen undertrykker kritisk tenkning. Gruppen unngår uenighet, og dette kan føre til svært dårlige beslutninger – som ved Bay of Pigs-invasjonen."
@@ -81,7 +81,7 @@ const QUESTIONS = [
     "catLabel": "Subkulturer og dynamikk",
     "q": "Hva er dysfunksjonell organisasjonskultur?",
     "opts": [
-      "En kultur som hemmer organisasjonens effektivitet, trivsel og måloppnåelse",
+      "En kultur som hemmer organisasjonens effektivitet, arbeidstrivsel og måloppnåelse",
       "En kultur som mangler skriftlige verdierklæringer, formelle normdokumenter og rutiner",
       "En sterk, ekskluderende kultur som gjør det vanskelig for nye medarbeidere å bli inkludert",
       "En kulturvariant som preger organisasjoner i krise, omstilling eller alvorlig omstrukturering"

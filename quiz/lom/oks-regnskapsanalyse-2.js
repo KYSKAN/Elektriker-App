@@ -38,8 +38,8 @@ const QUESTIONS = [
     "opts": [
       "LG2 = (Omløpsmidler − Varelager) / Kortsiktig gjeld; krav: over 1",
       "LG2 = Omløpsmidler / Kortsiktig gjeld; krav: over 2 (samme som LG1)",
-      "LG2 = (Bankinnskudd + Kasse) / Kortsiktig gjeld; krav: over 0,5",
-      "LG2 = Kundefordringer / Langsiktig gjeld; krav: over 1"
+      "LG2 = (Bankinnskudd + Kasse) / Kortsiktig gjeld; krav: bør overstige 0,5",
+      "LG2 = Kundefordringer / Gjennomsnittlig langsiktig gjeld; krav: over 1"
     ],
     "correct": 0,
     "explain": "LG2 = (Omløpsmidler − Varelager) / Kortsiktig gjeld. Krav: over 1. Viser om de mest likvide omløpsmidlene (ekskl. varelager som kan være vanskelig å selge raskt) dekker kortsiktig gjeld."
@@ -95,7 +95,7 @@ const QUESTIONS = [
       "Redusere antall ansatte og midlertidig utsette leverandørbetalinger for å frigi kapital",
       "Ta opp mer lån for å finansiere investeringer og vekst i nye markedssegmenter, og dermed øke omsetningsgrunnlaget på sikt",
       "Øke salgsprisene, redusere varekostnaden, øke bruttofortjenesteprosenten, kutte kostnader og øke omsetning",
-      "Øke varelageret og innføre lengre betalingsfrister for kunder"
+      "Øke varelageret og innføre gunstigere betalingsfrister og kredittid for kunder"
     ],
     "correct": 2,
     "explain": "Lønnsomheten bedres ved: øke inntekter (høyere pris, mer salg), bedre varekostnad (forhandlinger, redusere svinn), kutte unødvendige kostnader, forbedre bruttofortjeneste og øke kapitaleffektiviteten."
@@ -106,9 +106,9 @@ const QUESTIONS = [
     "catLabel": "Tiltak og vurdering",
     "q": "Hvilke tiltak kan bedre soliditeten?",
     "opts": [
-      "Øke kortsiktig gjeld for å finansiere løpende drift",
-      "Selge anleggsmidler og dele ut gevinsten som utbytte",
-      "Ta opp mer langsiktig lån og investere i nye anleggsmidler",
+      "Øke kortsiktig gjeld og gjeldsandelen for å finansiere den løpende driften og arbeidskapitalen",
+      "Selge anleggsmidler og bruke gevinsten til ekstraordinært utbytte til aksjonærene",
+      "Ta opp mer langsiktig gjeld og reinvestere i nye anleggsmidler og produksjonsutstyr",
       "Tilbakeholde overskudd (ikke dele ut utbytte), skyte inn ny egenkapital, nedbetale gjeld"
     ],
     "correct": 3,
@@ -121,9 +121,9 @@ const QUESTIONS = [
     "q": "Hvilke tiltak kan bedre likviditeten?",
     "opts": [
       "Kortere kredittid til kunder, bedre innkrevingsrutiner, redusere varelager, utvide kassekreditt, utsette utbytte",
-      "Øke varelager for å sikre leveranser og unngå utsalg, samt forlenge kundefordringer for å øke kundenes kjøpslyst og styrke salgsvolum",
-      "Dele ut mer utbytte og øke egenkapitalen via emisjon for å styrke soliditeten",
-      "Investere i ny produksjonskapasitet finansiert med kortsiktig gjeld og øke anleggsmidlene"
+      "Øke varelageret for å unngå utsalg og styrke leveringssikkerheten, og forlenge betalingsfristene for kunder",
+      "Dele ut mer utbytte og øke egenkapitalen via en rettet emisjon for å styrke soliditeten",
+      "Investere i ny produksjonskapasitet finansiert med kortsiktig gjeld og øke bedriftens anleggsmidler"
     ],
     "correct": 0,
     "explain": "Likviditeten bedres ved: raskere innbetaling fra kunder (kortere kredittid, faktoring), redusere varelager, forhandle lengre kredittid fra leverandører, kutte unødvendige utbetalinger og holde tilbake utbytte."
@@ -134,10 +134,10 @@ const QUESTIONS = [
     "catLabel": "Tiltak og vurdering",
     "q": "Hva er den viktigste årsaken til dårlig likviditet?",
     "opts": [
-      "For lav bruttofortjenesteprosent og høye varekostnader",
-      "For lav egenkapitalprosent og høy gjeldsgrad",
+      "For lav bruttofortjenesteprosent og uforholdsmessig høye varekostnader i forhold til inntektene",
+      "For lav egenkapitalprosent og for høy gjeldsgrad som hemmer bedriftens finansielle handlefrihet",
       "Lang kredittid til kunder, stor kapital bundet i varelager, sesonmessige svingninger og investeringer",
-      "For høy omløpshastighet på varelageret og for korte leverandørkreditter, noe som tapper driftskapitalen"
+      "For høy omløpshastighet på varelageret og for korte leverandørkreditter, som tapper driftskapitalen"
     ],
     "correct": 2,
     "explain": "Dårlig likviditet skyldes typisk: lang innbetalingstid fra kunder, store varelager som binder kapital, sesongsvingninger, store investeringer og store utbyttebetalinger. God lønnsomhet garanterer ikke god likviditet."

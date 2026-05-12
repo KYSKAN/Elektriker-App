@@ -183,7 +183,7 @@ const QUESTIONS = [
       "Verneombudet, som etter AML har formelt ansvar for å koordinere og gjennomføre HMS-opplæring",
       "Arbeidstakeren selv, som selvstendig må sørge for at HMS-kompetansen til enhver tid er oppdatert",
       "Arbeidsgiver, som har plikt til å gi nødvendig opplæring, øvelse og instruksjon",
-      "Fagforeningen, som fremforhandler opplæringsrettigheter i tariffavtalen"
+      "Fagforeningen, som fremforhandler opplæringsrettigheter og opplæringsfond i tariffavtalen"
     ],
     "correct": 2,
     "explain": "AML § 3-2: arbeidsgiver har ansvar for at arbeidstakerne har nødvendig opplæring, øvelse og instruksjon i HMS, inkludert bruk av verneutstyr og sikre arbeidsmetoder."

@@ -119,7 +119,7 @@ const QUESTIONS = [
     catLabel: 'Herzbergs to-faktorteori',
     q: 'Hva skiller motivasjonsfaktorer fra hygienefaktorer i Herzbergs teori?',
     opts: [
-      'Motivasjonsfaktorer øker motivasjon; hygienefaktorer fjerner kun mistrivsel',
+      'Motivasjonsfaktorer øker motivasjon og engasjement; hygienefaktorer fjerner kun mistrivsel',
       'Hygienefaktorer øker motivasjonen direkte; motivasjonsfaktorer fjerner mistrivsel',
       'Begge faktorene påvirker motivasjon, men virker på hvert sitt nivå i prosessen',
       'Motivasjonsfaktorer handler om lønn og kontrakter; hygienefaktorer om faglig utvikling',
@@ -156,7 +156,7 @@ const QUESTIONS = [
     q: 'Hva skjer med motivasjonen dersom hygienefaktorene er på plass, men motivasjonsfaktorene mangler?',
     opts: [
       'Ansatte opplever sterk motivasjon, fordi de grunnleggende behovene nå er dekket',
-      'Ansatte mistrives ikke, men de er heller ikke motiverte',
+      'Ansatte mistrives ikke, men de er heller ikke motiverte – de er passive og nøytrale',
       'Ansatte søker seg raskt bort fra jobben, fordi mistrivselen blir for stor',
       'Hygienefaktorene kompenserer for mangelen, og gir tilstrekkelig motivasjon over tid',
     ],
@@ -205,7 +205,7 @@ const QUESTIONS = [
     opts: [
       'Autoritær, kontrollorientert ledelse med tette rapporteringsrutiner',
       'Transaksjonsledelse med klare kontrakter, individuelle prestasjonsplaner og bonusstruktur',
-      'Delegerende, tillitsbasert ledelse som gir ansvar og autonomi',
+      'Delegerende, tillitsbasert ledelse som gir ansvar, autonomi og tillit til ansatte',
       'Direktivbasert ledelse med faste mål, hyppig resultatkontroll og avviksrapportering',
     ],
     correct: 2,
@@ -402,7 +402,7 @@ const QUESTIONS = [
       'SMART-mål er mer inspirerende og motiverende enn vage, brede mål',
       'SMART-mål benyttes primært i salg og markedsføring, vage mål i ledelse',
       'Vage mål gir mer fleksibilitet og er ofte lettere å nå i praksis',
-      'SMART-mål er konkret, målbart og tidsbestemt; vagt mål er upresist og vanskelig å vurdere',
+      'SMART-mål er konkret, målbart og tidsbestemt; vagt mål er upresist og uklart',
     ],
     correct: 3,
     explain: 'Et SMART-mål er presist: "Øke salget med 10% innen Q2" er SMART. "Vi skal bli bedre" er vagt. Klare mål gir bedre fokus og motivasjon.',

@@ -203,7 +203,7 @@ const QUESTIONS = [
     "q": "Hva er første steg i Kotters 8-trinnsmodell for endring?",
     "opts": [
       "Bygge koalisjon (av troverdige støttespillere) i hele organisasjonen",
-      "Skape en følelse av krise og hastverk (urgency)",
+      "Skape en sterk og tydelig følelse av krise og hastverk (urgency)",
       "Kommunisere endringsvisjonen bredt og tydelig (til alle nivåer)",
       "Forankre endringene i organisasjonens kultur (daglig praksis)"
     ],
@@ -290,7 +290,7 @@ const QUESTIONS = [
     "catLabel": "Endringsledelse – grunnlag",
     "q": "Hva er en prestasjonskultur?",
     "opts": [
-      "En kultur der forventninger er tydelige, ansatte har eierskap til mål og kontinuerlig forbedring er normen",
+      "En kultur der forventninger er tydelige, ansatte har reelt eierskap til mål og kontinuerlig forbedring er en grunnleggende norm",
       "En kultur der individuelle og kollektive bidrag synliggjøres, anerkjennes og belønnes gjennom regelmessige og strukturerte tilbakemeldinger",
       "En kultur der toppledelsen setter ambisiøse, målbare mål og systematisk holder mellomledere ansvarlige for levering og resultater",
       "En kultur der resultater overvåkes tett, avvik fra plan analyseres grundig og korrigerende tiltak iverksettes raskt og systematisk"

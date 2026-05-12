@@ -96,7 +96,7 @@ const QUESTIONS = [
     "q": "Hva illustrerer isfjellmodellen i organisasjonskulturens kontekst?",
     "opts": [
       "At organisasjonskultur (særlig artefaktene) primært utvikler seg i store, etablerte bedrifter",
-      "At den synlige delen (artefakter) er liten, mens den usynlige delen (verdier, antakelser) er mye større og dypere",
+      "At den synlige delen (artefakter) er liten, mens den usynlige delen (verdier, antakelser) er mye større",
       "At kulturen er stabil, tung å bevege – som et isfjell som driver sakte gjennom havet",
       "At ledelsen sjelden forstår de kulturelle strømningene (subkulturer), som faktisk preger organisasjonen"
     ],
