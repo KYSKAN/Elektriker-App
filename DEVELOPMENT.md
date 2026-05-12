@@ -4,7 +4,7 @@
 PWA og nettside for elektrikere. Fagkalkulatorer og quiz. Fungerer på Android, iOS og i alle nettlesere på mobil og PC.
 
 ## Nåværende status
-PWA er oppe og kjører på https://kyskan.github.io/Elektriker-App. Koblet til GitHub — automatisk deploy via GitHub Pages ved `git push`. Service worker på v210.
+PWA er oppe og kjører på https://kyskan.github.io/Elektriker-App. Koblet til GitHub — automatisk deploy via GitHub Pages ved `git push`. Service worker på v217.
 
 **Backend:** Supabase (PostgreSQL) — tabeller `scores` (toppliste) og `svar` (alle svar per spørsmål).
 

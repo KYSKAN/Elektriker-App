@@ -49,7 +49,7 @@ const QUESTIONS = [
     catLabel: 'Investeringsmetoder',
     q: 'Hva er kontantstrøm i investeringsanalyse?',
     opts: [
-      'Driftsresultatet slik det fremkommer i det periodiserte resultatregnskapet etter skatt',
+      'Driftsresultatet slik det fremkommer i det ordinære resultatregnskapet etter skatt',
       'Innbetalinger minus utbetalinger – de faktiske kontante inn- og utstrømmene',
       'Salgsinntekter fratrukket alle kostnader inkludert avskrivninger og renteutgifter',
       'Nettoresultatet etter skatt, rentekostnader og eventuelle ekstraordinære poster i perioden',
@@ -260,7 +260,7 @@ const QUESTIONS = [
     q: 'Hva er konsekvensen av økt kapitalbinding for lønnsomheten (TKR)?',
     opts: [
       'TKR stiger fordi høyere kapital signaliserer vekst og økt aktivitet',
-      'TKR forblir uendret siden kapitalbinding og lønnsomhet er i praksis uavhengige faktorer i tid',
+      'TKR forblir uendret siden kapitalbinding og lønnsomhet er i praksis ikke relatert til hverandre',
       'Økt kapitalbinding øker totalkapitalen og dermed reduseres TKR = Resultat / Totalkapital × 100',
       'TKR bedres fordi større varelager gir høyere salgsinntekter og bedre marginer',
     ],

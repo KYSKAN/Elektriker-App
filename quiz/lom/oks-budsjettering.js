@@ -76,7 +76,7 @@ const QUESTIONS = [
     opts: [
       'Salgsbudsjett og detaljert innkjøpsbudsjett',
       'Resultatbudsjett og likviditetsbudsjett',
-      'Driftsbudsjett og investeringsbudsjettet',
+      'Driftsbudsjettet og investeringsbudsjettet',
       'Kostnadsbudsjett og finansieringsbudsjett',
     ],
     correct: 1,
