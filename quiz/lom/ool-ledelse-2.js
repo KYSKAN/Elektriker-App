@@ -2,7 +2,7 @@ const QUIZ_META = {
   "id": "lom-ool-ledelse-2",
   "title": "Lederstil og organisasjon Del 2",
   "subtitle": "LØM Fagskole – Supplement, Rekruttering & Fagdokumentasjon",
-  "description": "18 spørsmål – Supplement, Rekruttering og kompetanse, Faglige dokumenter.",
+  "description": "15 spørsmål – Supplement, Rekruttering og kompetanse, Faglige dokumenter.",
   "cats": {
     "supplement": {
       "label": "Supplement",
@@ -63,34 +63,6 @@ const QUESTIONS = [
     "explain": "Rekruttering er et av lederens viktigste kulturbyggingsverktøy. Å velge kandidater som deler organisasjonens verdier (cultural fit) bidrar til å bevare og forsterke kulturen over tid."
   },
   {
-    "id": 33,
-    "cat": "supplement",
-    "catLabel": "Supplement",
-    "q": "Hva innebærer SMART-målsetting i personalarbeid?",
-    "opts": [
-      "Mål skal være Spesifikke, Målbare, Aktuelle (relevante), Realistiske og Tidsbestemte",
-      "Mål skal være Støttende, Meningsfulle (motiverende), Ambisiøse, Resultatorienterte og Tilpassede",
-      "Mål skal fastsettes av nærmeste leder (linjeleder), og godkjennes av HR-avdelingen",
-      "Mål skal primært reflektere virksomhetens finansielle nøkkeltall (KPI-er), budsjettmål og resultatkrav"
-    ],
-    "correct": 0,
-    "explain": "SMART = Spesifikke, Målbare, Aktuelle (relevante), Realistiske og Tidsbestemte. SMART-mål gjør det lettere å evaluere fremgang, skape klarhet og oppleve mestring."
-  },
-  {
-    "id": 34,
-    "cat": "supplement",
-    "catLabel": "Supplement",
-    "q": "Hva er kompetansemobilisering (Lai)?",
-    "opts": [
-      "Å sikre at ansattes eksisterende kompetanse faktisk brukes og utnyttes i jobben",
-      "Å sende ansatte på relevante kurs for å styrke og oppdatere deres formelle kvalifikasjoner",
-      "Å ansette medarbeidere med kompetanse som overstiger stillingens minimumskrav",
-      "Å gjennomføre systematisk kartlegging og analyse av kompetansegap i virksomheten"
-    ],
-    "correct": 0,
-    "explain": "Lai viser at det ikke er nok å ha kompetanse – det avgjørende er at kompetansen faktisk mobiliseres (tas i bruk) i arbeidsoppgavene. Uutnyttet kompetanse gir lavere motivasjon og høyere turnover."
-  },
-  {
     "id": 35,
     "cat": "supplement",
     "catLabel": "Supplement",
@@ -103,20 +75,6 @@ const QUESTIONS = [
     ],
     "correct": 2,
     "explain": "Thorsruds psykologiske jobbkrav innebærer at arbeidet bør gi: variasjon, læring, ansvar, medbestemmelse og sosiale relasjoner. Dette gir meningsfullhet og øker den indre motivasjonen."
-  },
-  {
-    "id": 36,
-    "cat": "supplement",
-    "catLabel": "Supplement",
-    "q": "Hva menes med prososial motivasjon?",
-    "opts": [
-      "Motivasjon som kommer fra ønsket om å hjelpe andre og gjøre noe som er godt for fellesskapet",
-      "Motivasjon som drives av karriereambisjoner, lønn og synlig status i organisasjonen",
-      "Motivasjon som oppstår gjennom anerkjennelse fra omgivelsene og sosiale tilbakemeldinger",
-      "Motivasjon som er knyttet til fellesskap, sosiale aktiviteter og god arbeidsatmosfære"
-    ],
-    "correct": 0,
-    "explain": "Prososial motivasjon er motivasjon som springer ut av et ønske om å bidra positivt for andre – kolleger, kunder eller samfunnet. Det er en av tre motivasjonstyper (indre, ytre og prososial)."
   },
   {
     "id": 37,

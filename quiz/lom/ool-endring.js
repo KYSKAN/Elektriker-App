@@ -240,7 +240,7 @@ const QUESTIONS = [
       "Bygge koalisjon av støttespillere",
       "Skape urgency og hastverk"
     ],
-    "explain": "Kotters 8 trinn: 1) Urgency → 2) Koalisjon → 3) Visjon → 4) Kommuniser visjonen → 5) Fjern barrierer → 6) Kortsiktige seire → 7) Konsolider gevinster → 8) Forankre i kulturen."
+    "explain": "Kotters 8 trinn i riktig rekkefølge: 1) Skape urgency og hastverk → 2) Bygge koalisjon av støttespillere → 3) Utvikle klar visjon og strategi → 4) Kommunisere endringsvisjonen bredt → 5) Fjerne barrierer for gjennomføring → 6) Planlegge og synliggjøre seire → 7) Konsolidere gevinster og gå videre → 8) Forankre endringene i kulturen."
   },
   {
     "id": 14,

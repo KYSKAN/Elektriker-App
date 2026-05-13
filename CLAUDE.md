@@ -79,15 +79,15 @@ Tre separate quiz-velger-sider lenket fra hoved-appen. Felles quiz-motor i `spil
 | lom-ool-motivasjon       | lom/ool-motivasjon.js          | 29       | index.html         | ✓         |
 | lom-ool-kultur           | lom/ool-kultur.js              | 37       | index.html         | ✓         |
 | lom-ool-endring          | lom/ool-endring.js             | 36       | index.html         | ✓         |
-| lom-ool-ledelse          | lom/ool-ledelse.js             | 47       | index.html         | ✓         |
-| lom-marked-strategi      | lom/marked-strategi.js         | 40       | index.html         | ✓         |
-| lom-marked-grunnlag      | lom/marked-grunnlag.js         | 41       | index.html         | ✓         |
+| lom-ool-ledelse          | lom/ool-ledelse.js             | 43       | index.html         | ✓         |
+| lom-marked-strategi      | lom/marked-strategi.js         | 37       | index.html         | ✓         |
+| lom-marked-grunnlag      | lom/marked-grunnlag.js         | 39       | index.html         | ✓         |
 | lom-oks-kostnader        | lom/oks-kostnader.js           | 38       | index.html         | ✓         |
 | lom-oks-regnskapsanalyse | lom/oks-regnskapsanalyse.js    | 35       | index.html         | ✓         |
-| lom-oks-kalkyl           | lom/oks-kalkyl.js              | 30       | index.html         | ✓         |
+| lom-oks-kalkyl           | lom/oks-kalkyl.js              | 29       | index.html         | ✓         |
 | lom-oks-budsjettering    | lom/oks-budsjettering.js       | 29       | index.html         | ✓         |
-| lom-oks-investering      | lom/oks-investering.js         | 31       | index.html         | ✓         |
-| lom-oks-tillegg          | lom/oks-tillegg.js             | 28       | index.html         | ✓         |
+| lom-oks-investering      | lom/oks-investering.js         | 29       | index.html         | ✓         |
+| lom-oks-tillegg          | lom/oks-tillegg.js             | 22       | index.html         | ✓         |
 | lom-lov-hms              | lom/lov-hms.js                 | 40       | index.html         | ✓         |
 | rlc                      | elektro/rlc.js                 | 28       | index-elektro.html | ✓         |
 | boolsk                   | bjrons/boolsk.js               | 31       | index-bjrons.html  |           |
@@ -98,7 +98,7 @@ Tre separate quiz-velger-sider lenket fra hoved-appen. Felles quiz-motor i `spil
 | vipper                   | bjrons/vipper.js               | 22       | index-bjrons.html  |           |
 | trh1ek                   | bjrons/trh1ek.js               | 50       | index-bjrons.html  | ✓         |
 
-**Totalt: 698 spørsmål fordelt på 21 temaer (13 LØM + 1 elektro + 7 bjrons)**
+**Totalt: 680 spørsmål fordelt på 21 temaer (13 LØM + 1 elektro + 7 bjrons)**
 
 ### Slik fungerer quiz-motoren
 `spill.html` inneholder HTML-struktur og CSS. All logikk ligger i `quiz/js/spill.js`.

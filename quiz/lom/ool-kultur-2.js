@@ -62,18 +62,18 @@ const QUESTIONS = [
     "id": 21,
     "cat": "subkulturer",
     "catLabel": "Subkulturer og dynamikk",
-    "q": "Hvilke to kjennetegn er typiske for gruppetenkning ifølge Janis?",
+    "q": "Hvilke to kjennetegn er typiske for gruppetenkning (groupthink) ifølge Janis?",
     "opts": [
-      "Gruppen undertrykker avvikende meninger for å opprettholde enighet",
-      "Gruppen søker aktivt fageksperter utenfra for å utfordre egne antagelser",
-      "Uenighet og åpen konflikt preger prosessen og fører til langsomme beslutninger",
-      "Gruppen tror den er ufeilbarlig og at egne beslutninger alltid er riktige"
+      "Gruppen undertrykker avvikende meninger for å opprettholde konsensus og enighet",
+      "Gruppen søker aktivt utenperspektiv og fageksperter for å utfordre egne antagelser",
+      "Gruppen oppmuntrer til åpen diskusjon og kritisk gjennomgang av egne beslutninger",
+      "Gruppen er overbevist om at den aldri tar feil og at egne beslutninger alltid er riktige"
     ],
     "correct": [
       0,
       3
     ],
-    "explain": "To typiske kjennetegn på gruppetenkning: (1) press for konformitet undertrykker avvikende meninger, og (2) en illusjon om ufeilbarlighet – gruppen kritiserer ikke egne beslutninger."
+    "explain": "To typiske kjennetegn på gruppetenkning (Janis): (1) press for konformitet – avvikende meninger undertrykkes for å bevare konsensus, og (2) en overdreven tro på egne beslutninger – gruppen tror den aldri tar feil og stiller ikke spørsmål ved egne valg."
   },
   {
     "id": 22,

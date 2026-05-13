@@ -2,7 +2,7 @@ const QUIZ_META = {
   "id": "lom-marked-strategi-2",
   "title": "Markedsstrategi Del 2",
   "subtitle": "LØM Fagskole – Markedsplan & Markedsmiks",
-  "description": "20 spørsmål – Markedsplan og mål, Markedsmiksen 5P, Distribusjon og kommunikasjon.",
+  "description": "17 spørsmål – Markedsplan og mål, Markedsmiksen 5P, Distribusjon og kommunikasjon.",
   "cats": {
     "markedsplan": {
       "label": "Markedsplan og mål",
@@ -47,20 +47,6 @@ const QUESTIONS = [
     ],
     "correct": 3,
     "explain": "Markedsplanprosessen starter med overordnede mål og forretningsidé, går via situasjonsanalyse og SMART-markedsmål, til strategi, program, konkrete aktiviteter og til slutt kontroll av resultater."
-  },
-  {
-    "id": 17,
-    "cat": "markedsplan",
-    "catLabel": "Markedsplan og mål",
-    "q": "Hva er en forretningsidé?",
-    "opts": [
-      "En overordnet beskrivelse av hva bedriften gjør, for hvem og hvilken verdi som skapes",
-      "En oversikt over prioriterte produktkategorier og planlagte markedssegmenter",
-      "En finansiell prognose med budsjett, likviditet og resultatmål",
-      "En nøyaktig gjennomgang av produksjonsprosessen og ressursbruken i bedriften"
-    ],
-    "correct": 0,
-    "explain": "Forretningsidéen er den grunnleggende ideen bak bedriften – hva som selges, til hvem, og hvilken nytte/verdi dette skaper for kundene. Den er styrende for alle strategiske valg."
   },
   {
     "id": 18,
@@ -119,20 +105,6 @@ const QUESTIONS = [
     "explain": "Produkt-P-en encompasser alt bedriften tilbyr kunden – fysiske egenskaper, design, kvalitet, merkevare, emballasje, service, garantier og tilleggstjenester."
   },
   {
-    "id": 22,
-    "cat": "markedsmiks",
-    "catLabel": "Markedsmiksen 5P",
-    "q": "Hva innebærer \"Distribusjon\" (Place) i markedsmiksen?",
-    "opts": [
-      "Lokasjonene der bedriften driver produksjon, mellomlagring, distribusjonssenter og lagerdrift",
-      "Utformingen og innredningen av fysiske utsalgssteder og butikklokaler",
-      "Plasseringen, eksponeringen og timingen av annonsering og reklame i ulike mediekanaler",
-      "Alle beslutninger knyttet til hvor og hvordan produktet gjøres tilgjengelig for kunden"
-    ],
-    "correct": 3,
-    "explain": "Distribusjon handler om valg av salgskanaler (nettsalg, butikk, grossist, direkte salg), lagrings- og logistikkløsninger og alt som sikrer at produktet er tilgjengelig der kunden ønsker det."
-  },
-  {
     "id": 23,
     "cat": "markedsmiks",
     "catLabel": "Markedsmiksen 5P",
@@ -145,20 +117,6 @@ const QUESTIONS = [
     ],
     "correct": 0,
     "explain": "Påvirkning (Promotion) er kommunikasjonsmiksen – alle tiltak for å informere og overtale målgruppen: reklame, PR, sosiale medier, event-markedsføring, direkte markedsføring og personlig salg."
-  },
-  {
-    "id": 24,
-    "cat": "markedsmiks",
-    "catLabel": "Markedsmiksen 5P",
-    "q": "Hvorfor er \"Personale\" inkludert som en P i markedsmiksen?",
-    "opts": [
-      "Fordi riktig bemanning sikrer at åpningstider, leveringsfrister og servicenivå overholdes i alle kanaler",
-      "Fordi lønnskostnader utgjør en vesentlig og voksende del av det totale markedsbudsjettet i tjenesteytende næringer",
-      "Fordi ansatte i tjenesteytende virksomheter er en del av produktet – de skaper kundeopplevelsen",
-      "Fordi employer branding og rekruttering påvirker bedriftens omdømme utad"
-    ],
-    "correct": 2,
-    "explain": "Personale er spesielt viktig i tjenestesektoren der ansatte er en integrert del av det som leveres – kundebehandlernes kunnskap, holdning og service påvirker direkte kundens opplevelse og tilfredshet."
   },
   {
     "id": 27,

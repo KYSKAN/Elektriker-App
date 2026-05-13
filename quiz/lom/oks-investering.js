@@ -2,7 +2,7 @@
   id: 'lom-oks-investering',
   title: 'Investering og kapitalbinding',
   subtitle: 'Økonomistyring – Kap. 13 og 14',
-  description: '31 spørsmål om investeringsanalyse (TBT, NV, IRR), gjensidig utelukkende prosjekter, kapitalbinding, ABC-analyse og DuPont-modellen.',
+  description: '29 spørsmål om investeringsanalyse (TBT, NV, IRR), gjensidig utelukkende prosjekter, kapitalbinding og ABC-analyse.',
   cats: {
     investeringsmetoder: { label: 'Investeringsmetoder', color: '#8b5cf6' },
     gjensidig:           { label: 'Gjensidig utelukkende', color: '#3b82f6' },
@@ -371,36 +371,6 @@ const QUESTIONS = [
     ],
     correct: 3,
     explain: 'ABC-analyse gir ulike styringsprinsipper: A-varer (høy verdi, 20% av varenummer, 80% av verdi): hyppige tellinger, tett styring. C-varer (lav verdi, 50% av varenummer, 5% av verdi): enklere rutiner, kan ha større sikkerhetslagre.',
-  },
-  // Q25 – correct=0 (103 tegn). Gjør opt[3] lengre enn riktig (113 tegn).
-  {
-    id: 25,
-    cat: 'abc_dupont',
-    catLabel: 'ABC-analyse og DuPont',
-    q: 'Hva er DuPont-modellens formel og hva viser den?',
-    opts: [
-      'TKR = Kapitalens omløpshastighet × Resultatgrad – viser de to veiene til bedre totalkapitalrentabilitet',
-      'TKR = Egenkapitalandel multiplisert med Resultatgrad og justert for Gjeldsgrad',
-      'TKR = Bruttofortjeneste / Driftsinntekter × Totalkapital – en alternativ og forenklet formel',
-      'TKR = Driftsresultat / Totalgjeld × Soliditetsprosent – måler gjeldsbetjeningsevne og langsiktig finansiell stabilitet',
-    ],
-    correct: 0,
-    explain: 'DuPont: TKR = Kapitalens omløpshastighet (Driftsinntekter/Totalkapital) × Resultatgrad (Resultat/Driftsinntekter × 100). Viser at man kan forbedre TKR enten via effektivitet (mer salg per krone kapital) eller marginer (bedre resultatgrad).',
-  },
-  // Q26 – correct=2 (85 tegn). Gjør opt[3] lengre enn riktig (94 tegn).
-  {
-    id: 26,
-    cat: 'abc_dupont',
-    catLabel: 'ABC-analyse og DuPont',
-    q: 'Hva er kapitalens omløpshastighet som del av DuPont-modellen?',
-    opts: [
-      'Gjennomsnittlig omløpstid for varelageret målt i antall dager',
-      'Totalkapital / Egenkapital – også kalt gearingfaktoren',
-      'Driftsinntekter / Gjennomsnittlig totalkapital – viser effektiviteten i kapitalbruken',
-      'Antall ganger den investerte egenkapitalen og fremmedkapitalen er reinvestert i løpet av ett regnskapsår',
-    ],
-    correct: 2,
-    explain: 'Kapitalens omløpshastighet = Driftsinntekter / Gjennomsnittlig totalkapital. Høy omløpshastighet betyr at bedriften genererer mye omsetning per krone investert kapital – effektiv kapitalbruk. Lav omløpshastighet indikerer for mye kapital bundet.',
   },
   // Q27 – correct=3 (120 tegn). Gjør opt[1] lengre enn riktig (129 tegn).
   {

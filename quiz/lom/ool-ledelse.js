@@ -2,7 +2,7 @@ const QUIZ_META = {
   "id": "lom-ool-ledelse-1",
   "title": "Lederstil og organisasjon Del 1",
   "subtitle": "LØM Fagskole – Lederstil, Org.former & Kommunikasjon",
-  "description": "29 spørsmål – Lederstil, Organisasjonsformer, Kommunikasjon.",
+  "description": "28 spørsmål – Lederstil, Organisasjonsformer, Kommunikasjon.",
   "cats": {
     "lederstil": {
       "label": "Lederstil",
@@ -489,19 +489,5 @@ const QUESTIONS = [
       2
     ],
     "explain": "For at delegering skal fungere må myndighet (beslutningsrett) og ressurser (tid, penger, kompetanse) følge med oppgaven. Uten disse kan medarbeideren ikke lykkes, uansett vilje."
-  },
-  {
-    "id": 29,
-    "cat": "kommunikasjon",
-    "catLabel": "Kommunikasjon",
-    "q": "Hva er beste virkemiddel mot motstand mot endring, ifølge Kanter (1992)?",
-    "opts": [
-      "Hyppig og tydelig informasjon fra ledelsen om endringens formål og forventede gevinster",
-      "Klare konsekvenser for medarbeidere som aktivt motarbeider gjennomføringen",
-      "Tidlig og reell involvering av de berørte partene i planleggingen",
-      "Å knytte endringsvillighet til prestasjonsvurdering og karriereutvikling"
-    ],
-    "correct": 2,
-    "explain": "Kanter (1992) viser at motstand mot endring reduseres mest effektivt gjennom tidlig og reell involvering av de berørte. Informasjon alene er ikke tilstrekkelig – folk vil ha innflytelse, ikke bare beskjed."
   }
 ];

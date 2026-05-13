@@ -2,7 +2,7 @@ const QUIZ_META = {
   id: 'lom-oks-kalkyl',
   title: 'Driftsregnskap og kalkyler',
   subtitle: 'Økonomistyring – Kap. 9 og 11',
-  description: '30 spørsmål om driftsregnskap, selvkostmetoden, bidragsmetoden, kalkylasjon i handelsbedrifter og avviksanalyse.',
+  description: '29 spørsmål om driftsregnskap, selvkostmetoden, bidragsmetoden, kalkylasjon i handelsbedrifter og avviksanalyse.',
   cats: {
     driftsregnskap: { label: 'Driftsregnskap', color: '#8b5cf6' },
     selvkost:       { label: 'Selvkostmetoden', color: '#3b82f6' },
@@ -305,20 +305,6 @@ const QUESTIONS = [
     ],
     correct: 2,
     explain: 'Tilvirkningskost = Direkte materialkostnader + Direkte lønnskostnader + Andre direkte kostnader + Indirekte produksjonskostnader. Dette er kostnadene knyttet til selve produksjonen – ekskludert salgs- og administrasjonskostnader.',
-  },
-  {
-    id: 22,
-    cat: 'bidrag',
-    catLabel: 'Bidragsmetoden',
-    q: 'Hva er "salgsmerkost = minimumskostnad" i praktisk sammenheng?',
-    opts: [
-      'Selvkostprisen fratrukket et minimumskrav til fortjeneste – brukes ved anbud og prisforhandlinger',
-      'Gjennomsnittlig tilvirkningskost per enhet, beregnet som gjennomsnittet av de siste tolv månedene',
-      'De variable kostnadene per enhet pluss en forholdsmessig andel av faste kostnader og administrasjonsomkostninger',
-      'Den prisen man minimum kan ta ved ledig kapasitet for å ikke tape penger – kun de variable kostnadene for ordren',
-    ],
-    correct: 3,
-    explain: 'Salgsmerkost (minimumspris) ved ledig kapasitet = de variable kostnadene for den spesifikke ordren. Alt over denne prisen gir positivt DB og bidrar til å dekke faste kostnader. Gjelder kun på kort sikt og ved ledig kapasitet.',
   },
   {
     id: 23,

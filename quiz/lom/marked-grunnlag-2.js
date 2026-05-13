@@ -2,7 +2,7 @@ const QUIZ_META = {
   "id": "lom-marked-grunnlag-2",
   "title": "Markedsgrunnlag Del 2",
   "subtitle": "LØM Fagskole – Konkurransemiljø & Kjøpsatferd",
-  "description": "16 spørsmål – Konkurransemiljø, Kjøpsprosess og kjøpsatferd.",
+  "description": "14 spørsmål – Konkurransemiljø, Kjøpsprosess og kjøpsatferd.",
   "cats": {
     "konkurranse_env": {
       "label": "Konkurransemiljø",
@@ -99,34 +99,6 @@ const QUESTIONS = [
     ],
     "correct": 3,
     "explain": "PESTEL kartlegger makroomgivelsene: Political, Economic, Social, Technological, Environmental, Legal. Brukes til å identifisere eksterne faktorer som kan påvirke bedriftens fremtid."
-  },
-  {
-    "id": 29,
-    "cat": "konkurranse_env",
-    "catLabel": "Konkurransemiljø",
-    "q": "Hva menes med «stuck-in-the-middle» i Porters generiske strategier?",
-    "opts": [
-      "En bedrift som verken klarer å differensiere seg eller å være kostnadsleder, og dermed mister konkurransefortrinn",
-      "En bedrift som bevisst posisjonerer seg i mellomsjiktet av markedet for å nå flest mulig kunder til en moderat pris",
-      "En bedrift som satser på en avgrenset og lønnsom markedsnisje fremfor hele markedet",
-      "En situasjon der kostnadslederskap og differensiering kombineres vellykket i én og samme strategi"
-    ],
-    "correct": 0,
-    "explain": "Porter advarer mot «stuck-in-the-middle»: bedrifter som verken er tydelige kostnadsledere eller differensierer seg klart, risikerer å miste kunder til begge ender og stagnere lønnsomheten."
-  },
-  {
-    "id": 30,
-    "cat": "konkurranse_env",
-    "catLabel": "Konkurransemiljø",
-    "q": "Hva er en markedsutfordrer ifølge Kotlers fire konkurranseposisjoner?",
-    "opts": [
-      "Bedriften med størst markedsandel som i stor grad setter bransjestandarden",
-      "Bedrifter som holder seg nær markedslederen ved å imitere produkt og pris",
-      "Bedrifter som konsentrerer seg om en avgrenset spesialnisje for å unngå direkte konkurranse",
-      "Bedrifter som aktivt utfordrer markedslederen og søker å ta over markedsandeler"
-    ],
-    "correct": 3,
-    "explain": "Kotler identifiserer fire posisjoner: markedsleder (størst andel), markedsutfordrer (nr. 2/3, angriper aktivt lederen), markedsfølger (imiterer lederen) og markedsnisje (smal spesialisert målgruppe)."
   },
   {
     "id": 34,
